@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="commentCell" selectionStyle="default" indentationWidth="10" id="bAy-Za-pTb" customClass="CommentCell" customModule="SnapShot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bAy-Za-pTb" id="WCt-Jq-CBV">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profileDefaultForFrontCell" translatesAutoresizingMaskIntoConstraints="NO" id="qWK-BP-lQb">
+                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Summer Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi8-Gh-dJz">
+                        <rect key="frame" x="66" y="8" width="82" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1小时前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFJ-uA-RTU">
+                        <rect key="frame" x="66" y="29" width="42" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="有人知道她到底拍的怎么样？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHR-sa-HXD">
+                        <rect key="frame" x="66" y="50" width="340" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIQ-p3-98o">
+                        <rect key="frame" x="386" y="8" width="20" height="20"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ecv-vK-Ome"/>
+                            <constraint firstAttribute="width" constant="20" id="pEQ-CB-9jM"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="commentBtn"/>
+                        <connections>
+                            <action selector="commentAction:" destination="bAy-Za-pTb" eventType="touchUpInside" id="oeo-Kj-J4S"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="hHR-sa-HXD" firstAttribute="leading" secondItem="qWK-BP-lQb" secondAttribute="trailing" constant="8" id="BLQ-P1-IKk"/>
+                    <constraint firstItem="GFJ-uA-RTU" firstAttribute="top" secondItem="Fi8-Gh-dJz" secondAttribute="bottom" id="NgS-vB-sT3"/>
+                    <constraint firstItem="hHR-sa-HXD" firstAttribute="top" secondItem="GFJ-uA-RTU" secondAttribute="bottom" id="Qtf-p6-5Wk"/>
+                    <constraint firstItem="qWK-BP-lQb" firstAttribute="leading" secondItem="WCt-Jq-CBV" secondAttribute="leadingMargin" id="RnD-96-PQP"/>
+                    <constraint firstItem="hHR-sa-HXD" firstAttribute="leading" secondItem="qWK-BP-lQb" secondAttribute="trailing" constant="8" id="XN9-Mn-GDp"/>
+                    <constraint firstItem="GFJ-uA-RTU" firstAttribute="leading" secondItem="qWK-BP-lQb" secondAttribute="trailing" constant="8" id="ZfB-oc-Eow"/>
+                    <constraint firstItem="RIQ-p3-98o" firstAttribute="trailing" secondItem="WCt-Jq-CBV" secondAttribute="trailingMargin" id="b5V-bl-6vO"/>
+                    <constraint firstItem="Fi8-Gh-dJz" firstAttribute="leading" secondItem="qWK-BP-lQb" secondAttribute="trailing" constant="8" id="fhX-MV-4Fw"/>
+                    <constraint firstItem="RIQ-p3-98o" firstAttribute="top" secondItem="WCt-Jq-CBV" secondAttribute="topMargin" id="goT-FO-kye"/>
+                    <constraint firstItem="qWK-BP-lQb" firstAttribute="top" secondItem="WCt-Jq-CBV" secondAttribute="topMargin" id="njP-Pf-x4o"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qWK-BP-lQb" secondAttribute="bottom" constant="14" id="qKx-df-dMq"/>
+                    <constraint firstItem="Fi8-Gh-dJz" firstAttribute="top" secondItem="WCt-Jq-CBV" secondAttribute="topMargin" id="yAB-Ry-tOd"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="qKx-df-dMq"/>
+                        <exclude reference="BLQ-P1-IKk"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="commentCellCommenButton" destination="RIQ-p3-98o" id="Jn8-8K-wGw"/>
+                <outlet property="commentCellCommentLabel" destination="hHR-sa-HXD" id="uMJ-qY-WlL"/>
+                <outlet property="commentCellProfileImageView" destination="qWK-BP-lQb" id="xPe-do-yvD"/>
+                <outlet property="commentCellTimeLabe" destination="GFJ-uA-RTU" id="IS9-F5-TWb"/>
+                <outlet property="commentCellUserIDLabel" destination="Fi8-Gh-dJz" id="Ho9-3J-9UH"/>
+            </connections>
+            <point key="canvasLocation" x="465" y="177"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="commentBtn" width="27" height="24"/>
+        <image name="profileDefaultForFrontCell" width="48" height="49"/>
+    </resources>
+</document>

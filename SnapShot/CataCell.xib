@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="198" id="ojp-9S-NBF" customClass="CataCell" customModule="SnapShot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ojp-9S-NBF" id="yQv-8D-miH">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EVw-f5-0mx">
+                        <rect key="frame" x="8" y="8" width="398" height="184"/>
+                        <animations/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cataShadowBannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-kP-OZu">
+                        <rect key="frame" x="8" y="131" width="398" height="61"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="萌娃外拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-5a-FcV">
+                        <rect key="frame" x="138" y="145" width="138" height="33"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="WVo-3V-alT"/>
+                            <constraint firstAttribute="height" constant="33" id="roo-cH-2ye"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="wbu-OI-Z7G"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WVo-3V-alT"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="dpU-kP-OZu" firstAttribute="leading" secondItem="yQv-8D-miH" secondAttribute="leadingMargin" id="5sN-WX-w4W"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ahW-5a-FcV" secondAttribute="trailing" constant="130" id="HJA-ZU-uaG"/>
+                    <constraint firstItem="EVw-f5-0mx" firstAttribute="bottom" secondItem="yQv-8D-miH" secondAttribute="bottomMargin" id="K36-Dk-70e"/>
+                    <constraint firstItem="dpU-kP-OZu" firstAttribute="trailing" secondItem="yQv-8D-miH" secondAttribute="trailingMargin" id="Klk-gj-GNG"/>
+                    <constraint firstItem="dpU-kP-OZu" firstAttribute="bottom" secondItem="yQv-8D-miH" secondAttribute="bottomMargin" id="NAn-p2-cLq"/>
+                    <constraint firstItem="EVw-f5-0mx" firstAttribute="top" secondItem="yQv-8D-miH" secondAttribute="topMargin" id="OtY-8B-92N"/>
+                    <constraint firstItem="EVw-f5-0mx" firstAttribute="leading" secondItem="yQv-8D-miH" secondAttribute="leadingMargin" id="QTT-P9-PBC"/>
+                    <constraint firstItem="ahW-5a-FcV" firstAttribute="top" secondItem="yQv-8D-miH" secondAttribute="topMargin" constant="137" id="bPM-26-LcM"/>
+                    <constraint firstItem="dpU-kP-OZu" firstAttribute="top" secondItem="yQv-8D-miH" secondAttribute="topMargin" constant="123" id="coO-yE-7aB"/>
+                    <constraint firstItem="ahW-5a-FcV" firstAttribute="leading" secondItem="yQv-8D-miH" secondAttribute="leadingMargin" constant="130" id="gYZ-P6-Law"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ahW-5a-FcV" secondAttribute="bottom" constant="14" id="pyu-nV-WZy"/>
+                    <constraint firstItem="EVw-f5-0mx" firstAttribute="trailing" secondItem="yQv-8D-miH" secondAttribute="trailingMargin" id="vaG-OM-q9w"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="cataImageView" destination="EVw-f5-0mx" id="jIk-Q8-EHB"/>
+                <outlet property="cataLabel" destination="ahW-5a-FcV" id="SBr-BF-zCQ"/>
+            </connections>
+            <point key="canvasLocation" x="589" y="768"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cataShadowBannerImage" width="476" height="59"/>
+    </resources>
+</document>

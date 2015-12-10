@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AD1E0298465F21F576CDC925307FD1178401CD46",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C0A73AC957763333EE34A2BB3EED7C9EFFF70C8B" : 0,
+    "AD1E0298465F21F576CDC925307FD1178401CD46" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "055C0713-2CF9-43E2-B57A-40302942BC15",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C0A73AC957763333EE34A2BB3EED7C9EFFF70C8B" : "SnapShot\/SnapShot\/",
+    "AD1E0298465F21F576CDC925307FD1178401CD46" : "SnapShot\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SnapShot",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SnapShot.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SnapShotKACHA\/SnapShot.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD1E0298465F21F576CDC925307FD1178401CD46"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/qqliteng\/SnapShot.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C0A73AC957763333EE34A2BB3EED7C9EFFF70C8B"
+    }
+  ]
+}

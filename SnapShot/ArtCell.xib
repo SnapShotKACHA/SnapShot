@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="artCell" selectionStyle="default" indentationWidth="10" rowHeight="241" id="5Ne-sR-Gdi" customClass="ArtCell" customModule="SnapShot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Ne-sR-Gdi" id="bPQ-pm-rla">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="237.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cataImageDefault" translatesAutoresizingMaskIntoConstraints="NO" id="qyE-P4-Kut">
+                        <rect key="frame" x="21" y="13" width="372" height="180"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-OT-qOk">
+                        <rect key="frame" x="77" y="204" width="21" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uip-Em-dvV">
+                        <rect key="frame" x="214" y="204" width="21" height="22"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="R2t-db-3KH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBW-oF-gfa">
+                        <rect key="frame" x="51" y="202" width="25" height="25"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="J9l-n5-2xb"/>
+                            <constraint firstAttribute="width" constant="25" id="ebx-vN-JiQ"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="likeBtn"/>
+                        <connections>
+                            <action selector="likeAction:" destination="5Ne-sR-Gdi" eventType="touchUpInside" id="CnR-jk-vq4"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-DE-SL7">
+                        <rect key="frame" x="186" y="202" width="25" height="25"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="3qD-X1-ClZ"/>
+                            <constraint firstAttribute="width" constant="25" id="D9p-gQ-0Ho"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="commentBtn"/>
+                        <connections>
+                            <action selector="commentAction:" destination="5Ne-sR-Gdi" eventType="touchUpInside" id="YL5-4O-KQG"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-3C-fPt">
+                        <rect key="frame" x="327" y="202" width="25" height="25"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="jxO-sQ-WyG"/>
+                            <constraint firstAttribute="width" constant="25" id="npm-sn-GeY"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="repostBtn"/>
+                        <connections>
+                            <action selector="repostAction:" destination="5Ne-sR-Gdi" eventType="touchUpInside" id="Wza-zf-4Qp"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="Uip-Em-dvV" firstAttribute="leading" secondItem="SLB-DE-SL7" secondAttribute="trailing" constant="3" id="8Y0-YL-vdl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Uip-Em-dvV" secondAttribute="bottom" constant="3.5" id="9GJ-iJ-P7l"/>
+                    <constraint firstItem="mc2-OT-qOk" firstAttribute="leading" secondItem="jBW-oF-gfa" secondAttribute="trailing" constant="1" id="BFI-zM-cdm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="vgf-3C-fPt" secondAttribute="bottom" constant="2" id="EtU-fM-u7O"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jBW-oF-gfa" secondAttribute="bottom" constant="2" id="FWp-y6-dfz"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mc2-OT-qOk" secondAttribute="bottom" constant="4" id="FZF-Ol-Jsa"/>
+                    <constraint firstItem="mc2-OT-qOk" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="11" id="H26-PO-vxi"/>
+                    <constraint firstItem="vgf-3C-fPt" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="9" id="L5f-Gd-0p6"/>
+                    <constraint firstItem="qyE-P4-Kut" firstAttribute="leading" secondItem="bPQ-pm-rla" secondAttribute="leadingMargin" constant="13" id="LC1-EN-voP"/>
+                    <constraint firstItem="mc2-OT-qOk" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="14" id="O0v-he-Yl0"/>
+                    <constraint firstItem="qyE-P4-Kut" firstAttribute="top" secondItem="bPQ-pm-rla" secondAttribute="topMargin" constant="5" id="UL8-Lx-jhe"/>
+                    <constraint firstItem="vgf-3C-fPt" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="12" id="WEt-gU-Dfd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vgf-3C-fPt" secondAttribute="trailing" constant="54" id="YtC-7Y-iQx"/>
+                    <constraint firstItem="Uip-Em-dvV" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="11" id="cqv-sS-Fcw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SLB-DE-SL7" secondAttribute="bottom" constant="2" id="cw7-O5-dkP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qyE-P4-Kut" secondAttribute="trailing" constant="13" id="ddY-xS-q6P"/>
+                    <constraint firstItem="jBW-oF-gfa" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="9" id="eOn-fp-Nsx"/>
+                    <constraint firstItem="jBW-oF-gfa" firstAttribute="leading" secondItem="bPQ-pm-rla" secondAttribute="leadingMargin" constant="43" id="gvz-zh-1X8"/>
+                    <constraint firstItem="vgf-3C-fPt" firstAttribute="leading" secondItem="Uip-Em-dvV" secondAttribute="trailing" priority="999" constant="92" id="kZk-KT-PrB"/>
+                    <constraint firstItem="SLB-DE-SL7" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="9" id="ltG-PQ-cbb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Uip-Em-dvV" secondAttribute="bottom" constant="4" id="qXR-dd-nHC"/>
+                    <constraint firstItem="SLB-DE-SL7" firstAttribute="leading" secondItem="mc2-OT-qOk" secondAttribute="trailing" constant="88" id="rdw-A8-5p6"/>
+                    <constraint firstItem="Uip-Em-dvV" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="7" id="vCk-JQ-7aM"/>
+                    <constraint firstItem="SLB-DE-SL7" firstAttribute="top" secondItem="qyE-P4-Kut" secondAttribute="bottom" constant="12" id="wdr-Yb-SQk"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="O0v-he-Yl0"/>
+                        <exclude reference="wdr-Yb-SQk"/>
+                        <exclude reference="9GJ-iJ-P7l"/>
+                        <exclude reference="vCk-JQ-7aM"/>
+                        <exclude reference="WEt-gU-Dfd"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="artCellCommentBtn" destination="SLB-DE-SL7" id="Df3-Eh-LIp"/>
+                <outlet property="artCellCommentLabel" destination="Uip-Em-dvV" id="Gcz-7w-NII"/>
+                <outlet property="artCellLikeBtn" destination="jBW-oF-gfa" id="0xS-7j-EBO"/>
+                <outlet property="artCellLikeLabel" destination="mc2-OT-qOk" id="GIm-BL-ujI"/>
+                <outlet property="artImageView" destination="qyE-P4-Kut" id="l2q-1Q-tM0"/>
+                <outlet property="repostBtn" destination="vgf-3C-fPt" id="4JW-2U-VwB"/>
+            </connections>
+            <point key="canvasLocation" x="832" y="483"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cataImageDefault" width="476" height="240"/>
+        <image name="commentBtn" width="27" height="24"/>
+        <image name="likeBtn" width="21" height="19"/>
+        <image name="repostBtn" width="26" height="23"/>
+    </resources>
+</document>
