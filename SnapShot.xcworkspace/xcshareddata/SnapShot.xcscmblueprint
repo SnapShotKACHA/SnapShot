@@ -1,16 +1,16 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AD1E0298465F21F576CDC925307FD1178401CD46",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9F6F1AE6FC4D357CE8D18F7062F708B808FA08CF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "C0A73AC957763333EE34A2BB3EED7C9EFFF70C8B" : 0,
-    "AD1E0298465F21F576CDC925307FD1178401CD46" : 0
+    "9F6F1AE6FC4D357CE8D18F7062F708B808FA08CF" : 0,
+    "C0A73AC957763333EE34A2BB3EED7C9EFFF70C8B" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "055C0713-2CF9-43E2-B57A-40302942BC15",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "C0A73AC957763333EE34A2BB3EED7C9EFFF70C8B" : "SnapShot\/SnapShot\/",
-    "AD1E0298465F21F576CDC925307FD1178401CD46" : "SnapShot\/"
+    "9F6F1AE6FC4D357CE8D18F7062F708B808FA08CF" : "SnapShot\/",
+    "C0A73AC957763333EE34A2BB3EED7C9EFFF70C8B" : "SnapShot\/SnapShot\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "SnapShot",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -19,7 +19,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SnapShotKACHA\/SnapShot.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD1E0298465F21F576CDC925307FD1178401CD46"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F6F1AE6FC4D357CE8D18F7062F708B808FA08CF"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/qqliteng\/SnapShot.git",
