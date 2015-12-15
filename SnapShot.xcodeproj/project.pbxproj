@@ -73,6 +73,7 @@
 		678352F71C0F1DCE00529B0F /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678352F61C0F1DCE00529B0F /* CouponCell.xib */; };
 		67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */; };
 		67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF31BEA50020049BD54 /* RegisterViewController.swift */; };
+		67B8C1DA1C2049DD003ACC33 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B8C1D91C2049DD003ACC33 /* OrderDetailViewController.swift */; };
 		B05B60A36145281EB59C405C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DFFBBF8D222EA135C2405F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -171,6 +172,7 @@
 		678352F61C0F1DCE00529B0F /* CouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
 		67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewContoller.swift; sourceTree = "<group>"; };
 		67A06FF31BEA50020049BD54 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		67B8C1D91C2049DD003ACC33 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 				027162A31C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift */,
 				676917B11C0DD86B00B73A1F /* CouponViewController.swift */,
 				027E88231C117CA200E9EB90 /* MyOrderViewController.swift */,
+				67B8C1D91C2049DD003ACC33 /* OrderDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */,
 				025659371BFDAF6A00057A72 /* HttpControl.swift in Sources */,
 				67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */,
+				67B8C1DA1C2049DD003ACC33 /* OrderDetailViewController.swift in Sources */,
 				027162A61C10173000A8F22B /* CameraCell.swift in Sources */,
 				02BD41E41BF475560078451A /* GroupCell.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
