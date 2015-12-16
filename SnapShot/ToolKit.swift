@@ -89,3 +89,19 @@ extension String  {
         return String(format: hash as String)
     }
 }
+
+extension NSDate {
+//    let numberOfDaysInCurrentMonth: Int?
+//    var firstDayOfCurrentMonth: NSDate?
+//    var weekly: Int?
+
+    func numberOfDaysInCurrentMonth() -> Int {
+        return NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.Day, inUnit: NSCalendarUnit.Month, forDate: self).length
+    }
+    
+    func firstDayOfCurrentMonth() -> NSDate {
+        let startDate:NSDate?
+        NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.Month, startDate: startDate , interval: nil, forDate: self)
+        return startDate!
+    }
+}

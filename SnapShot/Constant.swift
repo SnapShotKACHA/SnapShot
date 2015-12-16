@@ -37,6 +37,7 @@ let SCREEN_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.height
 //字体颜色
 let TEXT_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
 let TEXT_COLOR_LIGHT_GREY:UIColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1)
+let BACKGROUND_COLOR_GREY:UIColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
 let NAVIGATION_BAR_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
 let SP_BLUE_COLOR:UIColor = UIColor(red: 0/255, green: 85/255, blue: 170/255, alpha: 1)
 let HEITI:String = "Heiti SC"

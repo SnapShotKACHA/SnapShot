@@ -16,7 +16,7 @@ class ProfileDetailTableView: UITableView, UITableViewDataSource, UITableViewDel
         
         self.dataSource = self
         self.delegate = self
-        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 650)
+        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 700)
         let nibValueCell = UINib(nibName: "ValueCell", bundle: nil)
         let nibCameraCell = UINib(nibName: "CameraCell", bundle: nil)
         let nibServiceCell = UINib(nibName: "ServiceCell", bundle: nil)
@@ -83,6 +83,10 @@ class ProfileDetailTableView: UITableView, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
+        if section == 2 {
+            return 90
+        } else {
+            return 0
+        }
     }
 }

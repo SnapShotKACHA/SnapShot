@@ -16,7 +16,7 @@ class CommentDisplayTableView: UITableView, UITableViewDelegate, UITableViewData
         self.dataSource = self
         self.delegate = self
         self.sectionNumber = numberOfSection
-        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 600)
+        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 700)
         let nibCommentCell = UINib(nibName: "CommentCell", bundle: nil)
         self.registerNib(nibCommentCell, forCellReuseIdentifier: "commentCell")
     }
@@ -55,7 +55,11 @@ class CommentDisplayTableView: UITableView, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
+        if section == 2 {
+            return 90
+        } else {
+            return 0
+        }
     }
 
 }

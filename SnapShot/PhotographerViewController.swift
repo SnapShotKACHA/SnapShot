@@ -24,7 +24,7 @@ class PhotographerViewController: BasicViewController {
     var photographerDetailTableView: PhotographerDetailTableView?
     var artsDisplayTableView: ArtsDisplayTableView?
     var commentDisplayTableVeiw: CommentDisplayTableView?
-    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 45, width: SCREEN_WIDTH - 40, height: 40))
+    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
     
     
     var artsImageArray: [String]!
@@ -42,6 +42,8 @@ class PhotographerViewController: BasicViewController {
         self.startServiceButton.tintColor = UIColor.whiteColor()
         self.startServiceButton.setTitle("发起活动", forState: .Normal)
         self.startServiceButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
+        self.startServiceButton.layer.borderWidth = 12
+        self.startServiceButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
         
         let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 260)
         

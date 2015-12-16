@@ -53,6 +53,7 @@
 		0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */; };
 		028F209C1C0D3FA600AAAF68 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F209B1C0D3FA600AAAF68 /* ArtCell.swift */; };
 		028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */; };
+		02923D3F1C1FB41D002E8C2B /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */; };
 		0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF41BFEB27A007E8435 /* BaseTask.swift */; };
 		0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */; };
 		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
@@ -147,6 +148,7 @@
 		0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationBar.swift; sourceTree = "<group>"; };
 		028F209B1C0D3FA600AAAF68 /* ArtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtCell.xib; sourceTree = "<group>"; };
+		02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		0297AFF41BFEB27A007E8435 /* BaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
 		0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
 		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				027162A31C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift */,
 				676917B11C0DD86B00B73A1F /* CouponViewController.swift */,
 				027E88231C117CA200E9EB90 /* MyOrderViewController.swift */,
+				02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */,
 				02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */,
 				0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */,
+				02923D3F1C1FB41D002E8C2B /* CalenderViewController.swift in Sources */,
 				02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */,
 				027F162D1BC762C700D9B721 /* SnapShot.xcdatamodeld in Sources */,
 				676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */,

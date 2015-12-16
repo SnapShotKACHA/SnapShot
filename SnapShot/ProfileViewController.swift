@@ -27,14 +27,14 @@ class ProfileViewController: BasicViewController {
     var profileDetailTableView: ProfileDetailTableView?
     var artsDisplayTableView: ArtsDisplayTableView?
     var commentDisplayTableVeiw: CommentDisplayTableView?
-    var appointButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 45, width: SCREEN_WIDTH - 40, height: 40))
-
+    var appointButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
+    
     
     var artsImageArray: [String]!
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true
-        
+      
         ViewWidgest.navigatiobBarButtomButton([self.profileBtn, self.artsDisplayBtn, self.commentDisplayBtn], titleArray: ["基本资料","作品展示","用户评论"], targetArrary: ["profileBtnAction","artsDisplayBtnAction","commentDisplayBtnAction"], viewController: self, yPosition: 227)
         leftBtn.addTarget(self, action: "pushView", forControlEvents: UIControlEvents.TouchUpInside)
         self.profileBtn.selected = true
@@ -43,8 +43,10 @@ class ProfileViewController: BasicViewController {
         self.appointButton.tintColor = UIColor.whiteColor()
         self.appointButton.setTitle("立即预约", forState: .Normal)
         self.appointButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
+        self.appointButton.layer.borderWidth = 12
+        self.appointButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
         
-        let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 260)
+        let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 245)
         
         self.profileDetailTableView = ProfileDetailTableView(frame: tableRect, style: UITableViewStyle.Grouped)
         self.artsDisplayTableView = ArtsDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 5)

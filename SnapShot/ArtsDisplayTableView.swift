@@ -16,7 +16,7 @@ class ArtsDisplayTableView: UITableView, UITableViewDataSource, UITableViewDeleg
         self.dataSource = self
         self.delegate = self
         self.sectionNumber = numberOfSection
-        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 600)
+        self.contentSize = CGSize(width: SCREEN_WIDTH, height: 700)
         let nibArtCell = UINib(nibName: "ArtCell", bundle: nil)
         self.registerNib(nibArtCell, forCellReuseIdentifier: "artCell")
     }
@@ -55,7 +55,11 @@ class ArtsDisplayTableView: UITableView, UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
+        if section == 2 {
+            return 90
+        } else {
+            return 0
+        }
     }
 
 }
