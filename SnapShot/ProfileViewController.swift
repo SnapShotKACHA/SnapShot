@@ -28,7 +28,7 @@ class ProfileViewController: BasicViewController {
     var artsDisplayTableView: ArtsDisplayTableView?
     var commentDisplayTableVeiw: CommentDisplayTableView?
     var appointButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
-    
+    var commentButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
     
     var artsImageArray: [String]!
     
@@ -45,6 +45,13 @@ class ProfileViewController: BasicViewController {
         self.appointButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.appointButton.layer.borderWidth = 12
         self.appointButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
+        
+        self.commentButton.backgroundColor = SP_BLUE_COLOR
+        self.commentButton.tintColor = UIColor.whiteColor()
+        self.commentButton.setTitle("立即预约", forState: .Normal)
+        self.commentButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
+        self.commentButton.layer.borderWidth = 12
+        self.commentButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
         
         let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 245)
         
@@ -94,7 +101,7 @@ class ProfileViewController: BasicViewController {
             self.commentDisplayTableVeiw?.removeFromSuperview()
             self.view.addSubview(self.artsDisplayTableView!)
             self.appointButton.removeFromSuperview()
-            self.view.addSubview(self.appointButton)
+            
         }
     }
     
@@ -107,7 +114,7 @@ class ProfileViewController: BasicViewController {
             self.artsDisplayTableView?.removeFromSuperview()
             self.view.addSubview(self.commentDisplayTableVeiw!)
             self.appointButton.removeFromSuperview()
-            self.view.addSubview(self.appointButton)
+            self.view.addSubview(self.commentButton)
         }
     
     }
