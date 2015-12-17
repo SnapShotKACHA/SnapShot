@@ -26,6 +26,8 @@
 		0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256593A1BFDB69D00057A72 /* Parameters.swift */; };
 		0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256646C1BC8A02B00A04D21 /* LeftViewController.swift */; };
 		0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265B5E01BFF08460024586B /* UT8Encoding.swift */; };
+		0265C8AC1C21337900F9914B /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265C8AB1C21337900F9914B /* OrderInfoCell.swift */; };
+		0265C8AE1C21338E00F9914B /* OrderInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0265C8AD1C21338E00F9914B /* OrderInfoCell.xib */; };
 		026B97881C0C3AA400C853F0 /* ProfileDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B97871C0C3AA400C853F0 /* ProfileDetailTableView.swift */; };
 		026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B97891C0C3AF000C853F0 /* ArtsDisplayTableView.swift */; };
 		026B978C1C0C3B0600C853F0 /* CommentDisplayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B978B1C0C3B0600C853F0 /* CommentDisplayTableView.swift */; };
@@ -53,6 +55,8 @@
 		0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */; };
 		028F209C1C0D3FA600AAAF68 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F209B1C0D3FA600AAAF68 /* ArtCell.swift */; };
 		028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */; };
+		029018741C210EE20086FC61 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029018721C210EE20086FC61 /* OrderDetailViewController.swift */; };
+		029018751C210EE20086FC61 /* ProfileInfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029018731C210EE20086FC61 /* ProfileInfoTableView.swift */; };
 		02923D3F1C1FB41D002E8C2B /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */; };
 		0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF41BFEB27A007E8435 /* BaseTask.swift */; };
 		0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */; };
@@ -74,7 +78,6 @@
 		678352F71C0F1DCE00529B0F /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678352F61C0F1DCE00529B0F /* CouponCell.xib */; };
 		67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */; };
 		67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A06FF31BEA50020049BD54 /* RegisterViewController.swift */; };
-		67B8C1DA1C2049DD003ACC33 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B8C1D91C2049DD003ACC33 /* OrderDetailViewController.swift */; };
 		B05B60A36145281EB59C405C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DFFBBF8D222EA135C2405F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -116,6 +119,8 @@
 		0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
 		0256646C1BC8A02B00A04D21 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		0265B5E01BFF08460024586B /* UT8Encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UT8Encoding.swift; sourceTree = "<group>"; };
+		0265C8AB1C21337900F9914B /* OrderInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
+		0265C8AD1C21338E00F9914B /* OrderInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderInfoCell.xib; sourceTree = "<group>"; };
 		026B97871C0C3AA400C853F0 /* ProfileDetailTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailTableView.swift; sourceTree = "<group>"; };
 		026B97891C0C3AF000C853F0 /* ArtsDisplayTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtsDisplayTableView.swift; sourceTree = "<group>"; };
 		026B978B1C0C3B0600C853F0 /* CommentDisplayTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentDisplayTableView.swift; sourceTree = "<group>"; };
@@ -149,6 +154,8 @@
 		0289C2F11BDF7A9000943ABF /* SPNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationBar.swift; sourceTree = "<group>"; };
 		028F209B1C0D3FA600AAAF68 /* ArtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		028F209D1C0D3FBB00AAAF68 /* ArtCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtCell.xib; sourceTree = "<group>"; };
+		029018721C210EE20086FC61 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		029018731C210EE20086FC61 /* ProfileInfoTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInfoTableView.swift; sourceTree = "<group>"; };
 		02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		0297AFF41BFEB27A007E8435 /* BaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
 		0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
@@ -174,7 +181,6 @@
 		678352F61C0F1DCE00529B0F /* CouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
 		67A06FF11BEA47CA0049BD54 /* LoginViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewContoller.swift; sourceTree = "<group>"; };
 		67A06FF31BEA50020049BD54 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		67B8C1D91C2049DD003ACC33 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,15 @@
 				02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		0265C8AA1C21327800F9914B /* OrderDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				0265C8AB1C21337900F9914B /* OrderInfoCell.swift */,
+				0265C8AD1C21338E00F9914B /* OrderInfoCell.xib */,
+			);
+			name = OrderDetailCell;
 			sourceTree = "<group>";
 		};
 		026D1E0D1C117571001E63BF /* ProfileCells */ = {
@@ -288,6 +303,7 @@
 		0273CA521BCCADFE00918455 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				029018731C210EE20086FC61 /* ProfileInfoTableView.swift */,
 				027F16261BC762C700D9B721 /* FrontViewController.swift */,
 				0256646C1BC8A02B00A04D21 /* LeftViewController.swift */,
 				024C7D3D1BD4EE0A002666FB /* SPNavigationViewController.swift */,
@@ -307,6 +323,7 @@
 				027162A31C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift */,
 				676917B11C0DD86B00B73A1F /* CouponViewController.swift */,
 				027E88231C117CA200E9EB90 /* MyOrderViewController.swift */,
+				029018721C210EE20086FC61 /* OrderDetailViewController.swift */,
 				02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */,
 			);
 			name = Controllers;
@@ -383,6 +400,7 @@
 		0284B2C51BCBA7B8007779A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0265C8AA1C21327800F9914B /* OrderDetailCell */,
 				026D1E121C11761D001E63BF /* SearchCells */,
 				026D1E111C11760D001E63BF /* MainPageCells */,
 				026D1E0D1C117571001E63BF /* ProfileCells */,
@@ -544,6 +562,7 @@
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */,
 				026D1E091C117451001E63BF /* OrderCell.xib in Resources */,
+				0265C8AE1C21338E00F9914B /* OrderInfoCell.xib in Resources */,
 				028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */,
 				02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */,
 				024E862E1BE8B2CD00E44628 /* FrontCell.xib in Resources */,
@@ -627,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029018741C210EE20086FC61 /* OrderDetailViewController.swift in Sources */,
 				023994E01BE34A5E0010122F /* SearchViewController.swift in Sources */,
 				021C1C201BF06CFD0064DC45 /* BasicViewController.swift in Sources */,
 				026B978C1C0C3B0600C853F0 /* CommentDisplayTableView.swift in Sources */,
@@ -651,7 +671,6 @@
 				0289C2F21BDF7A9000943ABF /* SPNavigationBar.swift in Sources */,
 				025659371BFDAF6A00057A72 /* HttpControl.swift in Sources */,
 				67A06FF41BEA50020049BD54 /* RegisterViewController.swift in Sources */,
-				67B8C1DA1C2049DD003ACC33 /* OrderDetailViewController.swift in Sources */,
 				027162A61C10173000A8F22B /* CameraCell.swift in Sources */,
 				02BD41E41BF475560078451A /* GroupCell.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
@@ -668,9 +687,11 @@
 				02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */,
 				027F162D1BC762C700D9B721 /* SnapShot.xcdatamodeld in Sources */,
 				676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */,
+				029018751C210EE20086FC61 /* ProfileInfoTableView.swift in Sources */,
 				028F209C1C0D3FA600AAAF68 /* ArtCell.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
 				67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */,
+				0265C8AC1C21337900F9914B /* OrderInfoCell.swift in Sources */,
 				027162A41C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift in Sources */,
 				025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */,
 				02715E061BCE59BA008A11D7 /* Constant.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // Universe Varible
-var isLogin = false
+var isLogin:Bool = true
 var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
 //各种高度的变量

@@ -19,7 +19,8 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         self.title = "优惠活动"
-        self.couponTableView = UITableView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 1000), style: .Grouped)
+        self.couponTableView = UITableView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT), style: .Grouped)
+        self.couponTableView?.contentSize = CGSize(width: SCREEN_WIDTH, height: 700)
         self.couponTableView?.delegate = self
         self.couponTableView?.dataSource = self
         let nibCouponCell =  UINib(nibName: "CouponCell", bundle: nil)
@@ -50,7 +51,13 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
             couponLabel.font = UIFont(name: HEITI, size: 25)
             
             
-            let checkDetailLabel = UILabel(frame: CGRect(x: 20, y: 200, width: 80, height: 40))
+            let couponInfoLabel = UILabel(frame: CGRect(x: 50, y: 80, width: SCREEN_HEIGHT - 100, height: 80))
+            couponInfoLabel.text = "为好友的第一次拍摄送上50元红包\n好友预约拍摄时，您也将自动获得50元红包"
+            couponInfoLabel.textColor = UIColor.whiteColor()
+//            couponInfoLabel.textAlignment = .Center
+            
+            
+            let checkDetailLabel = UILabel(frame: CGRect(x: 20, y: 180, width: 80, height: 40))
             checkDetailLabel.text = "查看详情"
             checkDetailLabel.textColor = TEXT_COLOR_GREY
             checkDetailLabel.tintColor = TEXT_COLOR_GREY
@@ -60,6 +67,7 @@ class CouponViewController: UIViewController, UITableViewDataSource, UITableView
             cell?.addSubview(headerImageView)
             cell?.addSubview(headerCoverImageView)
             cell?.addSubview(couponLabel)
+            cell?.addSubview(couponInfoLabel)
             cell?.addSubview(checkDetailLabel)
         
             return cell!

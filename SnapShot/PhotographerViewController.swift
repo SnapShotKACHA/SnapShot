@@ -25,7 +25,7 @@ class PhotographerViewController: BasicViewController {
     var artsDisplayTableView: ArtsDisplayTableView?
     var commentDisplayTableVeiw: CommentDisplayTableView?
     var startServiceButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
-    
+    var shareButton = ViewWidgest.addRightButton("shareImage", imageAfter: "shareImage")
     
     var artsImageArray: [String]!
     
@@ -35,7 +35,7 @@ class PhotographerViewController: BasicViewController {
         ViewWidgest.navigatiobBarButtomButton([self.profileBtn, self.artsDisplayBtn, self.commentDisplayBtn], titleArray: ["基本资料","作品展示","用户评论"], targetArrary: ["profileBtnAction","artsDisplayBtnAction","commentDisplayBtnAction"], viewController: self, yPosition: 227)
         self.profileBtn.selected = true
         
-        self.navigationController?.navigationBar.addSubview(ViewWidgest.addRightButton("shareImage", imageAfter: "shareImage"))
+        self.navigationController?.navigationBar.addSubview(self.shareButton)
         
         
         self.startServiceButton.backgroundColor = SP_BLUE_COLOR
@@ -65,7 +65,7 @@ class PhotographerViewController: BasicViewController {
     }
     
     override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = false
+        self.shareButton.removeFromSuperview()
     }
     
     override func didReceiveMemoryWarning() {

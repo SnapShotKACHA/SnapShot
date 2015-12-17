@@ -51,7 +51,6 @@ class GroupDetailViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let identifier = "upperCell"
-//            var upperCell: UITableViewCell = groupDetailTableView.dequeueReusableCellWithIdentifier(identifier)!
             let upperCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: identifier)
             upperCell.frame = CGRectMake(0, 44, CGFloat(SCREEN_WIDTH), DETAIL_CELL_HEIGHT)
             upperCell.backgroundColor = UIColor.whiteColor()

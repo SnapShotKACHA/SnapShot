@@ -29,6 +29,7 @@ class ProfileViewController: BasicViewController {
     var commentDisplayTableVeiw: CommentDisplayTableView?
     var appointButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
     var commentButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
+    var commentView  = UIView(frame: CGRect(x: 20, y: SCREEN_HEIGHT/2 - 40, width: SCREEN_WIDTH-40, height: 180))
     
     var artsImageArray: [String]!
     
@@ -45,13 +46,15 @@ class ProfileViewController: BasicViewController {
         self.appointButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.appointButton.layer.borderWidth = 12
         self.appointButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
+        self.appointButton.addTarget(self, action: "makeAppointmentAction", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.commentButton.backgroundColor = SP_BLUE_COLOR
         self.commentButton.tintColor = UIColor.whiteColor()
-        self.commentButton.setTitle("立即预约", forState: .Normal)
+        self.commentButton.setTitle("发表评论", forState: .Normal)
         self.commentButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.commentButton.layer.borderWidth = 12
         self.commentButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
+        self.commentButton.addTarget(self, action: "makeCommentAction", forControlEvents: UIControlEvents.TouchUpInside)
         
         let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 245)
         
@@ -123,5 +126,38 @@ class ProfileViewController: BasicViewController {
         self.navigationController!.popToRootViewControllerAnimated(true)
     }
 
+    func makeAppointmentAction() {
+        let orderDetailViewController = OrderDetailViewController(title: "订单详情")
+        self.navigationController?.pushViewController(orderDetailViewController, animated: true)
+    }
     
+    func makeCommentAction() {
+        
+        commentView.backgroundColor = TEXT_COLOR_LIGHT_GREY
+        let inputField = UITextField (frame: CGRect(x: 10, y: 10, width: commentView.frame.size.width - 20, height: 110))
+        inputField.placeholder = "请输入评论"
+        inputField.backgroundColor = UIColor.whiteColor()
+        commentView.addSubview(inputField)
+        let makeComment = UIButton(frame: CGRect(x: 40, y: 130, width: 100, height: 40))
+        makeComment.backgroundColor = SP_BLUE_COLOR
+        makeComment.setTitle("发表评论", forState:  UIControlState.Normal)
+        makeComment.addTarget(self, action: "makeCommentButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        commentView.addSubview(makeComment)
+        
+        let cancelComment = UIButton(frame: CGRect(x: 180, y: 130, width: 100, height: 40))
+        cancelComment.backgroundColor = SP_BLUE_COLOR
+        cancelComment.setTitle("取消", forState:  UIControlState.Normal)
+        cancelComment.addTarget(self, action: "cancelCommentButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        commentView.addSubview(cancelComment)
+        
+        self.view.addSubview(commentView)
+    }
+    
+    func makeCommentButtonAction() {
+        commentView.removeFromSuperview()
+    }
+    
+    func cancelCommentButtonAction() {
+        commentView.removeFromSuperview()
+    }
 }

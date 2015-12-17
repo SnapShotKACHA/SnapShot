@@ -55,13 +55,13 @@ class CataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var cataDetailCell: CataDetailCell?
         
         if indexPath.section == 0 && indexPath.row == 0{
-//            cataCell = CataCell()
+
             cataCell = cataTableView.dequeueReusableCellWithIdentifier("cataCell") as? CataCell
             cataCell?.cataLabel.text = "萌娃外拍"
             cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")
             return cataCell!
         } else {
-//            cataDetailCell = CataDetailCell()
+
             cataDetailCell = cataTableView.dequeueReusableCellWithIdentifier("cataDetailCell") as? CataDetailCell
             cataDetailCell?.cataImage1.image = UIImage(named: "cataImageDefault")
             cataDetailCell?.cataImage2.image = UIImage(named: "cataImageDefault")

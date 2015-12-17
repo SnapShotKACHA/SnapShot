@@ -99,9 +99,9 @@ extension NSDate {
         return NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.Day, inUnit: NSCalendarUnit.Month, forDate: self).length
     }
     
-    func firstDayOfCurrentMonth() -> NSDate {
-        let startDate:NSDate?
-        NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.Month, startDate: startDate , interval: nil, forDate: self)
-        return startDate!
-    }
+//    func firstDayOfCurrentMonth() -> NSDate {
+//        let startDate:NSDate?
+//        NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.Month, startDate: startDate , interval: nil, forDate: self)
+//        return startDate!
+//    }
 }

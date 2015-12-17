@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate {
+class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate, HttpProtocol {
     var navBtn: UIButton?
+    var imageUrl: [String]?
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
@@ -25,7 +26,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.getHomePageImage()
         
         mainTableView.registerNib(UINib(nibName: "FrontCell", bundle: nil), forCellReuseIdentifier: "frontCell")
         mainTableView.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
@@ -122,7 +123,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return (self.imageUrl?.count)!
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -140,6 +141,37 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    func getHomePageImage() {
+        let timeStamp = ToolKit.getTimeStamp()
+        let sig = "GEThttp://111.13.47.169:8080/materials/homepagestime=\(timeStamp)f4a8yoxG9F6b1gUB"
+        let urlAssembler = UrlAssembler(taskUrl: "http://111.13.47.169:8080/materials/homepages", parameterDictionary: ["time": timeStamp], signiture: sig.md5)
+        let httpControl = HttpControl(delegate: self)
+        httpControl.onRequest(urlAssembler.url)
+    }
+    
+    func didRecieveResults(results: AnyObject) {
+        print(results)
+        if JSON(results)["succeed"].int! == 1 {
+            print(JSON(results)["data"][0])
+            
+            var sampleString: String = JSON(results)["data"]["items"].string!
+            sampleString = sampleString.stringByReplacingOccurrencesOfString("[", withString: "")
+            sampleString = sampleString.stringByReplacingOccurrencesOfString("]", withString: "")
+            sampleString = sampleString.stringByReplacingOccurrencesOfString("\"", withString: "")
+            self.imageUrl = sampleString.componentsSeparatedByString(",")
+        } else {
+            
+            
+            didRecieveError("requestFailed")
+        }
+        print("httpProtocol is called")
+    }
+    
+    func didRecieveError(error: AnyObject) {
+        print("httpProtocol is called")
+    }
+
     
 }
 

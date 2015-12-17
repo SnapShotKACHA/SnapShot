@@ -65,7 +65,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
             self.profileImage.hidden = true
             self.userIDLabel.hidden = true
             
-            self.view.addSubview(self.loginButton!)
+//            self.view.addSubview(self.loginButton!)
             
         } else {
             self.loginButton?.removeFromSuperview()
@@ -73,7 +73,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
             self.loginButton?.frame = CGRect(x: -10, y: -10, width: 0, height: 0)
             self.profileImage.hidden = false
             self.userIDLabel.hidden = false
-            self.userIDLabel.text = userDefaults.objectForKey("username") as? String
+            self.userIDLabel.text = "Maria玛丽娅"
+            self.view.addSubview(self.userIDLabel)
             self.changeStatuesButton.hidden = false
         }
 

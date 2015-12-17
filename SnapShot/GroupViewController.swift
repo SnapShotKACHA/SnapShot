@@ -16,7 +16,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var priceSortButton: UIButton?
     var distanceSortButton: UIButton?
     var dateSortButton: UIButton?
-    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
+    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
     
     override func viewWillAppear(animated: Bool) {
         if self.navBtn == nil {
@@ -39,6 +39,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.startServiceButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.startServiceButton.layer.borderWidth = 12
         self.startServiceButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
+        self.view.addSubview(self.startServiceButton)
     }
     
     override func viewDidLoad() {
@@ -85,7 +86,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
@@ -98,7 +99,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     
