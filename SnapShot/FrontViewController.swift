@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate, HttpProtocol {
     var navBtn: UIButton?
-    var imageUrl: [String]?
+    var imageUrl: [String] = []
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
@@ -20,14 +20,14 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
         self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
         self.navigationController?.navigationBar.addSubview(self.navBtn!)
+        
+        self.getHomePageImage()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.getHomePageImage()
-        
         mainTableView.registerNib(UINib(nibName: "FrontCell", bundle: nil), forCellReuseIdentifier: "frontCell")
         mainTableView.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
         mainTableView.separatorColor = UIColor.clearColor()
@@ -86,22 +86,17 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         } else {
             
-            let tmp = tableView.dequeueReusableCellWithIdentifier("frontCell")
+            let frontCell = self.mainTableView.dequeueReusableCellWithIdentifier("frontCell") as? FrontCell
+            let tapRecognizer = UITapGestureRecognizer(target: self, action: "pushToPhotograher")
+            frontCell!.userIDLabel.userInteractionEnabled = true
+            print(indexPath.row)
             
-            if tmp == nil {
-                cell = FrontCell(style: UITableViewCellStyle.Default, reuseIdentifier: "frontCell")
-            } else {
-                cell = tmp!
+            if self.imageUrl.count > 0 {
+                print(self.imageUrl[indexPath.row])
+                frontCell!.artImageView.hnk_setImageFromURL(NSURL(string: self.imageUrl[indexPath.section])!)
             }
-            
-            _ = cell as! FrontCell
-            
-            if indexPath.section == 0 {
-                cell = doReturnCell(indexPath.row - 1)
-            } else {
-                cell = self.doReturnCell(indexPath.row)
-            }
-            return cell
+            frontCell!.addGestureRecognizer(tapRecognizer)
+            return frontCell!
         }
     }
 
@@ -111,6 +106,11 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = mainTableView.dequeueReusableCellWithIdentifier("frontCell") as! FrontCell
         let tapRecognizer = UITapGestureRecognizer(target: self, action: "pushToPhotograher")
         cell.userIDLabel.userInteractionEnabled = true
+        print(row)
+        print(self.imageUrl)
+        if self.imageUrl.count > 0 {
+            cell.artImageView.hnk_setImageFromURL(NSURL(string: self.imageUrl[row])!)
+        }
         cell.addGestureRecognizer(tapRecognizer)
         return cell
     }
@@ -123,7 +123,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return (self.imageUrl?.count)!
+        return 6
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -160,6 +160,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             sampleString = sampleString.stringByReplacingOccurrencesOfString("]", withString: "")
             sampleString = sampleString.stringByReplacingOccurrencesOfString("\"", withString: "")
             self.imageUrl = sampleString.componentsSeparatedByString(",")
+            self.mainTableView.reloadData()
         } else {
             
             

@@ -24,7 +24,7 @@ class PhotographerViewController: BasicViewController {
     var photographerDetailTableView: PhotographerDetailTableView?
     var artsDisplayTableView: ArtsDisplayTableView?
     var commentDisplayTableVeiw: CommentDisplayTableView?
-    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
+    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH - 40, height: 60))
     var shareButton = ViewWidgest.addRightButton("shareImage", imageAfter: "shareImage")
     
     var artsImageArray: [String]!

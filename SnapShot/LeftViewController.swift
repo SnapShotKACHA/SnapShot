@@ -34,13 +34,16 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         self.initLeftViewController()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        self.initLeftViewController()
+    override func viewWillDisappear(animated: Bool) {
+        self.loginButton?.removeFromSuperview()
     }
+//    override func viewDidAppear(animated: Bool) {
+//        self.initLeftViewController()
+//    }
     
     override func viewDidLoad() {
         self.profileImage.image = UIImage(named: "profileImageDefault")
-        self.initLeftViewController()
+//        self.initLeftViewController()
         self.view.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
         
     }
@@ -60,20 +63,27 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         self.loginButton?.setTitleColor(TEXT_COLOR_LIGHT_GREY, forState: UIControlState.Normal)
         self.loginButton?.setTitleColor(UIColor.blackColor(), forState: UIControlState.Selected)
         self.loginButton?.addTarget(self, action: "loginViewDisplay", forControlEvents: UIControlEvents.TouchUpInside)
-        
+        self.view.addSubview(self.loginButton!)
         if isLogin == false {
             self.profileImage.hidden = true
             self.userIDLabel.hidden = true
             
-//            self.view.addSubview(self.loginButton!)
+            
             
         } else {
-            self.loginButton?.removeFromSuperview()
+            self.loginButton!.removeFromSuperview()
+            
             self.loginButton?.hidden = true
-            self.loginButton?.frame = CGRect(x: -10, y: -10, width: 0, height: 0)
+            self.loginButton?.frame = CGRectMake(-100, -100, 0, 0)
             self.profileImage.hidden = false
             self.userIDLabel.hidden = false
-            self.userIDLabel.text = "Maria玛丽娅"
+            self.userIDLabel.textColor = TEXT_COLOR_LIGHT_GREY
+            self.userIDLabel.adjustsFontSizeToFitWidth = true
+            if userDefaults.objectForKey("username") == nil {
+                self.userIDLabel.text = userDefaults.objectForKey("phoneNum") as? String
+            } else {
+                self.userIDLabel.text = userDefaults.objectForKey("username") as? String
+            }
             self.view.addSubview(self.userIDLabel)
             self.changeStatuesButton.hidden = false
         }
