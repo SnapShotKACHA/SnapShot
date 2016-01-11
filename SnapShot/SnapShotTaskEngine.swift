@@ -20,4 +20,8 @@ class SnapShotTaskEngine {
         return SnapShotSingleton.instance
     }
     
+    class func doRegisterTask() {
+        
+    }
+    
 }

@@ -364,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				677154981BFF55DC00D3A35D /* SPBridging-Header.h */,
-				0297AFF31BFEB24F007E8435 /* Task */,
+				0297AFF31BFEB24F007E8435 /* Engine */,
 				025659331BFDAE0100057A72 /* Tools */,
 				02E068921BD6222600530B8F /* Model */,
 				0273CA521BCCADFE00918455 /* Controllers */,
@@ -413,15 +413,13 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		0297AFF31BFEB24F007E8435 /* Task */ = {
+		0297AFF31BFEB24F007E8435 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				488FAE271C435860004C5543 /* Task */,
 				489795AE1C1A558A00F8831E /* SnapShotTaskEngine.swift */,
-				0297AFF41BFEB27A007E8435 /* BaseTask.swift */,
-				0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */,
-				02FC9BCB1C02F53400E67EAF /* LoginTask.swift */,
 			);
-			name = Task;
+			name = Engine;
 			sourceTree = "<group>";
 		};
 		02E068921BD6222600530B8F /* Model */ = {
@@ -438,6 +436,16 @@
 				532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		488FAE271C435860004C5543 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				0297AFF41BFEB27A007E8435 /* BaseTask.swift */,
+				0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */,
+				02FC9BCB1C02F53400E67EAF /* LoginTask.swift */,
+			);
+			name = Task;
 			sourceTree = "<group>";
 		};
 		9264CB8C256BF35A8C24C870 /* Frameworks */ = {
