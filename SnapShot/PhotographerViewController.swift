@@ -24,14 +24,14 @@ class PhotographerViewController: BasicViewController {
     var photographerDetailTableView: PhotographerDetailTableView?
     var artsDisplayTableView: ArtsDisplayTableView?
     var commentDisplayTableVeiw: CommentDisplayTableView?
-    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 20, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH - 40, height: 60))
+    var startServiceButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
     var shareButton = ViewWidgest.addRightButton("shareImage", imageAfter: "shareImage")
     
     var artsImageArray: [String]!
     
     override func viewWillAppear(animated: Bool) {
-        
-        
+        self.profileUserIDLabel.text = ToolKit.setUserID()
+        self.headImageView.frame = CGRectMake(0, -8, self.headImageView.frame.width, self.headImageView.frame.height - 20)
         ViewWidgest.navigatiobBarButtomButton([self.profileBtn, self.artsDisplayBtn, self.commentDisplayBtn], titleArray: ["基本资料","作品展示","用户评论"], targetArrary: ["profileBtnAction","artsDisplayBtnAction","commentDisplayBtnAction"], viewController: self, yPosition: 227)
         self.profileBtn.selected = true
         
