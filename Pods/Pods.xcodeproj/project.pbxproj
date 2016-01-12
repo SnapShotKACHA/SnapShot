@@ -7,369 +7,379 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A7E1A514719ED8F8B9D3C40CBA13CB /* PKSequentialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF2558B6C6A631A546931925792E7D2 /* PKSequentialAnimation.m */; };
+		023CA55350C651F21496C239E3E005C4 /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29585D11902502BD85DF3C335E827329 /* UIButton+Haneke.swift */; };
 		023DEF32D1F2F6752F2B034C1FB14664 /* OMGHTTPURLRQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4DACAAF768F4CEB231032A52BFF8AB /* OMGHTTPURLRQ.framework */; };
-		06BC55D835480D5421FC3F463534DE03 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E715C85FC59ADE820323D7692592F /* NSHTTPURLResponse+Haneke.swift */; };
-		08AAFC7841592A786D626CA0E46025A5 /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 47934942CD608AD667FEF50DC88F36D1 /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		092102E923101B51D902B5DF4057AFCF /* PKAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB69EEF42B789A32EB5615EE7A07B61 /* PKAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0DCA1F899559AA9531EDD7FADFCE6A0E /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7809F0EB6F4EB6DBA83E5018879FC /* Fetcher.swift */; };
-		139AD203E1D0F61FABAD7B34868F67B2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F559C1E9296F6B6C8BF95976A8D24DF0 /* QuartzCore.framework */; };
+		03623BF5E42E7887ED69A8A9141788F6 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F6E02F174799FC985E2F3D2252544 /* Fetch.swift */; };
+		096262A473F29BDBE4188EE706730269 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F46062320D67A6C74FD3E51C38C12F7 /* OMGHTTPURLRQ-dummy.m */; };
+		0AE2571AA626CFC97AF8778B6D5554A5 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487532877692083C402CF74B5EDF33A /* DiskCache.swift */; };
+		13C57B8785848200694EF69ED7E87AD2 /* PKLayerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F883F275A3A527DC19ECE6A4F1EE3E0 /* PKLayerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		156B2E7147CD11843A893B65380721B8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300427BB57BDD1B7B5241A4666941BD /* Result.swift */; };
 		1811526538149C68179837FB085B2D8E /* PromiseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2B2447E81AF9AB8A10490548ED36C /* PromiseKit-dummy.m */; };
 		181843BB84509D22D83F8EA10C9AE124 /* NSURLSession+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4512A509CA398E063973A57FA06B6824 /* NSURLSession+Promise.swift */; };
-		185B9CA5DF9B6F6FC3E984F228470289 /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ECB687F28BC6ED1A345970F2CE8369 /* UIView+Haneke.swift */; };
-		191EF7A9E148FB82BC545112EFE30727 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916DCCB7B29AC8ED8CECAF9141850F44 /* Cache.swift */; };
-		1BFD40BFCDC6CA96B62657D0960DA8F8 /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183553FB70AE4D74BB5A87CF478265B /* UIButton+Haneke.swift */; };
+		1AE6BE1D79C6A9FAAF7058F14CF2C5DF /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0A7F824821CFFCCCBC416CC2AD77D1 /* PKRevealController.m */; };
 		1D7BA6F9DD372315DA5B41D0C16CA416 /* hang.m in Sources */ = {isa = PBXBuildFile; fileRef = 02643B011FD433BF1DECF9A68DC4B6BF /* hang.m */; };
-		1FEB003F1928C6FDDD938A8C934AD5D8 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641F7DEA95DF1F80DEA0028D76FE8E85 /* PKRevealController.m */; };
 		213A1347D9D181A81E10490CBDC67912 /* CALayer+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = F4155B69F1D3CB39532B70D6CB06099F /* CALayer+AnyPromise.m */; };
+		236AC5524B555C5BC0445FBFE552AFB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
 		23F5940A08DB5F0B129F9DFF7CCC3452 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		253100467809B7FC6D412A3561D06399 /* PKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9E753B15C929D1604E74A11F7DE8C /* PKLog.m */; };
-		25F40575EFD5E59C362E7E943C3D570F /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F254B13E21A7BB9695088E33307A5BC9 /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		293BF361FE20FB53B965DA76C72EE158 /* NSObject+PKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = AE21191E09BED61AE2916DDE37932790 /* NSObject+PKBlocks.m */; };
+		296D739068C1C9D51186BBC7595878B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F150513CD0485309C1D9D065D07F2C /* UIKit.framework */; };
 		2A86E62715F68E6F420713BB00D65AA0 /* UIViewController+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DBA0C667BFB8598EDE8D8D781BB9BD /* UIViewController+Promise.swift */; };
 		2B091FEFB9388DE7830FA1C8E06A8A70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F150513CD0485309C1D9D065D07F2C /* UIKit.framework */; };
+		2BB757C1A862F267167BA43F9BAF1828 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F811977368408A6E7A3462AD2BA4EA1 /* Format.swift */; };
 		2CADC05196682D2F4810BABA8F00F2B1 /* NSObject+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0FD150F0C816036D899D6AB48DC47C /* NSObject+Promise.swift */; };
-		2F87AD64E8284EA9C38945458D4C958A /* PKRevealControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC6853BBA21C7BE8A8DBA41BC6DD508 /* PKRevealControllerView.m */; };
-		331818288A8FC5247238A8E4082AFF7B /* NSObject+PKBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 9386DE57B9CAA789928BBC3C56805652 /* NSObject+PKBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33F898651E9D5D3EDD78C49008523E23 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AA058880F9B7B91B5715E456BDDD7 /* Log.swift */; };
+		2DB5A82BD7D02896B43EF4D6285A25A8 /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEA4F0FC40C5AED5C7F75346F55DA6F /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2E973B73BD120913F6F51B3313847AD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
+		32475200A23B407EDB56803E294C90C4 /* PKRevealController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DD26C646009E11F5503D36B73016EC /* PKRevealController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3406A1EBFD75D3011BBEB7BFAC95808D /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C12C9BEC50C4E9B4433C159A8D63435 /* NetworkFetcher.swift */; };
 		345BA2B6EDC25472C548436336104F02 /* UIActionSheet+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C5E4D8853BC8829C08077FC53DB14 /* UIActionSheet+Promise.swift */; };
-		371E1A9680A5A2BD6B627436D4DEA6B0 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF32B34A4D0C656CE828364CA3D109F /* MultipartFormData.swift */; };
+		352E0979B5950FED6DAA03C5B5C46594 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 13E9B77F458E302EC9037B2D0AFF7ACA /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3769B9433B301E32A9DC200E73038AF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
 		39A8A7DB3537BDC61EF618B1737C1EB5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */; };
-		3CB5654A49C397453EE70C9482B3FA9A /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02457A0005CEB61E759A92265DB83C80 /* Stream.swift */; };
-		3F11AA5900EF63F5C41546229E27E88E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
+		3BBBCEE998B48699C491ACC8E7502802 /* PKAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F81E71EEDAAF181C12D52D6305EFA9 /* PKAnimation.m */; };
 		3F7F6FB40B9D15158F3C001FCE64E401 /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 7162B2031A1358232B6F5EE6B1F14217 /* NSNotificationCenter+AnyPromise.m */; };
-		413047750A13CF74C360B1DDAB08A33C /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23183F56C35A378699A7D3B574ACB246 /* Fetch.swift */; };
-		441359876B6FD8F6CF8BAA2F4AF20B9D /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985E5A0770186127D9ED68A07C8D1E2 /* UIImage+Haneke.swift */; };
+		40E39319D7505D4B3CC62A7EEB835AAE /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22D8E15124B0D14CCA8DD28731D417 /* ParameterEncoding.swift */; };
 		45075B42153CB1260B6654BCEF331F4B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE834093FDCE03B0F8C57CF52D336AEA /* State.swift */; };
 		4603BF9EC4ACE6FB93BD4CCF4817F8D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
 		47DCDF4AFB0D751208119D4E067363A5 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E54DCFCDF0922B2FF81658C39ACC0 /* AnyPromise.m */; };
-		48F8BA2FDAD26FCE1827C7ACF2CB9E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
-		4C927D308F615A75490DCE278D8DD576 /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725761660F12662EA932D56BBD25A54A /* DiskFetcher.swift */; };
-		5119BEA4C906937D3E76E4FEA1A7E0AA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7A7C320BE80A3B7F857E65BE6109 /* Error.swift */; };
-		51E64F6215E349181E85BC66D42AD0C4 /* PKRevealController.h in Headers */ = {isa = PBXBuildFile; fileRef = 186975FE342941658D99FEF698749B42 /* PKRevealController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52257A2395DB5856F143F5FC97DC0577 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF18E7E4B7FDB94715ED98C9C18C911 /* OMGHTTPURLRQ-dummy.m */; };
+		4D9A37457D92E7403CF315389B0F1768 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6566EB078879195F7379769EA5814F /* UIViewController+PKRevealController.m */; };
 		52436E7862E443C0E27978DFC92DF0A9 /* UIViewController+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 679626F445CE38E6A304D9700C79C485 /* UIViewController+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53AD6B34AEB4A0A8D0E44EAC081E676D /* PKLayerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDA590649D63DC247C2243B66412B26 /* PKLayerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D1A1EB12891762548927EEA5E322D29 /* PKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = BB4B3BC43DC928DABAFC498B90557048 /* PKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5482801760833C63A4B887E30FD5E76A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C517A984BBCE1F2C7B5A1C773AD5E /* Response.swift */; };
+		58D656895E563D7A966AF156ADD1F48D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6342358913911AE430FF7CB7E004108 /* Alamofire-dummy.m */; };
+		5D70E73DF0D59539A8B4ED2E081F62C4 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE779BCB420FBE12334A6C7C2358D0C3 /* Fetcher.swift */; };
 		5DC2C93A7EE9791B951075E686073475 /* NSURLConnection+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B63850D919D43EA3BA4E0D8070E528E /* NSURLConnection+Promise.swift */; };
-		611DCA7937085F7A07914D31013757CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
+		5E576376C3C8913DD2AC359E7050D2F6 /* PKSequentialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A20A39C1C6D2A11451DBEA603C6881 /* PKSequentialAnimation.m */; };
 		61A99B6F1DFB03CD8E617820883C9C54 /* URLDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E855EFA5E39319811125CB216369A09 /* URLDataPromise.swift */; };
 		61D2D54F57CEA1845E51F427FB0B10EA /* UIAlertView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9C69D6D89348C58F13611147071E2 /* UIAlertView+Promise.swift */; };
-		66037AD810A873A6089FEF41764D613F /* PKLayerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED28524DD378377C4CF71FE5B2FBC6 /* PKLayerAnimator.m */; };
+		6375AFA8E7B031CD084638F0DAF217F3 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43643A22AA6BFB2EAF078A74F167303 /* ServerTrustPolicy.swift */; };
+		64BF9CDDF6F79AA79A67DAA1E1708A97 /* UIViewController+PKRevealController.h in Headers */ = {isa = PBXBuildFile; fileRef = E312ECB419357F81C78D8D4F66F66705 /* UIViewController+PKRevealController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		660A10D57EDF732B79AE9246FA59CE09 /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 985D411080DC537A83839DAC6E43F25D /* UIView+AnyPromise.m */; };
 		66428F9646DB8F0CDAB74771E38E4C43 /* afterlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E250D2EEF5566B90FC571E7D2084B22 /* afterlife.swift */; };
 		67ECBAB31D73A12D030887FD29DC2235 /* UIAlertView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F44CB5716ACAF4C23F475038F0922C /* UIAlertView+AnyPromise.m */; };
-		67FD58AAB7E29B81D9265D4F5D7123F0 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E0AB48B6607C8F61FCCE63FB067AF4 /* Upload.swift */; };
-		6BD6428CCC9A551263BB32B7BE39F3EA /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452A82E13046B746A264B86E21E8CEB /* ResponseSerialization.swift */; };
+		6955F187C7B4733447E3725A7DA49623 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC5F24556C3C80646E1A995BF1BFDC8 /* ResponseSerialization.swift */; };
+		698FCFA367698B9EB384AFBFEBE11B6B /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA88BC73A13929B4F5424309FCB20F6E /* UIView+Haneke.swift */; };
+		69E554DB711693F50DBB551B0CDB9535 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A9F72820954803366238677725B17CB /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BC2EBE870E2CC8DE39AB1B0210CDBAF /* OMGFormURLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 687E63BCA33A156C34F90C75B90C577B /* OMGFormURLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CA8DF9C3639213FD23509DD33BD4BB5 /* PKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F94896AEFB5E3AE651FDD827B1D5EF5E /* PKLog.m */; };
 		6EBF6AEB5411316529628E2B775C2515 /* NSError+Cancellation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDDD98ABABE42B80C074AF8A3A2189E6 /* NSError+Cancellation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F9C58215BAB8D186B788FBBC6F7F870 /* CAAnimation+PKIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 239BC3119ACA78C89304614558E8FAB4 /* CAAnimation+PKIdentifier.m */; };
-		6FB623765A3F706058031391A7ACEB9B /* OMGHTTPURLRQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 118822003C1880BC6A19817ED8607158 /* OMGHTTPURLRQ.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7018324BDA7AC4BBEF2ACC4B729B7024 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E4EA086163C1A0F95F2BCE7EC977E /* UIImageView+Haneke.swift */; };
-		7179508E155A0B508DFB4F8BFD8C75D6 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD66FF223E2AE56CF3C4E6AE8B8AC65 /* DiskCache.swift */; };
+		7046F5E069272C1EC894B95A2AB324CC /* CALayer+PKConvenienceAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ABB5CCD7540F911521FB4183E4F8B6 /* CALayer+PKConvenienceAnimations.m */; };
 		717C21B2DE97387799BABAECBF2FE841 /* join.m in Sources */ = {isa = PBXBuildFile; fileRef = 1013A1086092D23D5739059B7EFB1306 /* join.m */; };
-		7216BD33124DD0C0C006E0E5D1E57C63 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3DFFF8A7432D296839830BC8BF3C9 /* CryptoSwiftMD5.swift */; };
-		7279EB309C47F79DCF71BE72BC46AE55 /* PKRevealController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2016F47371D08912813FDCC19096FE35 /* PKRevealController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		756AFF2960759077D7DF3527A275914A /* CALayer+PKConvenienceAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AAD3831F3F36B35C6DD02EF717A23F /* CALayer+PKConvenienceAnimations.m */; };
-		793F58A6D7E09308F4B4E969A6B8D90F /* OMGFormURLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 181D4D3195453773C8D1E95A4D7A06EF /* OMGFormURLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A334B0282215CEAA3F881D3F4B2AFD1 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32982ABBB0353421CEF6D98A2C200ABA /* NSFileManager+Haneke.swift */; };
-		7B7A9EC00F6C08AF22E2C48B35F0030D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A718CA1EE63F235E68DFEB74F6F995C /* Alamofire-dummy.m */; };
-		7DFC07F4C544E29AE04DF562A91AFAD8 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19035D77F153C474D1A6EB220FE50892 /* UIViewController+PKRevealController.m */; };
-		811BD430FDBA085045212B51A40A7A07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
+		72E5BAE876029093683572225C742203 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049235185851867D0DE2C3220557F87 /* Haneke.swift */; };
+		73B2418381CFE44F21D735F726F6C006 /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F12D9F0FA48432F59193C10A25505526 /* HanekeSwift-dummy.m */; };
+		785D09FB727050A33EC944AB3C7AC907 /* PKSequentialAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E18D6A57B088F615742DB0FAF30F9A69 /* PKSequentialAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79C4FEAD7430DF746F167FA2F2105845 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872B7C5A6A95CC6F29CDA1D7E6640BC3 /* Log.swift */; };
+		7D9D6F3CF751C70A3EC9DE9C881EB5F8 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97343ABF8221120044274AE5181B60BE /* MultipartFormData.swift */; };
+		7E159664957F9B62AE0ED0D54ACA4555 /* PKRevealController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6812846BAA47D43D755D6D86675BC5F5 /* PKRevealController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E2FB7B1041919EDC2B524E2A76D24A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
+		7F6FE930D9BBFAF81AD0C8F80036B791 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869302147196FC8CB35C3BEFEC377785 /* Alamofire.swift */; };
 		814ED4DECF9DF226714D63EA30D40A47 /* UIAlertView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 44029372F7F0FD2B7C11ECC7E8FFC115 /* UIAlertView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		853CD594E1C50D4A165947D35290833C /* PromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C738556931456F4A3CD2FA5B76C0ED8D /* PromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85499D45B7204D14B394F0778647F42D /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AB1EE1F0C28E9CDCA2B648F0C05B4A /* Haneke.swift */; };
-		861D4091ADC519F5058478F9C70479AA /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42BBFB4211A6D12176C3DD2695F3D7F /* ParameterEncoding.swift */; };
+		85B74B5B7CC34A17F9E91A8416CF23DD /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C08E48859BFA4A85F2740E0ACBBC4B /* Error.swift */; };
 		8680027299A6232AAA22B57CD8CA0DAB /* CALayer+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 251264EB78BB6D8557455C65E8A03A16 /* CALayer+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		881B21737E3744443DA5A5C7CF39922B /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3BDD64F994C6CDCA11FA02E9DD84C /* ServerTrustPolicy.swift */; };
-		8869A0BA8F69454E87C2C52CE6B28264 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764F35083629769C92D3D8BC951B267 /* Response.swift */; };
-		894F3C9AD152295F93CF3384E378A95A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F150513CD0485309C1D9D065D07F2C /* UIKit.framework */; };
-		8B88B2803FEA94D0CF10FCEC97BFF915 /* OMGHTTPURLRQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3D31AF9E2E56638695CFFCD7BAE3B4 /* OMGHTTPURLRQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D7D26C40BF98AE8E8D5DEF857F77E6B /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB651B58F9A31CD0B9608CF1ED59B33 /* Alamofire.swift */; };
-		8E8395C5EB45B9880ABEAA9967DE9BD3 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32378ACB013D8AB24C625CCEBFAFC6CB /* CGSize+Swift.swift */; };
+		8AD246BB8D224E9D0268509AE44F5B62 /* PKRevealControllerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E5CC9BA8AC755012E64695B57B44B0 /* PKRevealControllerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B7C18EE8B461D6EFBD35BCFBC625BDE /* NSObject+PKBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B52123BDF700C7A9FC7F65ED947494 /* NSObject+PKBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D66264E1A390F216BB68D7110D96D97 /* NSObject+PKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A756B898D36760DCED53BD9E2E97B5 /* NSObject+PKBlocks.m */; };
+		8E08B83A255A9A667DEB88E3482619C4 /* PKAnimating.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A07F11C698A9F606D6B1B414B291FC1 /* PKAnimating.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E9999FBF5E611890365171AEAD287E4 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B514C0C3125B841D0E11FFCE19104EA /* Pods-dummy.m */; };
-		90DB07435F663101359CCFB1E046811B /* PKSequentialAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C3C39A66569A219C07D497821E481D /* PKSequentialAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EA7E6E3304162CC425EDDCB25226D95 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7897AB92C5AE3F0D32356456E7D2E42 /* Manager.swift */; };
 		90EF20BB8DC0A183A97CEE5D4BE375EE /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */; };
 		91942F029BADA058C57CB8517490D33C /* dispatch_promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADE8DE7FF95947BF8856573A6D630AE /* dispatch_promise.swift */; };
+		937263D9233E51BBACFDB54AC70FDB46 /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D3E63EF9B9520E86A4A28A3C47320DC /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93E4ACA7CF4AC66F64C87BC3ECE270D2 /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1DF56D901E937F90AABC7E0305952A /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		994C41AFC2F80E0DAD65C289BA6C7F35 /* when.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C0556AB7515F5B7D5AAC2CEB53A94 /* when.m */; };
-		A219A56F71B33B460D1C994347BF4C19 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4B56A95B74D350222E635DF391872 /* Download.swift */; };
+		995D2385704CB4964C1EEF11E2230D7A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94963FC1C725698605887C54274DE44B /* Data.swift */; };
+		9B3CA6F8A8908F74195DE63D42F06560 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C4EF3B9B5FD62CB86F1C8A6DF3F6 /* UIImageView+Haneke.swift */; };
+		A029827E121FFBE23266AAE02407BC99 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1FE8E142686F93505CE8FA0556657D /* Request.swift */; };
+		A2B3975AF817B4F38527775BFF4FCFB0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F074E21535EC3170476A5336A3294037 /* Validation.swift */; };
+		A2C9D7AE2E3C23CE5A7E54F7B6873215 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
 		A3B498ADF34AE45E4DD75CD3C49C7A10 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F21BB25698BEF1A6F4124BB7C7370 /* race.swift */; };
-		A46D1C838BBD5B9AA7B8B0814D8A150A /* OMGFormURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DEBD4F5CF35E4771D6435AE93F1F5 /* OMGFormURLEncode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A43F9FC09F9115B53F7F5016F34F920C /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1F78D576CECE7D5D9722CA04FA68D /* Upload.swift */; };
 		A67A514DBE98FA74A5B1A1733A677368 /* PMKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF953E2B7025707BE36F16F482EE466 /* PMKAlertController.swift */; };
 		A782C57BE999DCD13D61ABEF2E1F88A0 /* UIActionSheet+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = F0ACA3191F046419DE5D1AE582E50B91 /* UIActionSheet+AnyPromise.m */; };
 		A7BCE50587314156B89997B4FDA5E3A4 /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 1776184D6DDEF5D163D92332040054A9 /* UIViewController+AnyPromise.m */; };
 		A7CBDDBB3AE2148C8E8F8426597D515F /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB43632CD9074F7E0E2FAE2CE6655649 /* AnyPromise.swift */; };
-		A7EEA02A3DE411015809CD750FED8FB8 /* PKRevealControllerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 28191C93B21A863FE22383D6030559F7 /* PKRevealControllerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABA9392225BB8F196D9F87509C178E45 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B03B56BF953E7AC54BC8A8EE279CB /* Cache.swift */; };
+		AD5489CBB7AD78BBAAD4CE09BA6C71E4 /* OMGFormURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1EEA7EDA2970BDC8742F06AE92E3B2 /* OMGFormURLEncode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AE22CDB749E4EB584320435276FF2E21 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FB718E626745738BBA1C8A0A14C401 /* Promise.swift */; };
+		AF96C93DA5EA9DBC2D1DB604FE6748C3 /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = C866ECD3C01479D7B85145ADEFCDA5B4 /* CryptoSwiftMD5.swift */; };
+		B136366A25A68A993EF43498FC3C72C3 /* PKRevealControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E170FDE3E05D9BE1AD75E538D5C43A /* PKRevealControllerView.m */; };
+		B15C19A225CBBEF505C05F722BE9A0B7 /* CALayer+PKConvenienceAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE15BC1C7325D129AE84236DBC4423F /* CALayer+PKConvenienceAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5A7BAC5F30FCFE2A6AB6F7DAB7075CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */; };
-		B98D0DD8982076BF58544946258706EC /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C303FB7C8B88FDD84F79A4A8E9165F /* Validation.swift */; };
+		B7173BC8D014DDAF87B04FE1178A43C2 /* PKLayerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DE66F8943CA1AB0D4207A31716DA51ED /* PKLayerAnimator.m */; };
+		B786548B5348E3EE3B5EFA772CA8249E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F559C1E9296F6B6C8BF95976A8D24DF0 /* QuartzCore.framework */; };
 		B9F8A61CC3293CC4D316690AD5479A43 /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = 44697B19357BEB24068511B4A031FE20 /* after.m */; };
 		BCD527B5E23F25AD6F0EF12F49957C71 /* Umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F9FAA391051A221C285A292F0D8D08 /* Umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE2FF09F437057B7049591EC6ADE992F /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ACF31474729D002322997F99B71188 /* Manager.swift */; };
-		BE52D959B406FA51C9BB7F83D78EDAF1 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7E56DA234618395F9A93A207824AC /* NetworkFetcher.swift */; };
+		BE48C078A44884C521A3B56428195427 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF5667234206F9FC1F041BB56BF482 /* String+Haneke.swift */; };
 		BFEE7912C183B0A4E56743C490EB89A1 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E16E30FFF2E75F66A5F212F481C474F9 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0415B04AA74925F997114D71A87CE81 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FFE56F91618381411AA578C8B66CBC /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0BFB8B08DF54E94B8CDE29868945105 /* CAAnimation+PKIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = C178181F03AC7ABA14AEB6455FCFE5F2 /* CAAnimation+PKIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C38EBA8A510C27F37169653C86BAD625 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581B90B1EA0F1E9BE7A6165CB73033F /* Error.swift */; };
+		C407F6883AA1D840278421B19BED67E6 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F1E230D1CE9775A8782F18A5109DE3 /* CGSize+Swift.swift */; };
+		C447D1B5525B138D316A7F3461F8613B /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6CC99CD027F9FE12831A454F242A7 /* UIImage+Haneke.swift */; };
 		C4A88B54358CE5544BB8B02F6C114E62 /* NSNotificationCenter+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71D7BAD5ABC1FE5C770EA395C328F8 /* NSNotificationCenter+Promise.swift */; };
+		C6DAC458884333853777BC5D4B55281A /* PKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FED2CB49E0D6D3A3BB34D7338250FFE /* PKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C861348075FC6CCB97A8971490949071 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F559C1E9296F6B6C8BF95976A8D24DF0 /* QuartzCore.framework */; };
-		C892258ED8017693E52B777E8A908DA6 /* PKRevealController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E48214BCF3242211A95AF6DF816C3724 /* PKRevealController-dummy.m */; };
-		CA1571BDE2CF1C2E9E86A4BAC56419E4 /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1F9109DBED2A968C4C3AC4B29C16CA /* HanekeSwift-dummy.m */; };
+		CB0BA1F4B32257271EABA8F7282D8002 /* OMGHTTPURLRQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A9DA858E171DD903C9EC7EFD65EA68C /* OMGHTTPURLRQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB0FC9C08976B9486B62454D91AA082F /* OMGHTTPURLRQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 143498EB518B92E927183A55EE9D3711 /* OMGHTTPURLRQ.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CCED5F6B83926355867A992F4E019872 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D0561374EBF91E29B9BB84E74FC74 /* after.swift */; };
-		D0FC5CFEF33516F4B2FCD3C076685F2A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C281AC2527A290A06BD1EDAA448F2 /* Result.swift */; };
-		D13CD2CE28EEE40622F5BBE3A15C381C /* UIViewController+PKRevealController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2547921546E2C0C804143CFB03117993 /* UIViewController+PKRevealController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2E7D8625216FE043C164CF29D17F630 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA560D14B426BDD8145538B471696EC8 /* String+Haneke.swift */; };
+		D22267A65BFF26832A6E3ACA1FC15DD5 /* CAAnimation+PKIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0573B0E59DDF49DCF6F5255D5B214C29 /* CAAnimation+PKIdentifier.m */; };
+		D405B70248DA052AEAFEAF6976217EDD /* OMGHTTPURLRQ-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B85814654C6A88C4CAD4309E8467FBD /* OMGHTTPURLRQ-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4B7AAD373896C2D5CB6548F6086A5D0 /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8DB15A86A98004577B5AC8B2D56FD /* when.swift */; };
 		D5DD923794B94BA0E3E71320586740DC /* UIView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD72EDC4A35C6F7D2B104712AE6D6324 /* UIView+Promise.swift */; };
-		D73E1D0E0FE11F38B3AC02E710F6E52C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C513CFDD3F3A716DC4794D86E3D936E /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8E0AC3B1BBA511270C1B384E52E016E /* PKAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2A78F50D7A15BBE03DE28064732FC /* PKAnimation.m */; };
-		E06F7A9D190DA9D09AAC0803DA7F4D8D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ED1F5966160C54FDDD302E45FC3E5E /* Request.swift */; };
 		E27016FAB406CFB41527850B89DC0BD0 /* NSURLConnection+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAAD3816F8D643A8B778305960A3C32 /* NSURLConnection+AnyPromise.m */; };
-		E4CB3C41C0648B4046BA597AE9B6EDD1 /* CAAnimation+PKIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DDFCF21E6A617421946183887E56999 /* CAAnimation+PKIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41BC22F1543D9EF50475BF90644894C /* PKRevealController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1DC80251D0FB452907FEE1F187DC45 /* PKRevealController-dummy.m */; };
 		E655789A069F1801D62B23723A8A88B6 /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 389B2FD3597A217DBEE254D058EE78A9 /* dispatch_promise.m */; };
 		E675809F7C361E62DF56DFDFD3AFD869 /* Promise+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AD1A364BEA1C039BD037DD3CF66996 /* Promise+Properties.swift */; };
-		E9EC4712D044D4EBDE6FB7231FFA416D /* CALayer+PKConvenienceAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 73AB7BF09CB7C9C4726F57A8348C5936 /* CALayer+PKConvenienceAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA0DEECB071742BFD2C5B48E8445E666 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD1F0830337EE2FEDEF4D114E1819F /* Data.swift */; };
+		E71182742520FF9B2FC8448E9C5822E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9204DCC6BEDD3752A233F7E913846 /* Stream.swift */; };
+		E8D3B2100485551D74845CD5781ED39E /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7E8BD48FF6A98249A5DD5CB9DBAC2 /* DiskFetcher.swift */; };
 		EF1210D6E5C28257A758E082E03F37F6 /* join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9248497A2FE9CBFF1D948C8FAEBD55DA /* join.swift */; };
 		EF8F9CBD512B39273FE912346B0C11FE /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 06765DE3ABE19E3E72EA4105E0C4F55A /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F17647E9E522257E84A72F6E46A33D85 /* PKAnimating.h in Headers */ = {isa = PBXBuildFile; fileRef = 00812282C4B6394FA64FD327AEA004E6 /* PKAnimating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0B9151AD167FE4FA5F7688CA5F8A9AC /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F10999B6DB0BA9363A8F5832FCB18FE /* Download.swift */; };
+		F23CF7750A80ED892A87607ABEB397C7 /* PKAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 59232803FE9E602F788B0F1E8FCE03FE /* PKAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2B3CF08C7C7368421D9806D4055FDB2 /* NSURLConnection+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D0D96DC04A192BDD5A8AD36BF648BB /* NSURLConnection+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3106EC4574BC6C40976255BA5A103E3 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029A13A37165A5EF0C5EA001DD4285B /* NSFileManager+Haneke.swift */; };
 		F589AD1A3C019A1BD4C7338310D40676 /* UIActionSheet+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D7D9BEA956344CCF67EC2997652CB07 /* UIActionSheet+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8F7FC076115929AB3F9069B50D9D8F1 /* OMGHTTPURLRQ-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 618BD3796742045B49C0A8ABAFA90D73 /* OMGHTTPURLRQ-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAE2463BCEED9F67BD7C02F8B351E7CF /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC84A94AB4A70FB8F5188B567A58856F /* Format.swift */; };
+		FA57F32904506EAF66D55E62F9967456 /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9035B81AF8FC627BD8287C8815A5DD /* NSHTTPURLResponse+Haneke.swift */; };
 		FB1F5BD41346B02758D11BA1278EDAA2 /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 787CE5A26258DE1830FCEBFDD32E9E8F /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5AD8DDE4D38E7BC69867A15DAF683647 /* PBXContainerItemProxy */ = {
+		18F3051C31D8A27901E7E7C133B3D221 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CF81E819ACCAF2695D525E2D6CCA36EE;
-			remoteInfo = OMGHTTPURLRQ;
+			remoteGlobalIDString = C2E13F2E2714B027173A457251259F14;
+			remoteInfo = Alamofire;
 		};
-		A1BCBC950FE44710C9037D6A53578BB2 /* PBXContainerItemProxy */ = {
+		202ABF5FB41B25847B5566151460AC15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C63E2D2EF023BACCE5536A1DF1E92C55;
 			remoteInfo = PromiseKit;
 		};
-		C1A03B2492A688E086F24E53926C3A3B /* PBXContainerItemProxy */ = {
+		62849E96937CCE3A03658E8BC0856D49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 74DEC968BA872046C00738395516F2DA;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = 95D6F8BEBF18C2C0D3F8A6B19A204DD8;
+			remoteInfo = OMGHTTPURLRQ;
 		};
-		D2FAFE67399C7C047021C44B627E908B /* PBXContainerItemProxy */ = {
+		894939D6A33F929E0797170E2AD23A37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55DA4C86FD4ED1553B002B74FE486C13;
+			remoteInfo = PKRevealController;
+		};
+		AE8C1E877D10117BC0144236DB190019 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B9A04D3C9B208813656510FDA8ADAE02;
 			remoteInfo = SwiftyJSON;
 		};
-		D7A16B519E03C778D01575D4EA6E03DB /* PBXContainerItemProxy */ = {
+		B84E3A6F7F0E9C0A1D6A3969AF3DF537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CF81E819ACCAF2695D525E2D6CCA36EE;
+			remoteGlobalIDString = 95D6F8BEBF18C2C0D3F8A6B19A204DD8;
 			remoteInfo = OMGHTTPURLRQ;
 		};
-		E66EE134ADB0B2EF55026F7BE0B4ED78 /* PBXContainerItemProxy */ = {
+		DA70815381099897C464F1978C231F34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AB7BEA18449CB9BD3AB268F07F8CC864;
-			remoteInfo = PKRevealController;
-		};
-		EBAAA2CB25B1B5BBBFBC446D2103DCC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C7BAEFFAB1498A39A02B0F6FDF7E8DAF;
+			remoteGlobalIDString = A3FDB86F9BF312612C69C5520332CABB;
 			remoteInfo = HanekeSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00812282C4B6394FA64FD327AEA004E6 /* PKAnimating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAnimating.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKAnimating.h; sourceTree = "<group>"; };
-		02457A0005CEB61E759A92265DB83C80 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
 		02643B011FD433BF1DECF9A68DC4B6BF /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
 		03B3BE1E62E50555A74FCE26F4EC3584 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0487532877692083C402CF74B5EDF33A /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
+		0573B0E59DDF49DCF6F5255D5B214C29 /* CAAnimation+PKIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CAAnimation+PKIdentifier.m"; path = "Source/PKRevealController/Categories/CAAnimation+PKIdentifier.m"; sourceTree = "<group>"; };
 		06765DE3ABE19E3E72EA4105E0C4F55A /* UIView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Categories/UIKit/UIView+AnyPromise.h"; sourceTree = "<group>"; };
-		06A2FE2B5F5F2BBD07FCBFDBD909B568 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B73A995AE89AD7BC0586C53ECD636E0 /* OMGHTTPURLRQ.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OMGHTTPURLRQ.modulemap; sourceTree = "<group>"; };
-		0DB8CC30063047451E79A3DADA7BFD91 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PromiseKit.modulemap; sourceTree = "<group>"; };
+		0CABA8D79A225E0D19AC7F6541B86DA2 /* OMGHTTPURLRQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMGHTTPURLRQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FAAD3816F8D643A8B778305960A3C32 /* NSURLConnection+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+AnyPromise.m"; path = "Categories/Foundation/NSURLConnection+AnyPromise.m"; sourceTree = "<group>"; };
 		1013A1086092D23D5739059B7EFB1306 /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
-		118822003C1880BC6A19817ED8607158 /* OMGHTTPURLRQ.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGHTTPURLRQ.m; path = Sources/OMGHTTPURLRQ.m; sourceTree = "<group>"; };
-		145C281AC2527A290A06BD1EDAA448F2 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		12E5CC9BA8AC755012E64695B57B44B0 /* PKRevealControllerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKRevealControllerView.h; path = Source/PKRevealController/Classes/PKRevealControllerView.h; sourceTree = "<group>"; };
+		13E9B77F458E302EC9037B2D0AFF7ACA /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGUserAgent.h; path = Sources/OMGUserAgent.h; sourceTree = "<group>"; };
+		143498EB518B92E927183A55EE9D3711 /* OMGHTTPURLRQ.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGHTTPURLRQ.m; path = Sources/OMGHTTPURLRQ.m; sourceTree = "<group>"; };
+		1467F6DD4FD9E4E4CB1016052DE9F140 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
+		16C4CBA29522144B3A1251D35CCCCFEF /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
 		1776184D6DDEF5D163D92332040054A9 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Categories/UIKit/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
-		181D4D3195453773C8D1E95A4D7A06EF /* OMGFormURLEncode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGFormURLEncode.h; path = Sources/OMGFormURLEncode.h; sourceTree = "<group>"; };
-		186975FE342941658D99FEF698749B42 /* PKRevealController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKRevealController.h; path = Source/PKRevealController/PKRevealController.h; sourceTree = "<group>"; };
-		19035D77F153C474D1A6EB220FE50892 /* UIViewController+PKRevealController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PKRevealController.m"; path = "Source/PKRevealController/Categories/UIViewController+PKRevealController.m"; sourceTree = "<group>"; };
-		1DDA590649D63DC247C2243B66412B26 /* PKLayerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLayerAnimator.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKLayerAnimator.h; sourceTree = "<group>"; };
-		1F3D31AF9E2E56638695CFFCD7BAE3B4 /* OMGHTTPURLRQ.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGHTTPURLRQ.h; path = Sources/OMGHTTPURLRQ.h; sourceTree = "<group>"; };
-		2016F47371D08912813FDCC19096FE35 /* PKRevealController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKRevealController-umbrella.h"; sourceTree = "<group>"; };
-		204733999BB4DEDA0582FF16DCA3487F /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		21E2A78F50D7A15BBE03DE28064732FC /* PKAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKAnimation.m; path = Source/PKRevealController/Modules/PKLayerAnimator/PKAnimation.m; sourceTree = "<group>"; };
-		23183F56C35A378699A7D3B574ACB246 /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
-		239BC3119ACA78C89304614558E8FAB4 /* CAAnimation+PKIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CAAnimation+PKIdentifier.m"; path = "Source/PKRevealController/Categories/CAAnimation+PKIdentifier.m"; sourceTree = "<group>"; };
+		18EF7B82ACD3B5E7D65DC6E449211539 /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
+		1A07F11C698A9F606D6B1B414B291FC1 /* PKAnimating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAnimating.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKAnimating.h; sourceTree = "<group>"; };
+		1EA7C0E2839A3C3A237CDD748ED54A97 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EB95BB73C08894671D2C87BA4DBC924 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		1FB56D19067B72DE4480DE7C2B108CDD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D05010B4BA2EDFCBDD1A375A429542 /* PKRevealController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKRevealController-prefix.pch"; sourceTree = "<group>"; };
+		23E0DBD93D28CE0FEADC8822B385A63B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		251264EB78BB6D8557455C65E8A03A16 /* CALayer+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+AnyPromise.h"; path = "Categories/QuartzCore/CALayer+AnyPromise.h"; sourceTree = "<group>"; };
-		2547921546E2C0C804143CFB03117993 /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PKRevealController.h"; path = "Source/PKRevealController/Categories/UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
-		2764F35083629769C92D3D8BC951B267 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		28191C93B21A863FE22383D6030559F7 /* PKRevealControllerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKRevealControllerView.h; path = Source/PKRevealController/Classes/PKRevealControllerView.h; sourceTree = "<group>"; };
+		2834E259DDD9CAC146F11BACE8D44E86 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29585D11902502BD85DF3C335E827329 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
 		29B5499BBC19B93A78E32FCB34982F34 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C513CFDD3F3A716DC4794D86E3D936E /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		31ECB687F28BC6ED1A345970F2CE8369 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
+		2B85814654C6A88C4CAD4309E8467FBD /* OMGHTTPURLRQ-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-umbrella.h"; sourceTree = "<group>"; };
+		2BB6CC99CD027F9FE12831A454F242A7 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		2F10999B6DB0BA9363A8F5832FCB18FE /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
 		31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		32378ACB013D8AB24C625CCEBFAFC6CB /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
-		32982ABBB0353421CEF6D98A2C200ABA /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
-		344E715C85FC59ADE820323D7692592F /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
 		3581B90B1EA0F1E9BE7A6165CB73033F /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
 		35FB718E626745738BBA1C8A0A14C401 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
-		36BBD5946E582DF8E60D97B48F69DEFC /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
 		389B2FD3597A217DBEE254D058EE78A9 /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
-		390B675CAEB650431016E346F96BE84E /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
-		3E5457D3E8C13CF6807A1B6130AD600F /* OMGHTTPURLRQ-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OMGHTTPURLRQ-Private.xcconfig"; sourceTree = "<group>"; };
+		39F1E230D1CE9775A8782F18A5109DE3 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		3AE23509E04911B5BCD2A772A908EB8F /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
+		3CD03E88A0B450C91B97119046958B84 /* PKRevealController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKRevealController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1DF56D901E937F90AABC7E0305952A /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
+		4029A13A37165A5EF0C5EA001DD4285B /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
+		413954C1D1429B006B4A6D940736463C /* PKRevealController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PKRevealController-Private.xcconfig"; sourceTree = "<group>"; };
 		414C5E4D8853BC8829C08077FC53DB14 /* UIActionSheet+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIActionSheet+Promise.swift"; path = "Categories/UIKit/UIActionSheet+Promise.swift"; sourceTree = "<group>"; };
-		4183553FB70AE4D74BB5A87CF478265B /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
+		42B05E2EA69A9E881D71F462F247C482 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44029372F7F0FD2B7C11ECC7E8FFC115 /* UIAlertView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AnyPromise.h"; path = "Categories/UIKit/UIAlertView+AnyPromise.h"; sourceTree = "<group>"; };
-		4452A82E13046B746A264B86E21E8CEB /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		44697B19357BEB24068511B4A031FE20 /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
+		44DD26C646009E11F5503D36B73016EC /* PKRevealController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKRevealController-umbrella.h"; sourceTree = "<group>"; };
 		4512A509CA398E063973A57FA06B6824 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Categories/Foundation/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
-		467DEBD4F5CF35E4771D6435AE93F1F5 /* OMGFormURLEncode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGFormURLEncode.m; path = Sources/OMGFormURLEncode.m; sourceTree = "<group>"; };
-		46C3C39A66569A219C07D497821E481D /* PKSequentialAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSequentialAnimation.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKSequentialAnimation.h; sourceTree = "<group>"; };
-		47934942CD608AD667FEF50DC88F36D1 /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGUserAgent.m; path = Sources/OMGUserAgent.m; sourceTree = "<group>"; };
+		481AD47FF2BEB023031A24E5F0393692 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		4A9DA858E171DD903C9EC7EFD65EA68C /* OMGHTTPURLRQ.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGHTTPURLRQ.h; path = Sources/OMGHTTPURLRQ.h; sourceTree = "<group>"; };
+		4AA9204DCC6BEDD3752A233F7E913846 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
 		4AA9C69D6D89348C58F13611147071E2 /* UIAlertView+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertView+Promise.swift"; path = "Categories/UIKit/UIAlertView+Promise.swift"; sourceTree = "<group>"; };
+		4B4B7D98A9A8FF30BF14DA6DCF3783AE /* PKRevealController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKRevealController.modulemap; sourceTree = "<group>"; };
 		4B514C0C3125B841D0E11FFCE19104EA /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		4BED28524DD378377C4CF71FE5B2FBC6 /* PKLayerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLayerAnimator.m; path = Source/PKRevealController/Modules/PKLayerAnimator/PKLayerAnimator.m; sourceTree = "<group>"; };
-		4FE7E56DA234618395F9A93A207824AC /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		4C6C517A984BBCE1F2C7B5A1C773AD5E /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		4F46062320D67A6C74FD3E51C38C12F7 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
+		4F883F275A3A527DC19ECE6A4F1EE3E0 /* PKLayerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLayerAnimator.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKLayerAnimator.h; sourceTree = "<group>"; };
 		52F150513CD0485309C1D9D065D07F2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		5574780E9EABB88B4D6B8EBAE308DE17 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AD1A364BEA1C039BD037DD3CF66996 /* Promise+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Properties.swift"; path = "Sources/Promise+Properties.swift"; sourceTree = "<group>"; };
-		5985E5A0770186127D9ED68A07C8D1E2 /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
-		5F1F9109DBED2A968C4C3AC4B29C16CA /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		59232803FE9E602F788B0F1E8FCE03FE /* PKAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAnimation.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKAnimation.h; sourceTree = "<group>"; };
+		5C12C9BEC50C4E9B4433C159A8D63435 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		5C89CA508093C489FE4DAD0837C0E943 /* OMGHTTPURLRQ.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OMGHTTPURLRQ.modulemap; sourceTree = "<group>"; };
 		5F5C0556AB7515F5B7D5AAC2CEB53A94 /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
-		618BD3796742045B49C0A8ABAFA90D73 /* OMGHTTPURLRQ-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-umbrella.h"; sourceTree = "<group>"; };
-		6373D1EB19B2896C92F0D9BE4E9549CC /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
-		641F7DEA95DF1F80DEA0028D76FE8E85 /* PKRevealController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKRevealController.m; path = Source/PKRevealController/PKRevealController.m; sourceTree = "<group>"; };
+		62FEA3FDDD3D1B3DB735BC7E0E803C4B /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		63C19F4AE5DAE60F7FE47E91ABDB205C /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		64F88A15A5FCFFF5585A7A3329101897 /* SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
-		65AAD3831F3F36B35C6DD02EF717A23F /* CALayer+PKConvenienceAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+PKConvenienceAnimations.m"; path = "Source/PKRevealController/Categories/CALayer+PKConvenienceAnimations.m"; sourceTree = "<group>"; };
-		65CB7A7C320BE80A3B7F857E65BE6109 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		67408B5FBAC52427C001FF94BE82DC96 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		679626F445CE38E6A304D9700C79C485 /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Categories/UIKit/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
-		68ACF31474729D002322997F99B71188 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		68B3521813859D9B4BA146AFFDE73428 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68C303FB7C8B88FDD84F79A4A8E9165F /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		6812846BAA47D43D755D6D86675BC5F5 /* PKRevealController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKRevealController.h; path = Source/PKRevealController/PKRevealController.h; sourceTree = "<group>"; };
+		68496F62B7F8F50A635DC81810ED588C /* OMGHTTPURLRQ-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OMGHTTPURLRQ-Private.xcconfig"; sourceTree = "<group>"; };
+		687E63BCA33A156C34F90C75B90C577B /* OMGFormURLEncode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGFormURLEncode.h; path = Sources/OMGFormURLEncode.h; sourceTree = "<group>"; };
+		6C1EEA7EDA2970BDC8742F06AE92E3B2 /* OMGFormURLEncode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGFormURLEncode.m; path = Sources/OMGFormURLEncode.m; sourceTree = "<group>"; };
 		6CF953E2B7025707BE36F16F482EE466 /* PMKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMKAlertController.swift; path = Categories/UIKit/PMKAlertController.swift; sourceTree = "<group>"; };
-		6DB651B58F9A31CD0B9608CF1ED59B33 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		6E88EFB6A30721CBB74A0D4D5780898C /* PKRevealController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKRevealController-prefix.pch"; sourceTree = "<group>"; };
 		6F7E54DCFCDF0922B2FF81658C39ACC0 /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
 		7162B2031A1358232B6F5EE6B1F14217 /* NSNotificationCenter+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AnyPromise.m"; path = "Categories/Foundation/NSNotificationCenter+AnyPromise.m"; sourceTree = "<group>"; };
-		725761660F12662EA932D56BBD25A54A /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
-		73AB7BF09CB7C9C4726F57A8348C5936 /* CALayer+PKConvenienceAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+PKConvenienceAnimations.h"; path = "Source/PKRevealController/Categories/CALayer+PKConvenienceAnimations.h"; sourceTree = "<group>"; };
-		7486BA4159B7961E13D29CA2298561F8 /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
+		7300427BB57BDD1B7B5241A4666941BD /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		74C7E8BD48FF6A98249A5DD5CB9DBAC2 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
 		77DBA0C667BFB8598EDE8D8D781BB9BD /* UIViewController+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Promise.swift"; path = "Categories/UIKit/UIViewController+Promise.swift"; sourceTree = "<group>"; };
-		77F9E753B15C929D1604E74A11F7DE8C /* PKLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLog.m; path = Source/PKRevealController/Modules/PKLog/PKLog.m; sourceTree = "<group>"; };
 		787CE5A26258DE1830FCEBFDD32E9E8F /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Categories/Foundation/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
-		79458EF82BF584E3AE282E72162A3C2C /* PKRevealController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKRevealController.modulemap; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7AF080C8B817494D3195AC28F608D1C4 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		7B63850D919D43EA3BA4E0D8070E528E /* NSURLConnection+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLConnection+Promise.swift"; path = "Categories/Foundation/NSURLConnection+Promise.swift"; sourceTree = "<group>"; };
+		7C1FE8E142686F93505CE8FA0556657D /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		7D7D9BEA956344CCF67EC2997652CB07 /* UIActionSheet+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+AnyPromise.h"; path = "Categories/UIKit/UIActionSheet+AnyPromise.h"; sourceTree = "<group>"; };
 		7E855EFA5E39319811125CB216369A09 /* URLDataPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLDataPromise.swift; path = Sources/URLDataPromise.swift; sourceTree = "<group>"; };
+		80D00D593F5322DDDA4BA5DD1F771589 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		8184CB435F1AB06402C398B21B5EEC6D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D0D96DC04A192BDD5A8AD36BF648BB /* NSURLConnection+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLConnection+AnyPromise.h"; path = "Categories/Foundation/NSURLConnection+AnyPromise.h"; sourceTree = "<group>"; };
 		85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		869302147196FC8CB35C3BEFEC377785 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		872B7C5A6A95CC6F29CDA1D7E6640BC3 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
 		87AABBDD8090D4376C4E75D76F8B99F9 /* PromiseKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PromiseKit-Private.xcconfig"; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		894B03B56BF953E7AC54BC8A8EE279CB /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
 		8A4DACAAF768F4CEB231032A52BFF8AB /* OMGHTTPURLRQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMGHTTPURLRQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A718CA1EE63F235E68DFEB74F6F995C /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		902AEB7CBBD6C0EFF6B5DCD2EB8ED562 /* HanekeSwift-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "HanekeSwift-Private.xcconfig"; sourceTree = "<group>"; };
+		8A9F72820954803366238677725B17CB /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		8BF1C4EF3B9B5FD62CB86F1C8A6DF3F6 /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
+		8F811977368408A6E7A3462AD2BA4EA1 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
 		90F9FAA391051A221C285A292F0D8D08 /* Umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Umbrella.h; path = Sources/Umbrella.h; sourceTree = "<group>"; };
-		916DCCB7B29AC8ED8CECAF9141850F44 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
-		916E4EA086163C1A0F95F2BCE7EC977E /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
 		9248497A2FE9CBFF1D948C8FAEBD55DA /* join.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = join.swift; path = Sources/join.swift; sourceTree = "<group>"; };
-		9386DE57B9CAA789928BBC3C56805652 /* NSObject+PKBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PKBlocks.h"; path = "Source/PKRevealController/Categories/NSObject+PKBlocks.h"; sourceTree = "<group>"; };
-		96C6BE2FB9A23F733BE46441CE5588E0 /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
+		94963FC1C725698605887C54274DE44B /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		94F81E71EEDAAF181C12D52D6305EFA9 /* PKAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKAnimation.m; path = Source/PKRevealController/Modules/PKLayerAnimator/PKAnimation.m; sourceTree = "<group>"; };
+		954A25E17FF20CCB50AA14D2C0BED628 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		972CB9D2B6252D5DE31FFC75A9EDA466 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97343ABF8221120044274AE5181B60BE /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		97A756B898D36760DCED53BD9E2E97B5 /* NSObject+PKBlocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PKBlocks.m"; path = "Source/PKRevealController/Categories/NSObject+PKBlocks.m"; sourceTree = "<group>"; };
+		97DB635057759C734AC34C76F43A682C /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
+		97F872A264BC670A9E3DA105BA01361D /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PromiseKit.modulemap; sourceTree = "<group>"; };
 		985D411080DC537A83839DAC6E43F25D /* UIView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Categories/UIKit/UIView+AnyPromise.m"; sourceTree = "<group>"; };
-		9A08F0E066D08B2177C6381F9B86B1F1 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		9DDFCF21E6A617421946183887E56999 /* CAAnimation+PKIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CAAnimation+PKIdentifier.h"; path = "Source/PKRevealController/Categories/CAAnimation+PKIdentifier.h"; sourceTree = "<group>"; };
-		9E1DE4AFA13DA50EFE6796EB795DCD31 /* OMGHTTPURLRQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMGHTTPURLRQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9F6E02F174799FC985E2F3D2252544 /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
+		9D3E63EF9B9520E86A4A28A3C47320DC /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
 		9E250D2EEF5566B90FC571E7D2084B22 /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Categories/Foundation/afterlife.swift; sourceTree = "<group>"; };
+		9FE15BC1C7325D129AE84236DBC4423F /* CALayer+PKConvenienceAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+PKConvenienceAnimations.h"; path = "Source/PKRevealController/Categories/CALayer+PKConvenienceAnimations.h"; sourceTree = "<group>"; };
+		9FED2CB49E0D6D3A3BB34D7338250FFE /* PKLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLog.h; path = Source/PKRevealController/Modules/PKLog/PKLog.h; sourceTree = "<group>"; };
+		A049235185851867D0DE2C3220557F87 /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		A0B52123BDF700C7A9FC7F65ED947494 /* NSObject+PKBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PKBlocks.h"; path = "Source/PKRevealController/Categories/NSObject+PKBlocks.h"; sourceTree = "<group>"; };
 		A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		A1E0AB48B6607C8F61FCCE63FB067AF4 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		A4FE2AE8E99E443EEC40A4AA027366E1 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
-		AA860BA90A709F500DE82FC4BB34913A /* Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		A43643A22AA6BFB2EAF078A74F167303 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		AA0A7F824821CFFCCCBC416CC2AD77D1 /* PKRevealController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKRevealController.m; path = Source/PKRevealController/PKRevealController.m; sourceTree = "<group>"; };
+		AAA1F78D576CECE7D5D9722CA04FA68D /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
 		AB43632CD9074F7E0E2FAE2CE6655649 /* AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPromise.swift; path = Sources/AnyPromise.swift; sourceTree = "<group>"; };
-		AC6A61DD1FF8C62611B1AB9FAA599A57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABC5F24556C3C80646E1A995BF1BFDC8 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		AC9035B81AF8FC627BD8287C8815A5DD /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
 		AD72EDC4A35C6F7D2B104712AE6D6324 /* UIView+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Promise.swift"; path = "Categories/UIKit/UIView+Promise.swift"; sourceTree = "<group>"; };
 		AD7C4AE6793AEC5EA1DE46E5E7A8ECFE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		AE21191E09BED61AE2916DDE37932790 /* NSObject+PKBlocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PKBlocks.m"; path = "Source/PKRevealController/Categories/NSObject+PKBlocks.m"; sourceTree = "<group>"; };
-		AEF18E7E4B7FDB94715ED98C9C18C911 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
-		AEF2558B6C6A631A546931925792E7D2 /* PKSequentialAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSequentialAnimation.m; path = Source/PKRevealController/Modules/PKLayerAnimator/PKSequentialAnimation.m; sourceTree = "<group>"; };
-		B65DD730C61C811D02F95334003AB4B9 /* PKRevealController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKRevealController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9ED1F5966160C54FDDD302E45FC3E5E /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		AE779BCB420FBE12334A6C7C2358D0C3 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
+		B6342358913911AE430FF7CB7E004108 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		BA03A832FD2565327CB71B2DA3F73173 /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAB7809F0EB6F4EB6DBA83E5018879FC /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
 		BADE8DE7FF95947BF8856573A6D630AE /* dispatch_promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dispatch_promise.swift; path = Sources/dispatch_promise.swift; sourceTree = "<group>"; };
-		BB4B3BC43DC928DABAFC498B90557048 /* PKLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKLog.h; path = Source/PKRevealController/Modules/PKLog/PKLog.h; sourceTree = "<group>"; };
-		BDD66FF223E2AE56CF3C4E6AE8B8AC65 /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
+		BB6566EB078879195F7379769EA5814F /* UIViewController+PKRevealController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PKRevealController.m"; path = "Source/PKRevealController/Categories/UIViewController+PKRevealController.m"; sourceTree = "<group>"; };
 		BE834093FDCE03B0F8C57CF52D336AEA /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
-		C2DD1F0830337EE2FEDEF4D114E1819F /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		C178181F03AC7ABA14AEB6455FCFE5F2 /* CAAnimation+PKIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CAAnimation+PKIdentifier.h"; path = "Source/PKRevealController/Categories/CAAnimation+PKIdentifier.h"; sourceTree = "<group>"; };
+		C1A88BF59A1018E230606DD1C1931BDA /* PKRevealController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKRevealController.xcconfig; sourceTree = "<group>"; };
 		C738556931456F4A3CD2FA5B76C0ED8D /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
-		C7F3BDD64F994C6CDCA11FA02E9DD84C /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		C8DB1A9B2458CDDC7E27AF987B7F2D1A /* PKRevealController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKRevealController.xcconfig; sourceTree = "<group>"; };
-		C8F3DFFF8A7432D296839830BC8BF3C9 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
-		CA560D14B426BDD8145538B471696EC8 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
+		C866ECD3C01479D7B85145ADEFCDA5B4 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		CC84A94AB4A70FB8F5188B567A58856F /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
+		CD22D8E15124B0D14CCA8DD28731D417 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		D00E0C2FBD49956CF38CED94092DC49A /* AMap.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/Versions/3.2.0.163b642/Resources/AMap.bundle; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D0ED3C11772BD5EA9C05D11E8F003EF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4DCEE07E65178F25E7EA264B1C1DAB8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D584C6212BCEF0B362FACF17251FB937 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		D5910336F84FEB2D3EE65CE8B20AE152 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0A20A39C1C6D2A11451DBEA603C6881 /* PKSequentialAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKSequentialAnimation.m; path = Source/PKRevealController/Modules/PKLayerAnimator/PKSequentialAnimation.m; sourceTree = "<group>"; };
+		D5B9CA42A7D1DC0F9DD8A9392DD46974 /* HanekeSwift-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "HanekeSwift-Private.xcconfig"; sourceTree = "<group>"; };
+		D5DF5667234206F9FC1F041BB56BF482 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
 		D61F21BB25698BEF1A6F4124BB7C7370 /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
-		D718A712663F88F8A25A00F047620668 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		DA88BC73A13929B4F5424309FCB20F6E /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
 		DB71D7BAD5ABC1FE5C770EA395C328F8 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Categories/Foundation/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
-		DC492759B14EBA7AD87D19E6F7EC5506 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		DCF32B34A4D0C656CE828364CA3D109F /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		DDDD98ABABE42B80C074AF8A3A2189E6 /* NSError+Cancellation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+Cancellation.h"; path = "Sources/NSError+Cancellation.h"; sourceTree = "<group>"; };
-		E0AB1EE1F0C28E9CDCA2B648F0C05B4A /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		DE66F8943CA1AB0D4207A31716DA51ED /* PKLayerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLayerAnimator.m; path = Source/PKRevealController/Modules/PKLayerAnimator/PKLayerAnimator.m; sourceTree = "<group>"; };
 		E16E30FFF2E75F66A5F212F481C474F9 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		E42BBFB4211A6D12176C3DD2695F3D7F /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		E48214BCF3242211A95AF6DF816C3724 /* PKRevealController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKRevealController-dummy.m"; sourceTree = "<group>"; };
+		E18D6A57B088F615742DB0FAF30F9A69 /* PKSequentialAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKSequentialAnimation.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKSequentialAnimation.h; sourceTree = "<group>"; };
+		E312ECB419357F81C78D8D4F66F66705 /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PKRevealController.h"; path = "Source/PKRevealController/Categories/UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
 		E4EC4B75BAE91861986227C1BE7B931E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E528ED2340AB55B01A011B50407F102F /* PKRevealController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PKRevealController-Private.xcconfig"; sourceTree = "<group>"; };
-		E6FFE56F91618381411AA578C8B66CBC /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGUserAgent.h; path = Sources/OMGUserAgent.h; sourceTree = "<group>"; };
+		E7897AB92C5AE3F0D32356456E7D2E42 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		E7E170FDE3E05D9BE1AD75E538D5C43A /* PKRevealControllerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKRevealControllerView.m; path = Source/PKRevealController/Classes/PKRevealControllerView.m; sourceTree = "<group>"; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9F44CB5716ACAF4C23F475038F0922C /* UIAlertView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AnyPromise.m"; path = "Categories/UIKit/UIAlertView+AnyPromise.m"; sourceTree = "<group>"; };
 		EB4CB50B42FA0112BD3CB968CB68AC93 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0FD150F0C816036D899D6AB48DC47C /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Categories/Foundation/NSObject+Promise.swift"; sourceTree = "<group>"; };
-		EDF5AA06C5E2074295EDF392E247D9C9 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
+		ED1DC80251D0FB452907FEE1F187DC45 /* PKRevealController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKRevealController-dummy.m"; sourceTree = "<group>"; };
 		EEC2B2447E81AF9AB8A10490548ED36C /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		F074E21535EC3170476A5336A3294037 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		F07CFFDE94A435436788512299FA9BF2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		F0ACA3191F046419DE5D1AE582E50B91 /* UIActionSheet+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+AnyPromise.m"; path = "Categories/UIKit/UIActionSheet+AnyPromise.m"; sourceTree = "<group>"; };
+		F0C08E48859BFA4A85F2740E0ACBBC4B /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
 		F11D0561374EBF91E29B9BB84E74FC74 /* after.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = after.swift; path = Sources/after.swift; sourceTree = "<group>"; };
-		F254B13E21A7BB9695088E33307A5BC9 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
+		F12D9F0FA48432F59193C10A25505526 /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		F36FAF41ECF24082C048CF76B6FFD909 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		F4155B69F1D3CB39532B70D6CB06099F /* CALayer+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+AnyPromise.m"; path = "Categories/QuartzCore/CALayer+AnyPromise.m"; sourceTree = "<group>"; };
 		F559C1E9296F6B6C8BF95976A8D24DF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		F6C4B56A95B74D350222E635DF391872 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
-		F8EA97872B61114E88E5DF24AF41BBBD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCB69EEF42B789A32EB5615EE7A07B61 /* PKAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKAnimation.h; path = Source/PKRevealController/Modules/PKLayerAnimator/PKAnimation.h; sourceTree = "<group>"; };
-		FCC6853BBA21C7BE8A8DBA41BC6DD508 /* PKRevealControllerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKRevealControllerView.m; path = Source/PKRevealController/Classes/PKRevealControllerView.m; sourceTree = "<group>"; };
+		F6ABB5CCD7540F911521FB4183E4F8B6 /* CALayer+PKConvenienceAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+PKConvenienceAnimations.m"; path = "Source/PKRevealController/Categories/CALayer+PKConvenienceAnimations.m"; sourceTree = "<group>"; };
+		F94896AEFB5E3AE651FDD827B1D5EF5E /* PKLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKLog.m; path = Source/PKRevealController/Modules/PKLog/PKLog.m; sourceTree = "<group>"; };
+		F9FA4EDDECF4D2FC139869D63502E0BA /* Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		FBEA4F0FC40C5AED5C7F75346F55DA6F /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGUserAgent.m; path = Sources/OMGUserAgent.m; sourceTree = "<group>"; };
+		FC3DDA60B0B5BBC1C6447A0D50EE88CF /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
 		FEB8DB15A86A98004577B5AC8B2D56FD /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
-		FF2AA058880F9B7B91B5715E456BDDD7 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		034AE7A719A890E4BBB5EEEE046A2EEC /* Frameworks */ = {
+		2D5F04D9FBFB6EE6812F7BA9DEB283B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				611DCA7937085F7A07914D31013757CD /* Foundation.framework in Frameworks */,
+				A2C9D7AE2E3C23CE5A7E54F7B6873215 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3480B724A1244E4DF16410A59F61F297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E2FB7B1041919EDC2B524E2A76D24A4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,19 +394,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C8CAC18689C79BDEE0B62710E58408E /* Frameworks */ = {
+		59778203E39DC772B246A55505CD8C18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				811BD430FDBA085045212B51A40A7A07 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AF54739E69B2767C6761A5A14679755 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48F8BA2FDAD26FCE1827C7ACF2CB9E1E /* Foundation.framework in Frameworks */,
+				2E973B73BD120913F6F51B3313847AD7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +410,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B632090FBE64EF70DC10142E4D334AF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236AC5524B555C5BC0445FBFE552AFB9 /* Foundation.framework in Frameworks */,
+				B786548B5348E3EE3B5EFA772CA8249E /* QuartzCore.framework in Frameworks */,
+				296D739068C1C9D51186BBC7595878B8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBEEDA6A29AD33FB9CFD183DA7A8F5B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,88 +428,167 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFD17BCE6CD10508DE4015416C8BD61C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F11AA5900EF63F5C41546229E27E88E /* Foundation.framework in Frameworks */,
-				139AD203E1D0F61FABAD7B34868F67B2 /* QuartzCore.framework in Frameworks */,
-				894F3C9AD152295F93CF3384E378A95A /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		083CDF0FA64202EC58CDFB97F7045280 /* OMGHTTPURLRQ */ = {
+		12FD9F071C52A51EAC06392C2FF4F77A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EF66A71B814FC2B7FD7E419CD945541 /* FormURLEncode */,
-				9689FF4816B436DCA04F1B0DC2691371 /* RQ */,
-				DBAA200A0715BDBCA08CE89152586904 /* Support Files */,
-				E13EFC05096AF366CAFB88BE1E7E20C4 /* UserAgent */,
-			);
-			path = OMGHTTPURLRQ;
-			sourceTree = "<group>";
-		};
-		38D77C77C4100BF57236D6CB0B27D30E /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */,
-				91C8A4364DBB08E1D5705CF9BA08B245 /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		4EF66A71B814FC2B7FD7E419CD945541 /* FormURLEncode */ = {
-			isa = PBXGroup;
-			children = (
-				181D4D3195453773C8D1E95A4D7A06EF /* OMGFormURLEncode.h */,
-				467DEBD4F5CF35E4771D6435AE93F1F5 /* OMGFormURLEncode.m */,
-			);
-			name = FormURLEncode;
-			sourceTree = "<group>";
-		};
-		68A82E75382AC303DAD51BCD916D41E5 /* PromiseKit */ = {
-			isa = PBXGroup;
-			children = (
-				A78B40F2506F0564E66B7E1B336A5F10 /* CorePromise */,
-				A945441B5DC752C073330B8F4ED57F06 /* Foundation */,
-				FB3BE8C2A117C4D3E3006A060EF8676D /* QuartzCore */,
-				E98CDE1DC34408F873393321E52DABBF /* Support Files */,
-				8C92F5CD4A91E78B6C436FC5832ACDA7 /* UIKit */,
-			);
-			path = PromiseKit;
-			sourceTree = "<group>";
-		};
-		6BEFCE7D2A926F57B2033DDA64CE0829 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8EA97872B61114E88E5DF24AF41BBBD /* Info.plist */,
-				79458EF82BF584E3AE282E72162A3C2C /* PKRevealController.modulemap */,
-				C8DB1A9B2458CDDC7E27AF987B7F2D1A /* PKRevealController.xcconfig */,
-				E528ED2340AB55B01A011B50407F102F /* PKRevealController-Private.xcconfig */,
-				E48214BCF3242211A95AF6DF816C3724 /* PKRevealController-dummy.m */,
-				6E88EFB6A30721CBB74A0D4D5780898C /* PKRevealController-prefix.pch */,
-				2016F47371D08912813FDCC19096FE35 /* PKRevealController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PKRevealController";
-			sourceTree = "<group>";
-		};
-		6EA6E157237D26A3041C291863667FC4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9A08F0E066D08B2177C6381F9B86B1F1 /* Alamofire.modulemap */,
-				D718A712663F88F8A25A00F047620668 /* Alamofire.xcconfig */,
-				AA860BA90A709F500DE82FC4BB34913A /* Alamofire-Private.xcconfig */,
-				8A718CA1EE63F235E68DFEB74F6F995C /* Alamofire-dummy.m */,
-				DC492759B14EBA7AD87D19E6F7EC5506 /* Alamofire-prefix.pch */,
-				2C513CFDD3F3A716DC4794D86E3D936E /* Alamofire-umbrella.h */,
-				D0ED3C11772BD5EA9C05D11E8F003EF4 /* Info.plist */,
+				63C19F4AE5DAE60F7FE47E91ABDB205C /* Alamofire.modulemap */,
+				80D00D593F5322DDDA4BA5DD1F771589 /* Alamofire.xcconfig */,
+				F9FA4EDDECF4D2FC139869D63502E0BA /* Alamofire-Private.xcconfig */,
+				B6342358913911AE430FF7CB7E004108 /* Alamofire-dummy.m */,
+				481AD47FF2BEB023031A24E5F0393692 /* Alamofire-prefix.pch */,
+				8A9F72820954803366238677725B17CB /* Alamofire-umbrella.h */,
+				23E0DBD93D28CE0FEADC8822B385A63B /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		18B06CC3498EB69499EC708B8F90EE7E /* QuartzCore */ = {
+			isa = PBXGroup;
+			children = (
+				251264EB78BB6D8557455C65E8A03A16 /* CALayer+AnyPromise.h */,
+				F4155B69F1D3CB39532B70D6CB06099F /* CALayer+AnyPromise.m */,
+			);
+			name = QuartzCore;
+			sourceTree = "<group>";
+		};
+		1A2148135C0D80838DB795424B4C48A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FB56D19067B72DE4480DE7C2B108CDD /* Info.plist */,
+				97F872A264BC670A9E3DA105BA01361D /* PromiseKit.modulemap */,
+				1467F6DD4FD9E4E4CB1016052DE9F140 /* PromiseKit.xcconfig */,
+				87AABBDD8090D4376C4E75D76F8B99F9 /* PromiseKit-Private.xcconfig */,
+				EEC2B2447E81AF9AB8A10490548ED36C /* PromiseKit-dummy.m */,
+				BA03A832FD2565327CB71B2DA3F73173 /* PromiseKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PromiseKit";
+			sourceTree = "<group>";
+		};
+		451146163EBE7E8DD18CB99C0DDAB0AB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2834E259DDD9CAC146F11BACE8D44E86 /* Info.plist */,
+				5C89CA508093C489FE4DAD0837C0E943 /* OMGHTTPURLRQ.modulemap */,
+				18EF7B82ACD3B5E7D65DC6E449211539 /* OMGHTTPURLRQ.xcconfig */,
+				68496F62B7F8F50A635DC81810ED588C /* OMGHTTPURLRQ-Private.xcconfig */,
+				4F46062320D67A6C74FD3E51C38C12F7 /* OMGHTTPURLRQ-dummy.m */,
+				97DB635057759C734AC34C76F43A682C /* OMGHTTPURLRQ-prefix.pch */,
+				2B85814654C6A88C4CAD4309E8467FBD /* OMGHTTPURLRQ-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OMGHTTPURLRQ";
+			sourceTree = "<group>";
+		};
+		4B5AB0A30BC05BC20473F7FD180949CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D00E0C2FBD49956CF38CED94092DC49A /* AMap.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		57F2C71477687BE708867AA249126939 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EA7C0E2839A3C3A237CDD748ED54A97 /* Info.plist */,
+				F36FAF41ECF24082C048CF76B6FFD909 /* SwiftyJSON.modulemap */,
+				62FEA3FDDD3D1B3DB735BC7E0E803C4B /* SwiftyJSON.xcconfig */,
+				64F88A15A5FCFFF5585A7A3329101897 /* SwiftyJSON-Private.xcconfig */,
+				A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */,
+				7AF080C8B817494D3195AC28F608D1C4 /* SwiftyJSON-prefix.pch */,
+				85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		64EDB7215F2D3CAF82C38E57A3227BED /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6CF953E2B7025707BE36F16F482EE466 /* PMKAlertController.swift */,
+				7D7D9BEA956344CCF67EC2997652CB07 /* UIActionSheet+AnyPromise.h */,
+				F0ACA3191F046419DE5D1AE582E50B91 /* UIActionSheet+AnyPromise.m */,
+				414C5E4D8853BC8829C08077FC53DB14 /* UIActionSheet+Promise.swift */,
+				44029372F7F0FD2B7C11ECC7E8FFC115 /* UIAlertView+AnyPromise.h */,
+				E9F44CB5716ACAF4C23F475038F0922C /* UIAlertView+AnyPromise.m */,
+				4AA9C69D6D89348C58F13611147071E2 /* UIAlertView+Promise.swift */,
+				06765DE3ABE19E3E72EA4105E0C4F55A /* UIView+AnyPromise.h */,
+				985D411080DC537A83839DAC6E43F25D /* UIView+AnyPromise.m */,
+				AD72EDC4A35C6F7D2B104712AE6D6324 /* UIView+Promise.swift */,
+				679626F445CE38E6A304D9700C79C485 /* UIViewController+AnyPromise.h */,
+				1776184D6DDEF5D163D92332040054A9 /* UIViewController+AnyPromise.m */,
+				77DBA0C667BFB8598EDE8D8D781BB9BD /* UIViewController+Promise.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		693333B234F94881420F3D4F0CC2B28E /* PKRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				C178181F03AC7ABA14AEB6455FCFE5F2 /* CAAnimation+PKIdentifier.h */,
+				0573B0E59DDF49DCF6F5255D5B214C29 /* CAAnimation+PKIdentifier.m */,
+				9FE15BC1C7325D129AE84236DBC4423F /* CALayer+PKConvenienceAnimations.h */,
+				F6ABB5CCD7540F911521FB4183E4F8B6 /* CALayer+PKConvenienceAnimations.m */,
+				A0B52123BDF700C7A9FC7F65ED947494 /* NSObject+PKBlocks.h */,
+				97A756B898D36760DCED53BD9E2E97B5 /* NSObject+PKBlocks.m */,
+				1A07F11C698A9F606D6B1B414B291FC1 /* PKAnimating.h */,
+				59232803FE9E602F788B0F1E8FCE03FE /* PKAnimation.h */,
+				94F81E71EEDAAF181C12D52D6305EFA9 /* PKAnimation.m */,
+				4F883F275A3A527DC19ECE6A4F1EE3E0 /* PKLayerAnimator.h */,
+				DE66F8943CA1AB0D4207A31716DA51ED /* PKLayerAnimator.m */,
+				9FED2CB49E0D6D3A3BB34D7338250FFE /* PKLog.h */,
+				F94896AEFB5E3AE651FDD827B1D5EF5E /* PKLog.m */,
+				6812846BAA47D43D755D6D86675BC5F5 /* PKRevealController.h */,
+				AA0A7F824821CFFCCCBC416CC2AD77D1 /* PKRevealController.m */,
+				12E5CC9BA8AC755012E64695B57B44B0 /* PKRevealControllerView.h */,
+				E7E170FDE3E05D9BE1AD75E538D5C43A /* PKRevealControllerView.m */,
+				E18D6A57B088F615742DB0FAF30F9A69 /* PKSequentialAnimation.h */,
+				D0A20A39C1C6D2A11451DBEA603C6881 /* PKSequentialAnimation.m */,
+				E312ECB419357F81C78D8D4F66F66705 /* UIViewController+PKRevealController.h */,
+				BB6566EB078879195F7379769EA5814F /* UIViewController+PKRevealController.m */,
+				C96ED144A91CFF1C9F2EB874D132329C /* Support Files */,
+			);
+			path = PKRevealController;
+			sourceTree = "<group>";
+		};
+		6958BFCFE9F97A28EB5946C4EE85C71D /* HanekeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				39F1E230D1CE9775A8782F18A5109DE3 /* CGSize+Swift.swift */,
+				894B03B56BF953E7AC54BC8A8EE279CB /* Cache.swift */,
+				C866ECD3C01479D7B85145ADEFCDA5B4 /* CryptoSwiftMD5.swift */,
+				94963FC1C725698605887C54274DE44B /* Data.swift */,
+				0487532877692083C402CF74B5EDF33A /* DiskCache.swift */,
+				74C7E8BD48FF6A98249A5DD5CB9DBAC2 /* DiskFetcher.swift */,
+				9C9F6E02F174799FC985E2F3D2252544 /* Fetch.swift */,
+				AE779BCB420FBE12334A6C7C2358D0C3 /* Fetcher.swift */,
+				8F811977368408A6E7A3462AD2BA4EA1 /* Format.swift */,
+				A049235185851867D0DE2C3220557F87 /* Haneke.swift */,
+				872B7C5A6A95CC6F29CDA1D7E6640BC3 /* Log.swift */,
+				4029A13A37165A5EF0C5EA001DD4285B /* NSFileManager+Haneke.swift */,
+				AC9035B81AF8FC627BD8287C8815A5DD /* NSHTTPURLResponse+Haneke.swift */,
+				5C12C9BEC50C4E9B4433C159A8D63435 /* NetworkFetcher.swift */,
+				D5DF5667234206F9FC1F041BB56BF482 /* String+Haneke.swift */,
+				29585D11902502BD85DF3C335E827329 /* UIButton+Haneke.swift */,
+				2BB6CC99CD027F9FE12831A454F242A7 /* UIImage+Haneke.swift */,
+				8BF1C4EF3B9B5FD62CB86F1C8A6DF3F6 /* UIImageView+Haneke.swift */,
+				DA88BC73A13929B4F5424309FCB20F6E /* UIView+Haneke.swift */,
+				D85C58447EF9E7CA9C723533754B6EC1 /* Support Files */,
+			);
+			path = HanekeSwift;
+			sourceTree = "<group>";
+		};
+		6D28C8E1E2BDB36092DD7252AE8D6E33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EB95BB73C08894671D2C87BA4DBC924 /* MAMapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
@@ -523,112 +614,149 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				AC76B6EC882B4FC71163F479F01FAB50 /* Frameworks */,
-				9FEFF300B53843ADAC8A37BFA43D85C2 /* Pods */,
+				915196873BD848CAB7FBFD91E0090049 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8C92F5CD4A91E78B6C436FC5832ACDA7 /* UIKit */ = {
+		90A4CAFF798F676C174A86157A3C45D5 /* UserAgent */ = {
 			isa = PBXGroup;
 			children = (
-				6CF953E2B7025707BE36F16F482EE466 /* PMKAlertController.swift */,
-				7D7D9BEA956344CCF67EC2997652CB07 /* UIActionSheet+AnyPromise.h */,
-				F0ACA3191F046419DE5D1AE582E50B91 /* UIActionSheet+AnyPromise.m */,
-				414C5E4D8853BC8829C08077FC53DB14 /* UIActionSheet+Promise.swift */,
-				44029372F7F0FD2B7C11ECC7E8FFC115 /* UIAlertView+AnyPromise.h */,
-				E9F44CB5716ACAF4C23F475038F0922C /* UIAlertView+AnyPromise.m */,
-				4AA9C69D6D89348C58F13611147071E2 /* UIAlertView+Promise.swift */,
-				06765DE3ABE19E3E72EA4105E0C4F55A /* UIView+AnyPromise.h */,
-				985D411080DC537A83839DAC6E43F25D /* UIView+AnyPromise.m */,
-				AD72EDC4A35C6F7D2B104712AE6D6324 /* UIView+Promise.swift */,
-				679626F445CE38E6A304D9700C79C485 /* UIViewController+AnyPromise.h */,
-				1776184D6DDEF5D163D92332040054A9 /* UIViewController+AnyPromise.m */,
-				77DBA0C667BFB8598EDE8D8D781BB9BD /* UIViewController+Promise.swift */,
+				13E9B77F458E302EC9037B2D0AFF7ACA /* OMGUserAgent.h */,
+				FBEA4F0FC40C5AED5C7F75346F55DA6F /* OMGUserAgent.m */,
 			);
-			name = UIKit;
+			name = UserAgent;
 			sourceTree = "<group>";
 		};
-		8DF01EE38EAC3CD43D0D82DBD1D34B15 /* Support Files */ = {
+		915196873BD848CAB7FBFD91E0090049 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A4FE2AE8E99E443EEC40A4AA027366E1 /* HanekeSwift.modulemap */,
-				390B675CAEB650431016E346F96BE84E /* HanekeSwift.xcconfig */,
-				902AEB7CBBD6C0EFF6B5DCD2EB8ED562 /* HanekeSwift-Private.xcconfig */,
-				5F1F9109DBED2A968C4C3AC4B29C16CA /* HanekeSwift-dummy.m */,
-				36BBD5946E582DF8E60D97B48F69DEFC /* HanekeSwift-prefix.pch */,
-				F254B13E21A7BB9695088E33307A5BC9 /* HanekeSwift-umbrella.h */,
-				AC6A61DD1FF8C62611B1AB9FAA599A57 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HanekeSwift";
-			sourceTree = "<group>";
-		};
-		91C8A4364DBB08E1D5705CF9BA08B245 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				68B3521813859D9B4BA146AFFDE73428 /* Info.plist */,
-				D584C6212BCEF0B362FACF17251FB937 /* SwiftyJSON.modulemap */,
-				67408B5FBAC52427C001FF94BE82DC96 /* SwiftyJSON.xcconfig */,
-				64F88A15A5FCFFF5585A7A3329101897 /* SwiftyJSON-Private.xcconfig */,
-				A0D3575B7F9DE11C652ED4F55D4D976B /* SwiftyJSON-dummy.m */,
-				204733999BB4DEDA0582FF16DCA3487F /* SwiftyJSON-prefix.pch */,
-				85E62DA073C367ACFC8C77B0B6180FD1 /* SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		9689FF4816B436DCA04F1B0DC2691371 /* RQ */ = {
-			isa = PBXGroup;
-			children = (
-				1F3D31AF9E2E56638695CFFCD7BAE3B4 /* OMGHTTPURLRQ.h */,
-				118822003C1880BC6A19817ED8607158 /* OMGHTTPURLRQ.m */,
-			);
-			name = RQ;
-			sourceTree = "<group>";
-		};
-		96BA39D3F2365AB58D70658457DEBA37 /* HanekeSwift */ = {
-			isa = PBXGroup;
-			children = (
-				32378ACB013D8AB24C625CCEBFAFC6CB /* CGSize+Swift.swift */,
-				916DCCB7B29AC8ED8CECAF9141850F44 /* Cache.swift */,
-				C8F3DFFF8A7432D296839830BC8BF3C9 /* CryptoSwiftMD5.swift */,
-				C2DD1F0830337EE2FEDEF4D114E1819F /* Data.swift */,
-				BDD66FF223E2AE56CF3C4E6AE8B8AC65 /* DiskCache.swift */,
-				725761660F12662EA932D56BBD25A54A /* DiskFetcher.swift */,
-				23183F56C35A378699A7D3B574ACB246 /* Fetch.swift */,
-				BAB7809F0EB6F4EB6DBA83E5018879FC /* Fetcher.swift */,
-				CC84A94AB4A70FB8F5188B567A58856F /* Format.swift */,
-				E0AB1EE1F0C28E9CDCA2B648F0C05B4A /* Haneke.swift */,
-				FF2AA058880F9B7B91B5715E456BDDD7 /* Log.swift */,
-				32982ABBB0353421CEF6D98A2C200ABA /* NSFileManager+Haneke.swift */,
-				344E715C85FC59ADE820323D7692592F /* NSHTTPURLResponse+Haneke.swift */,
-				4FE7E56DA234618395F9A93A207824AC /* NetworkFetcher.swift */,
-				CA560D14B426BDD8145538B471696EC8 /* String+Haneke.swift */,
-				4183553FB70AE4D74BB5A87CF478265B /* UIButton+Haneke.swift */,
-				5985E5A0770186127D9ED68A07C8D1E2 /* UIImage+Haneke.swift */,
-				916E4EA086163C1A0F95F2BCE7EC977E /* UIImageView+Haneke.swift */,
-				31ECB687F28BC6ED1A345970F2CE8369 /* UIView+Haneke.swift */,
-				8DF01EE38EAC3CD43D0D82DBD1D34B15 /* Support Files */,
-			);
-			path = HanekeSwift;
-			sourceTree = "<group>";
-		};
-		9FEFF300B53843ADAC8A37BFA43D85C2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C7742B8B5FF758B95A7D40992458C426 /* Alamofire */,
-				96BA39D3F2365AB58D70658457DEBA37 /* HanekeSwift */,
-				083CDF0FA64202EC58CDFB97F7045280 /* OMGHTTPURLRQ */,
-				B011CA1997B59CDAF49A0EB7C103AB4C /* PKRevealController */,
-				68A82E75382AC303DAD51BCD916D41E5 /* PromiseKit */,
-				38D77C77C4100BF57236D6CB0B27D30E /* SwiftyJSON */,
+				E29F166D521535ACF0BDB8F0A481322E /* AMap2DMap */,
+				B611275C145455507C169837CD9BAF53 /* Alamofire */,
+				6958BFCFE9F97A28EB5946C4EE85C71D /* HanekeSwift */,
+				AF633B3C8E9625973F0CC7DBAF30D5D6 /* OMGHTTPURLRQ */,
+				693333B234F94881420F3D4F0CC2B28E /* PKRevealController */,
+				DC8799B5A53132581C9F544AEEACDC8E /* PromiseKit */,
+				C37703509273F0662473A40560D68EAA /* SwiftyJSON */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A78B40F2506F0564E66B7E1B336A5F10 /* CorePromise */ = {
+		AA1B008E151B569975606819B3BD907A /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				787CE5A26258DE1830FCEBFDD32E9E8F /* NSNotificationCenter+AnyPromise.h */,
+				7162B2031A1358232B6F5EE6B1F14217 /* NSNotificationCenter+AnyPromise.m */,
+				DB71D7BAD5ABC1FE5C770EA395C328F8 /* NSNotificationCenter+Promise.swift */,
+				EC0FD150F0C816036D899D6AB48DC47C /* NSObject+Promise.swift */,
+				84D0D96DC04A192BDD5A8AD36BF648BB /* NSURLConnection+AnyPromise.h */,
+				0FAAD3816F8D643A8B778305960A3C32 /* NSURLConnection+AnyPromise.m */,
+				7B63850D919D43EA3BA4E0D8070E528E /* NSURLConnection+Promise.swift */,
+				4512A509CA398E063973A57FA06B6824 /* NSURLSession+Promise.swift */,
+				9E250D2EEF5566B90FC571E7D2084B22 /* afterlife.swift */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		AC76B6EC882B4FC71163F479F01FAB50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A4DACAAF768F4CEB231032A52BFF8AB /* OMGHTTPURLRQ.framework */,
+				E4E250C348A09EC1FA791F2910B07E65 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF633B3C8E9625973F0CC7DBAF30D5D6 /* OMGHTTPURLRQ */ = {
+			isa = PBXGroup;
+			children = (
+				BD2A10EF42BC04B849F3D398F881B1A8 /* FormURLEncode */,
+				DAA06E41E82031114FFA9C7DF9891516 /* RQ */,
+				451146163EBE7E8DD18CB99C0DDAB0AB /* Support Files */,
+				90A4CAFF798F676C174A86157A3C45D5 /* UserAgent */,
+			);
+			path = OMGHTTPURLRQ;
+			sourceTree = "<group>";
+		};
+		B611275C145455507C169837CD9BAF53 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				869302147196FC8CB35C3BEFEC377785 /* Alamofire.swift */,
+				2F10999B6DB0BA9363A8F5832FCB18FE /* Download.swift */,
+				F0C08E48859BFA4A85F2740E0ACBBC4B /* Error.swift */,
+				E7897AB92C5AE3F0D32356456E7D2E42 /* Manager.swift */,
+				97343ABF8221120044274AE5181B60BE /* MultipartFormData.swift */,
+				CD22D8E15124B0D14CCA8DD28731D417 /* ParameterEncoding.swift */,
+				7C1FE8E142686F93505CE8FA0556657D /* Request.swift */,
+				4C6C517A984BBCE1F2C7B5A1C773AD5E /* Response.swift */,
+				ABC5F24556C3C80646E1A995BF1BFDC8 /* ResponseSerialization.swift */,
+				7300427BB57BDD1B7B5241A4666941BD /* Result.swift */,
+				A43643A22AA6BFB2EAF078A74F167303 /* ServerTrustPolicy.swift */,
+				4AA9204DCC6BEDD3752A233F7E913846 /* Stream.swift */,
+				AAA1F78D576CECE7D5D9722CA04FA68D /* Upload.swift */,
+				F074E21535EC3170476A5336A3294037 /* Validation.swift */,
+				12FD9F071C52A51EAC06392C2FF4F77A /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BD2A10EF42BC04B849F3D398F881B1A8 /* FormURLEncode */ = {
+			isa = PBXGroup;
+			children = (
+				687E63BCA33A156C34F90C75B90C577B /* OMGFormURLEncode.h */,
+				6C1EEA7EDA2970BDC8742F06AE92E3B2 /* OMGFormURLEncode.m */,
+			);
+			name = FormURLEncode;
+			sourceTree = "<group>";
+		};
+		C37703509273F0662473A40560D68EAA /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				31F861572AEF58AF8E8738463397C601 /* SwiftyJSON.swift */,
+				57F2C71477687BE708867AA249126939 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		C96ED144A91CFF1C9F2EB874D132329C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8184CB435F1AB06402C398B21B5EEC6D /* Info.plist */,
+				4B4B7D98A9A8FF30BF14DA6DCF3783AE /* PKRevealController.modulemap */,
+				C1A88BF59A1018E230606DD1C1931BDA /* PKRevealController.xcconfig */,
+				413954C1D1429B006B4A6D940736463C /* PKRevealController-Private.xcconfig */,
+				ED1DC80251D0FB452907FEE1F187DC45 /* PKRevealController-dummy.m */,
+				21D05010B4BA2EDFCBDD1A375A429542 /* PKRevealController-prefix.pch */,
+				44DD26C646009E11F5503D36B73016EC /* PKRevealController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PKRevealController";
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				972CB9D2B6252D5DE31FFC75A9EDA466 /* Alamofire.framework */,
+				954A25E17FF20CCB50AA14D2C0BED628 /* Haneke.framework */,
+				0CABA8D79A225E0D19AC7F6541B86DA2 /* OMGHTTPURLRQ.framework */,
+				3CD03E88A0B450C91B97119046958B84 /* PKRevealController.framework */,
+				03B3BE1E62E50555A74FCE26F4EC3584 /* Pods.framework */,
+				29B5499BBC19B93A78E32FCB34982F34 /* PromiseKit.framework */,
+				EB4CB50B42FA0112BD3CB968CB68AC93 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1C441E61F9D7A0C37E2633E0745E54 /* CorePromise */ = {
 			isa = PBXGroup;
 			children = (
 				3F1DF56D901E937F90AABC7E0305952A /* AnyPromise.h */,
@@ -656,126 +784,49 @@
 			name = CorePromise;
 			sourceTree = "<group>";
 		};
-		A945441B5DC752C073330B8F4ED57F06 /* Foundation */ = {
+		D85C58447EF9E7CA9C723533754B6EC1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				787CE5A26258DE1830FCEBFDD32E9E8F /* NSNotificationCenter+AnyPromise.h */,
-				7162B2031A1358232B6F5EE6B1F14217 /* NSNotificationCenter+AnyPromise.m */,
-				DB71D7BAD5ABC1FE5C770EA395C328F8 /* NSNotificationCenter+Promise.swift */,
-				EC0FD150F0C816036D899D6AB48DC47C /* NSObject+Promise.swift */,
-				84D0D96DC04A192BDD5A8AD36BF648BB /* NSURLConnection+AnyPromise.h */,
-				0FAAD3816F8D643A8B778305960A3C32 /* NSURLConnection+AnyPromise.m */,
-				7B63850D919D43EA3BA4E0D8070E528E /* NSURLConnection+Promise.swift */,
-				4512A509CA398E063973A57FA06B6824 /* NSURLSession+Promise.swift */,
-				9E250D2EEF5566B90FC571E7D2084B22 /* afterlife.swift */,
-			);
-			name = Foundation;
-			sourceTree = "<group>";
-		};
-		AC76B6EC882B4FC71163F479F01FAB50 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8A4DACAAF768F4CEB231032A52BFF8AB /* OMGHTTPURLRQ.framework */,
-				E4E250C348A09EC1FA791F2910B07E65 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B011CA1997B59CDAF49A0EB7C103AB4C /* PKRevealController */ = {
-			isa = PBXGroup;
-			children = (
-				9DDFCF21E6A617421946183887E56999 /* CAAnimation+PKIdentifier.h */,
-				239BC3119ACA78C89304614558E8FAB4 /* CAAnimation+PKIdentifier.m */,
-				73AB7BF09CB7C9C4726F57A8348C5936 /* CALayer+PKConvenienceAnimations.h */,
-				65AAD3831F3F36B35C6DD02EF717A23F /* CALayer+PKConvenienceAnimations.m */,
-				9386DE57B9CAA789928BBC3C56805652 /* NSObject+PKBlocks.h */,
-				AE21191E09BED61AE2916DDE37932790 /* NSObject+PKBlocks.m */,
-				00812282C4B6394FA64FD327AEA004E6 /* PKAnimating.h */,
-				FCB69EEF42B789A32EB5615EE7A07B61 /* PKAnimation.h */,
-				21E2A78F50D7A15BBE03DE28064732FC /* PKAnimation.m */,
-				1DDA590649D63DC247C2243B66412B26 /* PKLayerAnimator.h */,
-				4BED28524DD378377C4CF71FE5B2FBC6 /* PKLayerAnimator.m */,
-				BB4B3BC43DC928DABAFC498B90557048 /* PKLog.h */,
-				77F9E753B15C929D1604E74A11F7DE8C /* PKLog.m */,
-				186975FE342941658D99FEF698749B42 /* PKRevealController.h */,
-				641F7DEA95DF1F80DEA0028D76FE8E85 /* PKRevealController.m */,
-				28191C93B21A863FE22383D6030559F7 /* PKRevealControllerView.h */,
-				FCC6853BBA21C7BE8A8DBA41BC6DD508 /* PKRevealControllerView.m */,
-				46C3C39A66569A219C07D497821E481D /* PKSequentialAnimation.h */,
-				AEF2558B6C6A631A546931925792E7D2 /* PKSequentialAnimation.m */,
-				2547921546E2C0C804143CFB03117993 /* UIViewController+PKRevealController.h */,
-				19035D77F153C474D1A6EB220FE50892 /* UIViewController+PKRevealController.m */,
-				6BEFCE7D2A926F57B2033DDA64CE0829 /* Support Files */,
-			);
-			path = PKRevealController;
-			sourceTree = "<group>";
-		};
-		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		C7742B8B5FF758B95A7D40992458C426 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				6DB651B58F9A31CD0B9608CF1ED59B33 /* Alamofire.swift */,
-				F6C4B56A95B74D350222E635DF391872 /* Download.swift */,
-				65CB7A7C320BE80A3B7F857E65BE6109 /* Error.swift */,
-				68ACF31474729D002322997F99B71188 /* Manager.swift */,
-				DCF32B34A4D0C656CE828364CA3D109F /* MultipartFormData.swift */,
-				E42BBFB4211A6D12176C3DD2695F3D7F /* ParameterEncoding.swift */,
-				B9ED1F5966160C54FDDD302E45FC3E5E /* Request.swift */,
-				2764F35083629769C92D3D8BC951B267 /* Response.swift */,
-				4452A82E13046B746A264B86E21E8CEB /* ResponseSerialization.swift */,
-				145C281AC2527A290A06BD1EDAA448F2 /* Result.swift */,
-				C7F3BDD64F994C6CDCA11FA02E9DD84C /* ServerTrustPolicy.swift */,
-				02457A0005CEB61E759A92265DB83C80 /* Stream.swift */,
-				A1E0AB48B6607C8F61FCCE63FB067AF4 /* Upload.swift */,
-				68C303FB7C8B88FDD84F79A4A8E9165F /* Validation.swift */,
-				6EA6E157237D26A3041C291863667FC4 /* Support Files */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				06A2FE2B5F5F2BBD07FCBFDBD909B568 /* Alamofire.framework */,
-				5574780E9EABB88B4D6B8EBAE308DE17 /* Haneke.framework */,
-				9E1DE4AFA13DA50EFE6796EB795DCD31 /* OMGHTTPURLRQ.framework */,
-				B65DD730C61C811D02F95334003AB4B9 /* PKRevealController.framework */,
-				03B3BE1E62E50555A74FCE26F4EC3584 /* Pods.framework */,
-				29B5499BBC19B93A78E32FCB34982F34 /* PromiseKit.framework */,
-				EB4CB50B42FA0112BD3CB968CB68AC93 /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DBAA200A0715BDBCA08CE89152586904 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D5910336F84FEB2D3EE65CE8B20AE152 /* Info.plist */,
-				0B73A995AE89AD7BC0586C53ECD636E0 /* OMGHTTPURLRQ.modulemap */,
-				96C6BE2FB9A23F733BE46441CE5588E0 /* OMGHTTPURLRQ.xcconfig */,
-				3E5457D3E8C13CF6807A1B6130AD600F /* OMGHTTPURLRQ-Private.xcconfig */,
-				AEF18E7E4B7FDB94715ED98C9C18C911 /* OMGHTTPURLRQ-dummy.m */,
-				6373D1EB19B2896C92F0D9BE4E9549CC /* OMGHTTPURLRQ-prefix.pch */,
-				618BD3796742045B49C0A8ABAFA90D73 /* OMGHTTPURLRQ-umbrella.h */,
+				16C4CBA29522144B3A1251D35CCCCFEF /* HanekeSwift.modulemap */,
+				3AE23509E04911B5BCD2A772A908EB8F /* HanekeSwift.xcconfig */,
+				D5B9CA42A7D1DC0F9DD8A9392DD46974 /* HanekeSwift-Private.xcconfig */,
+				F12D9F0FA48432F59193C10A25505526 /* HanekeSwift-dummy.m */,
+				FC3DDA60B0B5BBC1C6447A0D50EE88CF /* HanekeSwift-prefix.pch */,
+				9D3E63EF9B9520E86A4A28A3C47320DC /* HanekeSwift-umbrella.h */,
+				42B05E2EA69A9E881D71F462F247C482 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/OMGHTTPURLRQ";
+			path = "../Target Support Files/HanekeSwift";
 			sourceTree = "<group>";
 		};
-		E13EFC05096AF366CAFB88BE1E7E20C4 /* UserAgent */ = {
+		DAA06E41E82031114FFA9C7DF9891516 /* RQ */ = {
 			isa = PBXGroup;
 			children = (
-				E6FFE56F91618381411AA578C8B66CBC /* OMGUserAgent.h */,
-				47934942CD608AD667FEF50DC88F36D1 /* OMGUserAgent.m */,
+				4A9DA858E171DD903C9EC7EFD65EA68C /* OMGHTTPURLRQ.h */,
+				143498EB518B92E927183A55EE9D3711 /* OMGHTTPURLRQ.m */,
 			);
-			name = UserAgent;
+			name = RQ;
+			sourceTree = "<group>";
+		};
+		DC8799B5A53132581C9F544AEEACDC8E /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				CF1C441E61F9D7A0C37E2633E0745E54 /* CorePromise */,
+				AA1B008E151B569975606819B3BD907A /* Foundation */,
+				18B06CC3498EB69499EC708B8F90EE7E /* QuartzCore */,
+				1A2148135C0D80838DB795424B4C48A0 /* Support Files */,
+				64EDB7215F2D3CAF82C38E57A3227BED /* UIKit */,
+			);
+			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		E29F166D521535ACF0BDB8F0A481322E /* AMap2DMap */ = {
+			isa = PBXGroup;
+			children = (
+				6D28C8E1E2BDB36092DD7252AE8D6E33 /* Frameworks */,
+				4B5AB0A30BC05BC20473F7FD180949CC /* Resources */,
+			);
+			path = AMap2DMap;
 			sourceTree = "<group>";
 		};
 		E4E250C348A09EC1FA791F2910B07E65 /* iOS */ = {
@@ -788,64 +839,44 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E98CDE1DC34408F873393321E52DABBF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D4DCEE07E65178F25E7EA264B1C1DAB8 /* Info.plist */,
-				0DB8CC30063047451E79A3DADA7BFD91 /* PromiseKit.modulemap */,
-				EDF5AA06C5E2074295EDF392E247D9C9 /* PromiseKit.xcconfig */,
-				87AABBDD8090D4376C4E75D76F8B99F9 /* PromiseKit-Private.xcconfig */,
-				EEC2B2447E81AF9AB8A10490548ED36C /* PromiseKit-dummy.m */,
-				7486BA4159B7961E13D29CA2298561F8 /* PromiseKit-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PromiseKit";
-			sourceTree = "<group>";
-		};
-		FB3BE8C2A117C4D3E3006A060EF8676D /* QuartzCore */ = {
-			isa = PBXGroup;
-			children = (
-				251264EB78BB6D8557455C65E8A03A16 /* CALayer+AnyPromise.h */,
-				F4155B69F1D3CB39532B70D6CB06099F /* CALayer+AnyPromise.m */,
-			);
-			name = QuartzCore;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		177B02555938FC54DEC2CEE2BD8B6689 /* Headers */ = {
+		15A8E178B740840BA8B74B2970322715 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CB3C41C0648B4046BA597AE9B6EDD1 /* CAAnimation+PKIdentifier.h in Headers */,
-				E9EC4712D044D4EBDE6FB7231FFA416D /* CALayer+PKConvenienceAnimations.h in Headers */,
-				331818288A8FC5247238A8E4082AFF7B /* NSObject+PKBlocks.h in Headers */,
-				F17647E9E522257E84A72F6E46A33D85 /* PKAnimating.h in Headers */,
-				092102E923101B51D902B5DF4057AFCF /* PKAnimation.h in Headers */,
-				53AD6B34AEB4A0A8D0E44EAC081E676D /* PKLayerAnimator.h in Headers */,
-				5D1A1EB12891762548927EEA5E322D29 /* PKLog.h in Headers */,
-				7279EB309C47F79DCF71BE72BC46AE55 /* PKRevealController-umbrella.h in Headers */,
-				51E64F6215E349181E85BC66D42AD0C4 /* PKRevealController.h in Headers */,
-				A7EEA02A3DE411015809CD750FED8FB8 /* PKRevealControllerView.h in Headers */,
-				90DB07435F663101359CCFB1E046811B /* PKSequentialAnimation.h in Headers */,
-				D13CD2CE28EEE40622F5BBE3A15C381C /* UIViewController+PKRevealController.h in Headers */,
+				69E554DB711693F50DBB551B0CDB9535 /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		368A36398C7563F87A43AE2433269535 /* Headers */ = {
+		379A5651D45F4F36EF235E680507EF24 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F40575EFD5E59C362E7E943C3D570F /* HanekeSwift-umbrella.h in Headers */,
+				6BC2EBE870E2CC8DE39AB1B0210CDBAF /* OMGFormURLEncode.h in Headers */,
+				D405B70248DA052AEAFEAF6976217EDD /* OMGHTTPURLRQ-umbrella.h in Headers */,
+				CB0BA1F4B32257271EABA8F7282D8002 /* OMGHTTPURLRQ.h in Headers */,
+				352E0979B5950FED6DAA03C5B5C46594 /* OMGUserAgent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4590DAB5CF626CE6BBCA84E7B112DBDF /* Headers */ = {
+		4646E80F2317AB717AC5DA0DD6BD40A9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D73E1D0E0FE11F38B3AC02E710F6E52C /* Alamofire-umbrella.h in Headers */,
+				C0BFB8B08DF54E94B8CDE29868945105 /* CAAnimation+PKIdentifier.h in Headers */,
+				B15C19A225CBBEF505C05F722BE9A0B7 /* CALayer+PKConvenienceAnimations.h in Headers */,
+				8B7C18EE8B461D6EFBD35BCFBC625BDE /* NSObject+PKBlocks.h in Headers */,
+				8E08B83A255A9A667DEB88E3482619C4 /* PKAnimating.h in Headers */,
+				F23CF7750A80ED892A87607ABEB397C7 /* PKAnimation.h in Headers */,
+				13C57B8785848200694EF69ED7E87AD2 /* PKLayerAnimator.h in Headers */,
+				C6DAC458884333853777BC5D4B55281A /* PKLog.h in Headers */,
+				32475200A23B407EDB56803E294C90C4 /* PKRevealController-umbrella.h in Headers */,
+				7E159664957F9B62AE0ED0D54ACA4555 /* PKRevealController.h in Headers */,
+				8AD246BB8D224E9D0268509AE44F5B62 /* PKRevealControllerView.h in Headers */,
+				785D09FB727050A33EC944AB3C7AC907 /* PKSequentialAnimation.h in Headers */,
+				64BF9CDDF6F79AA79A67DAA1E1708A97 /* UIViewController+PKRevealController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,14 +898,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90804259D8267DFF3B2FB7C6707AC9FC /* Headers */ = {
+		B8699AE221AA51AB6132D5D2C7C4ED31 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				793F58A6D7E09308F4B4E969A6B8D90F /* OMGFormURLEncode.h in Headers */,
-				F8F7FC076115929AB3F9069B50D9D8F1 /* OMGHTTPURLRQ-umbrella.h in Headers */,
-				8B88B2803FEA94D0CF10FCEC97BFF915 /* OMGHTTPURLRQ.h in Headers */,
-				C0415B04AA74925F997114D71A87CE81 /* OMGUserAgent.h in Headers */,
+				937263D9233E51BBACFDB54AC70FDB46 /* HanekeSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,42 +936,25 @@
 			buildRules = (
 			);
 			dependencies = (
-				166D08B7F7C7E6043D7079EDB8A3A930 /* PBXTargetDependency */,
-				C121ED11700009F774D7C497D874E8BA /* PBXTargetDependency */,
-				14DBA724AC442678740F2BB1B66B0877 /* PBXTargetDependency */,
-				67878AC51C7F1AD0B67120B445DF5E85 /* PBXTargetDependency */,
-				76B0338D9F8647845F12E4C90F2C0FAF /* PBXTargetDependency */,
-				8F40AD3889010CF8E68C187CA0999CA1 /* PBXTargetDependency */,
+				3DB2A9C116E1E9EED782D5FFF5178719 /* PBXTargetDependency */,
+				F805746C7B1997FB988929B37718AC9D /* PBXTargetDependency */,
+				25700333D03B52D962561C7390784FFD /* PBXTargetDependency */,
+				7C0375C8A83F5760565330719F516C6F /* PBXTargetDependency */,
+				9AD0B09F393B7FF7C34F16DDE559108E /* PBXTargetDependency */,
+				56845431BF335B777441D879F51919CD /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
 			productReference = 03B3BE1E62E50555A74FCE26F4EC3584 /* Pods.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		74DEC968BA872046C00738395516F2DA /* Alamofire */ = {
+		55DA4C86FD4ED1553B002B74FE486C13 /* PKRevealController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CE6C4F80FDDC718C1A66E1CBF1FCDA9 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildConfigurationList = 7A11BF25CD1A1078082A45BFF35AB2F4 /* Build configuration list for PBXNativeTarget "PKRevealController" */;
 			buildPhases = (
-				878C8DCE0B7E962741A31E82E7ED926F /* Sources */,
-				9AF54739E69B2767C6761A5A14679755 /* Frameworks */,
-				4590DAB5CF626CE6BBCA84E7B112DBDF /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = 06A2FE2B5F5F2BBD07FCBFDBD909B568 /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AB7BEA18449CB9BD3AB268F07F8CC864 /* PKRevealController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4B86C405DCB00E41FE5F41B0349D942B /* Build configuration list for PBXNativeTarget "PKRevealController" */;
-			buildPhases = (
-				956B1229CFD520DDBF657E00BF088FFB /* Sources */,
-				FFD17BCE6CD10508DE4015416C8BD61C /* Frameworks */,
-				177B02555938FC54DEC2CEE2BD8B6689 /* Headers */,
+				3042950F8FE3366503F02FA5D1911B69 /* Sources */,
+				B632090FBE64EF70DC10142E4D334AF5 /* Frameworks */,
+				4646E80F2317AB717AC5DA0DD6BD40A9 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -951,7 +962,41 @@
 			);
 			name = PKRevealController;
 			productName = PKRevealController;
-			productReference = B65DD730C61C811D02F95334003AB4B9 /* PKRevealController.framework */;
+			productReference = 3CD03E88A0B450C91B97119046958B84 /* PKRevealController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		95D6F8BEBF18C2C0D3F8A6B19A204DD8 /* OMGHTTPURLRQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AFB61E998D7666BDBA488500FA97258 /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */;
+			buildPhases = (
+				B2421A0D1120E14854E2740A1131DF57 /* Sources */,
+				59778203E39DC772B246A55505CD8C18 /* Frameworks */,
+				379A5651D45F4F36EF235E680507EF24 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OMGHTTPURLRQ;
+			productName = OMGHTTPURLRQ;
+			productReference = 0CABA8D79A225E0D19AC7F6541B86DA2 /* OMGHTTPURLRQ.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A3FDB86F9BF312612C69C5520332CABB /* HanekeSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88D84BE1287A292494709847CB437236 /* Build configuration list for PBXNativeTarget "HanekeSwift" */;
+			buildPhases = (
+				5B8F322EFBB3ECAF7F6B0ED2473EC0F8 /* Sources */,
+				2D5F04D9FBFB6EE6812F7BA9DEB283B1 /* Frameworks */,
+				B8699AE221AA51AB6132D5D2C7C4ED31 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HanekeSwift;
+			productName = HanekeSwift;
+			productReference = 954A25E17FF20CCB50AA14D2C0BED628 /* Haneke.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B9A04D3C9B208813656510FDA8ADAE02 /* SwiftyJSON */ = {
@@ -971,6 +1016,23 @@
 			productReference = EB4CB50B42FA0112BD3CB968CB68AC93 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		C2E13F2E2714B027173A457251259F14 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C61ED98745A2BA1B0CE73D3741BA47AF /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				AC83F8C48F9A5913E69A3010856ECD2E /* Sources */,
+				3480B724A1244E4DF16410A59F61F297 /* Frameworks */,
+				15A8E178B740840BA8B74B2970322715 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 972CB9D2B6252D5DE31FFC75A9EDA466 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C63E2D2EF023BACCE5536A1DF1E92C55 /* PromiseKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7625EC9C6C1FBD0351E095C2D36089C /* Build configuration list for PBXNativeTarget "PromiseKit" */;
@@ -982,45 +1044,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				B388650757CEFA1E5F5B419B9609D8EF /* PBXTargetDependency */,
+				184C055B6777FA9E26D33DFF61A653D5 /* PBXTargetDependency */,
 			);
 			name = PromiseKit;
 			productName = PromiseKit;
 			productReference = 29B5499BBC19B93A78E32FCB34982F34 /* PromiseKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C7BAEFFAB1498A39A02B0F6FDF7E8DAF /* HanekeSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7A544013F4F9AE18FE06A0C944CDE614 /* Build configuration list for PBXNativeTarget "HanekeSwift" */;
-			buildPhases = (
-				427EB1FDD3F3A7467D91CD01881FF98B /* Sources */,
-				5C8CAC18689C79BDEE0B62710E58408E /* Frameworks */,
-				368A36398C7563F87A43AE2433269535 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HanekeSwift;
-			productName = HanekeSwift;
-			productReference = 5574780E9EABB88B4D6B8EBAE308DE17 /* Haneke.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CF81E819ACCAF2695D525E2D6CCA36EE /* OMGHTTPURLRQ */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8BD4A1C99612B451075559D0F23CDB80 /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */;
-			buildPhases = (
-				6A4D9712CA41D348E230229C3ABC152D /* Sources */,
-				034AE7A719A890E4BBB5EEEE046A2EEC /* Frameworks */,
-				90804259D8267DFF3B2FB7C6707AC9FC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OMGHTTPURLRQ;
-			productName = OMGHTTPURLRQ;
-			productReference = 9E1DE4AFA13DA50EFE6796EB795DCD31 /* OMGHTTPURLRQ.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1044,10 +1072,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74DEC968BA872046C00738395516F2DA /* Alamofire */,
-				C7BAEFFAB1498A39A02B0F6FDF7E8DAF /* HanekeSwift */,
-				CF81E819ACCAF2695D525E2D6CCA36EE /* OMGHTTPURLRQ */,
-				AB7BEA18449CB9BD3AB268F07F8CC864 /* PKRevealController */,
+				C2E13F2E2714B027173A457251259F14 /* Alamofire */,
+				A3FDB86F9BF312612C69C5520332CABB /* HanekeSwift */,
+				95D6F8BEBF18C2C0D3F8A6B19A204DD8 /* OMGHTTPURLRQ */,
+				55DA4C86FD4ED1553B002B74FE486C13 /* PKRevealController */,
 				2378217FC5A9815F5F372E054D2BF374 /* Pods */,
 				C63E2D2EF023BACCE5536A1DF1E92C55 /* PromiseKit */,
 				B9A04D3C9B208813656510FDA8ADAE02 /* SwiftyJSON */,
@@ -1056,41 +1084,48 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		427EB1FDD3F3A7467D91CD01881FF98B /* Sources */ = {
+		3042950F8FE3366503F02FA5D1911B69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8395C5EB45B9880ABEAA9967DE9BD3 /* CGSize+Swift.swift in Sources */,
-				191EF7A9E148FB82BC545112EFE30727 /* Cache.swift in Sources */,
-				7216BD33124DD0C0C006E0E5D1E57C63 /* CryptoSwiftMD5.swift in Sources */,
-				EA0DEECB071742BFD2C5B48E8445E666 /* Data.swift in Sources */,
-				7179508E155A0B508DFB4F8BFD8C75D6 /* DiskCache.swift in Sources */,
-				4C927D308F615A75490DCE278D8DD576 /* DiskFetcher.swift in Sources */,
-				413047750A13CF74C360B1DDAB08A33C /* Fetch.swift in Sources */,
-				0DCA1F899559AA9531EDD7FADFCE6A0E /* Fetcher.swift in Sources */,
-				FAE2463BCEED9F67BD7C02F8B351E7CF /* Format.swift in Sources */,
-				85499D45B7204D14B394F0778647F42D /* Haneke.swift in Sources */,
-				CA1571BDE2CF1C2E9E86A4BAC56419E4 /* HanekeSwift-dummy.m in Sources */,
-				33F898651E9D5D3EDD78C49008523E23 /* Log.swift in Sources */,
-				7A334B0282215CEAA3F881D3F4B2AFD1 /* NSFileManager+Haneke.swift in Sources */,
-				06BC55D835480D5421FC3F463534DE03 /* NSHTTPURLResponse+Haneke.swift in Sources */,
-				BE52D959B406FA51C9BB7F83D78EDAF1 /* NetworkFetcher.swift in Sources */,
-				D2E7D8625216FE043C164CF29D17F630 /* String+Haneke.swift in Sources */,
-				1BFD40BFCDC6CA96B62657D0960DA8F8 /* UIButton+Haneke.swift in Sources */,
-				441359876B6FD8F6CF8BAA2F4AF20B9D /* UIImage+Haneke.swift in Sources */,
-				7018324BDA7AC4BBEF2ACC4B729B7024 /* UIImageView+Haneke.swift in Sources */,
-				185B9CA5DF9B6F6FC3E984F228470289 /* UIView+Haneke.swift in Sources */,
+				D22267A65BFF26832A6E3ACA1FC15DD5 /* CAAnimation+PKIdentifier.m in Sources */,
+				7046F5E069272C1EC894B95A2AB324CC /* CALayer+PKConvenienceAnimations.m in Sources */,
+				8D66264E1A390F216BB68D7110D96D97 /* NSObject+PKBlocks.m in Sources */,
+				3BBBCEE998B48699C491ACC8E7502802 /* PKAnimation.m in Sources */,
+				B7173BC8D014DDAF87B04FE1178A43C2 /* PKLayerAnimator.m in Sources */,
+				6CA8DF9C3639213FD23509DD33BD4BB5 /* PKLog.m in Sources */,
+				E41BC22F1543D9EF50475BF90644894C /* PKRevealController-dummy.m in Sources */,
+				1AE6BE1D79C6A9FAAF7058F14CF2C5DF /* PKRevealController.m in Sources */,
+				B136366A25A68A993EF43498FC3C72C3 /* PKRevealControllerView.m in Sources */,
+				5E576376C3C8913DD2AC359E7050D2F6 /* PKSequentialAnimation.m in Sources */,
+				4D9A37457D92E7403CF315389B0F1768 /* UIViewController+PKRevealController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A4D9712CA41D348E230229C3ABC152D /* Sources */ = {
+		5B8F322EFBB3ECAF7F6B0ED2473EC0F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46D1C838BBD5B9AA7B8B0814D8A150A /* OMGFormURLEncode.m in Sources */,
-				52257A2395DB5856F143F5FC97DC0577 /* OMGHTTPURLRQ-dummy.m in Sources */,
-				6FB623765A3F706058031391A7ACEB9B /* OMGHTTPURLRQ.m in Sources */,
-				08AAFC7841592A786D626CA0E46025A5 /* OMGUserAgent.m in Sources */,
+				C407F6883AA1D840278421B19BED67E6 /* CGSize+Swift.swift in Sources */,
+				ABA9392225BB8F196D9F87509C178E45 /* Cache.swift in Sources */,
+				AF96C93DA5EA9DBC2D1DB604FE6748C3 /* CryptoSwiftMD5.swift in Sources */,
+				995D2385704CB4964C1EEF11E2230D7A /* Data.swift in Sources */,
+				0AE2571AA626CFC97AF8778B6D5554A5 /* DiskCache.swift in Sources */,
+				E8D3B2100485551D74845CD5781ED39E /* DiskFetcher.swift in Sources */,
+				03623BF5E42E7887ED69A8A9141788F6 /* Fetch.swift in Sources */,
+				5D70E73DF0D59539A8B4ED2E081F62C4 /* Fetcher.swift in Sources */,
+				2BB757C1A862F267167BA43F9BAF1828 /* Format.swift in Sources */,
+				72E5BAE876029093683572225C742203 /* Haneke.swift in Sources */,
+				73B2418381CFE44F21D735F726F6C006 /* HanekeSwift-dummy.m in Sources */,
+				79C4FEAD7430DF746F167FA2F2105845 /* Log.swift in Sources */,
+				F3106EC4574BC6C40976255BA5A103E3 /* NSFileManager+Haneke.swift in Sources */,
+				FA57F32904506EAF66D55E62F9967456 /* NSHTTPURLResponse+Haneke.swift in Sources */,
+				3406A1EBFD75D3011BBEB7BFAC95808D /* NetworkFetcher.swift in Sources */,
+				BE48C078A44884C521A3B56428195427 /* String+Haneke.swift in Sources */,
+				023CA55350C651F21496C239E3E005C4 /* UIButton+Haneke.swift in Sources */,
+				C447D1B5525B138D316A7F3461F8613B /* UIImage+Haneke.swift in Sources */,
+				9B3CA6F8A8908F74195DE63D42F06560 /* UIImageView+Haneke.swift in Sources */,
+				698FCFA367698B9EB384AFBFEBE11B6B /* UIView+Haneke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,46 +1135,6 @@
 			files = (
 				90EF20BB8DC0A183A97CEE5D4BE375EE /* SwiftyJSON-dummy.m in Sources */,
 				39A8A7DB3537BDC61EF618B1737C1EB5 /* SwiftyJSON.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		878C8DCE0B7E962741A31E82E7ED926F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B7A9EC00F6C08AF22E2C48B35F0030D /* Alamofire-dummy.m in Sources */,
-				8D7D26C40BF98AE8E8D5DEF857F77E6B /* Alamofire.swift in Sources */,
-				A219A56F71B33B460D1C994347BF4C19 /* Download.swift in Sources */,
-				5119BEA4C906937D3E76E4FEA1A7E0AA /* Error.swift in Sources */,
-				BE2FF09F437057B7049591EC6ADE992F /* Manager.swift in Sources */,
-				371E1A9680A5A2BD6B627436D4DEA6B0 /* MultipartFormData.swift in Sources */,
-				861D4091ADC519F5058478F9C70479AA /* ParameterEncoding.swift in Sources */,
-				E06F7A9D190DA9D09AAC0803DA7F4D8D /* Request.swift in Sources */,
-				8869A0BA8F69454E87C2C52CE6B28264 /* Response.swift in Sources */,
-				6BD6428CCC9A551263BB32B7BE39F3EA /* ResponseSerialization.swift in Sources */,
-				D0FC5CFEF33516F4B2FCD3C076685F2A /* Result.swift in Sources */,
-				881B21737E3744443DA5A5C7CF39922B /* ServerTrustPolicy.swift in Sources */,
-				3CB5654A49C397453EE70C9482B3FA9A /* Stream.swift in Sources */,
-				67FD58AAB7E29B81D9265D4F5D7123F0 /* Upload.swift in Sources */,
-				B98D0DD8982076BF58544946258706EC /* Validation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		956B1229CFD520DDBF657E00BF088FFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F9C58215BAB8D186B788FBBC6F7F870 /* CAAnimation+PKIdentifier.m in Sources */,
-				756AFF2960759077D7DF3527A275914A /* CALayer+PKConvenienceAnimations.m in Sources */,
-				293BF361FE20FB53B965DA76C72EE158 /* NSObject+PKBlocks.m in Sources */,
-				D8E0AC3B1BBA511270C1B384E52E016E /* PKAnimation.m in Sources */,
-				66037AD810A873A6089FEF41764D613F /* PKLayerAnimator.m in Sources */,
-				253100467809B7FC6D412A3561D06399 /* PKLog.m in Sources */,
-				C892258ED8017693E52B777E8A908DA6 /* PKRevealController-dummy.m in Sources */,
-				1FEB003F1928C6FDDD938A8C934AD5D8 /* PKRevealController.m in Sources */,
-				2F87AD64E8284EA9C38945458D4C958A /* PKRevealControllerView.m in Sources */,
-				00A7E1A514719ED8F8B9D3C40CBA13CB /* PKSequentialAnimation.m in Sources */,
-				7DFC07F4C544E29AE04DF562A91AFAD8 /* UIViewController+PKRevealController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1185,6 +1180,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC83F8C48F9A5913E69A3010856ECD2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D656895E563D7A966AF156ADD1F48D /* Alamofire-dummy.m in Sources */,
+				7F6FE930D9BBFAF81AD0C8F80036B791 /* Alamofire.swift in Sources */,
+				F0B9151AD167FE4FA5F7688CA5F8A9AC /* Download.swift in Sources */,
+				85B74B5B7CC34A17F9E91A8416CF23DD /* Error.swift in Sources */,
+				8EA7E6E3304162CC425EDDCB25226D95 /* Manager.swift in Sources */,
+				7D9D6F3CF751C70A3EC9DE9C881EB5F8 /* MultipartFormData.swift in Sources */,
+				40E39319D7505D4B3CC62A7EEB835AAE /* ParameterEncoding.swift in Sources */,
+				A029827E121FFBE23266AAE02407BC99 /* Request.swift in Sources */,
+				5482801760833C63A4B887E30FD5E76A /* Response.swift in Sources */,
+				6955F187C7B4733447E3725A7DA49623 /* ResponseSerialization.swift in Sources */,
+				156B2E7147CD11843A893B65380721B8 /* Result.swift in Sources */,
+				6375AFA8E7B031CD084638F0DAF217F3 /* ServerTrustPolicy.swift in Sources */,
+				E71182742520FF9B2FC8448E9C5822E0 /* Stream.swift in Sources */,
+				A43F9FC09F9115B53F7F5016F34F920C /* Upload.swift in Sources */,
+				A2B3975AF817B4F38527775BFF4FCFB0 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2421A0D1120E14854E2740A1131DF57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD5489CBB7AD78BBAAD4CE09BA6C71E4 /* OMGFormURLEncode.m in Sources */,
+				096262A473F29BDBE4188EE706730269 /* OMGHTTPURLRQ-dummy.m in Sources */,
+				CB0FC9C08976B9486B62454D91AA082F /* OMGHTTPURLRQ.m in Sources */,
+				2DB5A82BD7D02896B43EF4D6285A25A8 /* OMGUserAgent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA6B629C98C163A92B3C3F339411CDFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1196,47 +1224,47 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		14DBA724AC442678740F2BB1B66B0877 /* PBXTargetDependency */ = {
+		184C055B6777FA9E26D33DFF61A653D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OMGHTTPURLRQ;
-			target = CF81E819ACCAF2695D525E2D6CCA36EE /* OMGHTTPURLRQ */;
-			targetProxy = D7A16B519E03C778D01575D4EA6E03DB /* PBXContainerItemProxy */;
+			target = 95D6F8BEBF18C2C0D3F8A6B19A204DD8 /* OMGHTTPURLRQ */;
+			targetProxy = 62849E96937CCE3A03658E8BC0856D49 /* PBXContainerItemProxy */;
 		};
-		166D08B7F7C7E6043D7079EDB8A3A930 /* PBXTargetDependency */ = {
+		25700333D03B52D962561C7390784FFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OMGHTTPURLRQ;
+			target = 95D6F8BEBF18C2C0D3F8A6B19A204DD8 /* OMGHTTPURLRQ */;
+			targetProxy = B84E3A6F7F0E9C0A1D6A3969AF3DF537 /* PBXContainerItemProxy */;
+		};
+		3DB2A9C116E1E9EED782D5FFF5178719 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
-			target = 74DEC968BA872046C00738395516F2DA /* Alamofire */;
-			targetProxy = C1A03B2492A688E086F24E53926C3A3B /* PBXContainerItemProxy */;
+			target = C2E13F2E2714B027173A457251259F14 /* Alamofire */;
+			targetProxy = 18F3051C31D8A27901E7E7C133B3D221 /* PBXContainerItemProxy */;
 		};
-		67878AC51C7F1AD0B67120B445DF5E85 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PKRevealController;
-			target = AB7BEA18449CB9BD3AB268F07F8CC864 /* PKRevealController */;
-			targetProxy = E66EE134ADB0B2EF55026F7BE0B4ED78 /* PBXContainerItemProxy */;
-		};
-		76B0338D9F8647845F12E4C90F2C0FAF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PromiseKit;
-			target = C63E2D2EF023BACCE5536A1DF1E92C55 /* PromiseKit */;
-			targetProxy = A1BCBC950FE44710C9037D6A53578BB2 /* PBXContainerItemProxy */;
-		};
-		8F40AD3889010CF8E68C187CA0999CA1 /* PBXTargetDependency */ = {
+		56845431BF335B777441D879F51919CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
 			target = B9A04D3C9B208813656510FDA8ADAE02 /* SwiftyJSON */;
-			targetProxy = D2FAFE67399C7C047021C44B627E908B /* PBXContainerItemProxy */;
+			targetProxy = AE8C1E877D10117BC0144236DB190019 /* PBXContainerItemProxy */;
 		};
-		B388650757CEFA1E5F5B419B9609D8EF /* PBXTargetDependency */ = {
+		7C0375C8A83F5760565330719F516C6F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = OMGHTTPURLRQ;
-			target = CF81E819ACCAF2695D525E2D6CCA36EE /* OMGHTTPURLRQ */;
-			targetProxy = 5AD8DDE4D38E7BC69867A15DAF683647 /* PBXContainerItemProxy */;
+			name = PKRevealController;
+			target = 55DA4C86FD4ED1553B002B74FE486C13 /* PKRevealController */;
+			targetProxy = 894939D6A33F929E0797170E2AD23A37 /* PBXContainerItemProxy */;
 		};
-		C121ED11700009F774D7C497D874E8BA /* PBXTargetDependency */ = {
+		9AD0B09F393B7FF7C34F16DDE559108E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = C63E2D2EF023BACCE5536A1DF1E92C55 /* PromiseKit */;
+			targetProxy = 202ABF5FB41B25847B5566151460AC15 /* PBXContainerItemProxy */;
+		};
+		F805746C7B1997FB988929B37718AC9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HanekeSwift;
-			target = C7BAEFFAB1498A39A02B0F6FDF7E8DAF /* HanekeSwift */;
-			targetProxy = EBAAA2CB25B1B5BBBFBC446D2103DCC6 /* PBXContainerItemProxy */;
+			target = A3FDB86F9BF312612C69C5520332CABB /* HanekeSwift */;
+			targetProxy = DA70815381099897C464F1978C231F34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1300,33 +1328,6 @@
 			};
 			name = Release;
 		};
-		0E774F59C2E82A6BEE60117D39708F91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E528ED2340AB55B01A011B50407F102F /* PKRevealController-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.6;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PKRevealController/PKRevealController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PKRevealController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PKRevealController/PKRevealController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PKRevealController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		1265C8F524C5F829BE3AE2B07B71CA7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87AABBDD8090D4376C4E75D76F8B99F9 /* PromiseKit-Private.xcconfig */;
@@ -1353,33 +1354,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		1C9D15BDB26169B55AF955CBB07A31E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E528ED2340AB55B01A011B50407F102F /* PKRevealController-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.6;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PKRevealController/PKRevealController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PKRevealController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PKRevealController/PKRevealController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PKRevealController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		46DEB249B06F2F0345641C020D7A652A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1408,9 +1382,37 @@
 			};
 			name = Release;
 		};
-		690968E395D5C56FBDCD68CB9C7E0C68 /* Release */ = {
+		48D0C552BD42114CFCC9885EFF34F5BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E5457D3E8C13CF6807A1B6130AD600F /* OMGHTTPURLRQ-Private.xcconfig */;
+			baseConfigurationReference = F9FA4EDDECF4D2FC139869D63502E0BA /* Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3.0.1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4D0064ECBAC3F7D3169DB0F40EBE231A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68496F62B7F8F50A635DC81810ED588C /* OMGHTTPURLRQ-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 3.0.2;
@@ -1425,7 +1427,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = OMGHTTPURLRQ;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1433,7 +1435,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		71696812641F871196EEC5CA42362D44 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1463,25 +1465,25 @@
 			};
 			name = Debug;
 		};
-		733A5255FC7993EA2E0DBB26996D046F /* Release */ = {
+		8583A219790C1D60BFB95BF2B0237F8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 902AEB7CBBD6C0EFF6B5DCD2EB8ED562 /* HanekeSwift-Private.xcconfig */;
+			baseConfigurationReference = 413954C1D1429B006B4A6D940736463C /* PKRevealController-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.10.0;
+				CURRENT_PROJECT_VERSION = 2.0.6;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.10.0;
+				DYLIB_COMPATIBILITY_VERSION = 2;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PKRevealController/PKRevealController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKRevealController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PKRevealController/PKRevealController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Haneke;
+				PRODUCT_NAME = PKRevealController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1490,28 +1492,81 @@
 			};
 			name = Release;
 		};
-		9DEF59B7340E03BC5A4FC5B9FF2701BD /* Debug */ = {
+		88F2D5D56D671B995720FEDB9A5D0266 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 902AEB7CBBD6C0EFF6B5DCD2EB8ED562 /* HanekeSwift-Private.xcconfig */;
+			baseConfigurationReference = 68496F62B7F8F50A635DC81810ED588C /* OMGHTTPURLRQ-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.10.0;
+				CURRENT_PROJECT_VERSION = 3.0.2;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.10.0;
+				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OMGHTTPURLRQ/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Haneke;
+				MODULEMAP_FILE = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = OMGHTTPURLRQ;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8E6C2A83AC2496569A621A82FF131266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9FA4EDDECF4D2FC139869D63502E0BA /* Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3.0.1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9AEA994B05C77D4614F49D253D0433ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 413954C1D1429B006B4A6D940736463C /* PKRevealController-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.0.6;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKRevealController/PKRevealController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKRevealController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKRevealController/PKRevealController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PKRevealController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1557,34 +1612,6 @@
 			};
 			name = Debug;
 		};
-		AFA26F70757248F784B980B0C1E8FF78 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA860BA90A709F500DE82FC4BB34913A /* Alamofire-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3.0.1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		B07B2A34624FB736AE85D00BB29B41A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87AABBDD8090D4376C4E75D76F8B99F9 /* PromiseKit-Private.xcconfig */;
@@ -1613,25 +1640,25 @@
 			};
 			name = Debug;
 		};
-		E4A853D26676BCA6BD03B7358CC3B476 /* Release */ = {
+		D77A883D5E44D3BB4EBF26BAA8748632 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA860BA90A709F500DE82FC4BB34913A /* Alamofire-Private.xcconfig */;
+			baseConfigurationReference = D5B9CA42A7D1DC0F9DD8A9392DD46974 /* HanekeSwift-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3.0.1;
+				CURRENT_PROJECT_VERSION = 0.10.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_COMPATIBILITY_VERSION = 0.10.0;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
+				PRODUCT_NAME = Haneke;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1640,27 +1667,28 @@
 			};
 			name = Release;
 		};
-		ECF7B3EB23D0F376C153984C59D4AD57 /* Debug */ = {
+		E9BC9D5002404A79E9E8B32A1C58497E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E5457D3E8C13CF6807A1B6130AD600F /* OMGHTTPURLRQ-Private.xcconfig */;
+			baseConfigurationReference = D5B9CA42A7D1DC0F9DD8A9392DD46974 /* HanekeSwift-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3.0.2;
+				CURRENT_PROJECT_VERSION = 0.10.0;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_COMPATIBILITY_VERSION = 0.10.0;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OMGHTTPURLRQ/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ.modulemap";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = OMGHTTPURLRQ;
+				PRODUCT_NAME = Haneke;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1713,15 +1741,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CE6C4F80FDDC718C1A66E1CBF1FCDA9 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFA26F70757248F784B980B0C1E8FF78 /* Debug */,
-				E4A853D26676BCA6BD03B7358CC3B476 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1731,11 +1750,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B86C405DCB00E41FE5F41B0349D942B /* Build configuration list for PBXNativeTarget "PKRevealController" */ = {
+		4AFB61E998D7666BDBA488500FA97258 /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C9D15BDB26169B55AF955CBB07A31E0 /* Debug */,
-				0E774F59C2E82A6BEE60117D39708F91 /* Release */,
+				4D0064ECBAC3F7D3169DB0F40EBE231A /* Debug */,
+				88F2D5D56D671B995720FEDB9A5D0266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1749,20 +1768,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A544013F4F9AE18FE06A0C944CDE614 /* Build configuration list for PBXNativeTarget "HanekeSwift" */ = {
+		7A11BF25CD1A1078082A45BFF35AB2F4 /* Build configuration list for PBXNativeTarget "PKRevealController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9DEF59B7340E03BC5A4FC5B9FF2701BD /* Debug */,
-				733A5255FC7993EA2E0DBB26996D046F /* Release */,
+				9AEA994B05C77D4614F49D253D0433ED /* Debug */,
+				8583A219790C1D60BFB95BF2B0237F8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BD4A1C99612B451075559D0F23CDB80 /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */ = {
+		88D84BE1287A292494709847CB437236 /* Build configuration list for PBXNativeTarget "HanekeSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ECF7B3EB23D0F376C153984C59D4AD57 /* Debug */,
-				690968E395D5C56FBDCD68CB9C7E0C68 /* Release */,
+				E9BC9D5002404A79E9E8B32A1C58497E /* Debug */,
+				D77A883D5E44D3BB4EBF26BAA8748632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C61ED98745A2BA1B0CE73D3741BA47AF /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D0C552BD42114CFCC9885EFF34F5BA /* Debug */,
+				8E6C2A83AC2496569A621A82FF131266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

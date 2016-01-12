@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020651FD1C44D61F0098A622 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020651FC1C44D61F0098A622 /* LocationViewController.swift */; };
 		020763241C0D803000750BCE /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020763231C0D803000750BCE /* CommentCell.xib */; };
 		020763261C0D80D000750BCE /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020763251C0D80D000750BCE /* CommentCell.swift */; };
 		021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021695501BD8C7CE006A022F /* LaunchScreen.storyboard */; };
@@ -101,6 +102,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020651FA1C44D2D80098A622 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		020651FC1C44D61F0098A622 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		020763231C0D803000750BCE /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		020763251C0D80D000750BCE /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		021695511BD8C7CE006A022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -329,6 +332,7 @@
 				027E88231C117CA200E9EB90 /* MyOrderViewController.swift */,
 				029018721C210EE20086FC61 /* OrderDetailViewController.swift */,
 				02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */,
+				020651FC1C44D61F0098A622 /* LocationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -457,6 +461,7 @@
 		9264CB8C256BF35A8C24C870 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				020651FA1C44D2D80098A622 /* MAMapKit.framework */,
 				0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */,
 				27DFFBBF8D222EA135C2405F /* Pods.framework */,
 			);
@@ -693,6 +698,7 @@
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
 				027162A21C100F0900A8F22B /* PhotographerViewController.swift in Sources */,
+				020651FD1C44D61F0098A622 /* LocationViewController.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
 				026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */,
 				020763261C0D80D000750BCE /* CommentCell.swift in Sources */,
@@ -856,6 +862,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guo Ye (89439ERF39)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -877,6 +887,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guo Ye (89439ERF39)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
