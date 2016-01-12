@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate, HttpProtocol {
+class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate, SnapShotEngineProtocol{
     var navBtn: UIButton?
     var imageUrl: [String] = []
     @IBOutlet weak var mainTableView: UITableView!
@@ -20,8 +20,6 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
         self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
         self.navigationController?.navigationBar.addSubview(self.navBtn!)
-        
-        self.getHomePageImage()
         }
     }
     
@@ -142,37 +140,19 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
-    func getHomePageImage() {
-        let timeStamp = ToolKit.getTimeStamp()
-        let sig = "GEThttp://111.13.47.169:8080/materials/homepagestime=\(timeStamp)f4a8yoxG9F6b1gUB"
-        let urlAssembler = UrlAssembler(taskUrl: "http://111.13.47.169:8080/materials/homepages", parameterDictionary: ["time": timeStamp], signiture: sig.md5)
-        let httpControl = HttpControl(delegate: self)
-        httpControl.onRequest(urlAssembler.url)
-    }
-    
-    func didRecieveResults(results: AnyObject) {
-        print(results)
-        if JSON(results)["succeed"].int! == 1 {
-            print(JSON(results)["data"][0])
-            
-            var sampleString: String = JSON(results)["data"]["items"].string!
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("[", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("]", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("\"", withString: "")
+    func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+        print("FrontViewController, onTaskSuccess")
+        if (TASK_TYPE_GET_HOME_PAGES == taskType) {
+            print("get home pages task success!")
+            let sampleString: String! = extraData as! String;
             self.imageUrl = sampleString.componentsSeparatedByString(",")
             self.mainTableView.reloadData()
-        } else {
-            
-            
-            didRecieveError("requestFailed")
         }
-        print("httpProtocol is called")
     }
     
-    func didRecieveError(error: AnyObject) {
-        print("httpProtocol is called")
+    func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+        print("FrontViewController, onTaskError, handle please!")
     }
-
     
 }
 
