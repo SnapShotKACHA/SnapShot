@@ -71,6 +71,8 @@
 		02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F90BC81BFD764B00949D9B /* LowerCell.swift */; };
 		02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F96CB31BDA152100AA3D5E /* DetailCell.xib */; };
 		02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC9BCB1C02F53400E67EAF /* LoginTask.swift */; };
+		488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */; };
+		488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */; };
 		489795AF1C1A558A00F8831E /* SnapShotTaskEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489795AE1C1A558A00F8831E /* SnapShotTaskEngine.swift */; };
 		676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676917B11C0DD86B00B73A1F /* CouponViewController.swift */; };
 		6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677154991C009C4300D3A35D /* ToolKit.swift */; };
@@ -172,6 +174,8 @@
 		02FC9BCB1C02F53400E67EAF /* LoginTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
 		27DFFBBF8D222EA135C2405F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotEngineProtocol.swift; sourceTree = "<group>"; };
+		488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSMSVerifyCodeTask.swift; sourceTree = "<group>"; };
 		489795AE1C1A558A00F8831E /* SnapShotTaskEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotTaskEngine.swift; sourceTree = "<group>"; };
 		532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		676917B11C0DD86B00B73A1F /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
@@ -364,7 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				677154981BFF55DC00D3A35D /* SPBridging-Header.h */,
-				0297AFF31BFEB24F007E8435 /* Task */,
+				0297AFF31BFEB24F007E8435 /* Engine */,
 				025659331BFDAE0100057A72 /* Tools */,
 				02E068921BD6222600530B8F /* Model */,
 				0273CA521BCCADFE00918455 /* Controllers */,
@@ -413,15 +417,14 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		0297AFF31BFEB24F007E8435 /* Task */ = {
+		0297AFF31BFEB24F007E8435 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				488FAE271C435860004C5543 /* Task */,
 				489795AE1C1A558A00F8831E /* SnapShotTaskEngine.swift */,
-				0297AFF41BFEB27A007E8435 /* BaseTask.swift */,
-				0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */,
-				02FC9BCB1C02F53400E67EAF /* LoginTask.swift */,
+				488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */,
 			);
-			name = Task;
+			name = Engine;
 			sourceTree = "<group>";
 		};
 		02E068921BD6222600530B8F /* Model */ = {
@@ -438,6 +441,17 @@
 				532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		488FAE271C435860004C5543 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				0297AFF41BFEB27A007E8435 /* BaseTask.swift */,
+				0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */,
+				02FC9BCB1C02F53400E67EAF /* LoginTask.swift */,
+				488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */,
+			);
+			name = Task;
 			sourceTree = "<group>";
 		};
 		9264CB8C256BF35A8C24C870 /* Frameworks */ = {
@@ -647,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029018741C210EE20086FC61 /* OrderDetailViewController.swift in Sources */,
+				488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */,
 				023994E01BE34A5E0010122F /* SearchViewController.swift in Sources */,
 				021C1C201BF06CFD0064DC45 /* BasicViewController.swift in Sources */,
 				026B978C1C0C3B0600C853F0 /* CommentDisplayTableView.swift in Sources */,
@@ -665,6 +680,7 @@
 				027162A81C10177200A8F22B /* ServiceCell.swift in Sources */,
 				6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */,
 				02817FE61BDA16FD00166DC2 /* DetailCell.swift in Sources */,
+				488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
 				021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */,
 				0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */,

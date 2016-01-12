@@ -20,4 +20,19 @@ class SnapShotTaskEngine {
         return SnapShotSingleton.instance
     }
     
+    func doRegister(username: String!, phoneNum: String!, password: String!, verifyCode: String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
+        let registerTask: RegisterTask = RegisterTask(username: username, phoneNum:phoneNum, password:password, verifyCode: verifyCode, engineProtocol:engineProtocol);
+        return registerTask.taskType
+    }
+    
+    func doLogin(username:String!, phoneNum:String!, password:String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
+        let loginTask: LoginTask = LoginTask(username: username, phoneNum:phoneNum, password:password, engineProtocol:engineProtocol);
+        return loginTask.taskType
+    }
+    
+    func doGetVerifyCode(phoneNum: String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
+        let getVerifyCodeTask: GetSMSVerifyCodeTask = GetSMSVerifyCodeTask(phoneNum: phoneNum, engineProtocol:engineProtocol);
+        return getVerifyCodeTask.taskType
+    }
+    
 }

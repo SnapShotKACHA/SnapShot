@@ -10,20 +10,33 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class BaseTask:NSObject {
-    var taskID: Int!
+
+
+class BaseTask : NSObject {
+    
+    var taskID: Int! = PUBLIC_TASK_ID + 1
+    var taskType: Int!
     var taskUrl: String!
     var timeStamp: String?
     var httpControl: HttpControl!
-    var viewController: BasicViewController?
+    var engineProtocol: SnapShotEngineProtocol!
         
-    init(taskID:Int, taskUrl: String, viewController: BasicViewController?) {
+    init(taskType: Int, engineProtocol:SnapShotEngineProtocol?) {
         super.init()
-        self.taskID = taskID
-        self.taskUrl = taskUrl
-        
-        if viewController != nil {
-            self.viewController = viewController
+        self.taskType = taskType
+        self.engineProtocol = engineProtocol
+    }
+    
+    func notifySuccess(taskType: Int!, successCode: Int!, extraData: AnyObject!) {
+        if (self.engineProtocol != nil) {
+            self.engineProtocol.onTaskSuccess(taskType, successCode: successCode, extraData: extraData)
+        }
+}
+    
+    func notifyFailed(taskType: Int!, errorCode: Int!, extraData: AnyObject!) {
+        if (self.engineProtocol != nil) {
+            self.engineProtocol.onTaskError(taskType, errorCode: errorCode, extraData: extraData)
         }
     }
+
 }

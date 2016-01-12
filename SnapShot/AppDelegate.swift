@@ -11,7 +11,7 @@ import CoreData
 import PKRevealController
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol {
 
     var window: UIWindow?
     var navigationController: UINavigationController?
@@ -23,10 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent        
         NSThread .sleepForTimeInterval(1)
-        
         self.frontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as? FrontViewController
          self.leftViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("leftViewController") as? LeftViewController
         self.revealController = PKRevealController.init(frontViewController: frontViewController, leftViewController: leftViewController)
@@ -35,13 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.revealController!.title = "咔嚓"
         self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
         self.navigationController = UINavigationController()
-        
-        
-        
-        
         self.window?.rootViewController = self.initNavigationController()
-        
-        
         self.navigationController!.pushViewController(revealController!, animated: false)
         return true
     }
@@ -155,6 +147,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.searchViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("searchViewController") as? SearchViewController
         self.navigationController?.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(searchViewController!, animated: true)
+    }
+    
+    func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+        print("onTaskError")
+    }
+    func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+        print("onTaskSuccess")
     }
 }
 
