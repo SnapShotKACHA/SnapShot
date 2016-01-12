@@ -15,15 +15,15 @@ class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
     
     init(phoneNum: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_REGISTER, engineProtocol: engineProtocol)
-        self.phoneNum = phoneNum
+        self.phoneNum = "15810700086" // TODO need fix
         self.taskUrl = GET_SMS_VERIFY_CODE_URL
         getSMSValidCode()
     }
     
     func getSMSValidCode() {
         self.timeStamp = ToolKit.getTimeStamp()
-        let signature = "POST\(self.taskUrl)phoneNum=\(phoneNum)time=\(self.timeStamp)\(SECRET_KEY)"
         let parametersDic:Dictionary<String, String> = [JSON_KEY_PHONE_NUM: phoneNum, JSON_KEY_TIME: self.timeStamp!]
+        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }

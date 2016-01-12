@@ -38,5 +38,27 @@ class BaseTask : NSObject {
             self.engineProtocol.onTaskError(taskType, errorCode: errorCode, extraData: extraData)
         }
     }
+    
+    func generatePostSignature(url: String!, parametersDic:Dictionary<String, String>) -> String! {
+        return generateSignature("POST", url: url, parametersDic: parametersDic);
+    }
+    
+    func generateGetSignature(url: String!, parametersDic:Dictionary<String, String>) -> String! {
+        return generateSignature("GET", url: url, parametersDic: parametersDic);
+    }
+    
+    private func generateSignature(method: String!, url: String!, parametersDic:Dictionary<String, String>) -> String! {
+        var result: String = method
+        result += url;
+        let sortedDic = parametersDic.sort{$0.0 < $1.0}
+        for (parameter, parameterValue) in sortedDic {
+            result += "\(parameter)=\(parameterValue)"
+        }
+        result += SECRET_KEY
+        print("generateSignature = ")
+        print(result)
+        return result;
+    }
+
 
 }

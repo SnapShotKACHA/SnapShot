@@ -20,6 +20,13 @@ class SnapShotTaskEngine {
         return SnapShotSingleton.instance
     }
     
+    /*
+     * 用户注册   
+     * phoneNum, string, 手机号码
+     * username, string, 用户名
+     * password, string, 用户原始密码经md5加密后的字符串
+     * authCode, string, 手机验证码
+     */
     func doRegister(username: String!, phoneNum: String!, password: String!, verifyCode: String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
         let registerTask: RegisterTask = RegisterTask(username: username, phoneNum:phoneNum, password:password, verifyCode: verifyCode, engineProtocol:engineProtocol);
         return registerTask.taskType
