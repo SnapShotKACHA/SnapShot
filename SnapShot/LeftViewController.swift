@@ -64,6 +64,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         self.loginButton?.setTitleColor(UIColor.blackColor(), forState: UIControlState.Selected)
         self.loginButton?.addTarget(self, action: "loginViewDisplay", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.loginButton!)
+        self.userProfileButton.enabled = false
         if isLogin == false {
             self.profileImage.hidden = true
             self.userIDLabel.hidden = true
@@ -72,18 +73,14 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             self.loginButton!.removeFromSuperview()
-            
+            self.userProfileButton.enabled = true
             self.loginButton?.hidden = true
             self.loginButton?.frame = CGRectMake(-100, -100, 0, 0)
             self.profileImage.hidden = false
             self.userIDLabel.hidden = false
+            self.userIDLabel.text = ToolKit.setUserID()
             self.userIDLabel.textColor = TEXT_COLOR_LIGHT_GREY
             self.userIDLabel.adjustsFontSizeToFitWidth = true
-            if userDefaults.objectForKey("username") == nil {
-                self.userIDLabel.text = userDefaults.objectForKey("phoneNum") as? String
-            } else {
-                self.userIDLabel.text = userDefaults.objectForKey("username") as? String
-            }
             self.view.addSubview(self.userIDLabel)
             self.changeStatuesButton.hidden = false
         }

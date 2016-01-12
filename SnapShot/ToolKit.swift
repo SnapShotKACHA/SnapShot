@@ -17,6 +17,18 @@ class ToolKit {
         return timeStamp
     }
     
+    static func setUserID() -> String
+    {
+        if userDefaults.objectForKey("username") !== nil {
+            return userDefaults.objectForKey("username") as! String
+        } else if userDefaults.objectForKey("phoneNum") != nil {
+            return userDefaults.objectForKey("phoneNum") as! String
+        } else {
+            return "未获得用户名"
+        }
+        
+    }
+    
     static func stringToTimeStamp(stringTime:String)->String {
         
         let dfmatter = NSDateFormatter()
@@ -69,6 +81,8 @@ class ToolKit {
     }
 
 }
+
+
 
 extension String  {
     var md5: String! {

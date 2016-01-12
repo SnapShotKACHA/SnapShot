@@ -1640,7 +1640,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frontCellImageDefault1" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-j6-pRy">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="gZC-C1-jgt"/>
                                 </constraints>
@@ -1696,56 +1696,27 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeW-4t-UUg">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="ToP-Fc-pqL"/>
-                                    <constraint firstAttribute="width" constant="25" id="ojU-A8-jGc"/>
-                                </constraints>
-                                <state key="normal" image="editButtonImage"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ToP-Fc-pqL"/>
-                                        <exclude reference="ojU-A8-jGc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="ToP-Fc-pqL"/>
-                                        <include reference="ojU-A8-jGc"/>
-                                    </mask>
-                                </variation>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Bhg-Fq-XzO" secondAttribute="trailing" priority="750" constant="147" id="2Nx-Nn-bvk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YeW-4t-UUg" secondAttribute="trailing" constant="79" id="3m7-2A-9jU"/>
                             <constraint firstItem="Bhg-Fq-XzO" firstAttribute="leading" secondItem="rUI-RL-9u8" secondAttribute="leadingMargin" priority="750" constant="147" id="3tN-Dk-QQP"/>
                             <constraint firstItem="Bhg-Fq-XzO" firstAttribute="top" secondItem="E7L-ra-VCF" secondAttribute="bottom" constant="46" id="EwF-LF-Kh3"/>
                             <constraint firstItem="2Zr-j6-pRy" firstAttribute="leading" secondItem="rUI-RL-9u8" secondAttribute="leadingMargin" constant="-20" id="IBO-R0-blp"/>
                             <constraint firstItem="Osm-V3-AWm" firstAttribute="leading" secondItem="rUI-RL-9u8" secondAttribute="leadingMargin" constant="112" id="KUK-ut-OFJ"/>
                             <constraint firstItem="Osm-V3-AWm" firstAttribute="top" secondItem="Bhg-Fq-XzO" secondAttribute="bottom" constant="14" id="Lj0-3d-sdN"/>
-                            <constraint firstItem="YeW-4t-UUg" firstAttribute="top" secondItem="E7L-ra-VCF" secondAttribute="bottom" priority="999" constant="145" id="QYY-Xl-NQN"/>
                             <constraint firstItem="6qR-ve-MJa" firstAttribute="top" secondItem="Osm-V3-AWm" secondAttribute="bottom" constant="546" id="a0F-c0-4F1"/>
-                            <constraint firstItem="6qR-ve-MJa" firstAttribute="top" secondItem="YeW-4t-UUg" secondAttribute="bottom" constant="400" id="hUW-UK-8Jx"/>
                             <constraint firstItem="2Zr-j6-pRy" firstAttribute="top" secondItem="rUI-RL-9u8" secondAttribute="topMargin" constant="-22" id="n7w-6u-TO7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Zr-j6-pRy" secondAttribute="trailing" constant="-20" id="rzy-Dx-zzp"/>
-                            <constraint firstItem="YeW-4t-UUg" firstAttribute="leading" secondItem="Osm-V3-AWm" secondAttribute="trailing" constant="8" id="t6z-9z-zzi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="2Zr-j6-pRy"/>
                                 <exclude reference="Bhg-Fq-XzO"/>
                                 <exclude reference="Osm-V3-AWm"/>
-                                <exclude reference="YeW-4t-UUg"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="a0F-c0-4F1"/>
-                                <exclude reference="hUW-UK-8Jx"/>
-                                <exclude reference="3m7-2A-9jU"/>
-                                <exclude reference="QYY-Xl-NQN"/>
-                                <exclude reference="t6z-9z-zzi"/>
                                 <exclude reference="KUK-ut-OFJ"/>
                                 <exclude reference="Lj0-3d-sdN"/>
                                 <exclude reference="IBO-R0-blp"/>
@@ -1761,14 +1732,9 @@
                                 <include reference="2Zr-j6-pRy"/>
                                 <include reference="Bhg-Fq-XzO"/>
                                 <include reference="Osm-V3-AWm"/>
-                                <include reference="YeW-4t-UUg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="a0F-c0-4F1"/>
-                                <include reference="hUW-UK-8Jx"/>
-                                <include reference="3m7-2A-9jU"/>
-                                <include reference="QYY-Xl-NQN"/>
-                                <include reference="t6z-9z-zzi"/>
                                 <include reference="KUK-ut-OFJ"/>
                                 <include reference="Lj0-3d-sdN"/>
                                 <include reference="IBO-R0-blp"/>
@@ -1782,10 +1748,15 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
+                    <connections>
+                        <outlet property="headImageView" destination="2Zr-j6-pRy" id="b0O-hG-o9I"/>
+                        <outlet property="profileImageView" destination="Bhg-Fq-XzO" id="Nxf-Lv-Ofd"/>
+                        <outlet property="profileUserIDLabel" destination="Osm-V3-AWm" id="cVl-O4-UTo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceo-d3-CAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1325" y="1844.25"/>
+            <point key="canvasLocation" x="823" y="1976"/>
         </scene>
         <!--My Order View Controller-->
         <scene sceneID="kf6-Tf-wbm">
@@ -1923,7 +1894,6 @@
         <image name="checkBoxImage" width="33" height="31"/>
         <image name="checkBoxSelectedImage" width="33" height="31"/>
         <image name="couponIconImage" width="32" height="31"/>
-        <image name="editButtonImage" width="32" height="29"/>
         <image name="frontCellImageDefault1" width="845" height="481"/>
         <image name="groupIconImage" width="33" height="23"/>
         <image name="loginButtonImage" width="472" height="57"/>
