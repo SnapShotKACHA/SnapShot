@@ -23,6 +23,7 @@ class BaseTask : NSObject {
         
     init(taskType: Int, engineProtocol:SnapShotEngineProtocol?) {
         super.init()
+        PUBLIC_TASK_ID += 1
         self.taskType = taskType
         self.engineProtocol = engineProtocol
     }

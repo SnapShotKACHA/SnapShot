@@ -15,7 +15,7 @@ class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
     
     init(phoneNum: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_REGISTER, engineProtocol: engineProtocol)
-        self.phoneNum = "15810700086" // TODO need fix
+        self.phoneNum = phoneNum
         self.taskUrl = GET_SMS_VERIFY_CODE_URL
         getSMSValidCode()
     }

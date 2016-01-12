@@ -29,17 +29,30 @@ class SnapShotTaskEngine {
      */
     func doRegister(username: String!, phoneNum: String!, password: String!, verifyCode: String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
         let registerTask: RegisterTask = RegisterTask(username: username, phoneNum:phoneNum, password:password, verifyCode: verifyCode, engineProtocol:engineProtocol);
-        return registerTask.taskType
+        print("SnapShotTaskEngine, register task start, taskID = \(registerTask.taskID)")
+        return registerTask.taskID
     }
     
+    /*
+     * 登录成功后，SnapShotEngineProtocol中onTaskSuccess方法，返回LoginModel
+     * 可根据uid查找用户信息
+     */
     func doLogin(username:String!, phoneNum:String!, password:String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
         let loginTask: LoginTask = LoginTask(username: username, phoneNum:phoneNum, password:password, engineProtocol:engineProtocol);
-        return loginTask.taskType
+        print("SnapShotTaskEngine, login task start, taskID = \(loginTask.taskID)")
+        return loginTask.taskID
     }
     
     func doGetVerifyCode(phoneNum: String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
         let getVerifyCodeTask: GetSMSVerifyCodeTask = GetSMSVerifyCodeTask(phoneNum: phoneNum, engineProtocol:engineProtocol);
-        return getVerifyCodeTask.taskType
+        print("SnapShotTaskEngine, GetVerifyCode task start, taskID = \(getVerifyCodeTask.taskID)")
+        return getVerifyCodeTask.taskID
+    }
+    
+    func doGetUserInfoTask(userId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let getUserInfoTask: GetUserInfoTask = GetUserInfoTask(userId: userId, engineProtocol: engineProtocol);
+        print("SnapShotTaskEngine, getUserInfoTask task start, taskID = \(getUserInfoTask.taskID)")
+        return getUserInfoTask.taskID
     }
     
 }
