@@ -16,13 +16,17 @@ class LoginTask: BaseTask, HttpProtocol {
     var phoneNum: String?
     var password: String?
     
-    override init(taskID: Int, taskUrl: String, viewController: BasicViewController?) {
-        super.init(taskID: taskID, taskUrl: taskUrl, viewController:viewController)
+    init(username:String!, phoneNum: String!, password: String!, engineProtocol: SnapShotEngineProtocol) {
+        super.init(taskType: TASK_TYPE_LOGIN, engineProtocol: engineProtocol);
+        self.username = username;
+        self.phoneNum = phoneNum;
+        self.password = password;
+        self.taskUrl = LOGIN_URL
+        doLoginWithPhoneNum()
     }
     
-    func doLoginWithUserName(username:String, password:String) {
-        self.username = username
-        self.password = password.md5
+    func doLoginWithUserName() {
+        self.password = self.password!.md5
         self.timeStamp = ToolKit.getTimeStamp()
         let signature = "POST\(self.taskUrl)time=\(self.timeStamp)username=\(self.username)\(self.password)"
         let parametersDic:Dictionary<String, String> = ["username": self.username!, "time": timeStamp!]
@@ -30,36 +34,36 @@ class LoginTask: BaseTask, HttpProtocol {
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
-    func doLoginWithPhoneNum(phoneNum:String, password:String) {
-        self.phoneNum = phoneNum
-        self.password = password.md5
+    func doLoginWithPhoneNum() {
+        self.password = self.password!.md5
         self.timeStamp = ToolKit.getTimeStamp()
         let signature = "POST\(self.taskUrl!)phoneNum=\(self.phoneNum!)time=\(self.timeStamp!)\(self.password!.md5)"
-        let parametersDic:Dictionary<String, String> = ["phoneNum": phoneNum, "time": timeStamp!]
+        let parametersDic:Dictionary<String, String> = [JSON_KEY_PHONE_NUM: self.phoneNum!,
+            JSON_KEY_TIME: self.timeStamp!]
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
     func didRecieveResults(results: AnyObject) {
+        print("LoginTask")
         print(results)
-        if JSON(results)["succeed"].int! == 1 {
-            userDefaults.setObject(self.phoneNum, forKey: "phoneNum")
-            userDefaults.setObject(self.password, forKey: "password")
-            userDefaults.setObject(self.username, forKey: "username")
+        if (JSON(results)[JSON_KEY_SUCCEED].int! == JSON_VALUE_SUCCESS) {
+            userDefaults.setObject(self.phoneNum, forKey: JSON_KEY_PHONE_NUM)
+            userDefaults.setObject(self.password, forKey: JSON_KEY_PASSWORD)
+            userDefaults.setObject(self.username, forKey: JSON_KEY_USER_NAME)
             isLogin = true
-            self.viewController?.navigationController!.popToRootViewControllerAnimated(true)
+            self.engineProtocol.onTaskSuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "");
         } else {
-           
-            let cancelAction = UIAlertAction(title: "重新登录", style: .Cancel, handler: nil)
-            self.viewController?.presentViewController(ViewWidgest.displayAlert("登录错误", message: "请核对用户名和密码", actions: [cancelAction]), animated: true, completion: nil)
-            
-            didRecieveError("requestFailed")
+            print("RegisterTask, didRecieveResults, no matching json key")
+            self.engineProtocol.onTaskError(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "");
         }
         print("httpProtocol is called")
     }
     
     func didRecieveError(error: AnyObject) {
-        print("httpProtocol is called")
+        print("LoginTask")
+        print("httpProtocol is called, didRecieveError")
+        self.engineProtocol.onTaskError(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "");
     }
 
 }

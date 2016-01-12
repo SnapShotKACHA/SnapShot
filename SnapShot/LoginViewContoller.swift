@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: BasicViewController, UITextFieldDelegate {
+class LoginViewController: BasicViewController, UITextFieldDelegate, SnapShotEngineProtocol {
     
     @IBOutlet weak var phoneNumTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -55,8 +55,7 @@ class LoginViewController: BasicViewController, UITextFieldDelegate {
     
     @IBAction func loginButtonAction(sender: AnyObject) {
         if phoneNumTextField.text != nil && ToolKit.isTelNumber(phoneNumTextField.text!) && passwordTextField.text != nil {
-            let loginTask = LoginTask(taskID: 03, taskUrl: LOGIN_URL, viewController:self)
-            loginTask.doLoginWithPhoneNum(self.phoneNumTextField.text!, password: self.passwordTextField.text!)
+            SnapShotTaskEngine.getInstance().doLogin("", phoneNum: self.phoneNumTextField.text!, password: self.passwordTextField.text!, engineProtocol: self)
         }
     }
     
@@ -97,6 +96,19 @@ class LoginViewController: BasicViewController, UITextFieldDelegate {
             
         default:
             break
+        }
+    }
+    
+    func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+        if (taskType == TASK_TYPE_LOGIN && successCode == TASK_RESULT_CODE_SUCCESS) {
+            navigationController!.popToRootViewControllerAnimated(true)
+        }
+    }
+    
+    func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+        if (taskType == TASK_TYPE_LOGIN) {
+            let cancelAction = UIAlertAction(title: "重新登录", style: .Cancel, handler: nil)
+            presentViewController(ViewWidgest.displayAlert("登录错误", message: "请核对用户名和密码", actions: [cancelAction]), animated: true, completion: nil)
         }
     }
 }

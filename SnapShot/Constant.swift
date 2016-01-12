@@ -46,8 +46,32 @@ let CONTENT_FONT_SIZE:CGFloat = 12.0
 
 //网络参数
 let ROOT_URL = "http://111.13.47.169:8080"
-let AUTHENTICATION_CODE_URL = ROOT_URL + "/sms/authCode/send"
+let GET_SMS_VERIFY_CODE_URL = ROOT_URL + "/sms/authCode/send"
 let REGISTER_URL = ROOT_URL + "/user/register"
 let LOGIN_URL = ROOT_URL + "/user/login"
 let SECRET_KEY = "f4a8yoxG9F6b1gUB"
+
+let PUBLIC_TASK_ID: Int = 0
+
+// TaskType
+let TASK_TYPE_LOGIN: Int = 1
+let TASK_TYPE_REGISTER: Int = 2
+let TASK_TYPE_GET_VERIFY_CODE: Int = 3
+
+
+// Task result code
+let TASK_RESULT_CODE_SUCCESS: Int = 100
+let TASK_RESULT_CODE_GENERAL_ERROR: Int = 101
+
+// JSON_KEY
+let JSON_KEY_SUCCEED: String = "succeed"
+let JSON_KEY_PASSWORD: String = "password"
+let JSON_KEY_PHONE_NUM: String = "phoneNum"
+let JSON_KEY_USER_NAME: String = "username"
+let JSON_KEY_AUTH_CODE: String = "authCode"
+let JSON_KEY_TIME: String = "time"
+
+// JSON_VALUE
+let JSON_VALUE_SUCCESS = 1
+
  

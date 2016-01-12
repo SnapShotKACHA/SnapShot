@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-class RegisterViewController: BasicViewController,UITextFieldDelegate {
+class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShotEngineProtocol {
     @IBOutlet weak var userIDTextField: UITextField!
     @IBOutlet weak var phoneNumTextField: UITextField!
     
@@ -101,8 +101,7 @@ class RegisterViewController: BasicViewController,UITextFieldDelegate {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
         self.sendSMSButton.enabled = false
         if SMSTextField.text != nil {
-            let registerTask = RegisterTask(taskID: 01, taskUrl: AUTHENTICATION_CODE_URL, viewController:self)
-            registerTask.getSMSValidCode(SMSTextField.text!)
+            SnapShotTaskEngine.getInstance().doGetVerifyCode(SMSTextField.text!, engineProtocol: self)
         } else {
             self.authCodeWarningLabel.hidden = false
         }
@@ -190,12 +189,37 @@ class RegisterViewController: BasicViewController,UITextFieldDelegate {
     }
 
     @IBAction func registerButtonAction(sender: AnyObject) {
-        if phoneNumTextField.text != nil && userIDTextField.text != nil && self.SMSTextField.text != nil && passwordTextField != nil && passwordValidTextField.text != nil && passwordTextField.text == passwordValidTextField.text {
-            let registerTask = RegisterTask(taskID: 02, taskUrl: REGISTER_URL, viewController:self)
-            registerTask.doRegister(phoneNumTextField.text!, username: userIDTextField.text!, password:(passwordTextField.text)!, authCode: SMSTextField.text!)
+        if phoneNumTextField.text != nil
+            && userIDTextField.text != nil
+            && self.SMSTextField.text != nil
+            && passwordTextField != nil
+            && passwordValidTextField.text != nil
+            && passwordTextField.text == passwordValidTextField.text {
+            SnapShotTaskEngine.getInstance().doRegister(userIDTextField.text!,
+                phoneNum: phoneNumTextField.text!,
+                password: passwordTextField.text!,
+                verifyCode: SMSTextField.text!, engineProtocol: self)
         } else {
             self.passwordValidWarningLabel.hidden = false
             self.passwordValidWarningLabel.text = "注册失败"
+        }
+    }
+    
+    func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+        // receive register failed errorCode, handle it!
+        // with different errorCode
+        if (TASK_TYPE_REGISTER == taskType) {
+            
+        } else if (TASK_TYPE_GET_VERIFY_CODE == taskType) {
+            // TODO handle getVerifyCode failed
+        }
+    }
+    
+    func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+        if (TASK_TYPE_REGISTER == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
+//            navigationController!.popToRootViewControllerAnimated(true)
+        } else if (TASK_TYPE_GET_VERIFY_CODE == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
+            // TODO handle getVerifyCode succedd
         }
     }
 }

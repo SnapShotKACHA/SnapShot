@@ -37,7 +37,7 @@ class HttpControl {
      - parameter url: 网址
      - parameter 参数:
      */
-    func onRequestWithParams (url: String, param: Parameters) {
+    func onRequestWithParams(url: String, param: Parameters) {
         print(param.parametersDic)
         Alamofire.Manager.sharedInstance.request(Method.POST, url, parameters:param.parametersDic, encoding:ParameterEncoding.URL).responseJSON(options: NSJSONReadingOptions.MutableContainers){
             response -> Void in

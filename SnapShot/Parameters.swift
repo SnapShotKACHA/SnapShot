@@ -15,8 +15,14 @@ class Parameters {
     init (parameterDictionary: Dictionary<String, String>, signiture: String) {
         self.parametersDic = parameterDictionary
         self.parametersDic!["sig"] = signiture
-        print(self.parametersDic)
+//        print(self.parametersDic)
     }
+    
+//    static func generateLoginParam() -> Dictionary <String, String> {
+//        var dicitionary: Dictionary <String, String>
+//        dicitionary.generate()
+//        return dicitionary
+//    }
 }
 
 
