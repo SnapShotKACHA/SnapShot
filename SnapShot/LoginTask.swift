@@ -52,10 +52,10 @@ class LoginTask: BaseTask, HttpProtocol {
             userDefaults.setObject(self.password, forKey: JSON_KEY_PASSWORD)
             userDefaults.setObject(self.username, forKey: JSON_KEY_USER_NAME)
             isLogin = true
-            self.engineProtocol.onTaskSuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "");
+            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "");
         } else {
-            print("RegisterTask, didRecieveResults, no matching json key")
-            self.engineProtocol.onTaskError(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "");
+            print("LoginTask, didRecieveResults, no matching json key")
+            notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "");
         }
         print("httpProtocol is called")
     }
@@ -63,7 +63,7 @@ class LoginTask: BaseTask, HttpProtocol {
     func didRecieveError(error: AnyObject) {
         print("LoginTask")
         print("httpProtocol is called, didRecieveError")
-        self.engineProtocol.onTaskError(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "");
-    }
+        notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "");
+    }  
 
 }

@@ -74,6 +74,7 @@
 		02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC9BCB1C02F53400E67EAF /* LoginTask.swift */; };
 		488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */; };
 		488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */; };
+		488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */; };
 		489795AF1C1A558A00F8831E /* SnapShotTaskEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489795AE1C1A558A00F8831E /* SnapShotTaskEngine.swift */; };
 		676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676917B11C0DD86B00B73A1F /* CouponViewController.swift */; };
 		6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677154991C009C4300D3A35D /* ToolKit.swift */; };
@@ -179,6 +180,7 @@
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotEngineProtocol.swift; sourceTree = "<group>"; };
 		488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSMSVerifyCodeTask.swift; sourceTree = "<group>"; };
+		488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomePagesTask.swift; sourceTree = "<group>"; };
 		489795AE1C1A558A00F8831E /* SnapShotTaskEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotTaskEngine.swift; sourceTree = "<group>"; };
 		532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		676917B11C0DD86B00B73A1F /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */,
 				02FC9BCB1C02F53400E67EAF /* LoginTask.swift */,
 				488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */,
+				488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				027162A41C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift in Sources */,
 				025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */,
 				02715E061BCE59BA008A11D7 /* Constant.swift in Sources */,
+				488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */,
 				0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */,
 				678352F51C0F1D8900529B0F /* CouponCell.swift in Sources */,
 			);

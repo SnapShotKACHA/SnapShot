@@ -42,12 +42,15 @@ class RegisterTask: BaseTask, HttpProtocol {
     func didRecieveResults(results: AnyObject) {
         print("RegisterTask, didRecieveResults")
         print(results)
-        if (JSON(results)[JSON_KEY_SUCCEED].int! == JSON_VALUE_SUCCESS) {
+        let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
+        if (succeed == JSON_VALUE_SUCCESS) {
             userDefaults.setObject(self.phoneNum, forKey: JSON_KEY_PHONE_NUM)
             userDefaults.setObject(self.password?.md5, forKey: JSON_KEY_PASSWORD)
             userDefaults.setObject(self.username, forKey: JSON_KEY_USER_NAME)
             isLogin = true
             notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "")
+        } else if (JSON_VALUE_FAILED == succeed) {
+            notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "") // custom error code
         } else {
             print("RegisterTask, didRecieveResults, no matching json key")
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")

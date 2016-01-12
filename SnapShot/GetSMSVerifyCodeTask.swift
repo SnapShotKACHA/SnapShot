@@ -30,18 +30,24 @@ class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
     
     func didRecieveResults(results: AnyObject) {
         print("GetSMSVerifyCodeTask, didRecieveResults")
-        if (JSON(results)[JSON_KEY_SUCCEED].int! == JSON_VALUE_SUCCESS) {
-            userDefaults.setObject(self.phoneNum, forKey: JSON_KEY_PHONE_NUM)
-            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "")
-        } else {
-            print("GetSMSVerifyCodeTask, didRecieveResults, no matching json key")
-            notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
+        print("results = ")
+        print(results)
+        let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
+        switch (succeed) {
+            case JSON_VALUE_SUCCESS:
+                userDefaults.setObject(self.phoneNum, forKey: JSON_KEY_PHONE_NUM)
+                notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "")
+                break;
+            case JSON_VALUE_FAILED:
+                notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
+                break;
+            default:
+                print("GetSMSVerifyCodeTask, didRecieveResults, no matching json key")
+                break;
         }
-        
     }
     
     func didRecieveError(error: AnyObject) {
-
         print("GetSMSVerifyCodeTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

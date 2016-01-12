@@ -209,17 +209,19 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShot
         // receive register failed errorCode, handle it!
         // with different errorCode
         if (TASK_TYPE_REGISTER == taskType) {
-            
+            print("register task error, handle please!")
         } else if (TASK_TYPE_GET_VERIFY_CODE == taskType) {
             // TODO handle getVerifyCode failed
+            print("get verify code task success, handle please!")
         }
     }
     
     func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
         if (TASK_TYPE_REGISTER == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
-//            navigationController!.popToRootViewControllerAnimated(true)
+            print("register task success, handle please!")
         } else if (TASK_TYPE_GET_VERIFY_CODE == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
             // TODO handle getVerifyCode succedd
+            print("get verify code task success, handle please!")
         }
     }
 }

@@ -23,7 +23,7 @@ class HttpControl {
      */
     
     func onRequest(url: String) {
-        Alamofire.request(.GET, url).responseJSON {response in
+        Alamofire.request(Method.GET, url).responseJSON {response in
             if(response.result.error != nil) {
                 self.delegate.didRecieveError(response.result.error!)
             } else {
