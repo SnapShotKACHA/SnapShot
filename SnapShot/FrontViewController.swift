@@ -144,7 +144,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         print("FrontViewController, onTaskSuccess")
         if (TASK_TYPE_GET_HOME_PAGES == taskType) {
             print("get home pages task success!")
-            let sampleString: String! = extraData as! String;
+            let sampleString: String! = extraData as! String
             self.imageUrl = sampleString.componentsSeparatedByString(",")
             self.mainTableView.reloadData()
         }

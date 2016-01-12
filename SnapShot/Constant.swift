@@ -13,6 +13,8 @@ import UIKit
 var isLogin:Bool = false
 var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
+// 高德导航 Map KEY
+let AMAP_KEY = "5f535d9ec2e98bbdc4acc2f9b201e530"
 //各种高度的变量
 let TABLE_CELL_HEIGHT: CGFloat = 100
 let SECTION_HEIGHT: CGFloat = 24

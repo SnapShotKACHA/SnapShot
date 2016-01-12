@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		020651FD1C44D61F0098A622 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020651FC1C44D61F0098A622 /* LocationViewController.swift */; };
+		020651FF1C44E2520098A622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020651FE1C44E2520098A622 /* UIKit.framework */; };
+		020652011C44E25D0098A622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652001C44E25D0098A622 /* Foundation.framework */; };
+		020652031C44E2670098A622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652021C44E2670098A622 /* CoreGraphics.framework */; };
+		020652051C44E2720098A622 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652041C44E2720098A622 /* QuartzCore.framework */; };
+		020652071C44E27B0098A622 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652061C44E27B0098A622 /* CoreLocation.framework */; };
+		020652091C44E28A0098A622 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652081C44E28A0098A622 /* CoreTelephony.framework */; };
+		0206520B1C44E2940098A622 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0206520A1C44E2940098A622 /* SystemConfiguration.framework */; };
+		0206520D1C44E2A50098A622 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0206520C1C44E2A50098A622 /* libz.tbd */; };
+		0206520F1C44E2AF0098A622 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0206520E1C44E2AF0098A622 /* libstdc++.6.0.9.tbd */; };
+		020652111C44E2B90098A622 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652101C44E2B90098A622 /* Security.framework */; };
 		020763241C0D803000750BCE /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020763231C0D803000750BCE /* CommentCell.xib */; };
 		020763261C0D80D000750BCE /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020763251C0D80D000750BCE /* CommentCell.swift */; };
 		021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021695501BD8C7CE006A022F /* LaunchScreen.storyboard */; };
@@ -105,6 +115,16 @@
 /* Begin PBXFileReference section */
 		020651FA1C44D2D80098A622 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		020651FC1C44D61F0098A622 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		020651FE1C44E2520098A622 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		020652001C44E25D0098A622 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		020652021C44E2670098A622 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		020652041C44E2720098A622 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		020652061C44E27B0098A622 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		020652081C44E28A0098A622 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0206520A1C44E2940098A622 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0206520C1C44E2A50098A622 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0206520E1C44E2AF0098A622 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		020652101C44E2B90098A622 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		020763231C0D803000750BCE /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		020763251C0D80D000750BCE /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		021695511BD8C7CE006A022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -197,6 +217,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020652111C44E2B90098A622 /* Security.framework in Frameworks */,
+				0206520F1C44E2AF0098A622 /* libstdc++.6.0.9.tbd in Frameworks */,
+				0206520D1C44E2A50098A622 /* libz.tbd in Frameworks */,
+				0206520B1C44E2940098A622 /* SystemConfiguration.framework in Frameworks */,
+				020652091C44E28A0098A622 /* CoreTelephony.framework in Frameworks */,
+				020652071C44E27B0098A622 /* CoreLocation.framework in Frameworks */,
+				020652051C44E2720098A622 /* QuartzCore.framework in Frameworks */,
+				020652031C44E2670098A622 /* CoreGraphics.framework in Frameworks */,
+				020652011C44E25D0098A622 /* Foundation.framework in Frameworks */,
+				020651FF1C44E2520098A622 /* UIKit.framework in Frameworks */,
 				B05B60A36145281EB59C405C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +494,16 @@
 		9264CB8C256BF35A8C24C870 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				020652101C44E2B90098A622 /* Security.framework */,
+				0206520E1C44E2AF0098A622 /* libstdc++.6.0.9.tbd */,
+				0206520C1C44E2A50098A622 /* libz.tbd */,
+				0206520A1C44E2940098A622 /* SystemConfiguration.framework */,
+				020652081C44E28A0098A622 /* CoreTelephony.framework */,
+				020652061C44E27B0098A622 /* CoreLocation.framework */,
+				020652041C44E2720098A622 /* QuartzCore.framework */,
+				020652021C44E2670098A622 /* CoreGraphics.framework */,
+				020652001C44E25D0098A622 /* Foundation.framework */,
+				020651FE1C44E2520098A622 /* UIKit.framework */,
 				020651FA1C44D2D80098A622 /* MAMapKit.framework */,
 				0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */,
 				27DFFBBF8D222EA135C2405F /* Pods.framework */,
