@@ -14,6 +14,7 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
     var mapView: MAMapView?
     var mapSearch: AMapSearchAPI?
     var currentLocation:CLLocation?
+    var speedShotFrame:SpeedShotFrame?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +23,12 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
     }
     
     func initMapView() {
+        speedShotFrame = SpeedShotFrame()
+        
         mapView = MAMapView(frame: self.view.bounds)
         mapView?.delegate = self
+        mapView!.addSubview(speedShotFrame!)
         self.view.addSubview(mapView!)
-        
-        
         
         //设置指南针和比例尺的位置
         mapView?.showsCompass = true

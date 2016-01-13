@@ -71,6 +71,8 @@
 		02923D3F1C1FB41D002E8C2B /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */; };
 		0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF41BFEB27A007E8435 /* BaseTask.swift */; };
 		0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */; };
+		02A488381C4623DD00FB926A /* SpeedShotFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A488371C4623DD00FB926A /* SpeedShotFrame.xib */; };
+		02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A488391C4626DA00FB926A /* SpeedShotFrame.swift */; };
 		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
 		02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BD41E51BF4788E0078451A /* GroupCell.xib */; };
 		02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */; };
@@ -187,6 +189,8 @@
 		02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		0297AFF41BFEB27A007E8435 /* BaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
 		0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
+		02A488371C4623DD00FB926A /* SpeedShotFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedShotFrame.xib; sourceTree = "<group>"; };
+		02A488391C4626DA00FB926A /* SpeedShotFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedShotFrame.swift; sourceTree = "<group>"; };
 		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		02BD41E51BF4788E0078451A /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -444,6 +448,7 @@
 		0284B2C51BCBA7B8007779A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02A488361C4623BE00FB926A /* SpeedShotFrame */,
 				0265C8AA1C21327800F9914B /* OrderDetailCell */,
 				026D1E121C11761D001E63BF /* SearchCells */,
 				026D1E111C11760D001E63BF /* MainPageCells */,
@@ -465,6 +470,15 @@
 				488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */,
 			);
 			name = Engine;
+			sourceTree = "<group>";
+		};
+		02A488361C4623BE00FB926A /* SpeedShotFrame */ = {
+			isa = PBXGroup;
+			children = (
+				02A488371C4623DD00FB926A /* SpeedShotFrame.xib */,
+				02A488391C4626DA00FB926A /* SpeedShotFrame.swift */,
+			);
+			name = SpeedShotFrame;
 			sourceTree = "<group>";
 		};
 		02E068921BD6222600530B8F /* Model */ = {
@@ -630,6 +644,7 @@
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */,
 				026D1E091C117451001E63BF /* OrderCell.xib in Resources */,
+				02A488381C4623DD00FB926A /* SpeedShotFrame.xib in Resources */,
 				0265C8AE1C21338E00F9914B /* OrderInfoCell.xib in Resources */,
 				028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */,
 				02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */,
@@ -747,6 +762,7 @@
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
+				02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */,
 				027162A21C100F0900A8F22B /* PhotographerViewController.swift in Sources */,
 				020651FD1C44D61F0098A622 /* LocationViewController.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
