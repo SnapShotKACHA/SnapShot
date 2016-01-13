@@ -48,16 +48,18 @@ class LoginTask: BaseTask, HttpProtocol {
         print("LoginTask")
         print(results)
         if (JSON(results)[JSON_KEY_SUCCEED].int! == JSON_VALUE_SUCCESS) {
-            userDefaults.setObject(self.phoneNum, forKey: JSON_KEY_PHONE_NUM)
-            userDefaults.setObject(self.password, forKey: JSON_KEY_PASSWORD)
-            userDefaults.setObject(self.username, forKey: JSON_KEY_USER_NAME)
+            let loginModel: LoginModel = LoginModel()
+            loginModel.parseJson(JSON(results)[JSON_KEY_DATA].object)
             isLogin = true
-            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "");
+            userDefaults.setObject(loginModel.phoneNum, forKey: JSON_KEY_PHONE_NUM)
+            userDefaults.setObject(self.password, forKey: JSON_KEY_PASSWORD)
+            userDefaults.setObject(loginModel.username, forKey: JSON_KEY_USER_NAME)
+            userDefaults.setObject(loginModel.uid, forKey: JSON_KEY_UID)
+            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: loginModel);
         } else {
             print("LoginTask, didRecieveResults, no matching json key")
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "");
         }
-        print("httpProtocol is called")
     }
     
     func didRecieveError(error: AnyObject) {

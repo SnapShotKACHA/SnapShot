@@ -54,13 +54,14 @@ let REGISTER_URL = ROOT_URL + "/user/register"
 let LOGIN_URL = ROOT_URL + "/user/login"
 let SECRET_KEY = "f4a8yoxG9F6b1gUB"
 
-let PUBLIC_TASK_ID: Int = 0
+var PUBLIC_TASK_ID: Int = 0
 
 // TaskType
 let TASK_TYPE_LOGIN: Int = 1
 let TASK_TYPE_REGISTER: Int = 2
 let TASK_TYPE_GET_VERIFY_CODE: Int = 3
 let TASK_TYPE_GET_HOME_PAGES: Int = 4
+let TASK_TYPE_GET_USER_INFO: Int = 5
 
 // Task result code
 let TASK_RESULT_CODE_SUCCESS: Int = 100
@@ -73,6 +74,8 @@ let JSON_KEY_PHONE_NUM: String = "phoneNum"
 let JSON_KEY_USER_NAME: String = "username"
 let JSON_KEY_AUTH_CODE: String = "authCode"
 let JSON_KEY_TIME: String = "time"
+let JSON_KEY_UID: String = "uid"
+let JSON_KEY_DATA: String = "data"
 
 // JSON_VALUE
 let JSON_VALUE_SUCCESS = 1
