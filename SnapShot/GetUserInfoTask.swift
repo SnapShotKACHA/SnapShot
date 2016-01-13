@@ -16,14 +16,17 @@ class GetUserInfoTask: BaseTask, HttpProtocol {
     init(userId: String!, engineProtocol: SnapShotEngineProtocol?) {
         super.init(taskType: TASK_TYPE_GET_USER_INFO, engineProtocol: engineProtocol)
         self.uid = userId
+        self.taskUrl = GET_USER_INFO_URL
+        doGetUserInfo()
     }
     
     func doGetUserInfo() {
         self.timeStamp = ToolKit.getTimeStamp()
         let parametersDic:Dictionary<String, String> = [JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
-        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
+        let signature = generateGetSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
-        self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
+        
+        self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)
 
     }
 

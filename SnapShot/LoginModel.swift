@@ -22,9 +22,9 @@ class LoginModel {
     }
     
     func parseJson(object: AnyObject) {
-        phoneNum = JSON(object)[JSON_KEY_PHONE_NUM].rawString()
-        username = JSON(object)[JSON_KEY_USER_NAME].rawString()
-        uid = JSON(object)[JSON_KEY_UID].rawString()
+        phoneNum = JSON(object)[JSON_KEY_PHONE_NUM].string
+        username = JSON(object)[JSON_KEY_USER_NAME].string
+        uid = JSON(object)[JSON_KEY_UID].string
     }
     
 }
