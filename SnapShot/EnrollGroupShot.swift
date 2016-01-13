@@ -1,5 +1,5 @@
 //
-//  ModifyUserNameTask.swift
+//  EnrollGroupShot.swift
 //  SnapShot
 //
 //  Created by 张磊 on 16/1/13.
@@ -9,29 +9,29 @@
 import Foundation
 import SwiftyJSON
 
-class ModifyUserNameTask: BaseTask, HttpProtocol {
+class EnrollGroupShot: BaseTask, HttpProtocol {
     
-    var newName: String!
+    var shotId: String!
     var uid: String!
     
-    init(newName: String!, uid: String!, engineProtocol: SnapShotEngineProtocol!) {
-        super.init(taskType: TASK_TYPE_MODIFY_USER_NAME, engineProtocol: engineProtocol)
-        self.newName = newName
+    init(shotId: String!, uid: String!, engineProtocol: SnapShotEngineProtocol!) {
+        super.init(taskType: TASK_TYPE_ENROLL_GROUP_SHOT, engineProtocol: engineProtocol)
+        self.shotId = shotId
         self.uid = uid
-        self.taskUrl = MODIFY_USER_NAME_URL
-        ModifyUserName()
+        self.taskUrl = ENROLL_GROUP_SHOT_URL
+        EnrollGroupShot()
     }
     
-    func ModifyUserName() {
+    func EnrollGroupShot() {
         self.timeStamp = ToolKit.getTimeStamp()
-        let parametersDic: Dictionary<String, String> = [JSON_KEY_NEW_NAME: self.newName, JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
+        let parametersDic: Dictionary<String, String> = [JSON_KEY_SHOT_ID: self.shotId, JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
         let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
     func didRecieveResults(results: AnyObject) {
-        print("ModifyUserNameTask, didRecieveResults")
+        print("EnrollGroupShot, didRecieveResults")
         print("results = ")
         print(results)
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
@@ -43,13 +43,13 @@ class ModifyUserNameTask: BaseTask, HttpProtocol {
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
             break;
         default:
-            print("ModifyUserNameTask, didRecieveResults, no matching json key")
+            print("EnrollGroupShot, didRecieveResults, no matching json key")
             break;
         }
     }
     
     func didRecieveError(error: AnyObject) {
-        print("ModifyUserNameTask, didRecieveError")
+        print("EnrollGroupShot, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }
     

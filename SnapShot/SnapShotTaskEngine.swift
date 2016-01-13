@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class SnapShotTaskEngine {
     
     class func getInstance() -> SnapShotTaskEngine! {
@@ -92,4 +91,17 @@ class SnapShotTaskEngine {
         return modifyPasswordTask.taskID
     }
     
+    /**
+    * ## 用户报名参加团拍
+    * path：/groupShot/enroll
+    * paras:    
+    * uid, long, 用户ID
+    * shotId, long, 团拍活动id
+    * need test
+    */
+    func doEnrollGroupShot(shotId: String!, uid:String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let enrollGroupShot: EnrollGroupShot = EnrollGroupShot(shotId: shotId, uid: uid, engineProtocol: engineProtocol);
+        print("SnapShotTaskEngine, EnrollGroupShot task start, taskID = \(enrollGroupShot.taskID)")
+        return enrollGroupShot.taskID
+    }
 }

@@ -73,6 +73,7 @@
 		02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC9BCB1C02F53400E67EAF /* LoginTask.swift */; };
 		48340FA01C461D600029D195 /* ModifyUserNameTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */; };
 		48340FA21C461F330029D195 /* ModifyPasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA11C461F330029D195 /* ModifyPasswordTask.swift */; };
+		48340FA41C4626780029D195 /* EnrollGroupShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA31C4626780029D195 /* EnrollGroupShot.swift */; };
 		488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */; };
 		488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */; };
 		488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */; };
@@ -181,6 +182,7 @@
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyUserNameTask.swift; sourceTree = "<group>"; };
 		48340FA11C461F330029D195 /* ModifyPasswordTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyPasswordTask.swift; sourceTree = "<group>"; };
+		48340FA31C4626780029D195 /* EnrollGroupShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollGroupShot.swift; sourceTree = "<group>"; };
 		488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotEngineProtocol.swift; sourceTree = "<group>"; };
 		488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSMSVerifyCodeTask.swift; sourceTree = "<group>"; };
 		488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomePagesTask.swift; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				488FAE2F1C44E024004C5543 /* GetUserInfoTask.swift */,
 				48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */,
 				48340FA11C461F330029D195 /* ModifyPasswordTask.swift */,
+				48340FA31C4626780029D195 /* EnrollGroupShot.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */,
 				029018751C210EE20086FC61 /* ProfileInfoTableView.swift in Sources */,
 				028F209C1C0D3FA600AAAF68 /* ArtCell.swift in Sources */,
+				48340FA41C4626780029D195 /* EnrollGroupShot.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
 				67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */,
 				0265C8AC1C21337900F9914B /* OrderInfoCell.swift in Sources */,
