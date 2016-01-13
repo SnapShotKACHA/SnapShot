@@ -14,20 +14,23 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
     var mapView: MAMapView?
     var mapSearch: AMapSearchAPI?
     var currentLocation:CLLocation?
-    var speedShotFrame:SpeedShotFrame?
+    var speedShotFrame:SpeedShotFrame!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "急速约拍"
         MAMapServices.sharedServices().apiKey = AMAP_KEY
         initMapView()
     }
     
     func initMapView() {
-        speedShotFrame = SpeedShotFrame()
-        
+        let infoDic:Dictionary<String, String> = ["location":" 故宫","price":"10元"]
+        speedShotFrame = SpeedShotFrame(infoDic: infoDic)
+        speedShotFrame.backgroundColor = UIColor.blueColor()
+        print(speedShotFrame.frame.size)
         mapView = MAMapView(frame: self.view.bounds)
         mapView?.delegate = self
-        mapView!.addSubview(speedShotFrame!)
+        self.view.addSubview(speedShotFrame!)
         self.view.addSubview(mapView!)
         
         //设置指南针和比例尺的位置
