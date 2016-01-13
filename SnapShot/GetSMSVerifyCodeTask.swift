@@ -22,7 +22,7 @@ class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
     
     func getSMSValidCode() {
         self.timeStamp = ToolKit.getTimeStamp()
-        let parametersDic:Dictionary<String, String> = [JSON_KEY_PHONE_NUM: phoneNum, JSON_KEY_TIME: self.timeStamp!]
+        let parametersDic: Dictionary<String, String> = [JSON_KEY_PHONE_NUM: phoneNum, JSON_KEY_TIME: self.timeStamp!]
         let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))

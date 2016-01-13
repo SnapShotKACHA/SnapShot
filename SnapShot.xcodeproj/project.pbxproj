@@ -84,6 +84,9 @@
 		02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F90BC81BFD764B00949D9B /* LowerCell.swift */; };
 		02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F96CB31BDA152100AA3D5E /* DetailCell.xib */; };
 		02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC9BCB1C02F53400E67EAF /* LoginTask.swift */; };
+		48340FA01C461D600029D195 /* ModifyUserNameTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */; };
+		48340FA21C461F330029D195 /* ModifyPasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA11C461F330029D195 /* ModifyPasswordTask.swift */; };
+		48340FA41C4626780029D195 /* EnrollGroupShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA31C4626780029D195 /* EnrollGroupShot.swift */; };
 		488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */; };
 		488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */; };
 		488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */; };
@@ -204,6 +207,9 @@
 		02FC9BCB1C02F53400E67EAF /* LoginTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
 		27DFFBBF8D222EA135C2405F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyUserNameTask.swift; sourceTree = "<group>"; };
+		48340FA11C461F330029D195 /* ModifyPasswordTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyPasswordTask.swift; sourceTree = "<group>"; };
+		48340FA31C4626780029D195 /* EnrollGroupShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollGroupShot.swift; sourceTree = "<group>"; };
 		488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotEngineProtocol.swift; sourceTree = "<group>"; };
 		488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSMSVerifyCodeTask.swift; sourceTree = "<group>"; };
 		488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomePagesTask.swift; sourceTree = "<group>"; };
@@ -507,6 +513,9 @@
 				488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */,
 				488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */,
 				488FAE2F1C44E024004C5543 /* GetUserInfoTask.swift */,
+				48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */,
+				48340FA11C461F330029D195 /* ModifyPasswordTask.swift */,
+				48340FA31C4626780029D195 /* EnrollGroupShot.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -760,6 +769,7 @@
 				02BD41E41BF475560078451A /* GroupCell.swift in Sources */,
 				488FAE331C44F58B004C5543 /* LoginModel.swift in Sources */,
 				0256646D1BC8A02B00A04D21 /* LeftViewController.swift in Sources */,
+				48340FA21C461F330029D195 /* ModifyPasswordTask.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
 				02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */,
@@ -773,11 +783,13 @@
 				02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */,
 				0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */,
 				02923D3F1C1FB41D002E8C2B /* CalenderViewController.swift in Sources */,
+				48340FA01C461D600029D195 /* ModifyUserNameTask.swift in Sources */,
 				02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */,
 				027F162D1BC762C700D9B721 /* SnapShot.xcdatamodeld in Sources */,
 				676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */,
 				029018751C210EE20086FC61 /* ProfileInfoTableView.swift in Sources */,
 				028F209C1C0D3FA600AAAF68 /* ArtCell.swift in Sources */,
+				48340FA41C4626780029D195 /* EnrollGroupShot.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
 				67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */,
 				0265C8AC1C21337900F9914B /* OrderInfoCell.swift in Sources */,
