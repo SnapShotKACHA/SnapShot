@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020651FD1C44D61F0098A622 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020651FC1C44D61F0098A622 /* LocationViewController.swift */; };
+		020651FF1C44E2520098A622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020651FE1C44E2520098A622 /* UIKit.framework */; };
+		020652011C44E25D0098A622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652001C44E25D0098A622 /* Foundation.framework */; };
+		020652031C44E2670098A622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652021C44E2670098A622 /* CoreGraphics.framework */; };
+		020652051C44E2720098A622 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652041C44E2720098A622 /* QuartzCore.framework */; };
+		020652071C44E27B0098A622 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652061C44E27B0098A622 /* CoreLocation.framework */; };
+		020652091C44E28A0098A622 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652081C44E28A0098A622 /* CoreTelephony.framework */; };
+		0206520B1C44E2940098A622 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0206520A1C44E2940098A622 /* SystemConfiguration.framework */; };
+		0206520D1C44E2A50098A622 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0206520C1C44E2A50098A622 /* libz.tbd */; };
+		0206520F1C44E2AF0098A622 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0206520E1C44E2AF0098A622 /* libstdc++.6.0.9.tbd */; };
+		020652111C44E2B90098A622 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652101C44E2B90098A622 /* Security.framework */; };
 		020763241C0D803000750BCE /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020763231C0D803000750BCE /* CommentCell.xib */; };
 		020763261C0D80D000750BCE /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020763251C0D80D000750BCE /* CommentCell.swift */; };
 		021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021695501BD8C7CE006A022F /* LaunchScreen.storyboard */; };
@@ -60,6 +71,8 @@
 		02923D3F1C1FB41D002E8C2B /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */; };
 		0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF41BFEB27A007E8435 /* BaseTask.swift */; };
 		0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */; };
+		02A488381C4623DD00FB926A /* SpeedShotFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A488371C4623DD00FB926A /* SpeedShotFrame.xib */; };
+		02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A488391C4626DA00FB926A /* SpeedShotFrame.swift */; };
 		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
 		02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BD41E51BF4788E0078451A /* GroupCell.xib */; };
 		02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */; };
@@ -115,6 +128,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020651FA1C44D2D80098A622 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		020651FC1C44D61F0098A622 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		020651FE1C44E2520098A622 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		020652001C44E25D0098A622 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		020652021C44E2670098A622 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		020652041C44E2720098A622 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		020652061C44E27B0098A622 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		020652081C44E28A0098A622 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0206520A1C44E2940098A622 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0206520C1C44E2A50098A622 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0206520E1C44E2AF0098A622 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		020652101C44E2B90098A622 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		020763231C0D803000750BCE /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		020763251C0D80D000750BCE /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		021695511BD8C7CE006A022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -175,6 +200,8 @@
 		02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		0297AFF41BFEB27A007E8435 /* BaseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
 		0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
+		02A488371C4623DD00FB926A /* SpeedShotFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedShotFrame.xib; sourceTree = "<group>"; };
+		02A488391C4626DA00FB926A /* SpeedShotFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedShotFrame.swift; sourceTree = "<group>"; };
 		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		02BD41E51BF4788E0078451A /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +247,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020652111C44E2B90098A622 /* Security.framework in Frameworks */,
+				0206520F1C44E2AF0098A622 /* libstdc++.6.0.9.tbd in Frameworks */,
+				0206520D1C44E2A50098A622 /* libz.tbd in Frameworks */,
+				0206520B1C44E2940098A622 /* SystemConfiguration.framework in Frameworks */,
+				020652091C44E28A0098A622 /* CoreTelephony.framework in Frameworks */,
+				020652071C44E27B0098A622 /* CoreLocation.framework in Frameworks */,
+				020652051C44E2720098A622 /* QuartzCore.framework in Frameworks */,
+				020652031C44E2670098A622 /* CoreGraphics.framework in Frameworks */,
+				020652011C44E25D0098A622 /* Foundation.framework in Frameworks */,
+				020651FF1C44E2520098A622 /* UIKit.framework in Frameworks */,
 				B05B60A36145281EB59C405C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +396,7 @@
 				027E88231C117CA200E9EB90 /* MyOrderViewController.swift */,
 				029018721C210EE20086FC61 /* OrderDetailViewController.swift */,
 				02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */,
+				020651FC1C44D61F0098A622 /* LocationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -434,6 +472,7 @@
 		0284B2C51BCBA7B8007779A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02A488361C4623BE00FB926A /* SpeedShotFrame */,
 				0265C8AA1C21327800F9914B /* OrderDetailCell */,
 				026D1E121C11761D001E63BF /* SearchCells */,
 				026D1E111C11760D001E63BF /* MainPageCells */,
@@ -457,6 +496,15 @@
 				48A600371C47964F0094049C /* SnapShotTaskUrl.swift */,
 			);
 			name = Engine;
+			sourceTree = "<group>";
+		};
+		02A488361C4623BE00FB926A /* SpeedShotFrame */ = {
+			isa = PBXGroup;
+			children = (
+				02A488371C4623DD00FB926A /* SpeedShotFrame.xib */,
+				02A488391C4626DA00FB926A /* SpeedShotFrame.swift */,
+			);
+			name = SpeedShotFrame;
 			sourceTree = "<group>";
 		};
 		02E068921BD6222600530B8F /* Model */ = {
@@ -499,6 +547,17 @@
 		9264CB8C256BF35A8C24C870 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				020652101C44E2B90098A622 /* Security.framework */,
+				0206520E1C44E2AF0098A622 /* libstdc++.6.0.9.tbd */,
+				0206520C1C44E2A50098A622 /* libz.tbd */,
+				0206520A1C44E2940098A622 /* SystemConfiguration.framework */,
+				020652081C44E28A0098A622 /* CoreTelephony.framework */,
+				020652061C44E27B0098A622 /* CoreLocation.framework */,
+				020652041C44E2720098A622 /* QuartzCore.framework */,
+				020652021C44E2670098A622 /* CoreGraphics.framework */,
+				020652001C44E25D0098A622 /* Foundation.framework */,
+				020651FE1C44E2520098A622 /* UIKit.framework */,
+				020651FA1C44D2D80098A622 /* MAMapKit.framework */,
 				0256593F1BFDC64200057A72 /* libcommonCrypto.tbd */,
 				27DFFBBF8D222EA135C2405F /* Pods.framework */,
 			);
@@ -618,6 +677,7 @@
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */,
 				026D1E091C117451001E63BF /* OrderCell.xib in Resources */,
+				02A488381C4623DD00FB926A /* SpeedShotFrame.xib in Resources */,
 				0265C8AE1C21338E00F9914B /* OrderInfoCell.xib in Resources */,
 				028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */,
 				02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */,
@@ -740,7 +800,9 @@
 				48A600361C4794DD0094049C /* GetRecommendedShot.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
+				02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */,
 				027162A21C100F0900A8F22B /* PhotographerViewController.swift in Sources */,
+				020651FD1C44D61F0098A622 /* LocationViewController.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
 				026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */,
 				488FAE301C44E024004C5543 /* GetUserInfoTask.swift in Sources */,
@@ -912,6 +974,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guo Ye (89439ERF39)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -933,6 +999,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guo Ye (89439ERF39)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SnapShot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

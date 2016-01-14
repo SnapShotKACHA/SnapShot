@@ -29,6 +29,16 @@ class ToolKit {
         
     }
     
+    static func iOS8() -> Bool {
+        let versionCode:String = UIDevice.currentDevice().systemVersion
+        let start:String.Index = versionCode.startIndex.advancedBy(0)
+        let end:String.Index = versionCode.startIndex.advancedBy(1)
+        let range = Range<String.Index>(start: start, end: end)
+        let version = NSString(string: UIDevice.currentDevice().systemVersion.substringWithRange(range)).doubleValue
+        return version >= 8.0
+    }
+
+    
     static func stringToTimeStamp(stringTime:String)->String {
         
         let dfmatter = NSDateFormatter()

@@ -13,6 +13,8 @@ import UIKit
 var isLogin:Bool = false
 var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
+// 高德导航 Map KEY
+let AMAP_KEY = "5f535d9ec2e98bbdc4acc2f9b201e530"
 //各种高度的变量
 let TABLE_CELL_HEIGHT: CGFloat = 100
 let SECTION_HEIGHT: CGFloat = 24
@@ -23,7 +25,7 @@ let TITLE_HEIGHT: CGFloat = 44
 let SERVICE_CELL_HEIGHT: CGFloat = 120
 let VALUE_CELL_HEIGHT: CGFloat = 187
 let USER_INFO_CELL_HEIGHT: CGFloat = 35
-let CATA_CELL_HEIGHT: CGFloat = 200
+let CATA_CELL_HEIGHT: CGFloat = 240
 let CATA_DETAIL_CELL_HEIGHT: CGFloat = 100
 let FRONT_CELL_HEIGHT: CGFloat = 305
 let CAMERA_CELL_HEIGHT: CGFloat = 150

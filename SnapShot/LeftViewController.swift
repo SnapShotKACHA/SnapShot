@@ -18,14 +18,15 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signatureLabel: UILabel!
     
     
+    @IBOutlet weak var homePageButton: UIButton!
     @IBOutlet weak var changeStatuesButton: UIButton!
     @IBOutlet weak var serviceCataButton: UIButton!
     @IBOutlet weak var userProfileButton: UIButton!
     @IBOutlet weak var groupAppointmentButton: UIButton!
     @IBOutlet weak var couponButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
-    @IBOutlet weak var aboutButton: UIButton!
-    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var fastAppointButton: UIButton!
+    @IBOutlet weak var specialServiceButton: UIButton!
     
     var loginButton: UIButton?
     
@@ -94,6 +95,9 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(loginViewController!, animated: true)
     }
     
+    @IBAction func homePageButton(sender: AnyObject) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     @IBAction func changeStatusButton(sender: AnyObject) {
         print("changStatusButton button is pressed!")
     }
@@ -118,6 +122,13 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func fastAppointButton(sender: AnyObject) {
+        let locationViewController = LocationViewController()
+        self.navigationController?.pushViewController(locationViewController, animated: true)
+    }
+    
+    @IBAction func specialServiceButton(sender: AnyObject) {
+    }
     
     @IBAction func couponButton(sender: AnyObject) {
         print("couponButton button is pressed!")

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -14,20 +14,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="237.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cataImageDefault" translatesAutoresizingMaskIntoConstraints="NO" id="qyE-P4-Kut">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frontCellImageDefault1" translatesAutoresizingMaskIntoConstraints="NO" id="qyE-P4-Kut">
                         <rect key="frame" x="21" y="13" width="372" height="180"/>
-                        <animations/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-OT-qOk">
                         <rect key="frame" x="77" y="204" width="21" height="21"/>
-                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uip-Em-dvV">
                         <rect key="frame" x="214" y="204" width="21" height="22"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="21" id="R2t-db-3KH"/>
                         </constraints>
@@ -37,7 +34,6 @@
                     </label>
                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBW-oF-gfa">
                         <rect key="frame" x="51" y="202" width="25" height="25"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="J9l-n5-2xb"/>
                             <constraint firstAttribute="width" constant="25" id="ebx-vN-JiQ"/>
@@ -49,7 +45,6 @@
                     </button>
                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-DE-SL7">
                         <rect key="frame" x="186" y="202" width="25" height="25"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="3qD-X1-ClZ"/>
                             <constraint firstAttribute="width" constant="25" id="D9p-gQ-0Ho"/>
@@ -61,7 +56,6 @@
                     </button>
                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-3C-fPt">
                         <rect key="frame" x="327" y="202" width="25" height="25"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="jxO-sQ-WyG"/>
                             <constraint firstAttribute="width" constant="25" id="npm-sn-GeY"/>
@@ -72,7 +66,6 @@
                         </connections>
                     </button>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="Uip-Em-dvV" firstAttribute="leading" secondItem="SLB-DE-SL7" secondAttribute="trailing" constant="3" id="8Y0-YL-vdl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Uip-Em-dvV" secondAttribute="bottom" constant="3.5" id="9GJ-iJ-P7l"/>
@@ -109,7 +102,6 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="artCellCommentBtn" destination="SLB-DE-SL7" id="Df3-Eh-LIp"/>
                 <outlet property="artCellCommentLabel" destination="Uip-Em-dvV" id="Gcz-7w-NII"/>
@@ -122,8 +114,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="cataImageDefault" width="476" height="240"/>
         <image name="commentBtn" width="27" height="24"/>
+        <image name="frontCellImageDefault1" width="845" height="481"/>
         <image name="likeBtn" width="21" height="19"/>
         <image name="repostBtn" width="26" height="23"/>
     </resources>

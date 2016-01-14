@@ -8,65 +8,56 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>HanekeSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>OMGHTTPURLRQ.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>PKRevealController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>PromiseKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>17637446E7407E7F35399DD14BC14FE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2378217FC5A9815F5F372E054D2BF374</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74DEC968BA872046C00738395516F2DA</key>
+		<key>80E95A0AB047573A6521208387E91EA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB7BEA18449CB9BD3AB268F07F8CC864</key>
+		<key>9108FDD176F329222433DD9A9E2339CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -81,12 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7BAEFFAB1498A39A02B0F6FDF7E8DAF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CF81E819ACCAF2695D525E2D6CCA36EE</key>
+		<key>EFA49EC1FFEF1C1CC9AABE90DC88B329</key>
 		<dict>
 			<key>primary</key>
 			<true/>

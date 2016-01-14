@@ -8,10 +8,11 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 import PKRevealController
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol {
+class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol, CLLocationManagerDelegate {
 
     var window: UIWindow?
     var navigationController: UINavigationController?
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol {
     var frontViewController: FrontViewController?
     var leftViewController: LeftViewController?
     var searchViewController: SearchViewController?
+    var locationManager:CLLocationManager = CLLocationManager()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,7 +37,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol {
         self.navigationController = UINavigationController()
         self.window?.rootViewController = self.initNavigationController()
         self.navigationController!.pushViewController(revealController!, animated: false)
+        
+        
+        
         return true
+    }
+    
+    func locationAuthenticate() {
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        if (ToolKit.iOS8()){
+            self.locationManager.requestAlwaysAuthorization()
+        }
+
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        switch status {
+        case CLAuthorizationStatus.NotDetermined:
+            if self.locationManager.respondsToSelector("requestAlwaysAuthorization") {
+                self.locationManager.requestWhenInUseAuthorization()
+            }
+        default:
+            break
+        }
+        
     }
 
     func initNavigationController()-> UINavigationController {

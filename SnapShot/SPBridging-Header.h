@@ -7,3 +7,5 @@
 //
 
 #import <CommonCrypto/CommonDigest.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>

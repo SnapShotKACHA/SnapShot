@@ -28,8 +28,15 @@ class ArtsDisplayTableView: UITableView, UITableViewDataSource, UITableViewDeleg
     
     //==================UITableViewDataSource====================================================//
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = (self.dequeueReusableCellWithIdentifier("artCell", forIndexPath: indexPath) as? ArtCell)!
-        return cell
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let cell: ArtCell = (self.dequeueReusableCellWithIdentifier("artCell", forIndexPath: indexPath) as? ArtCell)!
+            cell.artImageView = UIImageView(image: UIImage(named: "frontCellImageDefault1"))
+            return cell
+        } else {
+            let cell: ArtCell = (self.dequeueReusableCellWithIdentifier("artCell", forIndexPath: indexPath) as? ArtCell)!
+            
+            return cell
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
