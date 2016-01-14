@@ -108,4 +108,20 @@ class SnapShotTaskEngine {
         print("SnapShotTaskEngine, EnrollGroupShot task start, taskID = \(enrollGroupShot.taskID)")
         return enrollGroupShot.taskID
     }
+    
+    /**
+     * 获取首页推荐特色服务
+     * path：--
+     * paras:
+     * uid, 用户ID, 可选
+     * longitude, 经度, 可选
+     * latitude, 维度, 可选
+     * return extraData: SpecailShotModel
+     * need test
+     */
+    func doGetRecommendedShot(userId: String!, longitude: String!, latitude: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let getRecommendedShotTask: GetRecommendedShotTask = GetRecommendedShotTask(userId: userId, longitude: longitude, latitude: latitude, engineProtocol: engineProtocol);
+        print("SnapShotTaskEngine, GetRecommendedShotTask task start, taskID = \(getRecommendedShotTask.taskID)")
+        return getRecommendedShotTask.taskID
+    }
 }

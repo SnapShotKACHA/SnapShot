@@ -9,19 +9,20 @@
 import Foundation
 import SwiftyJSON
 
-class LoginModel {
+class LoginModel: BaseModel {
     
     var phoneNum: String?;
     var username: String?;
     var uid: String?;
     
-    init() {
+    override init() {
         phoneNum = ""
         username = ""
         uid = ""
     }
     
-    func parseJson(object: AnyObject) {
+    override func parseJson(object: AnyObject) {
+        super.parseJson(object)
         phoneNum = JSON(object)[JSON_KEY_PHONE_NUM].string
         username = JSON(object)[JSON_KEY_USER_NAME].string
         uid = JSON(object)[JSON_KEY_UID].string

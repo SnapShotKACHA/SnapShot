@@ -44,48 +44,5 @@ let HEITI:String = "Heiti SC"
 let TITLE_FONT_SIZE:CGFloat = 20.0
 let CONTENT_FONT_SIZE:CGFloat = 12.0
 
-//网络参数
-let ROOT_URL = "http://111.13.47.169:8080"
-let GET_SMS_VERIFY_CODE_URL = ROOT_URL + "/sms/authCode/send"
-let GET_HOME_PAGES_URL = ROOT_URL + "/materials/homepages"
-let REGISTER_URL = ROOT_URL + "/user/register"
-let LOGIN_URL = ROOT_URL + "/user/login"
-let SECRET_KEY = "f4a8yoxG9F6b1gUB"
-let GET_USER_INFO_URL = ROOT_URL + "/user/info/get"
-let MODIFY_USER_NAME_URL = ROOT_URL + "/user/name/mod"
-let MODIFY_PASSWORD_URL = ROOT_URL + "/user/password/mod"
-let ENROLL_GROUP_SHOT_URL = ROOT_URL + "/groupShot/enroll"
-
-var PUBLIC_TASK_ID: Int = 0
-
-// TaskType
-let TASK_TYPE_LOGIN: Int = 1
-let TASK_TYPE_REGISTER: Int = 2
-let TASK_TYPE_GET_VERIFY_CODE: Int = 3
-let TASK_TYPE_GET_HOME_PAGES: Int = 4
-let TASK_TYPE_GET_USER_INFO: Int = 5
-let TASK_TYPE_MODIFY_USER_NAME: Int = 6
-let TASK_TYPE_MODIFY_PASSWORD: Int = 7
-let TASK_TYPE_ENROLL_GROUP_SHOT: Int = 8
-
-// Task result code
-let TASK_RESULT_CODE_SUCCESS: Int = 100
-let TASK_RESULT_CODE_GENERAL_ERROR: Int = 101
-
-// JSON_KEY
-let JSON_KEY_SUCCEED: String = "succeed"
-let JSON_KEY_PASSWORD: String = "password"
-let JSON_KEY_PHONE_NUM: String = "phoneNum"
-let JSON_KEY_USER_NAME: String = "username"
-let JSON_KEY_AUTH_CODE: String = "authCode"
-let JSON_KEY_TIME: String = "time"
-let JSON_KEY_UID: String = "uid"
-let JSON_KEY_DATA: String = "data"
-let JSON_KEY_NEW_NAME: String = "newName"
-let JSON_KEY_SHOT_ID: String = "shotId"
-
-// JSON_VALUE
-let JSON_VALUE_SUCCESS = 1
-let JSON_VALUE_FAILED = 0
 
  

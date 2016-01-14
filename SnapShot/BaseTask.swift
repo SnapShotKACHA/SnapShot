@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
+var PUBLIC_TASK_ID: Int = 0
 
 class BaseTask : NSObject {
     
