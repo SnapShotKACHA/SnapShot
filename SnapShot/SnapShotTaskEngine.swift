@@ -26,8 +26,16 @@ class SnapShotTaskEngine {
      * password, string, 用户原始密码经md5加密后的字符串
      * authCode, string, 手机验证码
      */
-    func doRegister(username: String!, phoneNum: String!, password: String!, verifyCode: String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
-        let registerTask: RegisterTask = RegisterTask(username: username, phoneNum:phoneNum, password:password, verifyCode: verifyCode, engineProtocol:engineProtocol);
+    func doRegister(username: String!,
+        phoneNum: String!,
+        password: String!,
+        verifyCode: String!,
+        engineProtocol:SnapShotEngineProtocol!) -> Int! {
+        let registerTask: RegisterTask = RegisterTask(username: username,
+            phoneNum: phoneNum,
+            password: password,
+            verifyCode: verifyCode,
+            engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, register task start, taskID = \(registerTask.taskID)")
         return registerTask.taskID
     }
@@ -36,14 +44,21 @@ class SnapShotTaskEngine {
      * 登录成功后，SnapShotEngineProtocol中onTaskSuccess方法，返回LoginModel
      * 可根据uid查找用户信息
      */
-    func doLogin(username:String!, phoneNum:String!, password:String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
-        let loginTask: LoginTask = LoginTask(username: username, phoneNum:phoneNum, password:password, engineProtocol:engineProtocol);
+    func doLogin(username:String!,
+        phoneNum: String!,
+        password: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let loginTask: LoginTask = LoginTask(username: username,
+            phoneNum: phoneNum,
+            password: password,
+            engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, login task start, taskID = \(loginTask.taskID)")
         return loginTask.taskID
     }
     
-    func doGetVerifyCode(phoneNum: String!, engineProtocol:SnapShotEngineProtocol!) -> Int! {
-        let getVerifyCodeTask: GetSMSVerifyCodeTask = GetSMSVerifyCodeTask(phoneNum: phoneNum, engineProtocol:engineProtocol);
+    func doGetVerifyCode(phoneNum: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let getVerifyCodeTask: GetSMSVerifyCodeTask = GetSMSVerifyCodeTask(phoneNum: phoneNum,
+            engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetVerifyCode task start, taskID = \(getVerifyCodeTask.taskID)")
         return getVerifyCodeTask.taskID
     }
@@ -69,7 +84,10 @@ class SnapShotTaskEngine {
      * secretKey 用户密码，经过两次md5加密
      * need test
      */
-    func doModifyUserNameTask(newName: String!, uid:String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+    func doModifyUserNameTask(newName: String!,
+        uid:String!,
+        secretKey: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let modifyUserNameTask: ModifyUserNameTask = ModifyUserNameTask(newName: newName, uid: uid, secretKey: secretKey, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, ModifyUserNameTask task start, taskID = \(modifyUserNameTask.taskID)")
         return modifyUserNameTask.taskID
@@ -84,7 +102,11 @@ class SnapShotTaskEngine {
      * secretKey 用户密码，经过两次md5加密
      * need test
      */
-    func doModifyPasswordTask(phoneNum: String!, password: String!, authCode: String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+    func doModifyPasswordTask(phoneNum: String!,
+        password: String!,
+        authCode: String!,
+        secretKey: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let modifyPasswordTask: ModifyPasswordTask = ModifyPasswordTask(phoneNum: phoneNum,
             password: password,
             authCode: authCode,
@@ -103,8 +125,12 @@ class SnapShotTaskEngine {
     * secretKey 用户密码，经过两次md5加密
     * need test
     */
-    func doEnrollGroupShot(shotId: String!, uid:String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
-        let enrollGroupShot: EnrollGroupShot = EnrollGroupShot(shotId: shotId, uid: uid, secretKey: secretKey, engineProtocol: engineProtocol);
+    func doEnrollGroupShotTask(shotId: String!,
+        uid:String!,
+        secretKey: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let enrollGroupShot: EnrollGroupShotTask = EnrollGroupShotTask(shotId: shotId,
+            uid: uid, secretKey: secretKey, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, EnrollGroupShot task start, taskID = \(enrollGroupShot.taskID)")
         return enrollGroupShot.taskID
     }
@@ -119,9 +145,30 @@ class SnapShotTaskEngine {
      * return extraData: SpecailShotModel
      * need test
      */
-    func doGetRecommendedShot(userId: String!, longitude: String!, latitude: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
-        let getRecommendedShotTask: GetRecommendedShotTask = GetRecommendedShotTask(userId: userId, longitude: longitude, latitude: latitude, engineProtocol: engineProtocol);
+    func doGetRecommendedShot(userId: String!,
+        longitude: String!,
+        latitude: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let getRecommendedShotTask: GetRecommendedShotTask = GetRecommendedShotTask(userId: userId,
+            longitude: longitude,
+            latitude: latitude,
+            engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetRecommendedShotTask task start, taskID = \(getRecommendedShotTask.taskID)")
         return getRecommendedShotTask.taskID
+    }
+    
+    /**
+     * 获取特色服务详情
+     * path：--
+     * paras:
+     * shotId：活动Id
+     * return extraData: SpecailShotDetailModel
+     * need test
+     */
+    func doGetSpecialShotDetailTask(shotId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let getSpecialShotDetailTask: GetSpecialShotDetailTask = GetSpecialShotDetailTask(shotId: shotId,
+            engineProtocol: engineProtocol);
+        print("SnapShotTaskEngine, GetSpecialShotDetailTask task start, taskID = \(getSpecialShotDetailTask.taskID)")
+        return getSpecialShotDetailTask.taskID
     }
 }

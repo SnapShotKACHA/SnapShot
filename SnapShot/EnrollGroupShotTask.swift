@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class EnrollGroupShot: BaseTask, HttpProtocol {
+class EnrollGroupShotTask: BaseTask, HttpProtocol {
     
     var shotId: String!
     var uid: String!
