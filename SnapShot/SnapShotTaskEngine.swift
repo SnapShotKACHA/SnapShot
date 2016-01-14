@@ -66,10 +66,11 @@ class SnapShotTaskEngine {
      * path: /user/name/mod
      * uid, long, 用户id
      * newName, string, 新的用户名
+     * secretKey 用户密码，经过两次md5加密
      * need test
      */
-    func doModifyUserNameTask(newName: String!, uid:String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
-        let modifyUserNameTask: ModifyUserNameTask = ModifyUserNameTask(newName: newName, uid: uid, engineProtocol: engineProtocol);
+    func doModifyUserNameTask(newName: String!, uid:String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let modifyUserNameTask: ModifyUserNameTask = ModifyUserNameTask(newName: newName, uid: uid, secretKey: secretKey, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, ModifyUserNameTask task start, taskID = \(modifyUserNameTask.taskID)")
         return modifyUserNameTask.taskID
     }
@@ -80,12 +81,14 @@ class SnapShotTaskEngine {
      * phoneNum, string, 手机号码
      * password, string, 用户新密码经md5加密后的字符串
      * authCode, string, 手机验证码
+     * secretKey 用户密码，经过两次md5加密
      * need test
      */
-    func doModifyPasswordTask(phoneNum: String!, password: String!, authCode: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+    func doModifyPasswordTask(phoneNum: String!, password: String!, authCode: String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let modifyPasswordTask: ModifyPasswordTask = ModifyPasswordTask(phoneNum: phoneNum,
             password: password,
             authCode: authCode,
+            secretKey: secretKey,
             engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, ModifyPasswordTask task start, taskID = \(modifyPasswordTask.taskID)")
         return modifyPasswordTask.taskID
@@ -97,10 +100,11 @@ class SnapShotTaskEngine {
     * paras:    
     * uid, long, 用户ID
     * shotId, long, 团拍活动id
+    * secretKey 用户密码，经过两次md5加密
     * need test
     */
-    func doEnrollGroupShot(shotId: String!, uid:String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
-        let enrollGroupShot: EnrollGroupShot = EnrollGroupShot(shotId: shotId, uid: uid, engineProtocol: engineProtocol);
+    func doEnrollGroupShot(shotId: String!, uid:String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let enrollGroupShot: EnrollGroupShot = EnrollGroupShot(shotId: shotId, uid: uid, secretKey: secretKey, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, EnrollGroupShot task start, taskID = \(enrollGroupShot.taskID)")
         return enrollGroupShot.taskID
     }

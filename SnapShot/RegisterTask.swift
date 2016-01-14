@@ -34,7 +34,7 @@ class RegisterTask: BaseTask, HttpProtocol {
             JSON_KEY_PASSWORD: self.password!,
             JSON_KEY_AUTH_CODE: self.authCode!,
             JSON_KEY_TIME: self.timeStamp!]
-        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
+        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic, secretKey: SECRET_KEY)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }

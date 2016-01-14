@@ -12,6 +12,7 @@ import SwiftyJSON
 class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
     
     var phoneNum: String!
+    var secretKey: String!
     
     init(phoneNum: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_REGISTER, engineProtocol: engineProtocol)
@@ -23,7 +24,7 @@ class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
     func getSMSValidCode() {
         self.timeStamp = ToolKit.getTimeStamp()
         let parametersDic: Dictionary<String, String> = [JSON_KEY_PHONE_NUM: phoneNum, JSON_KEY_TIME: self.timeStamp!]
-        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
+        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic, secretKey: SECRET_KEY)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }

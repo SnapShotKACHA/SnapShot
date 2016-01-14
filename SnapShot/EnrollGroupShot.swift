@@ -13,11 +13,13 @@ class EnrollGroupShot: BaseTask, HttpProtocol {
     
     var shotId: String!
     var uid: String!
+    var secretKey: String!
     
-    init(shotId: String!, uid: String!, engineProtocol: SnapShotEngineProtocol!) {
+    init(shotId: String!, uid: String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_ENROLL_GROUP_SHOT, engineProtocol: engineProtocol)
         self.shotId = shotId
         self.uid = uid
+        self.secretKey = secretKey
         self.taskUrl = ENROLL_GROUP_SHOT_URL
         EnrollGroupShot()
     }
@@ -25,7 +27,7 @@ class EnrollGroupShot: BaseTask, HttpProtocol {
     func EnrollGroupShot() {
         self.timeStamp = ToolKit.getTimeStamp()
         let parametersDic: Dictionary<String, String> = [JSON_KEY_SHOT_ID: self.shotId, JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
-        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
+        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic, secretKey: self.secretKey)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
