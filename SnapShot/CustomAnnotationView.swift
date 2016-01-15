@@ -10,11 +10,10 @@ import Foundation
 import UIKit
 
 class CustomAnnotation: MAAnnotationView {
-    var name: String?
     var portrait: UIImage?
     var calloutView: UIView?
     var portraitImageView: UIImageView?
-    var nameLabel: UILabel?
+    var profileImageView:UIImageView?
     
     func btnAction() {
         print(self.annotation.coordinate)
@@ -22,16 +21,15 @@ class CustomAnnotation: MAAnnotationView {
     
     override init!(annotation: MAAnnotation!, reuseIdentifier: String!) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        self.bounds = CGRectMake(0, 0, 150, 60)
-        self.backgroundColor = UIColor.lightGrayColor()
-        self.portraitImageView = UIImageView(frame: CGRectMake(5, 5, 30, 30))
-        self .addSubview(self.portraitImageView!)
+        self.bounds = CGRectMake(0, 0, 40, 40)
+        self.backgroundColor = UIColor.clearColor()
+        self.portraitImageView = UIImageView(frame: CGRectMake(15, 0, 25, 20))
+        self.portraitImageView?.contentMode = .ScaleAspectFit
+        self .addSubview(portraitImageView!)
         
-        self.nameLabel = UILabel(frame: CGRectMake(35, 35, 40, 20))
-        self.nameLabel?.textColor = UIColor.whiteColor()
-        self.nameLabel?.backgroundColor = UIColor.clearColor()
-        self.nameLabel?.font = UIFont.systemFontOfSize(15)
-        self .addSubview(self.nameLabel!)
+        self.profileImageView = UIImageView(frame: CGRectMake(0, 15, 30, 30))
+        self.profileImageView?.contentMode = .ScaleAspectFit
+        self .addSubview(profileImageView!)
         
     }
     

@@ -33,9 +33,9 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
         mapView?.compassOrigin = CGPointMake(10, 100)
         mapView?.scaleOrigin = CGPointMake(10, self.view.frame.height - 100)
         mapView?.setUserTrackingMode(MAUserTrackingMode.Follow, animated: true)
-        mapView?.scaleOrigin = CGPoint(x: 100, y: SCREEN_HEIGHT - 180)
-        mapView!.showsUserLocation = true
         
+        mapView!.showsUserLocation = true
+        mapView!.setZoomLevel(14, animated: true)
         self.view.addSubview(mapView!)
         self.view.addSubview(speedShotFrame!)
     }
@@ -46,14 +46,14 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
     }
     
     func initBtns(){
-        centerMarker = UIImageView(frame: CGRectMake(0, 0, 20, 30))
-        centerMarker.center = mapView!.center
-        centerMarker.frame=CGRectMake(centerMarker.frame.origin.x, centerMarker.frame.origin.y + 10, 20, 30);
-        centerMarker.image = UIImage(named: "locationPinImage")
-        centerMarker.contentMode = .ScaleAspectFit
-        mapView!.addSubview(centerMarker)
+//        centerMarker = UIImageView(frame: CGRectMake(0, 0, 20, 30))
+//        centerMarker.center = mapView!.center
+//        centerMarker.frame = CGRectMake(centerMarker.frame.origin.x, centerMarker.frame.origin.y + 10, 20, 30);
+//        centerMarker.image = UIImage(named: "locationPinImage")
+//        centerMarker.contentMode = .ScaleAspectFit
+//        mapView!.addSubview(centerMarker)
         //定位按钮
-        let locationBtn:UIButton = UIButton(frame: CGRectMake(15, SCREEN_HEIGHT - 200, 35, 35))
+        let locationBtn:UIButton = UIButton(frame: CGRectMake(15, SCREEN_HEIGHT - 230, 35, 35))
         locationBtn.setBackgroundImage(UIImage(named: "positionImage"), forState: UIControlState.Normal)
         locationBtn.tag = 1;
         locationBtn.addTarget(self, action:"btnSelector:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -118,7 +118,8 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
             //取出当前位置的坐标
             print("latitude : \(userLocation.coordinate.latitude),longitude: \(userLocation.coordinate.longitude)");
             centerCoordinate = CLLocationCoordinate2DMake(userLocation.coordinate.latitude,userLocation.coordinate.longitude);
-            mapView.showsUserLocation = false;
+            
+            mapView.showsUserLocation = true;
         }
     }
     
@@ -164,13 +165,12 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
         if annotation .isKindOfClass(MAPointAnnotation) {
             let customResultIdentifier = "customReuseIdentifier"
             
-            var annotationView:CustomAnnotation = CustomAnnotation(annotation: annotation, reuseIdentifier: customResultIdentifier)
-            annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(customResultIdentifier) as! CustomAnnotation
+            let annotationView = CustomAnnotation(annotation: annotation, reuseIdentifier: customResultIdentifier)
             annotationView.canShowCallout = false
             annotationView.draggable = true
             annotationView.calloutOffset = CGPointMake(0, -5)
-            annotationView.portrait = UIImage(named: "cameraRedImage")
-            annotationView.name = "摄影师"
+            annotationView.portraitImageView?.image = UIImage(named: "cameraRedImage")
+            annotationView.profileImageView?.image = UIImage(named: "profileImageDefault")
             return annotationView
         }
         return nil
@@ -187,7 +187,10 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.addAnnotationWithCooordinate(mapView!.centerCoordinate)
+        self.addAnnotationWithCooordinate(CLLocationCoordinate2D(latitude: 39.925349, longitude: 116.407098))
+        self.addAnnotationWithCooordinate(CLLocationCoordinate2D(latitude: 39.931165, longitude: 116.400936))
+        self.addAnnotationWithCooordinate(CLLocationCoordinate2D(latitude: 39.912241, longitude: 116.404637))
+        self.addAnnotationWithCooordinate(CLLocationCoordinate2D(latitude: 39.931995, longitude: 116.395151))
     }
     
     
