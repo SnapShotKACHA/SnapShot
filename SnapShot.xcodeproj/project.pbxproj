@@ -73,6 +73,7 @@
 		0297AFF71BFEB2EE007E8435 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */; };
 		02A488381C4623DD00FB926A /* SpeedShotFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A488371C4623DD00FB926A /* SpeedShotFrame.xib */; };
 		02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A488391C4626DA00FB926A /* SpeedShotFrame.swift */; };
+		02ACC8D21C4786C80085AD7F /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ACC8D11C4786C80085AD7F /* CustomAnnotationView.swift */; };
 		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
 		02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BD41E51BF4788E0078451A /* GroupCell.xib */; };
 		02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */; };
@@ -194,6 +195,7 @@
 		0297AFF61BFEB2EE007E8435 /* RegisterTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
 		02A488371C4623DD00FB926A /* SpeedShotFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedShotFrame.xib; sourceTree = "<group>"; };
 		02A488391C4626DA00FB926A /* SpeedShotFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedShotFrame.swift; sourceTree = "<group>"; };
+		02ACC8D11C4786C80085AD7F /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		02BD41E51BF4788E0078451A /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 		0284B2C51BCBA7B8007779A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02ACC8D01C47868B0085AD7F /* CustomAnnotionView */,
 				02A488361C4623BE00FB926A /* SpeedShotFrame */,
 				0265C8AA1C21327800F9914B /* OrderDetailCell */,
 				026D1E121C11761D001E63BF /* SearchCells */,
@@ -485,6 +488,14 @@
 				02A488391C4626DA00FB926A /* SpeedShotFrame.swift */,
 			);
 			name = SpeedShotFrame;
+			sourceTree = "<group>";
+		};
+		02ACC8D01C47868B0085AD7F /* CustomAnnotionView */ = {
+			isa = PBXGroup;
+			children = (
+				02ACC8D11C4786C80085AD7F /* CustomAnnotationView.swift */,
+			);
+			name = CustomAnnotionView;
 			sourceTree = "<group>";
 		};
 		02E068921BD6222600530B8F /* Model */ = {
@@ -774,6 +785,7 @@
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
 				02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */,
 				027162A21C100F0900A8F22B /* PhotographerViewController.swift in Sources */,
+				02ACC8D21C4786C80085AD7F /* CustomAnnotationView.swift in Sources */,
 				020651FD1C44D61F0098A622 /* LocationViewController.swift in Sources */,
 				02817FE81BDA189B00166DC2 /* ValueCell.swift in Sources */,
 				026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */,
