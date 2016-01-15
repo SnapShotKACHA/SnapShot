@@ -21,3 +21,4 @@ let MODIFY_PASSWORD_URL = ROOT_URL + "/user/password/mod"
 let ENROLL_GROUP_SHOT_URL = ROOT_URL + "/groupShot/enroll"
 let GET_RECOMMENDED_SHOT_URL = ROOT_URL + "" // TODO fix me
 let GET_SPECIAL_SHOT_DETAIL_URL = ROOT_URL + "" // TODO fix me
+let GET_RECOMMENDED_PHOTOGRAPHER_URL = ROOT_URL + "" // TODO fix me
