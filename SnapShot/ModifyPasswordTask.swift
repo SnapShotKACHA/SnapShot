@@ -14,12 +14,14 @@ class ModifyPasswordTask: BaseTask, HttpProtocol {
     var phoneNum: String!
     var password: String!
     var authCode: String!
+    var secretKey: String!
     
-    init(phoneNum: String!, password: String!, authCode: String!, engineProtocol: SnapShotEngineProtocol!) {
+    init(phoneNum: String!, password: String!, authCode: String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_MODIFY_PASSWORD, engineProtocol: engineProtocol)
         self.phoneNum = phoneNum
         self.password = password
         self.authCode = authCode
+        self.secretKey = secretKey
         self.taskUrl = MODIFY_PASSWORD_URL
         modifyPassword()
     }
@@ -30,7 +32,7 @@ class ModifyPasswordTask: BaseTask, HttpProtocol {
             JSON_KEY_AUTH_CODE: self.authCode,
             JSON_KEY_PHONE_NUM: self.phoneNum,
             JSON_KEY_TIME: self.timeStamp!]
-        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
+        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic, secretKey: self.secretKey)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl,
             param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))

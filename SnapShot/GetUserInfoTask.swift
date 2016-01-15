@@ -25,9 +25,7 @@ class GetUserInfoTask: BaseTask, HttpProtocol {
         let parametersDic:Dictionary<String, String> = [JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
         let signature = generateGetSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
-        
         self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)
-
     }
 
     func didRecieveResults(results: AnyObject) {

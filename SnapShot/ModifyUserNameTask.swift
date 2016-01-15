@@ -13,11 +13,13 @@ class ModifyUserNameTask: BaseTask, HttpProtocol {
     
     var newName: String!
     var uid: String!
+    var secretKey: String!
     
-    init(newName: String!, uid: String!, engineProtocol: SnapShotEngineProtocol!) {
+    init(newName: String!, uid: String!, secretKey: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_MODIFY_USER_NAME, engineProtocol: engineProtocol)
         self.newName = newName
         self.uid = uid
+        self.secretKey = secretKey
         self.taskUrl = MODIFY_USER_NAME_URL
         ModifyUserName()
     }
@@ -25,7 +27,7 @@ class ModifyUserNameTask: BaseTask, HttpProtocol {
     func ModifyUserName() {
         self.timeStamp = ToolKit.getTimeStamp()
         let parametersDic: Dictionary<String, String> = [JSON_KEY_NEW_NAME: self.newName, JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
-        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic)
+        let signature = generatePostSignature(self.taskUrl, parametersDic: parametersDic, secretKey: self.secretKey)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }

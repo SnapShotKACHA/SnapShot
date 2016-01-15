@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
+var PUBLIC_TASK_ID: Int = 0
 
 class BaseTask : NSObject {
     
@@ -40,22 +40,22 @@ class BaseTask : NSObject {
         }
     }
     
-    func generatePostSignature(url: String!, parametersDic:Dictionary<String, String>) -> String! {
-        return generateSignature("POST", url: url, parametersDic: parametersDic);
+    func generatePostSignature(url: String!, parametersDic:Dictionary<String, String>, secretKey: String!) -> String! {
+        return generateSignature("POST", url: url, parametersDic: parametersDic, secretKey: secretKey);
     }
     
     func generateGetSignature(url: String!, parametersDic:Dictionary<String, String>) -> String! {
-        return generateSignature("GET", url: url, parametersDic: parametersDic);
+        return generateSignature("GET", url: url, parametersDic: parametersDic, secretKey: SECRET_KEY);
     }
     
-    private func generateSignature(method: String!, url: String!, parametersDic:Dictionary<String, String>) -> String! {
+    private func generateSignature(method: String!, url: String!, parametersDic:Dictionary<String, String>, secretKey: String!) -> String! {
         var result: String = method
         result += url;
         let sortedDic = parametersDic.sort{$0.0 < $1.0}
         for (parameter, parameterValue) in sortedDic {
             result += "\(parameter)=\(parameterValue)"
         }
-        result += SECRET_KEY
+        result += secretKey
         print("generateSignature = ")
         print(result)
         return result;
