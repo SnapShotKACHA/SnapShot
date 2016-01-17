@@ -104,6 +104,7 @@
 		48A600441C47A2190094049C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A600431C47A2190094049C /* BaseModel.swift */; };
 		48E457371C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */; };
 		48E457391C47EA230060BCCB /* SpecialShotDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */; };
+		673363C51C4BC04400CA6DE1 /* SpecialServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673363C41C4BC04400CA6DE1 /* SpecialServiceViewController.swift */; };
 		676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676917B11C0DD86B00B73A1F /* CouponViewController.swift */; };
 		6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677154991C009C4300D3A35D /* ToolKit.swift */; };
 		678352F51C0F1D8900529B0F /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678352F41C0F1D8900529B0F /* CouponCell.swift */; };
@@ -239,6 +240,7 @@
 		48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSpecialShotDetailTask.swift; sourceTree = "<group>"; };
 		48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialShotDetailModel.swift; sourceTree = "<group>"; };
 		532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		673363C41C4BC04400CA6DE1 /* SpecialServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialServiceViewController.swift; sourceTree = "<group>"; };
 		676917B11C0DD86B00B73A1F /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		677154981BFF55DC00D3A35D /* SPBridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPBridging-Header.h"; sourceTree = "<group>"; };
 		677154991C009C4300D3A35D /* ToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolKit.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				029018721C210EE20086FC61 /* OrderDetailViewController.swift */,
 				02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */,
 				020651FC1C44D61F0098A622 /* LocationViewController.swift */,
+				673363C41C4BC04400CA6DE1 /* SpecialServiceViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				027162A41C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift in Sources */,
 				025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */,
 				02715E061BCE59BA008A11D7 /* Constant.swift in Sources */,
+				673363C51C4BC04400CA6DE1 /* SpecialServiceViewController.swift in Sources */,
 				48A6003E1C47977A0094049C /* TaskResultCode.swift in Sources */,
 				488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */,
 				0256593B1BFDB69D00057A72 /* Parameters.swift in Sources */,
