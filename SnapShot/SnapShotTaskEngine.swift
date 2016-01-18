@@ -44,8 +44,8 @@ class SnapShotTaskEngine {
      * 登录成功后，SnapShotEngineProtocol中onTaskSuccess方法，返回LoginModel
      * 可根据uid查找用户信息
      */
-    func doLogin(username:String!,
-        phoneNum: String!,
+    func doLogin(username:String?,
+        phoneNum: String?,
         password: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let loginTask: LoginTask = LoginTask(username: username,
