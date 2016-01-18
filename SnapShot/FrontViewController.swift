@@ -78,7 +78,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         } else if indexPath.section == 0 && indexPath.row == 1 {
             cataCell = CataCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cataCell")
             cataCell = mainTableView.dequeueReusableCellWithIdentifier("cataCell") as? CataCell
-            cataCell?.cataLabel.text = "萌娃外拍"
+            cataCell?.cataLabel.text = "星球大战邀你来战"
             cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")            
             return cataCell!
 

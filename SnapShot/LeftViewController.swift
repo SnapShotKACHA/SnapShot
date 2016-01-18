@@ -128,6 +128,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func specialServiceButton(sender: AnyObject) {
+        let specialServiceViewController = SpecialServiceViewController()
+        self.navigationController?.pushViewController(specialServiceViewController, animated: true)
     }
     
     @IBAction func couponButton(sender: AnyObject) {
