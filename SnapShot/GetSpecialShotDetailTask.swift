@@ -39,8 +39,8 @@ class GetSpecialShotDetailTask: BaseTask, HttpProtocol {
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
         switch (succeed) {
         case JSON_VALUE_SUCCESS:
-            let specailShotModel: SpecialShotModel = SpecialShotModel.init();
-            specailShotModel.parseJson("")
+            let specailShotModel: SpecialShotDetailModel = SpecialShotDetailModel.init();
+            specailShotModel.parseJson(JSON(results)[JSON_KEY_DATA].object)
             notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: specailShotModel)
             break;
         case JSON_VALUE_FAILED:
