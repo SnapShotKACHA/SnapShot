@@ -145,11 +145,11 @@ class SnapShotTaskEngine {
      * return extraData: SpecailShotModel
      * need test
      */
-    func doGetRecommendedShot(userId: String!,
+    func doGetRecommendedSpecialShot(userId: String!,
         longitude: String!,
         latitude: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
-        let getRecommendedShotTask: GetRecommendedShotTask = GetRecommendedShotTask(uid: userId,
+        let getRecommendedShotTask: GetRecommendedSpecialShotTask = GetRecommendedSpecialShotTask(uid: userId,
             longitude: longitude,
             latitude: latitude,
             engineProtocol: engineProtocol);

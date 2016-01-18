@@ -103,7 +103,7 @@
 		48A600441C47A2190094049C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A600431C47A2190094049C /* BaseModel.swift */; };
 		48E457371C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */; };
 		48E457391C47EA230060BCCB /* SpecialShotDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */; };
-		48E4573B1C4889360060BCCB /* GetRecommendedShotTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4573A1C4889360060BCCB /* GetRecommendedShotTask.swift */; };
+		48E4573B1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4573A1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift */; };
 		676917B21C0DD86B00B73A1F /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676917B11C0DD86B00B73A1F /* CouponViewController.swift */; };
 		6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677154991C009C4300D3A35D /* ToolKit.swift */; };
 		678352F51C0F1D8900529B0F /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678352F41C0F1D8900529B0F /* CouponCell.swift */; };
@@ -237,7 +237,7 @@
 		48A600431C47A2190094049C /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSpecialShotDetailTask.swift; sourceTree = "<group>"; };
 		48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialShotDetailModel.swift; sourceTree = "<group>"; };
-		48E4573A1C4889360060BCCB /* GetRecommendedShotTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRecommendedShotTask.swift; sourceTree = "<group>"; };
+		48E4573A1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRecommendedSpecialShotTask.swift; sourceTree = "<group>"; };
 		532A0CC2C5DA932C31807160 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		676917B11C0DD86B00B73A1F /* CouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		677154981BFF55DC00D3A35D /* SPBridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPBridging-Header.h"; sourceTree = "<group>"; };
@@ -548,7 +548,7 @@
 				48340FA31C4626780029D195 /* EnrollGroupShotTask.swift */,
 				48A600351C4794DD0094049C /* GetRecommendedPhotographerTask.swift */,
 				48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */,
-				48E4573A1C4889360060BCCB /* GetRecommendedShotTask.swift */,
+				48E4573A1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -779,7 +779,7 @@
 				026B978C1C0C3B0600C853F0 /* CommentDisplayTableView.swift in Sources */,
 				48E457391C47EA230060BCCB /* SpecialShotDetailModel.swift in Sources */,
 				489795AF1C1A558A00F8831E /* SnapShotTaskEngine.swift in Sources */,
-				48E4573B1C4889360060BCCB /* GetRecommendedShotTask.swift in Sources */,
+				48E4573B1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift in Sources */,
 				0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */,
 				027F16271BC762C700D9B721 /* FrontViewController.swift in Sources */,
 				024E862C1BE8B27C00E44628 /* FrontCell.swift in Sources */,

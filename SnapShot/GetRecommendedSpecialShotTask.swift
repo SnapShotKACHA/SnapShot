@@ -12,29 +12,29 @@ import SwiftyJSON
 /*
     用于获取首页推荐特色服务的banner信息，HTTP.GET
 */
-class GetRecommendedShotTask: BaseTask, HttpProtocol {
+class GetRecommendedSpecialShotTask: BaseTask, HttpProtocol {
     
     var uid: String!
     var longitude: String!
     var latitude: String!
 
     init(uid: String!, longitude: String!, latitude: String!, engineProtocol: SnapShotEngineProtocol!) {
-        super.init(taskType: TASK_TYPE_GET_RECOMMENDED_SHOT, engineProtocol: engineProtocol)
+        super.init(taskType: TASK_TYPE_GET_RECOMMENDED_SPECIAL_SHOT, engineProtocol: engineProtocol)
         self.uid = uid
-        self.taskUrl = GET_RECOMMENDED_SHOT_URL
+        self.taskUrl = GET_RECOMMENDED_SPECIAL_SHOT_URL
         getRecommendedPhotographer()
     }
     
     func getRecommendedPhotographer() {
         self.timeStamp = ToolKit.getTimeStamp()
-        let parametersDic:Dictionary<String, String> = [JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
+        let parametersDic: Dictionary<String, String> = [JSON_KEY_UID: self.uid, JSON_KEY_TIME: self.timeStamp!]
         let signature = generateGetSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)
     }
     
     func didRecieveResults(results: AnyObject) {
-        print("GetRecommendedShotTask, didRecieveResults")
+        print("GetRecommendedSpecialShotTask, didRecieveResults")
         print("results = ")
         print(results)
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
@@ -46,13 +46,13 @@ class GetRecommendedShotTask: BaseTask, HttpProtocol {
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
             break;
         default:
-            print("GetRecommendedShotTask, didRecieveResults, no matching json key")
+            print("GetRecommendedSpecialShotTask, didRecieveResults, no matching json key")
             break;
         }
     }
     
     func didRecieveError(error: AnyObject) {
-        print("GetRecommendedShotTaskv, didRecieveError")
+        print("GetRecommendedSpecialShotTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }
 }
