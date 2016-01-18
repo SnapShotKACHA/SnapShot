@@ -142,7 +142,7 @@ class SnapShotTaskEngine {
      * uid, 用户ID, 可选
      * longitude, 经度, 可选
      * latitude, 维度, 可选
-     * return extraData: SpecailShotModel
+     * return extraData: SpecialShotModel
      * need test
      */
     func doGetRecommendedSpecialShot(userId: String!,

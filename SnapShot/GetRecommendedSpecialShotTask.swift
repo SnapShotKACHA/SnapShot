@@ -40,7 +40,9 @@ class GetRecommendedSpecialShotTask: BaseTask, HttpProtocol {
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
         switch (succeed) {
         case JSON_VALUE_SUCCESS:
-            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "")
+            let specialShotModel: SpecialShotModel = SpecialShotModel();
+            specialShotModel.parseJson(JSON(results)[JSON_KEY_DATA].object)
+            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: specialShotModel)
             break;
         case JSON_VALUE_FAILED:
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")

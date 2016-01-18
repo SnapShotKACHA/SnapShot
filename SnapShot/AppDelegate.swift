@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol, C
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        SnapShotTaskEngine.getInstance().doGetRecommendedSpecialShot("", longitude: "", latitude: "", engineProtocol: self)
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent        
         NSThread .sleepForTimeInterval(1)
