@@ -142,14 +142,14 @@ class SnapShotTaskEngine {
      * uid, 用户ID, 可选
      * longitude, 经度, 可选
      * latitude, 维度, 可选
-     * return extraData: SpecailShotModel
+     * return extraData: SpecialShotModel
      * need test
      */
-    func doGetRecommendedShot(userId: String!,
+    func doGetRecommendedSpecialShot(userId: String!,
         longitude: String!,
         latitude: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
-        let getRecommendedShotTask: GetRecommendedShotTask = GetRecommendedShotTask(userId: userId,
+        let getRecommendedShotTask: GetRecommendedSpecialShotTask = GetRecommendedSpecialShotTask(uid: userId,
             longitude: longitude,
             latitude: latitude,
             engineProtocol: engineProtocol);
@@ -170,5 +170,33 @@ class SnapShotTaskEngine {
             engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetSpecialShotDetailTask task start, taskID = \(getSpecialShotDetailTask.taskID)")
         return getSpecialShotDetailTask.taskID
+    }
+    
+    /**
+     * 获取特色服务详情
+     * path：--
+     * paras:
+     * uid：用户id，可选
+     * longitude：经度，double，可选
+     * latitude：维度，double，可选
+     * page：请求的页数
+     * step：每页多少条
+     * return extraData: --
+     * need test
+     */
+    func doGetRecommendedPhotographerTask(uid: String!,
+        longitude: String!,
+        latitude: String!,
+        page: String!,
+        step: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let getRecommendedPhotographerTask: GetRecommendedPhotographerTask = GetRecommendedPhotographerTask(uid: uid!,
+            longitude: longitude!,
+            latitude: latitude!,
+            page: page!,
+            step: step!,
+            engineProtocol: engineProtocol);
+        print("SnapShotTaskEngine, GetRecommendedPhotographerTask task start, taskID = \(getRecommendedPhotographerTask.taskID)")
+        return getRecommendedPhotographerTask.taskID
     }
 }

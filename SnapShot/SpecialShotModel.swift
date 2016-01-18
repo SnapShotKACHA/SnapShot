@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class SpecailShotModel: BaseModel {
+class SpecialShotModel: BaseModel {
     
     var picUrl: String?;
     var price: String?;
@@ -30,9 +30,8 @@ class SpecailShotModel: BaseModel {
         picUrl = JSON(object)[JSON_KEY_PIC_URL].string
         price = JSON(object)[JSON_KEY_PRICE].string
         title = JSON(object)[JSON_KEY_TITLE].string
-        abstract = JSON(object)[JSON_KEY_ABSTRACT].string
+        abstract = JSON(object)[JSON_KEY_INTRO].string
         shotId = JSON(object)[JSON_KEY_SHOT_ID].string
-
     }
     
 }

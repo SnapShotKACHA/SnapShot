@@ -13,7 +13,7 @@ class GetUserInfoTask: BaseTask, HttpProtocol {
     
     var uid: String!
     
-    init(userId: String!, engineProtocol: SnapShotEngineProtocol?) {
+    init(userId: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_GET_USER_INFO, engineProtocol: engineProtocol)
         self.uid = userId
         self.taskUrl = GET_USER_INFO_URL
