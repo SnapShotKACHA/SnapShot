@@ -36,10 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol, C
         self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
         self.navigationController = UINavigationController()
         self.window?.rootViewController = self.initNavigationController()
-        self.navigationController!.pushViewController(revealController!, animated: false)
-        
-        
-        
+        self.navigationController!.pushViewController(revealController!, animated: false)        
         return true
     }
     
