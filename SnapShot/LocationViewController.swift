@@ -24,7 +24,7 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
         speedShotFrame = (NSBundle.mainBundle().loadNibNamed("SpeedShotFrame", owner: nil, options: nil) as NSArray).objectAtIndex(0) as? SpeedShotFrame
         speedShotFrame?.frame = CGRect(x: 0, y: SCREEN_HEIGHT - 160, width: SCREEN_WIDTH, height: 160)
         print(speedShotFrame!.frame.size)
-        mapView = MAMapView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 160))
+        mapView = MAMapView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
         mapView?.delegate = self
         
         //设置指南针和比例尺的位置
@@ -102,7 +102,7 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
     func getLocationRoundFlag(){
     }
     
-    func mapView(mapView: MAMapView!, var didUpdateUserLocation userLocation: MAUserLocation!, updatingLocation: Bool) {
+    func mapView(mapView: MAMapView!, didUpdateUserLocation userLocation: MAUserLocation!, updatingLocation: Bool) {
         if updatingLocation {
             //取出当前位置的坐标
             print("latitude : \(userLocation.coordinate.latitude),longitude: \(userLocation.coordinate.longitude)");

@@ -74,8 +74,17 @@
 		02A488381C4623DD00FB926A /* SpeedShotFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A488371C4623DD00FB926A /* SpeedShotFrame.xib */; };
 		02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A488391C4626DA00FB926A /* SpeedShotFrame.swift */; };
 		02ACC8D21C4786C80085AD7F /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ACC8D11C4786C80085AD7F /* CustomAnnotationView.swift */; };
+		02B30DCA1C4E09DF00DFB69D /* ServiceFeeFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B30DC91C4E09DF00DFB69D /* ServiceFeeFrame.xib */; };
+		02B30DCC1C4E14E300DFB69D /* ServiceFeeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B30DCB1C4E14E300DFB69D /* ServiceFeeFrame.swift */; };
 		02BD41E41BF475560078451A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD41E31BF475560078451A /* GroupCell.swift */; };
 		02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BD41E51BF4788E0078451A /* GroupCell.xib */; };
+		02C1501F1C4CB728000DAC8B /* SpeedShotFinishedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1501E1C4CB728000DAC8B /* SpeedShotFinishedFrame.swift */; };
+		02C150211C4CB742000DAC8B /* SpeedShotFinishedFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C150201C4CB742000DAC8B /* SpeedShotFinishedFrame.xib */; };
+		02C150231C4CBB26000DAC8B /* LocationPhotographerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C150221C4CBB26000DAC8B /* LocationPhotographerViewController.swift */; };
+		02C150251C4CCAC5000DAC8B /* SpeedShotOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C150241C4CCAC5000DAC8B /* SpeedShotOrderCell.xib */; };
+		02C150271C4CCC44000DAC8B /* SpeedShotOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C150261C4CCC44000DAC8B /* SpeedShotOrderCell.swift */; };
+		02C150291C4CD9DC000DAC8B /* SpeedShotStartFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C150281C4CD9DC000DAC8B /* SpeedShotStartFrame.xib */; };
+		02C1502B1C4CD9F3000DAC8B /* SpeedShotStartFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1502A1C4CD9F3000DAC8B /* SpeedShotStartFrame.swift */; };
 		02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */; };
 		02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */; };
 		02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */; };
@@ -208,8 +217,17 @@
 		02A488371C4623DD00FB926A /* SpeedShotFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedShotFrame.xib; sourceTree = "<group>"; };
 		02A488391C4626DA00FB926A /* SpeedShotFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedShotFrame.swift; sourceTree = "<group>"; };
 		02ACC8D11C4786C80085AD7F /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		02B30DC91C4E09DF00DFB69D /* ServiceFeeFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceFeeFrame.xib; sourceTree = "<group>"; };
+		02B30DCB1C4E14E300DFB69D /* ServiceFeeFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceFeeFrame.swift; sourceTree = "<group>"; };
 		02BD41E31BF475560078451A /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		02BD41E51BF4788E0078451A /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		02C1501E1C4CB728000DAC8B /* SpeedShotFinishedFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedShotFinishedFrame.swift; sourceTree = "<group>"; };
+		02C150201C4CB742000DAC8B /* SpeedShotFinishedFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedShotFinishedFrame.xib; sourceTree = "<group>"; };
+		02C150221C4CBB26000DAC8B /* LocationPhotographerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPhotographerViewController.swift; sourceTree = "<group>"; };
+		02C150241C4CCAC5000DAC8B /* SpeedShotOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedShotOrderCell.xib; sourceTree = "<group>"; };
+		02C150261C4CCC44000DAC8B /* SpeedShotOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedShotOrderCell.swift; sourceTree = "<group>"; };
+		02C150281C4CD9DC000DAC8B /* SpeedShotStartFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedShotStartFrame.xib; sourceTree = "<group>"; };
+		02C1502A1C4CD9F3000DAC8B /* SpeedShotStartFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedShotStartFrame.swift; sourceTree = "<group>"; };
 		02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueCell.xib; sourceTree = "<group>"; };
 		02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWidgest.swift; sourceTree = "<group>"; };
@@ -408,6 +426,7 @@
 				029018721C210EE20086FC61 /* OrderDetailViewController.swift */,
 				02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */,
 				020651FC1C44D61F0098A622 /* LocationViewController.swift */,
+				02C150221C4CBB26000DAC8B /* LocationPhotographerViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -515,6 +534,14 @@
 			children = (
 				02A488371C4623DD00FB926A /* SpeedShotFrame.xib */,
 				02A488391C4626DA00FB926A /* SpeedShotFrame.swift */,
+				02C150281C4CD9DC000DAC8B /* SpeedShotStartFrame.xib */,
+				02C1502A1C4CD9F3000DAC8B /* SpeedShotStartFrame.swift */,
+				02C150201C4CB742000DAC8B /* SpeedShotFinishedFrame.xib */,
+				02C1501E1C4CB728000DAC8B /* SpeedShotFinishedFrame.swift */,
+				02C150241C4CCAC5000DAC8B /* SpeedShotOrderCell.xib */,
+				02C150261C4CCC44000DAC8B /* SpeedShotOrderCell.swift */,
+				02B30DC91C4E09DF00DFB69D /* ServiceFeeFrame.xib */,
+				02B30DCB1C4E14E300DFB69D /* ServiceFeeFrame.swift */,
 			);
 			name = SpeedShotFrame;
 			sourceTree = "<group>";
@@ -697,10 +724,12 @@
 				0227D7591BEB562F00F7A704 /* CataCell.xib in Resources */,
 				027162AC1C101A7700A8F22B /* ServiceCell.xib in Resources */,
 				027162AA1C101A6C00A8F22B /* CameraCell.xib in Resources */,
+				02C150291C4CD9DC000DAC8B /* SpeedShotStartFrame.xib in Resources */,
 				027F162A1BC762C700D9B721 /* Main.storyboard in Resources */,
 				02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */,
 				026D1E091C117451001E63BF /* OrderCell.xib in Resources */,
 				02A488381C4623DD00FB926A /* SpeedShotFrame.xib in Resources */,
+				02B30DCA1C4E09DF00DFB69D /* ServiceFeeFrame.xib in Resources */,
 				0265C8AE1C21338E00F9914B /* OrderInfoCell.xib in Resources */,
 				028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */,
 				02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */,
@@ -710,9 +739,11 @@
 				022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */,
 				02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */,
 				021C1C241BF08E330064DC45 /* CataDetailCell.xib in Resources */,
+				02C150211C4CB742000DAC8B /* SpeedShotFinishedFrame.xib in Resources */,
 				678352F71C0F1DCE00529B0F /* CouponCell.xib in Resources */,
 				020763241C0D803000750BCE /* CommentCell.xib in Resources */,
 				0284B2C41BCBA7AD007779A4 /* CardCell.xib in Resources */,
+				02C150251C4CCAC5000DAC8B /* SpeedShotOrderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +821,7 @@
 				488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */,
 				023994E01BE34A5E0010122F /* SearchViewController.swift in Sources */,
 				021C1C201BF06CFD0064DC45 /* BasicViewController.swift in Sources */,
+				02B30DCC1C4E14E300DFB69D /* ServiceFeeFrame.swift in Sources */,
 				026B978C1C0C3B0600C853F0 /* CommentDisplayTableView.swift in Sources */,
 				48E457391C47EA230060BCCB /* SpecialShotDetailModel.swift in Sources */,
 				489795AF1C1A558A00F8831E /* SnapShotTaskEngine.swift in Sources */,
@@ -802,12 +834,15 @@
 				02E96BBA1BF33F5300B6388F /* GroupViewController.swift in Sources */,
 				48A6003A1C4796A60094049C /* SnapShotTaskType.swift in Sources */,
 				027E88241C117CA200E9EB90 /* MyOrderViewController.swift in Sources */,
+				02C1502B1C4CD9F3000DAC8B /* SpeedShotStartFrame.swift in Sources */,
 				02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */,
 				0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */,
 				02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */,
 				026D1E0B1C11745D001E63BF /* OrderCell.swift in Sources */,
+				02C150271C4CCC44000DAC8B /* SpeedShotOrderCell.swift in Sources */,
 				027162A81C10177200A8F22B /* ServiceCell.swift in Sources */,
 				6771549A1C009C4300D3A35D /* ToolKit.swift in Sources */,
+				02C1501F1C4CB728000DAC8B /* SpeedShotFinishedFrame.swift in Sources */,
 				02817FE61BDA16FD00166DC2 /* DetailCell.swift in Sources */,
 				488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */,
 				024C7D3E1BD4EE0A002666FB /* SPNavigationViewController.swift in Sources */,
@@ -854,6 +889,7 @@
 				0265C8AC1C21337900F9914B /* OrderInfoCell.swift in Sources */,
 				027162A41C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift in Sources */,
 				025659351BFDAF3300057A72 /* UrlAssembler.swift in Sources */,
+				02C150231C4CBB26000DAC8B /* LocationPhotographerViewController.swift in Sources */,
 				02715E061BCE59BA008A11D7 /* Constant.swift in Sources */,
 				48A6003E1C47977A0094049C /* TaskResultCode.swift in Sources */,
 				488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */,

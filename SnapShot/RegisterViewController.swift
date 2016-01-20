@@ -134,9 +134,6 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShot
         case USERNAME_TAG:
             if userIDTextField.text == nil {
                 self.userIDWarningLabel.hidden = false
-            } else if self.userIDTextField.text?.characters.count < 4 || self.userIDTextField.text?.characters.count > 30 {
-                self.userIDTextField.text = nil
-                self.userIDWarningLabel.hidden = false
             } else {
                 self.userIDWarningLabel.hidden = true
             }

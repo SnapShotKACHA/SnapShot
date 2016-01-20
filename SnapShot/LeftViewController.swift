@@ -27,9 +27,11 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var fastAppointButton: UIButton!
     @IBOutlet weak var specialServiceButton: UIButton!
+   
+    
     
     var loginButton: UIButton?
-    
+    var statues: String = "user"
     
     override func viewWillAppear(animated: Bool) {
         self.initLeftViewController()
@@ -123,8 +125,15 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func fastAppointButton(sender: AnyObject) {
-        let locationViewController = LocationViewController()
-        self.navigationController?.pushViewController(locationViewController, animated: true)
+        if statues == "user" {
+            let locationViewController = LocationViewController()
+            self.navigationController?.pushViewController(locationViewController, animated: true)
+        } else if statues == "photographer" {
+            let locationPhotographerViewController = LocationPhotographerViewController()
+            self.navigationController?.pushViewController(locationPhotographerViewController, animated: true)
+        } else {
+            
+        }
     }
     
     @IBAction func specialServiceButton(sender: AnyObject) {
@@ -138,9 +147,8 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(couponViewController, animated: true)
     }
 
-    @IBAction func logoutButton(sender: AnyObject) {
-        isLogin = false
-        self.initLeftViewController()
+    @IBAction func changeStatuesButton(sender: AnyObject) {
+        statues = "photographer"
     }
     
     //====================UITextFieldDelegate=================//
