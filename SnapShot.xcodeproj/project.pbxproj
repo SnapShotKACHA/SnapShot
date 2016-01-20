@@ -95,6 +95,7 @@
 		02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F96CB31BDA152100AA3D5E /* DetailCell.xib */; };
 		02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC9BCB1C02F53400E67EAF /* LoginTask.swift */; };
 		482FDCF41C4C8E83006D4E1B /* SpecialServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482FDCF31C4C8E83006D4E1B /* SpecialServiceViewController.swift */; };
+		482FDCF61C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482FDCF51C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift */; };
 		48340FA01C461D600029D195 /* ModifyUserNameTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */; };
 		48340FA21C461F330029D195 /* ModifyPasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA11C461F330029D195 /* ModifyPasswordTask.swift */; };
 		48340FA41C4626780029D195 /* EnrollGroupShotTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA31C4626780029D195 /* EnrollGroupShotTask.swift */; };
@@ -240,6 +241,7 @@
 		27DFFBBF8D222EA135C2405F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36641F4D68FB6F42685324F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		482FDCF31C4C8E83006D4E1B /* SpecialServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialServiceViewController.swift; sourceTree = "<group>"; };
+		482FDCF51C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerIntroduceModel.swift; sourceTree = "<group>"; };
 		48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyUserNameTask.swift; sourceTree = "<group>"; };
 		48340FA11C461F330029D195 /* ModifyPasswordTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyPasswordTask.swift; sourceTree = "<group>"; };
 		48340FA31C4626780029D195 /* EnrollGroupShotTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollGroupShotTask.swift; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				48A600411C47A1FA0094049C /* SpecialShotModel.swift */,
 				48A600431C47A2190094049C /* BaseModel.swift */,
 				48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */,
+				482FDCF51C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -869,6 +872,7 @@
 				026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */,
 				488FAE301C44E024004C5543 /* GetUserInfoTask.swift in Sources */,
 				020763261C0D80D000750BCE /* CommentCell.swift in Sources */,
+				482FDCF61C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift in Sources */,
 				48A600441C47A2190094049C /* BaseModel.swift in Sources */,
 				02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */,
 				02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */,

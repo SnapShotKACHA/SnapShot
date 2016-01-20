@@ -9,28 +9,27 @@
 import Foundation
 import SwiftyJSON
 
-class SpecailShotDetailModel: BaseModel {
+class SpecialShotDetailModel: BaseModel {
     
-    var picUrl: String?;
-    var price: String?;
-    var title: String?;
-    var abstract: String?;
-    var shotId: String?;
-    var summary: String?;
-    var date: String?;
-    var location: String?;
-    var service: String?;
-    var sculpt: String?; // 造型
-    var likeCount: String?; // 点赞数量
-    var commentsCount: String?; // 评论数量
-    var photographer: String?; // 摄影师，{头像，id}
+    private var picUrls: String?;
+    private var price: String?;
+    private var title: String?;
+    private var intro: String?;
+    private var shotId: String?;
+    private var summary: String?;
+    private var date: String?;
+    private var location: String?;
+    private var service: String?;
+    private var sculpt: String?; // 造型
+    private var likeCount: String?; // 点赞数量
+    private var commentsCount: String?; // 评论数量
+    private var photographers: String?; // 摄影师，{头像，id}
 
-    
     override init() {
-        picUrl = ""
+        picUrls = ""
         price = ""
         title = ""
-        abstract = ""
+        intro = ""
         shotId = ""
         summary = ""
         date = ""
@@ -39,15 +38,15 @@ class SpecailShotDetailModel: BaseModel {
         sculpt = ""
         likeCount = ""
         commentsCount = ""
-        photographer = ""
+        photographers = ""
     }
     
     override func parseJson(object: AnyObject) {
         super.parseJson(object)
-        picUrl = JSON(object)[JSON_KEY_PIC_URL].string
+        picUrls = JSON(object)[JSON_KEY_PIC_URLS].string
         price = JSON(object)[JSON_KEY_PRICE].string
         title = JSON(object)[JSON_KEY_TITLE].string
-        abstract = JSON(object)[JSON_KEY_ABSTRACT].string
+        intro = JSON(object)[JSON_KEY_INTRO].string
         shotId = JSON(object)[JSON_KEY_SHOT_ID].string        
         summary = JSON(object)[JSON_KEY_SUMMARY].string
         date = JSON(object)[JSON_KEY_DATE].string
@@ -56,8 +55,59 @@ class SpecailShotDetailModel: BaseModel {
         sculpt = JSON(object)[JSON_KEY_SCULPT].string
         likeCount = JSON(object)[JSON_KEY_LIKE_COUNT].string
         commentsCount = JSON(object)[JSON_KEY_COMMENTS_COUNT].string
-        photographer = JSON(object)[JSON_KEY_PHOTOGRAPHER].string
-        
+        photographers = JSON(object)[JSON_KEY_PHOTOGRAPHERS].string
+    }
+    
+    func getPhotographers() -> String {
+        return self.photographers!
+    }
+    
+    func getCommentsCount() -> String {
+        return self.commentsCount!
+    }
+    
+    func getLikeCount() -> String {
+        return self.likeCount!
+    }
+    
+    func getSculpt() -> String {
+        return self.sculpt!
+    }
+    
+    func getService() -> String {
+        return self.service!
+    }
+    
+    func getLocation() -> String {
+        return self.location!
+    }
+    
+    func getDate() -> String {
+        return self.date!
+    }
+    
+    func getSummary() -> String {
+        return self.summary!
+    }
+
+    func getShotId() -> String {
+        return self.shotId!
+    }
+    
+    func getIntro() -> String {
+        return self.intro!
+    }
+    
+    func getTitle() -> String {
+        return self.title!
+    }
+    
+    func getPrice() -> String {
+        return self.price!
+    }
+    
+    func getPicUrls() -> String {
+        return self.picUrls!
     }
     
 }

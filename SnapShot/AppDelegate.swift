@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol, C
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        SnapShotTaskEngine.getInstance().doGetRecommendedSpecialShot("", longitude: "", latitude: "", engineProtocol: self)
-        
+
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent        
         NSThread .sleepForTimeInterval(1)
         self.frontViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("frontViewController") as? FrontViewController
@@ -37,10 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol, C
         self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
         self.navigationController = UINavigationController()
         self.window?.rootViewController = self.initNavigationController()
-        self.navigationController!.pushViewController(revealController!, animated: false)
-        
-        
-        
+        self.navigationController!.pushViewController(revealController!, animated: false)        
         return true
     }
     
