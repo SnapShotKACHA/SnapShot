@@ -199,4 +199,17 @@ class SnapShotTaskEngine {
         print("SnapShotTaskEngine, GetRecommendedPhotographerTask task start, taskID = \(getRecommendedPhotographerTask.taskID)")
         return getRecommendedPhotographerTask.taskID
     }
+    
+    /**
+     * 获取用户基本信息
+     * method: Http.GET
+     * path: /user/info/get
+     * photographerId, long, 摄影师id
+     * need test
+     */
+    func doGetPhotographerBaseDetailTask(photographerId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+        let getPhotographerBaseDetailTask: GetPhotographerBaseDetailTask = GetPhotographerBaseDetailTask(photographerId: photographerId, engineProtocol: engineProtocol);
+        print("SnapShotTaskEngine, GetPhotographerBaseDetailTask task start, taskID = \(getPhotographerBaseDetailTask.taskID)")
+        return getPhotographerBaseDetailTask.taskID
+    }
 }

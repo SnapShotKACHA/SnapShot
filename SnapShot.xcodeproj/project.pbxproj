@@ -90,6 +90,8 @@
 		48340FA01C461D600029D195 /* ModifyUserNameTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */; };
 		48340FA21C461F330029D195 /* ModifyPasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA11C461F330029D195 /* ModifyPasswordTask.swift */; };
 		48340FA41C4626780029D195 /* EnrollGroupShotTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48340FA31C4626780029D195 /* EnrollGroupShotTask.swift */; };
+		483DA8E41C5083190005AA3B /* GetPhotographerBaseDetailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DA8E31C5083190005AA3B /* GetPhotographerBaseDetailTask.swift */; };
+		483DA8E61C508A720005AA3B /* PhotographerBaseDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DA8E51C508A720005AA3B /* PhotographerBaseDetailModel.swift */; };
 		488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */; };
 		488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */; };
 		488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */; };
@@ -227,6 +229,8 @@
 		48340F9F1C461D600029D195 /* ModifyUserNameTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyUserNameTask.swift; sourceTree = "<group>"; };
 		48340FA11C461F330029D195 /* ModifyPasswordTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyPasswordTask.swift; sourceTree = "<group>"; };
 		48340FA31C4626780029D195 /* EnrollGroupShotTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollGroupShotTask.swift; sourceTree = "<group>"; };
+		483DA8E31C5083190005AA3B /* GetPhotographerBaseDetailTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPhotographerBaseDetailTask.swift; sourceTree = "<group>"; };
+		483DA8E51C508A720005AA3B /* PhotographerBaseDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerBaseDetailModel.swift; sourceTree = "<group>"; };
 		488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotEngineProtocol.swift; sourceTree = "<group>"; };
 		488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSMSVerifyCodeTask.swift; sourceTree = "<group>"; };
 		488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomePagesTask.swift; sourceTree = "<group>"; };
@@ -537,6 +541,7 @@
 				48A600431C47A2190094049C /* BaseModel.swift */,
 				48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */,
 				482FDCF51C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift */,
+				483DA8E51C508A720005AA3B /* PhotographerBaseDetailModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 				48A600351C4794DD0094049C /* GetRecommendedPhotographerTask.swift */,
 				48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */,
 				48E4573A1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift */,
+				483DA8E31C5083190005AA3B /* GetPhotographerBaseDetailTask.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -806,6 +812,7 @@
 				48A6003A1C4796A60094049C /* SnapShotTaskType.swift in Sources */,
 				027E88241C117CA200E9EB90 /* MyOrderViewController.swift in Sources */,
 				02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */,
+				483DA8E41C5083190005AA3B /* GetPhotographerBaseDetailTask.swift in Sources */,
 				0227D75B1BEB588900F7A704 /* CataCell.swift in Sources */,
 				02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */,
 				026D1E0B1C11745D001E63BF /* OrderCell.swift in Sources */,
@@ -826,6 +833,7 @@
 				48340FA21C461F330029D195 /* ModifyPasswordTask.swift in Sources */,
 				48A6003C1C4797140094049C /* SnapShotJsonKey.swift in Sources */,
 				48A600361C4794DD0094049C /* GetRecommendedPhotographerTask.swift in Sources */,
+				483DA8E61C508A720005AA3B /* PhotographerBaseDetailModel.swift in Sources */,
 				027F16251BC762C700D9B721 /* AppDelegate.swift in Sources */,
 				0265B5E11BFF08460024586B /* UT8Encoding.swift in Sources */,
 				02A4883A1C4626DA00FB926A /* SpeedShotFrame.swift in Sources */,

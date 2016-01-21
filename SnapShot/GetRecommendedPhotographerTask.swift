@@ -57,6 +57,7 @@ class GetRecommendedPhotographerTask: BaseTask, HttpProtocol {
         switch (succeed) {
         case JSON_VALUE_SUCCESS:
             // 学习如何回传list
+            JSON(results)[JSON_KEY_DATA]
             let photographerIntroduceModel: PhotographerIntroduceModel = PhotographerIntroduceModel();
             photographerIntroduceModel.parseJson("")
             notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "")
