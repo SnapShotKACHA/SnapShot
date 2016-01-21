@@ -232,4 +232,23 @@ class SnapShotTaskEngine {
         print("SnapShotTaskEngine, GetPhotographerProductTask task start, taskID = \(getPhotographerProductTask.taskID)")
         return getPhotographerProductTask.taskID
     }
+    
+    /**
+     * 摄影师主页——用户评论（getPhotographerComments）
+     * method: Http.GET
+     * path: /work/getWorks
+     * userId, long, 摄影师id
+     * page, 请求的页数
+     * step, 每页的条数
+     * need test
+     */
+    func doGetPhotographerCommentsTask(userId: String!, page: String!,
+        step: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+            let getPhotographerCommentsTask: GetPhotographerCommentsTask = GetPhotographerCommentsTask(userId: userId,
+                page: page,
+                step: step,
+                engineProtocol: engineProtocol);
+            print("SnapShotTaskEngine, GetPhotographerCommentsTask task start, taskID = \(getPhotographerCommentsTask.taskID)")
+            return getPhotographerCommentsTask.taskID
+    }
 }

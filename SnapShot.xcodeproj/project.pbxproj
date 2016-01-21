@@ -94,6 +94,8 @@
 		483DA8E61C508A720005AA3B /* PhotographerBaseDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DA8E51C508A720005AA3B /* PhotographerBaseDetailModel.swift */; };
 		483DA8E81C50B2690005AA3B /* GetPhotographerProductTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DA8E71C50B2690005AA3B /* GetPhotographerProductTask.swift */; };
 		483DA8EA1C50B5570005AA3B /* PhotographerProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DA8E91C50B5570005AA3B /* PhotographerProductModel.swift */; };
+		483DA8EC1C50BE580005AA3B /* GetPhotographerCommentsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DA8EB1C50BE580005AA3B /* GetPhotographerCommentsTask.swift */; };
+		483DA8EE1C50D4930005AA3B /* PhotographerCommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DA8ED1C50D4930005AA3B /* PhotographerCommentsModel.swift */; };
 		488FAE2A1C43F01E004C5543 /* SnapShotEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */; };
 		488FAE2C1C449297004C5543 /* GetSMSVerifyCodeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */; };
 		488FAE2E1C44D2F1004C5543 /* GetHomePagesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */; };
@@ -235,6 +237,8 @@
 		483DA8E51C508A720005AA3B /* PhotographerBaseDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerBaseDetailModel.swift; sourceTree = "<group>"; };
 		483DA8E71C50B2690005AA3B /* GetPhotographerProductTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPhotographerProductTask.swift; sourceTree = "<group>"; };
 		483DA8E91C50B5570005AA3B /* PhotographerProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerProductModel.swift; sourceTree = "<group>"; };
+		483DA8EB1C50BE580005AA3B /* GetPhotographerCommentsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPhotographerCommentsTask.swift; sourceTree = "<group>"; };
+		483DA8ED1C50D4930005AA3B /* PhotographerCommentsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerCommentsModel.swift; sourceTree = "<group>"; };
 		488FAE291C43F01E004C5543 /* SnapShotEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotEngineProtocol.swift; sourceTree = "<group>"; };
 		488FAE2B1C449297004C5543 /* GetSMSVerifyCodeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSMSVerifyCodeTask.swift; sourceTree = "<group>"; };
 		488FAE2D1C44D2F1004C5543 /* GetHomePagesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomePagesTask.swift; sourceTree = "<group>"; };
@@ -547,6 +551,7 @@
 				482FDCF51C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift */,
 				483DA8E51C508A720005AA3B /* PhotographerBaseDetailModel.swift */,
 				483DA8E91C50B5570005AA3B /* PhotographerProductModel.swift */,
+				483DA8ED1C50D4930005AA3B /* PhotographerCommentsModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 				48E4573A1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift */,
 				483DA8E31C5083190005AA3B /* GetPhotographerBaseDetailTask.swift */,
 				483DA8E71C50B2690005AA3B /* GetPhotographerProductTask.swift */,
+				483DA8EB1C50BE580005AA3B /* GetPhotographerCommentsTask.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -811,6 +817,7 @@
 				48E4573B1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift in Sources */,
 				0284B2C21BCBA798007779A4 /* CardCell.swift in Sources */,
 				027F16271BC762C700D9B721 /* FrontViewController.swift in Sources */,
+				483DA8EE1C50D4930005AA3B /* PhotographerCommentsModel.swift in Sources */,
 				024E862C1BE8B27C00E44628 /* FrontCell.swift in Sources */,
 				026B97881C0C3AA400C853F0 /* ProfileDetailTableView.swift in Sources */,
 				021C1C261BF08E600064DC45 /* CataDetailCell.swift in Sources */,
@@ -856,6 +863,7 @@
 				48A600441C47A2190094049C /* BaseModel.swift in Sources */,
 				02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */,
 				02FC9BCC1C02F53400E67EAF /* LoginTask.swift in Sources */,
+				483DA8EC1C50BE580005AA3B /* GetPhotographerCommentsTask.swift in Sources */,
 				48A600381C47964F0094049C /* SnapShotTaskUrl.swift in Sources */,
 				0297AFF51BFEB27A007E8435 /* BaseTask.swift in Sources */,
 				02923D3F1C1FB41D002E8C2B /* CalenderViewController.swift in Sources */,
