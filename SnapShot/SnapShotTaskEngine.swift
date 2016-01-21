@@ -201,15 +201,35 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 获取用户基本信息
+     * 摄影师主页——基本资料
      * method: Http.GET
-     * path: /user/info/get
+     * path: /photographer/info/get
      * photographerId, long, 摄影师id
      * need test
      */
-    func doGetPhotographerBaseDetailTask(photographerId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+    func doGetPhotographerBaseDetailTask(photographerId: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let getPhotographerBaseDetailTask: GetPhotographerBaseDetailTask = GetPhotographerBaseDetailTask(photographerId: photographerId, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetPhotographerBaseDetailTask task start, taskID = \(getPhotographerBaseDetailTask.taskID)")
         return getPhotographerBaseDetailTask.taskID
+    }
+    
+    /**
+     * 摄影师主页——作品展示（getPhotographerProduct）
+     * method: Http.GET
+     * path: /work/getWorks
+     * photographerId, long, 摄影师id
+     * page, 请求的页数
+     * step, 每页的条数
+     * need test
+     */
+    func doGetPhotographerProductTask(gid: String!, page: String!,
+        step: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+            let getPhotographerProductTask: GetPhotographerProductTask = GetPhotographerProductTask(gid: gid,
+                page: page,
+                step: step,
+                engineProtocol: engineProtocol);
+        print("SnapShotTaskEngine, GetPhotographerProductTask task start, taskID = \(getPhotographerProductTask.taskID)")
+        return getPhotographerProductTask.taskID
     }
 }
