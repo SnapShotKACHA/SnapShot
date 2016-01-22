@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>HanekeSwift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -42,12 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>13C0EB44A43421F516C1D365484683B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>17637446E7407E7F35399DD14BC14FE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1FE98A5A51CBEA3DFECACE9E6E0BE116</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2378217FC5A9815F5F372E054D2BF374</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EEB8890A9BC72BE5F86D7B93C224E5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,6 +78,16 @@
 			<true/>
 		</dict>
 		<key>80E95A0AB047573A6521208387E91EA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>870679C2A0DA8FD1A6BA0BB5E7CFEF9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C7CB03AC0815D8BA7F326CF8C2DF8C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>C7BAEFFAB1498A39A02B0F6FDF7E8DAF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB83D6D2F4267C4D5FE050CC8B0A6690</key>
 		<dict>
 			<key>primary</key>
 			<true/>

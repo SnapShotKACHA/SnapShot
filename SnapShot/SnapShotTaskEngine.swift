@@ -251,4 +251,22 @@ class SnapShotTaskEngine {
             print("SnapShotTaskEngine, GetPhotographerCommentsTask task start, taskID = \(getPhotographerCommentsTask.taskID)")
             return getPhotographerCommentsTask.taskID
     }
+    
+    /**
+     * 摄影师主页——用户评论（getPhotographerComments）
+     * method: Http.POST
+     * path: /workLike/add
+     * uid：用户Id，次处必须登录
+     * workId：摄影作品id
+     * need test
+     */
+    func doLikeTheWorkTask(workId: String!, uid: String!, secretKey: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
+            let likeTheWorkTask: LikeTheWorkTask = LikeTheWorkTask(workId: workId,
+                uid: uid,
+                secretKey: secretKey,
+                engineProtocol: engineProtocol);
+            print("SnapShotTaskEngine, LikeTheWorkTask task start, taskID = \(likeTheWorkTask.taskID)")
+            return likeTheWorkTask.taskID
+    }
 }
