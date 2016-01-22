@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import DGElasticPullToRefresh
 
 class FrontViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SlideScrollViewDelegate, SnapShotEngineProtocol{
     var navBtn: UIButton?
     var imageUrl: [String] = []
+    var specialShotModel: SpecialShotModel?
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
@@ -20,18 +22,40 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
         self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
         self.navigationController?.navigationBar.addSubview(self.navBtn!)
+        SnapShotTaskEngine.getInstance().doGetRecommendedSpecialShot("", longitude: "", latitude: "", engineProtocol: self)
+        SnapShotTaskEngine.getInstance().doGetRecommendedPhotographerTask("", longitude: "", latitude: "", page: "1", step: "5", engineProtocol: self)
+        
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         mainTableView.registerNib(UINib(nibName: "FrontCell", bundle: nil), forCellReuseIdentifier: "frontCell")
         mainTableView.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
         mainTableView.separatorColor = UIColor.clearColor()
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        initTableView()
         self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "popToSearchViewController")
+    }
+    
+    func initTableView() {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.frame = CGRectMake(SCREEN_WIDTH / 2 - 20, 64, 40, 40)
+        loadingView.tintColor = UIColor(red: 78/255, green: 221/255, blue: 200/255, alpha: 1)
+        mainTableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            SnapShotTaskEngine.getInstance().doGetRecommendedSpecialShot("", longitude: "", latitude: "", engineProtocol: self)
+            SnapShotTaskEngine.getInstance().doGetRecommendedPhotographerTask("", longitude: "", latitude: "", page: "1", step: "5", engineProtocol: self)
+            // Do not forget to call dg_stopLoading() at the end
+            self?.mainTableView.dg_stopLoading()
+            }, loadingView: loadingView)
+        mainTableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        mainTableView.dg_setPullToRefreshBackgroundColor(mainTableView.backgroundColor!)
+    
+    }
+    
+    deinit {
+        mainTableView.dg_removePullToRefresh()
     }
 
     override func viewWillDisappear(animated: Bool) {
@@ -79,7 +103,15 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             cataCell = CataCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cataCell")
             cataCell = mainTableView.dequeueReusableCellWithIdentifier("cataCell") as? CataCell
             cataCell?.cataLabel.text = "星球大战邀你来战"
-            cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")            
+            cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")
+            
+            if specialShotModel != nil {
+                cataCell?.cataLabel.text = specialShotModel?.getTitle()
+                cataCell?.cataImageView.hnk_setImageFromURL(NSURL(string: specialShotModel!.getPicUrl())!)
+                cataCell?.priceLabel.text = specialShotModel?.getPrice()
+                cataCell?.cataIntroLabel.text = specialShotModel?.getIntro()
+            }
+            
             return cataCell!
 
         } else {
@@ -124,6 +156,13 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 6
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 1 {
+            let specialServiceDetailViewController = SpecialServiceDetailViewController(title: "星球大战剧照")
+            self.navigationController?.pushViewController(specialServiceDetailViewController, animated: true)
+        }
+    }
+    
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
                 return 0
@@ -142,11 +181,26 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
         print("FrontViewController, onTaskSuccess")
-        if (TASK_TYPE_GET_HOME_PAGES == taskType) {
-            print("get home pages task success!")
-            let sampleString: String! = extraData as! String
-            self.imageUrl = sampleString.componentsSeparatedByString(",")
-            self.mainTableView.reloadData()
+        
+        switch taskType {
+            case TASK_TYPE_GET_HOME_PAGES:
+                print("get home pages task success!")
+                let sampleString: String! = extraData as! String
+                self.imageUrl = sampleString.componentsSeparatedByString(",")
+                self.mainTableView.reloadData()
+                break
+            case TASK_TYPE_GET_RECOMMENDED_PHOTOGRAPHER:
+//                specialShotModel = SpecialShotModel()
+//                specialShotModel?.parseJson(extraData)
+//                self.mainTableView.reloadData()
+                break
+            case TASK_TYPE_GET_RECOMMENDED_SPECIAL_SHOT:
+                specialShotModel = SpecialShotModel()
+                specialShotModel = extraData as? SpecialShotModel
+                self.mainTableView.reloadData()
+                break
+            default:
+                break
         }
     }
     

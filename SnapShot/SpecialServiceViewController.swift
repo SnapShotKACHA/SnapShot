@@ -39,6 +39,11 @@ class SpecialServiceViewController: BasicViewController, UITableViewDelegate, UI
         return cataCell!
     }
     
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let specialServiceDetailViewController = SpecialServiceDetailViewController(title: "星球大战剧照")
+        self.navigationController?.pushViewController(specialServiceDetailViewController, animated: true)
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
     }

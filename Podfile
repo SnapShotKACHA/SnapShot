@@ -9,3 +9,4 @@ pod 'SwiftyJSON'
 pod 'PKRevealController'
 pod 'AMap2DMap'
 pod 'AMapSearch'
+pod "DGElasticPullToRefresh"

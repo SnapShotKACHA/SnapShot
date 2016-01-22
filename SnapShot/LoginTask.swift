@@ -16,7 +16,7 @@ class LoginTask: BaseTask, HttpProtocol {
     var phoneNum: String?
     var password: String?
     
-    init(username:String!, phoneNum: String!, password: String!, engineProtocol: SnapShotEngineProtocol) {
+    init(username:String?, phoneNum: String?, password: String!, engineProtocol: SnapShotEngineProtocol) {
         super.init(taskType: TASK_TYPE_LOGIN, engineProtocol: engineProtocol);
         self.username = username;
         self.phoneNum = phoneNum;

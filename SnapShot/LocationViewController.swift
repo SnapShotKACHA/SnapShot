@@ -24,7 +24,7 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
         speedShotFrame = (NSBundle.mainBundle().loadNibNamed("SpeedShotFrame", owner: nil, options: nil) as NSArray).objectAtIndex(0) as? SpeedShotFrame
         speedShotFrame?.frame = CGRect(x: 0, y: SCREEN_HEIGHT - 160, width: SCREEN_WIDTH, height: 160)
         print(speedShotFrame!.frame.size)
-        mapView = MAMapView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 160))
+        mapView = MAMapView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
         mapView?.delegate = self
         
         //设置指南针和比例尺的位置
@@ -58,30 +58,18 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
         locationBtn.tag = 1;
         locationBtn.addTarget(self, action:"btnSelector:", forControlEvents: UIControlEvents.TouchUpInside)
         mapView!.addSubview(locationBtn)
-        //刷新按钮
-//        let refreshBtn:UIButton = UIButton(frame: CGRectMake(15, mapView!.frame.size.height-110, 35, 35))
-//        refreshBtn.setBackgroundImage(UIImage(named: "ic_refresh.png"), forState: UIControlState.Normal)
-//        refreshBtn.setBackgroundImage(UIImage(named: "ic_refresh_press.png"), forState: UIControlState.Selected)
-//        refreshBtn.setBackgroundImage(UIImage(named: "ic_refresh_press.png"), forState: UIControlState.Highlighted)
-//        refreshBtn.tag = 2;
-//        refreshBtn.addTarget(self, action: "btnSelector:", forControlEvents: UIControlEvents.TouchUpInside)
-//        mapView!.addSubview(refreshBtn)
-        //缩小按钮
-//        let zoomOutBtn:UIButton = UIButton(frame: CGRectMake(mapView!.frame.size.width - 15-35, mapView!.frame.size.height-70, 35, 35))
-//        zoomOutBtn.setBackgroundImage(UIImage(named: "ic_zoom_out.png"), forState: UIControlState.Normal)
-//        zoomOutBtn.setBackgroundImage(UIImage(named: "ic_zoom_out_press.png"), forState: UIControlState.Selected)
-//        zoomOutBtn.setBackgroundImage(UIImage(named: "ic_zoom_out_press.png"), forState: UIControlState.Highlighted)
-//        zoomOutBtn.tag = 3;
-//        zoomOutBtn.addTarget(self, action: "btnSelector:", forControlEvents: UIControlEvents.TouchUpInside)
-//        mapView!.addSubview(zoomOutBtn)
         //放大按钮
-//        let zoomInBtn:UIButton = UIButton(frame: CGRectMake(mapView!.frame.size.width-15-35, mapView!.frame.size.height-110, 35, 35))
-//        zoomInBtn.setBackgroundImage(UIImage(named: "ic_zoom_in.png"), forState: UIControlState.Normal)
-//        zoomInBtn.setBackgroundImage(UIImage(named: "ic_zoom_in_press.png"), forState: UIControlState.Selected)
-//        zoomInBtn.setBackgroundImage(UIImage(named: "ic_zoom_in_press.png"), forState: UIControlState.Highlighted)
-//        zoomInBtn.tag = 4;
-//        zoomInBtn.addTarget(self, action: "btnSelector:", forControlEvents: UIControlEvents.TouchUpInside)
-//        mapView!.addSubview(zoomInBtn)
+        let zoomOutBtn:UIButton = UIButton(frame: CGRectMake(mapView!.frame.size.width-15-35, mapView!.frame.size.height - 80, 35, 35))
+        zoomOutBtn.setBackgroundImage(UIImage(named: "zoomOutImage"), forState: UIControlState.Normal)
+        zoomOutBtn.tag = 3;
+        zoomOutBtn.addTarget(self, action: "btnSelector:", forControlEvents: UIControlEvents.TouchUpInside)
+        mapView!.addSubview(zoomOutBtn)
+        //缩小按钮
+        let zoomInBtn:UIButton = UIButton(frame: CGRectMake(mapView!.frame.size.width - 15-35, mapView!.frame.size.height - 40, 35, 35))
+        zoomInBtn.setBackgroundImage(UIImage(named: "zoomInImage"), forState: UIControlState.Normal)
+        zoomInBtn.tag = 4;
+        zoomInBtn.addTarget(self, action: "btnSelector:", forControlEvents: UIControlEvents.TouchUpInside)
+        mapView!.addSubview(zoomInBtn)
     }
     
     func btnSelector(sender: UIButton) {
@@ -94,16 +82,17 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
             getLocationRoundFlag()
             mapView!.showsUserLocation = true; //YES 为打开定位,NO 为关闭定位
         case 3:
-            if mapView!.zoomLevel >= 4 && mapView!.zoomLevel <= 19{
-                mapView!.setZoomLevel(mapView!.zoomLevel-1, animated: true)
-            }else if mapView!.zoomLevel >= 3 && mapView!.zoomLevel < 4{
-                mapView!.setZoomLevel(3, animated: true)
-            }
-        case 4:
             if mapView!.zoomLevel >= 3 && mapView!.zoomLevel <= 18{
                 mapView!.setZoomLevel(mapView!.zoomLevel+1, animated: true)
             }else if mapView!.zoomLevel > 18 && mapView!.zoomLevel <= 19{
                 mapView!.setZoomLevel(19, animated: true)
+            }
+        case 4:
+                        
+            if mapView!.zoomLevel >= 4 && mapView!.zoomLevel <= 19{
+                mapView!.setZoomLevel(mapView!.zoomLevel-1, animated: true)
+            }else if mapView!.zoomLevel >= 3 && mapView!.zoomLevel < 4{
+                mapView!.setZoomLevel(3, animated: true)
             }
         default:
             print("not known ")
@@ -118,7 +107,6 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
             //取出当前位置的坐标
             print("latitude : \(userLocation.coordinate.latitude),longitude: \(userLocation.coordinate.longitude)");
             centerCoordinate = CLLocationCoordinate2DMake(userLocation.coordinate.latitude,userLocation.coordinate.longitude);
-            
             mapView.showsUserLocation = true;
         }
     }
@@ -170,7 +158,6 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
             annotationView.draggable = true
             annotationView.calloutOffset = CGPointMake(0, -5)
             annotationView.portraitImageView?.image = UIImage(named: "cameraRedImage")
-            annotationView.profileImageView?.image = UIImage(named: "profileImageDefault")
             return annotationView
         }
         return nil
@@ -187,6 +174,7 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         self.addAnnotationWithCooordinate(CLLocationCoordinate2D(latitude: 39.925349, longitude: 116.407098))
         self.addAnnotationWithCooordinate(CLLocationCoordinate2D(latitude: 39.931165, longitude: 116.400936))
         self.addAnnotationWithCooordinate(CLLocationCoordinate2D(latitude: 39.912241, longitude: 116.404637))

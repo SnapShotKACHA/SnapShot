@@ -13,7 +13,7 @@ class CustomAnnotation: MAAnnotationView {
     var portrait: UIImage?
     var calloutView: UIView?
     var portraitImageView: UIImageView?
-    var profileImageView:UIImageView?
+    
     
     func btnAction() {
         print(self.annotation.coordinate)
@@ -23,13 +23,9 @@ class CustomAnnotation: MAAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         self.bounds = CGRectMake(0, 0, 40, 40)
         self.backgroundColor = UIColor.clearColor()
-        self.portraitImageView = UIImageView(frame: CGRectMake(15, 0, 25, 20))
+        self.portraitImageView = UIImageView(frame: CGRectMake(0, 0, 40, 40))
         self.portraitImageView?.contentMode = .ScaleAspectFit
         self .addSubview(portraitImageView!)
-        
-        self.profileImageView = UIImageView(frame: CGRectMake(0, 15, 30, 30))
-        self.profileImageView?.contentMode = .ScaleAspectFit
-        self .addSubview(profileImageView!)
         
     }
     

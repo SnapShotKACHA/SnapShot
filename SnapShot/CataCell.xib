@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ojp-9S-NBF" id="yQv-8D-miH">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="239.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EVw-f5-0mx">
@@ -23,7 +23,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cataShadowBannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-kP-OZu">
                         <rect key="frame" x="8" y="131" width="398" height="59"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="萌娃外拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-5a-FcV">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="萌娃外拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-5a-FcV">
                         <rect key="frame" x="138" y="145" width="138" height="33"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="WVo-3V-alT"/>
@@ -83,7 +83,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cataImageView" destination="EVw-f5-0mx" id="jIk-Q8-EHB"/>
+                <outlet property="cataIntroLabel" destination="vRU-NX-B09" id="Wot-V0-oZ9"/>
                 <outlet property="cataLabel" destination="ahW-5a-FcV" id="SBr-BF-zCQ"/>
+                <outlet property="priceLabel" destination="I8L-Xg-BD0" id="Qad-Xv-e0h"/>
             </connections>
             <point key="canvasLocation" x="589" y="768"/>
         </tableViewCell>

@@ -77,7 +77,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         
         let myHeight:Float = 24
         let shadowImg:UIImageView = UIImageView()
-        shadowImg.frame = CGRect(origin: CGPoint(x: 0, y: 130), size: CGSize(width: 320, height: 80))
+        shadowImg.frame = CGRect(origin: CGPoint(x: 0, y: scrollView.frame.height - 80), size: CGSize(width: 320, height: 80))
         shadowImg.image = UIImage(named: "shadow.png")
         self.addSubview(shadowImg)
         

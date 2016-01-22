@@ -101,7 +101,7 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShot
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
         self.sendSMSButton.enabled = false
         if SMSTextField.text != nil {
-            SnapShotTaskEngine.getInstance().doGetVerifyCode(SMSTextField.text!, engineProtocol: self)
+            SnapShotTaskEngine.getInstance().doGetVerifyCode(phoneNumTextField.text!, engineProtocol: self)
         } else {
             self.authCodeWarningLabel.hidden = false
         }
@@ -133,9 +133,6 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShot
         switch textField.tag {
         case USERNAME_TAG:
             if userIDTextField.text == nil {
-                self.userIDWarningLabel.hidden = false
-            } else if self.userIDTextField.text?.characters.count < 4 || self.userIDTextField.text?.characters.count > 30 {
-                self.userIDTextField.text = nil
                 self.userIDWarningLabel.hidden = false
             } else {
                 self.userIDWarningLabel.hidden = true
@@ -219,9 +216,12 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShot
     func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
         if (TASK_TYPE_REGISTER == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
             print("register task success, handle please!")
+            SnapShotTaskEngine.getInstance().doLogin(nil, phoneNum: self.phoneNumTextField.text, password: self.passwordTextField.text, engineProtocol: self)
         } else if (TASK_TYPE_GET_VERIFY_CODE == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
             // TODO handle getVerifyCode succedd
             print("get verify code task success, handle please!")
+        } else if (TASK_TYPE_LOGIN == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
 }
