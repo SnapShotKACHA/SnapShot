@@ -88,6 +88,7 @@
 		02C228A61BD9D89900BC83C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */; };
 		02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */; };
 		02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */; };
+		02D39B651C4F643F00E1067B /* SpecialServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39B641C4F643F00E1067B /* SpecialServiceDetailViewController.swift */; };
 		02E96BBA1BF33F5300B6388F /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E96BB91BF33F5300B6388F /* GroupViewController.swift */; };
 		02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */; };
 		02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F90BC61BFD763A00949D9B /* LowerCell.xib */; };
@@ -232,6 +233,7 @@
 		02C228A51BD9D89900BC83C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueCell.xib; sourceTree = "<group>"; };
 		02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWidgest.swift; sourceTree = "<group>"; };
+		02D39B641C4F643F00E1067B /* SpecialServiceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialServiceDetailViewController.swift; sourceTree = "<group>"; };
 		02E96BB91BF33F5300B6388F /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		02F90BC61BFD763A00949D9B /* LowerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LowerCell.xib; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				02923D3E1C1FB41D002E8C2B /* CalenderViewController.swift */,
 				020651FC1C44D61F0098A622 /* LocationViewController.swift */,
 				02C150221C4CBB26000DAC8B /* LocationPhotographerViewController.swift */,
+				02D39B641C4F643F00E1067B /* SpecialServiceDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -889,6 +892,7 @@
 				482FDCF41C4C8E83006D4E1B /* SpecialServiceViewController.swift in Sources */,
 				48A600401C4797C60094049C /* SnapShotJsonValue.swift in Sources */,
 				02715E081BCE5A77008A11D7 /* SlideScrollView.swift in Sources */,
+				02D39B651C4F643F00E1067B /* SpecialServiceDetailViewController.swift in Sources */,
 				67A06FF21BEA47CA0049BD54 /* LoginViewContoller.swift in Sources */,
 				0265C8AC1C21337900F9914B /* OrderInfoCell.swift in Sources */,
 				027162A41C100F4F00A8F22B /* PhotographerProfileDetailTableView.swift in Sources */,

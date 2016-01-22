@@ -19,6 +19,10 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-OT-qOk">
                         <rect key="frame" x="77" y="204" width="21" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Owp-LS-Oj8"/>
+                            <constraint firstAttribute="width" constant="21" id="kXa-Rq-9d4"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -26,7 +30,9 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uip-Em-dvV">
                         <rect key="frame" x="214" y="204" width="21" height="22"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Pl7-Ti-fhZ"/>
                             <constraint firstAttribute="width" constant="21" id="R2t-db-3KH"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="21" id="v7m-tK-C9Q"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,6 +43,8 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="J9l-n5-2xb"/>
                             <constraint firstAttribute="width" constant="25" id="ebx-vN-JiQ"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="grF-a1-ayJ"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="n7t-lm-rGG"/>
                         </constraints>
                         <state key="normal" title="Button" image="likeBtn"/>
                         <connections>
@@ -47,7 +55,9 @@
                         <rect key="frame" x="186" y="202" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="3qD-X1-ClZ"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="7DW-y3-oX5"/>
                             <constraint firstAttribute="width" constant="25" id="D9p-gQ-0Ho"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="UoT-eb-g5x"/>
                         </constraints>
                         <state key="normal" title="Button" image="commentBtn"/>
                         <connections>
@@ -57,6 +67,8 @@
                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-3C-fPt">
                         <rect key="frame" x="327" y="202" width="25" height="25"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Ihn-mj-7O0"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="gJo-ed-1fF"/>
                             <constraint firstAttribute="height" constant="25" id="jxO-sQ-WyG"/>
                             <constraint firstAttribute="width" constant="25" id="npm-sn-GeY"/>
                         </constraints>

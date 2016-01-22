@@ -24,6 +24,7 @@ class LowerCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var repostBtn: UIButton!
     
+    @IBOutlet weak var variableLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

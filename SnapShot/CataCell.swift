@@ -15,7 +15,9 @@ class CataCell: UITableViewCell {
     
     @IBOutlet weak var cataLabel: UILabel!
     
+    @IBOutlet weak var cataIntroLabel: UILabel!
     
+    @IBOutlet weak var priceLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -83,7 +83,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cataImageView" destination="EVw-f5-0mx" id="jIk-Q8-EHB"/>
+                <outlet property="cataIntroLabel" destination="vRU-NX-B09" id="Wot-V0-oZ9"/>
                 <outlet property="cataLabel" destination="ahW-5a-FcV" id="SBr-BF-zCQ"/>
+                <outlet property="priceLabel" destination="I8L-Xg-BD0" id="Qad-Xv-e0h"/>
             </connections>
             <point key="canvasLocation" x="589" y="768"/>
         </tableViewCell>

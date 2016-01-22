@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HanekeSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,22 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17637446E7407E7F35399DD14BC14FE3</key>
+		<key>13C0EB44A43421F516C1D365484683B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2378217FC5A9815F5F372E054D2BF374</key>
+		<key>1FE98A5A51CBEA3DFECACE9E6E0BE116</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>80E95A0AB047573A6521208387E91EA9</key>
+		<key>6EEB8890A9BC72BE5F86D7B93C224E5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9108FDD176F329222433DD9A9E2339CB</key>
+		<key>870679C2A0DA8FD1A6BA0BB5E7CFEF9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C7CB03AC0815D8BA7F326CF8C2DF8C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EFA49EC1FFEF1C1CC9AABE90DC88B329</key>
+		<key>CB83D6D2F4267C4D5FE050CC8B0A6690</key>
 		<dict>
 			<key>primary</key>
 			<true/>
