@@ -121,6 +121,7 @@
 		48A600401C4797C60094049C /* SnapShotJsonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A6003F1C4797C60094049C /* SnapShotJsonValue.swift */; };
 		48A600421C47A1FA0094049C /* SpecialShotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A600411C47A1FA0094049C /* SpecialShotModel.swift */; };
 		48A600441C47A2190094049C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A600431C47A2190094049C /* BaseModel.swift */; };
+		48C243AC1C55CD8C002ED6A7 /* CommentTheWorkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C243AB1C55CD8C002ED6A7 /* CommentTheWorkTask.swift */; };
 		48E457371C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */; };
 		48E457391C47EA230060BCCB /* SpecialShotDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */; };
 		48E4573B1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4573A1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift */; };
@@ -275,6 +276,7 @@
 		48A6003F1C4797C60094049C /* SnapShotJsonValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapShotJsonValue.swift; sourceTree = "<group>"; };
 		48A600411C47A1FA0094049C /* SpecialShotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialShotModel.swift; sourceTree = "<group>"; };
 		48A600431C47A2190094049C /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		48C243AB1C55CD8C002ED6A7 /* CommentTheWorkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTheWorkTask.swift; sourceTree = "<group>"; };
 		48E457361C47E8DB0060BCCB /* GetSpecialShotDetailTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSpecialShotDetailTask.swift; sourceTree = "<group>"; };
 		48E457381C47EA230060BCCB /* SpecialShotDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialShotDetailModel.swift; sourceTree = "<group>"; };
 		48E4573A1C4889360060BCCB /* GetRecommendedSpecialShotTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRecommendedSpecialShotTask.swift; sourceTree = "<group>"; };
@@ -617,6 +619,7 @@
 				483DA8E71C50B2690005AA3B /* GetPhotographerProductTask.swift */,
 				483DA8EB1C50BE580005AA3B /* GetPhotographerCommentsTask.swift */,
 				483DA8EF1C527DCB0005AA3B /* LikeTheWorkTask.swift */,
+				48C243AB1C55CD8C002ED6A7 /* CommentTheWorkTask.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -900,6 +903,7 @@
 				026B978A1C0C3AF000C853F0 /* ArtsDisplayTableView.swift in Sources */,
 				488FAE301C44E024004C5543 /* GetUserInfoTask.swift in Sources */,
 				020763261C0D80D000750BCE /* CommentCell.swift in Sources */,
+				48C243AC1C55CD8C002ED6A7 /* CommentTheWorkTask.swift in Sources */,
 				482FDCF61C4C9A2E006D4E1B /* PhotographerIntroduceModel.swift in Sources */,
 				48A600441C47A2190094049C /* BaseModel.swift in Sources */,
 				02F90BC91BFD764B00949D9B /* LowerCell.swift in Sources */,
