@@ -291,4 +291,32 @@ class SnapShotTaskEngine {
             print("SnapShotTaskEngine, CommentTheWorkTask task start, taskID = \(commentTheWorkTask.taskID)")
             return commentTheWorkTask.taskID
     }
+    
+    /**
+     * 获取特色服务列表
+     * path：--
+     * paras:
+     * uid, 用户ID, 可选
+     * longitude, 经度, 可选
+     * latitude, 维度, 可选
+     * page, 请求的页数
+     * step, 每页的条数
+     * return extraData: SpecialShotModel
+     * need test
+     */
+    func doGetSpecialShotListTask(userId: String!,
+        longitude: String!,
+        latitude: String!,
+        page: String!,
+        step: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
+            let getSpecialShotListTask: GetSpecialShotListTask = GetSpecialShotListTask(uid: userId,
+                longitude: longitude,
+                latitude: latitude,
+                page: page,
+                step: step,
+                engineProtocol: engineProtocol);
+            print("SnapShotTaskEngine, GetSpecialShotListTask task start, taskID = \(getSpecialShotListTask.taskID)")
+            return getSpecialShotListTask.taskID
+    }
 }

@@ -1,8 +1,8 @@
 //
-//  GetRecommendedPhotographerTask.swift
+//  GetSpecialShotListTask.swift
 //  SnapShot
 //
-//  Created by 张磊 on 16/1/15.
+//  Created by 张磊 on 16/1/25.
 //  Copyright © 2016年 Jacob Li. All rights reserved.
 //
 
@@ -10,20 +10,25 @@ import Foundation
 import SwiftyJSON
 
 /*
-    用于获取首页推荐特色服务的banner信息，HTTP.GET
+    用于获取特色服务的列表，HTTP.GET
 */
-class GetRecommendedSpecialShotTask: BaseTask, HttpProtocol {
+class GetSpecialShotListTask: BaseTask, HttpProtocol {
     
-    var uid: String!
-    var longitude: String!
-    var latitude: String!
+    private var uid: String!
+    private var longitude: String!
+    private var latitude: String!
+    private var page: String!
+    private var step: String!
 
-    init(uid: String!, longitude: String!, latitude: String!, engineProtocol: SnapShotEngineProtocol!) {
-        super.init(taskType: TASK_TYPE_GET_RECOMMENDED_SPECIAL_SHOT, engineProtocol: engineProtocol)
+    
+    init(uid: String!, longitude: String!, latitude: String!, page: String!, step: String!, engineProtocol: SnapShotEngineProtocol!) {
+        super.init(taskType: TASK_TYPE_GET_SPECIAL_SHOT_LIST, engineProtocol: engineProtocol)
         self.uid = uid
         self.longitude = longitude
         self.latitude = latitude
-        self.taskUrl = GET_RECOMMENDED_SPECIAL_SHOT_URL
+        self.page = page
+        self.step = step
+        self.taskUrl = GET_SEPCIAL_SHOT_LIST_URL
         getRecommendedPhotographer()
     }
     
@@ -32,6 +37,8 @@ class GetRecommendedSpecialShotTask: BaseTask, HttpProtocol {
         let parametersDic: Dictionary<String, String> = [JSON_KEY_UID: self.uid,
             JSON_KEY_LONGITUDE: self.longitude,
             JSON_KEY_LATITUDE: self.latitude,
+            JSON_KEY_STEP: self.step,
+            JSON_KEY_PAGE: self.page,
             JSON_KEY_TIME: self.timeStamp!]
         let signature = generateGetSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
@@ -39,27 +46,27 @@ class GetRecommendedSpecialShotTask: BaseTask, HttpProtocol {
     }
     
     func didRecieveResults(results: AnyObject) {
-        print("GetRecommendedSpecialShotTask, didRecieveResults")
+        print("GetSpecialShotListTask, didRecieveResults")
         print("results = ")
         print(results)
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
         switch (succeed) {
         case JSON_VALUE_SUCCESS:
             let specialShotModel: SpecialShotModel = SpecialShotModel();
-            specialShotModel.parseJson(JSON(results)[JSON_KEY_DATA].object)
+            specialShotModel.parseJson(JSON(results)[JSON_KEY_DATA].object) // 此处为列表，不知道如何处理
             notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: specialShotModel)
             break;
         case JSON_VALUE_FAILED:
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
             break;
         default:
-            print("GetRecommendedSpecialShotTask, didRecieveResults, no matching json key")
+            print("GetSpecialShotListTask, didRecieveResults, no matching json key")
             break;
         }
     }
     
     func didRecieveError(error: AnyObject) {
-        print("GetRecommendedSpecialShotTask, didRecieveError")
+        print("GetSpecialShotListTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }
 }
