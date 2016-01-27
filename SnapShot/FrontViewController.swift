@@ -190,6 +190,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.mainTableView.reloadData()
                 break
             case TASK_TYPE_GET_RECOMMENDED_PHOTOGRAPHER:
+                print(extraData)
 //                specialShotModel = SpecialShotModel()
 //                specialShotModel?.parseJson(extraData)
 //                self.mainTableView.reloadData()

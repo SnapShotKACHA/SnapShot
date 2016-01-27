@@ -27,7 +27,22 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         groupTableView.registerNib(UINib(nibName: "GroupCell", bundle: nil), forCellReuseIdentifier: "groupCell")
         groupTableView.delegate = self
         groupTableView.dataSource = self
+        initTopButtons()
+       
+    }
+    
+    
+    override func viewDidLoad() {
+        self.navigationItem.hidesBackButton = true
+        self.title = "一起团拍"
         
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        ViewWidgest.recoverNavigationBar([self.navBtn!, self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], navigationController: self.navigationController!)
+    }
+    
+    func initTopButtons() {
         self.priceSortButton = UIButton()
         self.distanceSortButton = UIButton()
         self.dateSortButton = UIButton()
@@ -40,16 +55,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.startServiceButton.layer.borderWidth = 12
         self.startServiceButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
         self.view.addSubview(self.startServiceButton)
-    }
-    
-    override func viewDidLoad() {
-        self.navigationItem.hidesBackButton = true
-        self.title = "一起团拍"
-        
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        ViewWidgest.recoverNavigationBar([self.navBtn!, self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], navigationController: self.navigationController!)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
