@@ -319,4 +319,35 @@ class SnapShotTaskEngine {
             print("SnapShotTaskEngine, GetSpecialShotListTask task start, taskID = \(getSpecialShotListTask.taskID)")
             return getSpecialShotListTask.taskID
     }
+    
+    /**
+     * 获取一起团拍列表
+     * path：--
+     * paras:
+     * uid, 用户ID, 可选
+     * longitude, 经度, 可选
+     * latitude, 维度, 可选
+     * page, 请求的页数
+     * step, 每页的条数
+     * sortType, 排序，price、distance、date三类，用于按照价格、距离、时间排序，默认为价格
+     * return extraData: SpecialShotModel
+     * need test
+     */
+    func doGetGroupShotListTask(userId: String!,
+        longitude: String!,
+        latitude: String!,
+        page: String!,
+        step: String!,
+        sortType: String!,
+        engineProtocol: SnapShotEngineProtocol!) -> Int! {
+            let getGroupShotListTask: GetGroupShotListTask = GetGroupShotListTask(uid: userId,
+                longitude: longitude,
+                latitude: latitude,
+                page: page,
+                step: step,
+                sortType: sortType,
+                engineProtocol: engineProtocol);
+            print("SnapShotTaskEngine, GetGroupShotListTask task start, taskID = \(getGroupShotListTask.taskID)")
+            return getGroupShotListTask.taskID
+    }
 }
