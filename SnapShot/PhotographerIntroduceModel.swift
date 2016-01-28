@@ -13,25 +13,25 @@ class PhotographerIntroduceModel: BaseModel {
     
     private var picUrl: String?;
     private var price: String?;
-    private var avatarUrl: String?;
+    private var avatar: String?;
     private var nickname: String?;
     private var publishDate: String?;
     private var location: String?;
     private var likeCount: String?;
-    private var commentsCount: String?;
+    private var commentCount: String?;
     private var photographerId: String?;
     private var appointmentCount: String?;
     
     override init() {
         picUrl = ""
         price = ""
-        avatarUrl = ""
+        avatar = ""
         nickname = ""
         publishDate = ""
         location = ""
         likeCount = ""
         photographerId = ""
-        commentsCount = ""
+        commentCount = ""
         appointmentCount = ""
     }
     
@@ -39,13 +39,13 @@ class PhotographerIntroduceModel: BaseModel {
         super.parseJson(object)
         picUrl = JSON(object)[JSON_KEY_PIC_URL].string
         price = JSON(object)[JSON_KEY_PRICE].string
-        avatarUrl = JSON(object)[JSON_KEY_TITLE].string
-        nickname = JSON(object)[JSON_KEY_INTRO].string
-        publishDate = JSON(object)[JSON_KEY_SHOT_ID].string        
+        avatar = JSON(object)[JSON_KEY_AVATAR].string
+        nickname = JSON(object)[JSON_KEY_NICKNAME].string
+        publishDate = JSON(object)[JSON_KEY_PUBLISH_DATE].string
         location = JSON(object)[JSON_KEY_LOCATION].string
         likeCount = JSON(object)[JSON_KEY_LIKE_COUNT].string
         photographerId = JSON(object)[JSON_KEY_PHOTOGRAPHER_ID].string
-        commentsCount = JSON(object)[JSON_KEY_COMMENTS_COUNT].string
+        commentCount = JSON(object)[JSON_KEY_COMMENT_COUNT].string
         appointmentCount = JSON(object)[JSON_KEY_APPOINTMENT_COUNT].string
     }
     
@@ -61,8 +61,8 @@ class PhotographerIntroduceModel: BaseModel {
         return self.photographerId!
     }
     
-    func getCommentsCount() -> String {
-        return self.commentsCount!
+    func getCommentCount() -> String {
+        return self.commentCount!
     }
     
     func getAppointmentCount() -> String {
@@ -85,8 +85,8 @@ class PhotographerIntroduceModel: BaseModel {
         return self.nickname!
     }
     
-    func getAvatarUrl() -> String {
-        return self.avatarUrl!
+    func getAvatar() -> String {
+        return self.avatar!
     }
     
 }

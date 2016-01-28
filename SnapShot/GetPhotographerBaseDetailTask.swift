@@ -11,18 +11,18 @@ import SwiftyJSON
 
 class GetPhotographerBaseDetailTask: BaseTask, HttpProtocol {
     
-    var gid: String!
+    var userId: String!
     
-    init(photographerId: String!, engineProtocol: SnapShotEngineProtocol!) {
+    init(userId: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_GET_PHOTOGRAPHER_BASE_DETAIL, engineProtocol: engineProtocol)
-        self.gid = photographerId
+        self.userId = userId
         self.taskUrl = GET_PHOTOGRAPHER_BASE_DETAIL_URL
         doGetPhotographerBaseDetail()
     }
     
     func doGetPhotographerBaseDetail() {
         self.timeStamp = ToolKit.getTimeStamp()
-        let parametersDic:Dictionary<String, String> = [JSON_KEY_GID: self.gid, JSON_KEY_TIME: self.timeStamp!]
+        let parametersDic:Dictionary<String, String> = [JSON_KEY_USER_ID: self.userId, JSON_KEY_TIME: self.timeStamp!]
         let signature = generateGetSignature(self.taskUrl, parametersDic: parametersDic)
         self.httpControl = HttpControl(delegate: self)
         self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)

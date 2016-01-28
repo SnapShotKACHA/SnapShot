@@ -22,7 +22,7 @@ class SpecialShotDetailModel: BaseModel {
     private var service: String?;
     private var sculpt: String?; // 造型
     private var likeCount: String?; // 点赞数量
-    private var commentsCount: String?; // 评论数量
+    private var commentCount: String?; // 评论数量
     private var photographers: String?; // 摄影师，{头像，id}
 
     override init() {
@@ -37,7 +37,7 @@ class SpecialShotDetailModel: BaseModel {
         service = ""
         sculpt = ""
         likeCount = ""
-        commentsCount = ""
+        commentCount = ""
         photographers = ""
     }
     
@@ -54,7 +54,7 @@ class SpecialShotDetailModel: BaseModel {
         service = JSON(object)[JSON_KEY_SERVICE].string
         sculpt = JSON(object)[JSON_KEY_SCULPT].string
         likeCount = JSON(object)[JSON_KEY_LIKE_COUNT].string
-        commentsCount = JSON(object)[JSON_KEY_COMMENTS_COUNT].string
+        commentCount = JSON(object)[JSON_KEY_COMMENT_COUNT].string
         photographers = JSON(object)[JSON_KEY_PHOTOGRAPHERS].string
     }
     
@@ -62,8 +62,8 @@ class SpecialShotDetailModel: BaseModel {
         return self.photographers!
     }
     
-    func getCommentsCount() -> String {
-        return self.commentsCount!
+    func getCommentCount() -> String {
+        return self.commentCount!
     }
     
     func getLikeCount() -> String {

@@ -136,7 +136,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 获取首页推荐特色服务
+     * 1.获取首页推荐特色服务
      * path：--
      * paras:
      * uid, 用户ID, 可选
@@ -158,7 +158,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 获取特色服务详情
+     * 2.获取特色服务详情
      * path：--
      * paras:
      * shotId：活动Id
@@ -173,7 +173,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 获取特色服务详情
+     * 3.首页推荐摄影师
      * path：--
      * paras:
      * uid：用户id，可选
@@ -201,21 +201,21 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 摄影师主页——基本资料
+     * 4.摄影师主页——基本资料
      * method: Http.GET
      * path: /photographer/info/get
      * photographerId, long, 摄影师id
      * need test
      */
-    func doGetPhotographerBaseDetailTask(photographerId: String!,
+    func doGetPhotographerBaseDetailTask(userId: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
-        let getPhotographerBaseDetailTask: GetPhotographerBaseDetailTask = GetPhotographerBaseDetailTask(photographerId: photographerId, engineProtocol: engineProtocol);
+        let getPhotographerBaseDetailTask: GetPhotographerBaseDetailTask = GetPhotographerBaseDetailTask(userId: userId, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetPhotographerBaseDetailTask task start, taskID = \(getPhotographerBaseDetailTask.taskID)")
         return getPhotographerBaseDetailTask.taskID
     }
     
     /**
-     * 摄影师主页——作品展示（getPhotographerProduct）
+     * 5.摄影师主页——作品展示（getPhotographerProduct）
      * method: Http.GET
      * path: /work/getWorks
      * photographerId, long, 摄影师id
@@ -234,7 +234,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 摄影师主页——用户评论（getPhotographerComments）
+     * 6.摄影师主页——用户评论（getPhotographerComments）
      * method: Http.GET
      * path: /work/getWorks
      * userId, long, 摄影师id
@@ -253,7 +253,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 摄影师主页——作品点赞（likeTheWork）
+     * 8.摄影师主页——作品点赞（likeTheWork）
      * method: Http.POST
      * path: /workLike/add
      * uid：用户Id，次处必须登录
@@ -271,7 +271,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 摄影师主页——用户评论（commentTheWork）
+     * 9.摄影师主页——用户评论（commentTheWork）
      * method: Http.POST
      * path: /workLike/add
      * uid：用户Id，次处必须登录
@@ -293,7 +293,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 获取特色服务列表
+     * 12.获取特色服务列表
      * path：--
      * paras:
      * uid, 用户ID, 可选
@@ -321,7 +321,7 @@ class SnapShotTaskEngine {
     }
     
     /**
-     * 获取一起团拍列表
+     * 13.获取一起团拍列表
      * path：--
      * paras:
      * uid, 用户ID, 可选
