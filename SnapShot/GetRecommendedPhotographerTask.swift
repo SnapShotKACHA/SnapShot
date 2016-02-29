@@ -52,14 +52,24 @@ class GetRecommendedPhotographerTask: BaseTask, HttpProtocol {
     func didRecieveResults(results: AnyObject) {
         print("GetRecommendedPhotographerTask, didRecieveResults")
         print("results = ")
-        print(results)
+        
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
         switch (succeed) {
         case JSON_VALUE_SUCCESS:
             // 学习如何回传list
-            JSON(results)[JSON_KEY_DATA]
-            let photographerIntroduceModel: PhotographerIntroduceModel = PhotographerIntroduceModel();
-            photographerIntroduceModel.parseJson("")
+//            JSON(results)[JSON_KEY_DATA][JSON_KEY_ITEMS].string?.stringByReplacingOccurrencesOfString("\\", withString: "")
+//            var sampString = JSON(results)[JSON_KEY_DATA][JSON_KEY_ITEMS].string?.stringByReplacingOccurrencesOfString("[", withString: "")
+//            sampString =  sampString?.stringByReplacingOccurrencesOfString("]", withString: "")
+//            let tempArray = sampString?.componentsSeparatedByString("},{")
+//            let itemsString = JSON(results)[JSON_KEY_DATA][JSON_KEY_ITEMS].string
+//            let itemsData = itemsString?.dataUsingEncoding(NSUTF8StringEncoding)
+//            
+//            let jsonArr = try!NSJSONSerialization.JSONObjectWithData(itemsData!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+//            print (String(jsonArr))
+//            
+//            print (JSON(results)[JSON_KEY_DATA][JSON_KEY_ITEMS].string?.stringByReplacingOccurrencesOfString("\\\"", withString: "\""))
+//            let photographerIntroduceModel: PhotographerIntroduceModel = PhotographerIntroduceModel();
+//            photographerIntroduceModel.parseJson("")
             notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "")
             break;
         case JSON_VALUE_FAILED:

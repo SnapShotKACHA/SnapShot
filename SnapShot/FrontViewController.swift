@@ -192,10 +192,17 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
                 break
             case TASK_TYPE_GET_RECOMMENDED_PHOTOGRAPHER:
                 print(extraData)
-                let jsonResult = JSON(extraData)
-                let photographerIntro = PhotographerIntroduceModel()
-                for item in jsonResult["data"].array! {
-                    print(item)
+                
+                
+                let itemsString = JSON(extraData)[JSON_KEY_DATA][JSON_KEY_ITEMS].string
+                let itemsData = itemsString?.dataUsingEncoding(NSUTF8StringEncoding)
+                
+                let jsonArr = try!NSJSONSerialization.JSONObjectWithData(itemsData!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+                print (String(jsonArr))
+                
+                for value in jsonArr {
+                   print(value)
+//                    let photographerIntro = PhotographerIntroduceModel(picUrlValue: item.objectForKey(JSON_KEY_PIC_URL), priceValue: item.objectForKey(JSON_KEY_PRICE), avatarValue: item.objectForKey(JSON_KEY_AVATAR), nicknameValue: item.objectForKey(JSON_KEY_NICKNAME), publishDateValue: item.objectForKey(JSON_KEY_PUBLISH_DATE), loactionValue: item.objectForKey(JSON_KEY_LOCATION), likeCountValue: item.objectForKey(JSON_KEY_LIKE_COUNT), photographerIdValue: item.objectForKey(JSON_KEY_PHOTOGRAPHER_ID), commentCountValue: item.objectForKey(JSON_KEY_COMMENT_COUNT), appointmentCountValue: item.objectForKey(JSON_KEY_APPOINTMENT_COUNT))
                 }
                 
                 

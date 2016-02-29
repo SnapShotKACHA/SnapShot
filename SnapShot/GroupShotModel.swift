@@ -50,12 +50,12 @@ class GroupShotModel: BaseModel {
         shotId = JSON(object)[JSON_KEY_SHOT_ID].string
         location = JSON(object)[JSON_KEY_LOCATION].string
         likeCount = JSON(object)[JSON_KEY_LIKE_COUNT].string
-        startTime = JSON(object)[JSON_KEY_PHOTOGRAPHER_ID].string
-        commentCount = JSON(object)[JSON_KEY_COMMENTS_COUNT].string
-        endTime = JSON(object)[JSON_KEY_APPOINTMENT_COUNT].string
-        maxNumber = JSON(object)[JSON_KEY_PHOTOGRAPHER_ID].string
-        photographerCount = JSON(object)[JSON_KEY_COMMENTS_COUNT].string
-        minNumber = JSON(object)[JSON_KEY_APPOINTMENT_COUNT].string
+        startTime = JSON(object)[JSON_KEY_START_TIME].string
+        commentCount = JSON(object)[JSON_KEY_COMMENT_COUNT].string
+        endTime = JSON(object)[JSON_KEY_END_TIME].string
+        maxNumber = JSON(object)[JSON_KEY_MAX_NUMBER].string
+        photographerCount = JSON(object)[JSON_KEY_PHOTOGRAPHER_COUNT].string
+        minNumber = JSON(object)[JSON_KEY_MIN_NUMBER].string
     }
     
     /*

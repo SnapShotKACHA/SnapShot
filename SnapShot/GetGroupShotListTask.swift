@@ -55,8 +55,13 @@ class GetGroupShotListTask: BaseTask, HttpProtocol {
         switch (succeed) {
         case JSON_VALUE_SUCCESS:
             let groupShotModel: GroupShotModel = GroupShotModel()
+
             print(groupShotModel)
 //            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: specialShotModel)
+
+            // 此处为列表，不知道如何处理
+            notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: groupShotModel)
+
             break;
         case JSON_VALUE_FAILED:
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
