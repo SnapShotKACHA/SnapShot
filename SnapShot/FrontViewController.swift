@@ -15,6 +15,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     var navBtn: UIButton?
     var imageUrl: [String] = []
     var specialShotModel: SpecialShotModel?
+    var photographerIntroduceModel: [PhotographerIntroduceModel]?
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
@@ -23,7 +24,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navBtn?.addTarget(AppDelegate(), action: "leftViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
         self.navigationController?.navigationBar.addSubview(self.navBtn!)
         SnapShotTaskEngine.getInstance().doGetRecommendedSpecialShot("", longitude: "", latitude: "", engineProtocol: self)
-        SnapShotTaskEngine.getInstance().doGetRecommendedPhotographerTask("", longitude: "", latitude: "", page: "1", step: "5", engineProtocol: self)
+        SnapShotTaskEngine.getInstance().doGetRecommendedPhotographerTask("13811245934", longitude: "", latitude: "", page: "0", step: "5", engineProtocol: self)
         
         }
     }
@@ -191,9 +192,14 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
                 break
             case TASK_TYPE_GET_RECOMMENDED_PHOTOGRAPHER:
                 print(extraData)
-//                specialShotModel = SpecialShotModel()
-//                specialShotModel?.parseJson(extraData)
-//                self.mainTableView.reloadData()
+                let jsonResult = JSON(extraData)
+                let photographerIntro = PhotographerIntroduceModel()
+                for item in jsonResult["data"].array! {
+                    print(item)
+                }
+                
+                
+                self.mainTableView.reloadData()
                 break
             case TASK_TYPE_GET_RECOMMENDED_SPECIAL_SHOT:
                 specialShotModel = SpecialShotModel()

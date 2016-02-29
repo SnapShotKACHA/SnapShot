@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShotEngineProtocol {
+class RegisterViewController: BasicViewController, UITextFieldDelegate {
     @IBOutlet weak var userIDTextField: UITextField!
     @IBOutlet weak var phoneNumTextField: UITextField!
     
@@ -202,7 +202,7 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShot
         }
     }
     
-    func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+    override func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
         // receive register failed errorCode, handle it!
         // with different errorCode
         if (TASK_TYPE_REGISTER == taskType) {
@@ -213,7 +213,7 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate, SnapShot
         }
     }
     
-    func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+    override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
         if (TASK_TYPE_REGISTER == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
             print("register task success, handle please!")
             SnapShotTaskEngine.getInstance().doLogin(nil, phoneNum: self.phoneNumTextField.text, password: self.passwordTextField.text, engineProtocol: self)

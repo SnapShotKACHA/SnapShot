@@ -39,9 +39,9 @@ class PhotographerIntroduceModel: BaseModel {
         super.parseJson(object)
         picUrl = JSON(object)[JSON_KEY_PIC_URL].string
         price = JSON(object)[JSON_KEY_PRICE].string
-        avatarUrl = JSON(object)[JSON_KEY_TITLE].string
-        nickname = JSON(object)[JSON_KEY_INTRO].string
-        publishDate = JSON(object)[JSON_KEY_SHOT_ID].string        
+        avatarUrl = JSON(object)[JSON_KEY_AVATAR].string
+        nickname = JSON(object)[JSON_KEY_NICKNAME].string
+        publishDate = JSON(object)[JSON_KEY_PUBLISHDATE].string
         location = JSON(object)[JSON_KEY_LOCATION].string
         likeCount = JSON(object)[JSON_KEY_LIKE_COUNT].string
         photographerId = JSON(object)[JSON_KEY_PHOTOGRAPHER_ID].string

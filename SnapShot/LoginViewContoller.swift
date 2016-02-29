@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: BasicViewController, UITextFieldDelegate, SnapShotEngineProtocol {
+class LoginViewController: BasicViewController, UITextFieldDelegate {
     
     @IBOutlet weak var phoneNumTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -99,13 +99,13 @@ class LoginViewController: BasicViewController, UITextFieldDelegate, SnapShotEng
         }
     }
     
-    func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+    override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
         if (taskType == TASK_TYPE_LOGIN && successCode == TASK_RESULT_CODE_SUCCESS) {
             navigationController!.popToRootViewControllerAnimated(true)
         }
     }
     
-    func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+    override func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
         if (taskType == TASK_TYPE_LOGIN) {
             let cancelAction = UIAlertAction(title: "重新登录", style: .Cancel, handler: nil)
             presentViewController(ViewWidgest.displayAlert("登录错误", message: "请核对用户名和密码", actions: [cancelAction]), animated: true, completion: nil)

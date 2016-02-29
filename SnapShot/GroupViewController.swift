@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GroupViewController: BasicViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var groupTableView: UITableView!
     var navBtn: UIButton?
@@ -28,6 +28,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         groupTableView.delegate = self
         groupTableView.dataSource = self
         initTopButtons()
+        SnapShotTaskEngine.getInstance().doGetGroupShotListTask("", longitude: "", latitude: "", page: "", step: "", sortType: "", engineProtocol: self)
        
     }
     
@@ -123,6 +124,16 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func popToRoot() {
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+        if TASK_TYPE_GET_GROUP_SHOT_LIST == taskType {
+            
+        }
+    }
+    
+    override func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+        
     }
     
 }
