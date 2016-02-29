@@ -59,7 +59,7 @@ class ToolKit {
         
         let timeSta:NSTimeInterval = string.doubleValue
         let dfmatter = NSDateFormatter()
-        dfmatter.dateFormat="yyyy年MM月dd日"
+        dfmatter.dateFormat="MM月dd日"
         
         let date = NSDate(timeIntervalSince1970: timeSta)
         

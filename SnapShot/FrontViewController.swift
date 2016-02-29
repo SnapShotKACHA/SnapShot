@@ -15,7 +15,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     var navBtn: UIButton?
     var imageUrl: [String] = []
     var specialShotModel: SpecialShotModel?
-    var photographerIntroduceModel: [PhotographerIntroduceModel]?
+    var photographerIntroduceModel: [PhotographerIntroduceModel] = []
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
@@ -120,11 +120,15 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             let frontCell = self.mainTableView.dequeueReusableCellWithIdentifier("frontCell") as? FrontCell
             let tapRecognizer = UITapGestureRecognizer(target: self, action: "pushToPhotograher")
             frontCell!.userIDLabel.userInteractionEnabled = true
-            print(indexPath.row)
             
-            if self.imageUrl.count > 0 {
-                print(self.imageUrl[indexPath.row])
-                frontCell!.artImageView.hnk_setImageFromURL(NSURL(string: self.imageUrl[indexPath.section])!)
+            
+            if self.photographerIntroduceModel.count > 0 {
+                frontCell?.locationLabel.text = self.photographerIntroduceModel[indexPath.section].getLocation()
+                frontCell?.timeLabel.text = self.photographerIntroduceModel[indexPath.section].getPublishDate()
+                frontCell?.userIDLabel.text = self.photographerIntroduceModel[indexPath.section].getNickname()
+                frontCell?.priceLabel.text = "￥\(self.photographerIntroduceModel[indexPath.section].getPrice())"
+                frontCell?.profileImageView.hnk_setImageFromURL(NSURL(string: self.photographerIntroduceModel[indexPath.section].getAvatar())!)
+                frontCell!.artImageView.hnk_setImageFromURL(NSURL(string: self.photographerIntroduceModel[indexPath.section].getPicUrl())!)
             }
             frontCell!.addGestureRecognizer(tapRecognizer)
             return frontCell!
@@ -154,7 +158,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 6
+        return photographerIntroduceModel.count > 0 ? photographerIntroduceModel.count : 3
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -193,20 +197,31 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             case TASK_TYPE_GET_RECOMMENDED_PHOTOGRAPHER:
                 print("++++++++++\(extraData)++++++++++")
                 if String(extraData) != nil {
-                    
-                
                 
                     let itemsString = JSON(extraData)[JSON_KEY_DATA][JSON_KEY_ITEMS].string
                     let itemsData = itemsString?.dataUsingEncoding(NSUTF8StringEncoding)
                 
                     let jsonArr = try!NSJSONSerialization.JSONObjectWithData(itemsData!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-                    print (String(jsonArr))
+//                    print (String(jsonArr))
                 
-                    for value in jsonArr {
-                        print(value)
-//                    let photographerIntro = PhotographerIntroduceModel(picUrlValue: item.objectForKey(JSON_KEY_PIC_URL), priceValue: item.objectForKey(JSON_KEY_PRICE), avatarValue: item.objectForKey(JSON_KEY_AVATAR), nicknameValue: item.objectForKey(JSON_KEY_NICKNAME), publishDateValue: item.objectForKey(JSON_KEY_PUBLISH_DATE), loactionValue: item.objectForKey(JSON_KEY_LOCATION), likeCountValue: item.objectForKey(JSON_KEY_LIKE_COUNT), photographerIdValue: item.objectForKey(JSON_KEY_PHOTOGRAPHER_ID), commentCountValue: item.objectForKey(JSON_KEY_COMMENT_COUNT), appointmentCountValue: item.objectForKey(JSON_KEY_APPOINTMENT_COUNT))
+                    for item in jsonArr {
+                        let picUrl = item.objectForKey(JSON_KEY_PIC_URL) as! String
+                        let price = item.objectForKey(JSON_KEY_PRICE) as! String
+                        let avatar = item.objectForKey(JSON_KEY_AVATAR) as! String
+                        let nickname = item.objectForKey(JSON_KEY_NICKNAME) as! String
+                        let publishDate = ToolKit.timeStampToString(item.objectForKey(JSON_KEY_PUBLISH_DATE) as! String)
+                        let location = item.objectForKey(JSON_KEY_LOCATION) as! String
+                        let likeCount = item.objectForKey(JSON_KEY_LIKE_COUNT) as! String
+                        let photographerId = item.objectForKey(JSON_KEY_PHOTOGRAPHER_ID) as! String
+                        let commentCount =  item.objectForKey(JSON_KEY_COMMENT_COUNT) as! String
+                        let appointmentCount = item.objectForKey(JSON_KEY_APPOINTMENT_COUNT) as! String
+                        
+                        let photographerIntro: PhotographerIntroduceModel = PhotographerIntroduceModel(picUrlValue: picUrl, priceValue: price, avatarValue: avatar, nicknameValue: nickname, publishDateValue: publishDate, loactionValue: location, likeCountValue: likeCount, photographerIdValue: photographerId, commentCountValue: commentCount, appointmentCountValue: appointmentCount)
+                        print(photographerIntro.getNickname())
+                        self.photographerIntroduceModel.append(photographerIntro)
                     }
-                
+                    
+                    
                 
                     self.mainTableView.reloadData()
                 }
