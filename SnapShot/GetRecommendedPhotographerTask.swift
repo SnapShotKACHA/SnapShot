@@ -52,7 +52,7 @@ class GetRecommendedPhotographerTask: BaseTask, HttpProtocol {
     func didRecieveResults(results: AnyObject) {
         print("GetRecommendedPhotographerTask, didRecieveResults")
         print("results = ")
-        
+        print(results)
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
         switch (succeed) {
         case JSON_VALUE_SUCCESS:
