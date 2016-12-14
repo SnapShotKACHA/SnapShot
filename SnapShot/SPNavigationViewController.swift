@@ -20,16 +20,16 @@ class SPNavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SPNavigationBar = UINavigationBar(frame: CGRectMake(0, 0, CGFloat(SCREEN_WIDTH), 64))
+        SPNavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: CGFloat(SCREEN_WIDTH), height: 64))
         let titleShadow: NSShadow = NSShadow()
         titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
-        titleShadow.shadowOffset = CGSizeMake(1, 1)
-        SPNavigationBar?.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 24.0)!, NSShadowAttributeName:titleShadow]
+        titleShadow.shadowOffset = CGSize(width: 1, height: 1)
+        SPNavigationBar?.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:UIFont(name: "Heiti SC", size: 24.0)!, NSShadowAttributeName:titleShadow]
         
 //        letButtonItem = UIBarButtonItem(barButtonSystemItem: .Camera, target: self, action: "cameraButtonAction")
         SPNavigationBar?.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
-        SPNavigationBar?.pushNavigationItem(initNavigationBarItem(), animated: false)
-        SPNavigationBar?.tintColor = UIColor.whiteColor()
+        SPNavigationBar?.pushItem(initNavigationBarItem(), animated: false)
+        SPNavigationBar?.tintColor = UIColor.white
         self.view.addSubview(SPNavigationBar!)
         
     }
@@ -42,14 +42,14 @@ class SPNavigationViewController: UINavigationController {
         self.SPNavigationBar?.removeFromSuperview()
     }
     
-    func updateLeftBarItem(leftButton: UIBarButtonItem) {
+    func updateLeftBarItem(_ leftButton: UIBarButtonItem) {
         self.SPNavigationBarItem?.leftBarButtonItem = leftButton
     }
     
     func initNavigationBarItem() -> UINavigationItem {
         SPNavigationBarItem = UINavigationItem()
         SPNavigationBarItem!.title = "SnapShot"
-        SPNavigationBarItem!.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchButtonAction")
+        SPNavigationBarItem!.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(SPNavigationViewController.searchButtonAction))
         return SPNavigationBarItem!
     }
     
@@ -64,7 +64,7 @@ class SPNavigationViewController: UINavigationController {
     }
     
     func popUpAction() {
-        self.popToRootViewControllerAnimated(true)
+        self.popToRootViewController(animated: true)
         print("popUpAction")
     }
 }

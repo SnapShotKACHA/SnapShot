@@ -49,7 +49,7 @@ class GetRecommendedPhotographerTask: BaseTask, HttpProtocol {
         self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("GetRecommendedPhotographerTask, didRecieveResults")
         print("results = ")
         print(results)
@@ -71,7 +71,7 @@ class GetRecommendedPhotographerTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("GetRecommendedPhotographerTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

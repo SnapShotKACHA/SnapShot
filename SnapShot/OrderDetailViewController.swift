@@ -22,34 +22,34 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.addSubview(self.orderDetailCancelButton)
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         self.orderDetailCancelButton.removeFromSuperview()
     }
 
     
     override func viewDidLoad() {
-        self.orderDetailTableView = UITableView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT), style: .Plain)
+        self.orderDetailTableView = UITableView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT), style: .plain)
         self.orderDetailTableView?.delegate = self
         self.orderDetailTableView?.dataSource = self
         let nibOrderInfoCell = UINib(nibName: "OrderInfoCell", bundle: nil)
-        self.orderDetailTableView?.registerNib(nibOrderInfoCell, forCellReuseIdentifier: "orderInfoCell")
+        self.orderDetailTableView?.register(nibOrderInfoCell, forCellReuseIdentifier: "orderInfoCell")
         self.view.addSubview(self.orderDetailTableView!)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "orderDetailCell")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "orderDetailCell")
         if indexPath.section == 0 {
             let orderImageView = UIImageView(image: UIImage(named: "orderFlowImage"))
             orderImageView.frame = CGRect(x: 5, y: 5, width: SCREEN_WIDTH - 10, height: 50)
-            orderImageView.contentMode = .ScaleAspectFit
+            orderImageView.contentMode = .scaleAspectFit
             cell.addSubview(orderImageView)
             return cell
         } else if indexPath.section == 1 {
-            let orderInfoCell = self.orderDetailTableView?.dequeueReusableCellWithIdentifier("orderInfoCell", forIndexPath: indexPath) as! OrderInfoCell
+            let orderInfoCell = self.orderDetailTableView?.dequeueReusableCell(withIdentifier: "orderInfoCell", for: indexPath) as! OrderInfoCell
             orderInfoCell.orderInfoCellServiceLabel.text = "萌娃外拍"
             orderInfoCell.orderInfoCellPhotorLabel.text = "Summer Li"
             orderInfoCell.orderInfoCellDateLabel.text = "2015年12月4日"
@@ -71,7 +71,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
                 cell.textLabel?.text = "和包"
                 let hePayImage = UIImageView(image: UIImage(named: "hePayImage"))
                 hePayImage.frame = CGRect(x: 50, y: 5, width: 30, height: 30)
-                hePayImage.contentMode = .ScaleAspectFit
+                hePayImage.contentMode = .scaleAspectFit
                 cell.addSubview(hePayImage)
             } else if indexPath.row == 2 {
                 cell.detailTextLabel?.text = "20元大红包"
@@ -88,9 +88,9 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             } else {
                 cell.backgroundColor = BACKGROUND_COLOR_GREY
                 let payButton = UIButton(frame: CGRect(x: SCREEN_WIDTH - 170, y: 5, width: 150, height: 30))
-                payButton.setTitle("确认支付", forState: .Normal)
+                payButton.setTitle("确认支付", for: UIControlState())
                 payButton.backgroundColor = SP_BLUE_COLOR
-                payButton.titleLabel?.textColor = UIColor.whiteColor()
+                payButton.titleLabel?.textColor = UIColor.white
                 cell.addSubview(payButton)
                 cell.textLabel?.text = "50%定金：￥165元"
             }
@@ -99,7 +99,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 80
         } else if indexPath.section == 1 {
@@ -117,7 +117,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else if section == 1 {
@@ -131,7 +131,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 0
         } else {
@@ -139,7 +139,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
     

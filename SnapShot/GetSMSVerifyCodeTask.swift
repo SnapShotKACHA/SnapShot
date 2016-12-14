@@ -29,14 +29,14 @@ class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("GetSMSVerifyCodeTask, didRecieveResults")
         print("results = ")
         print(results)
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
         switch (succeed) {
             case JSON_VALUE_SUCCESS:
-                userDefaults.setObject(self.phoneNum, forKey: JSON_KEY_PHONE_NUM)
+                userDefaults.set(self.phoneNum, forKey: JSON_KEY_PHONE_NUM)
                 notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: "")
                 break;
             case JSON_VALUE_FAILED:
@@ -48,7 +48,7 @@ class GetSMSVerifyCodeTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("GetSMSVerifyCodeTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

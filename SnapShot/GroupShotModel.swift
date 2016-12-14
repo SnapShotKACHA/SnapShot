@@ -11,19 +11,19 @@ import SwiftyJSON
 
 class GroupShotModel: BaseModel {
     
-    private var picUrl: String?;
-    private var price: String?;
-    private var title: String?;
-    private var intro: String?;
-    private var shotId: String?;
-    private var startTime: String?;
-    private var endTime: String?;
-    private var minNumber: String?;
-    private var maxNumber: String?;
-    private var likeCount: String?;
-    private var commentCount: String?;
-    private var photographerCount: String?;
-    private var location: String?;
+    fileprivate var picUrl: String?;
+    fileprivate var price: String?;
+    fileprivate var title: String?;
+    fileprivate var intro: String?;
+    fileprivate var shotId: String?;
+    fileprivate var startTime: String?;
+    fileprivate var endTime: String?;
+    fileprivate var minNumber: String?;
+    fileprivate var maxNumber: String?;
+    fileprivate var likeCount: String?;
+    fileprivate var commentCount: String?;
+    fileprivate var photographerCount: String?;
+    fileprivate var location: String?;
     
     override init() {
         picUrl = ""
@@ -41,7 +41,7 @@ class GroupShotModel: BaseModel {
         photographerCount = ""
     }
     
-    override func parseJson(object: AnyObject) {
+    override func parseJson(_ object: AnyObject) {
         super.parseJson(object)
         picUrl = JSON(object)[JSON_KEY_PIC_URL].string
         price = JSON(object)[JSON_KEY_PRICE].string

@@ -25,16 +25,16 @@ class GetHomePagesTask: BaseTask, HttpProtocol {
         httpControl.onRequest(urlAssembler.url)
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("GetHomePagesTask, didRecieveResults")
         print(results)
         let succeed: Int = JSON(results)[JSON_KEY_SUCCEED].int!
         if (succeed == JSON_VALUE_SUCCESS) {
             print(JSON(results)["data"][0])
             var sampleString: String = JSON(results)["data"]["items"].string!
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("[", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("]", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("\"", withString: "")
+            sampleString = sampleString.replacingOccurrences(of: "[", with: "")
+            sampleString = sampleString.replacingOccurrences(of: "]", with: "")
+            sampleString = sampleString.replacingOccurrences(of: "\"", with: "")
             notifySuccess(self.taskType, successCode: TASK_RESULT_CODE_SUCCESS, extraData: sampleString)
         } else {
             notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
@@ -42,7 +42,7 @@ class GetHomePagesTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("GetHomePagesTask, didRecieveError")
     }
 }

@@ -29,29 +29,29 @@ class PhotographerViewController: BasicViewController {
     
     var artsImageArray: [String]!
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.profileUserIDLabel.text = ToolKit.setUserID()
-        self.headImageView.frame = CGRectMake(0, -8, self.headImageView.frame.width, self.headImageView.frame.height - 20)
+        self.headImageView.frame = CGRect(x: 0, y: -8, width: self.headImageView.frame.width, height: self.headImageView.frame.height - 20)
         ViewWidgest.navigatiobBarButtomButton([self.profileBtn, self.artsDisplayBtn, self.commentDisplayBtn], titleArray: ["基本资料","作品展示","用户评论"], targetArrary: ["profileBtnAction","artsDisplayBtnAction","commentDisplayBtnAction"], viewController: self, yPosition: 227)
-        self.profileBtn.selected = true
+        self.profileBtn.isSelected = true
         
         self.navigationController?.navigationBar.addSubview(self.shareButton)
         
         
         self.startServiceButton.backgroundColor = SP_BLUE_COLOR
-        self.startServiceButton.tintColor = UIColor.whiteColor()
-        self.startServiceButton.setTitle("发起活动", forState: .Normal)
+        self.startServiceButton.tintColor = UIColor.white
+        self.startServiceButton.setTitle("发起活动", for: UIControlState())
         self.startServiceButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.startServiceButton.layer.borderWidth = 12
-        self.startServiceButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
+        self.startServiceButton.layer.borderColor = BACKGROUND_COLOR_GREY.cgColor
         
         let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 260)
         
-        self.photographerDetailTableView = PhotographerDetailTableView(frame: tableRect, style: UITableViewStyle.Grouped)
-        self.artsDisplayTableView = ArtsDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 5)
-        self.commentDisplayTableVeiw = CommentDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 1)
+        self.photographerDetailTableView = PhotographerDetailTableView(frame: tableRect, style: UITableViewStyle.grouped)
+        self.artsDisplayTableView = ArtsDisplayTableView(frame: tableRect, style: UITableViewStyle.grouped, numberOfSection: 5)
+        self.commentDisplayTableVeiw = CommentDisplayTableView(frame: tableRect, style: UITableViewStyle.grouped, numberOfSection: 1)
         
-        if self.profileBtn.selected == true {
+        if self.profileBtn.isSelected == true {
             self.view.addSubview(self.photographerDetailTableView!)
             self.view.addSubview(self.startServiceButton)
         }
@@ -64,7 +64,7 @@ class PhotographerViewController: BasicViewController {
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.shareButton.removeFromSuperview()
     }
     
@@ -73,10 +73,10 @@ class PhotographerViewController: BasicViewController {
     }
     
     func profileBtnAction() {
-        if self.profileBtn.selected == false {
-            self.profileBtn.selected = true
-            self.artsDisplayBtn.selected = false
-            self.commentDisplayBtn.selected = false
+        if self.profileBtn.isSelected == false {
+            self.profileBtn.isSelected = true
+            self.artsDisplayBtn.isSelected = false
+            self.commentDisplayBtn.isSelected = false
             self.artsDisplayTableView?.removeFromSuperview()
             self.commentDisplayTableVeiw?.removeFromSuperview()
             self.view.addSubview(self.photographerDetailTableView!)
@@ -86,10 +86,10 @@ class PhotographerViewController: BasicViewController {
     }
     
     func artsDisplayBtnAction() {
-        if self.artsDisplayBtn.selected == false {
-            self.artsDisplayBtn.selected = true
-            self.profileBtn.selected = false
-            self.commentDisplayBtn.selected = false
+        if self.artsDisplayBtn.isSelected == false {
+            self.artsDisplayBtn.isSelected = true
+            self.profileBtn.isSelected = false
+            self.commentDisplayBtn.isSelected = false
             self.photographerDetailTableView?.removeFromSuperview()
             self.commentDisplayTableVeiw?.removeFromSuperview()
             self.view.addSubview(self.artsDisplayTableView!)
@@ -98,10 +98,10 @@ class PhotographerViewController: BasicViewController {
     }
     
     func commentDisplayBtnAction() {
-        if self.commentDisplayBtn.selected == false {
-            self.commentDisplayBtn.selected = true
-            self.artsDisplayBtn.selected = false
-            self.profileBtn.selected = false
+        if self.commentDisplayBtn.isSelected == false {
+            self.commentDisplayBtn.isSelected = true
+            self.artsDisplayBtn.isSelected = false
+            self.profileBtn.isSelected = false
             self.photographerDetailTableView?.removeFromSuperview()
             self.artsDisplayTableView?.removeFromSuperview()
             self.view.addSubview(self.commentDisplayTableVeiw!)
@@ -111,7 +111,7 @@ class PhotographerViewController: BasicViewController {
     }
     
     func pushView() {
-        self.navigationController!.popToRootViewControllerAnimated(true)
+        self.navigationController!.popToRootViewController(animated: true)
     }
     
     

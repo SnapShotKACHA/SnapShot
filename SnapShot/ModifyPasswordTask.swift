@@ -38,7 +38,7 @@ class ModifyPasswordTask: BaseTask, HttpProtocol {
             param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("ModifyPasswordTask, didRecieveResults")
         print("results = ")
         print(results)
@@ -56,7 +56,7 @@ class ModifyPasswordTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("ModifyPasswordTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

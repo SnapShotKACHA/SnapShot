@@ -22,7 +22,7 @@ class HttpControl {
      - parameter url: 网址
      */
     
-    func onRequest(url: String) {
+    func onRequest(_ url: String) {
         Alamofire.request(Method.GET, url).responseJSON {response in
             if(response.result.error != nil) {
                 self.delegate.didRecieveError(response.result.error!)
@@ -37,9 +37,9 @@ class HttpControl {
      - parameter url: 网址
      - parameter 参数:
      */
-    func onRequestWithParams(url: String, param: Parameters) {
+    func onRequestWithParams(_ url: String, param: Parameters) {
         print(param.parametersDic)
-        Alamofire.Manager.sharedInstance.request(Method.POST, url, parameters:param.parametersDic, encoding:ParameterEncoding.URL).responseJSON(options: NSJSONReadingOptions.MutableContainers){
+        Alamofire.Manager.sharedInstance.request(Method.POST, url, parameters:param.parametersDic, encoding:ParameterEncoding.url).responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers){
             response -> Void in
             if(response.result.error != nil) {
                 self.delegate.didRecieveError(response.result.error!)
@@ -52,6 +52,6 @@ class HttpControl {
 }
 
 protocol HttpProtocol {
-    func didRecieveResults(results:AnyObject)
-    func didRecieveError(error:AnyObject)
+    func didRecieveResults(_ results:AnyObject)
+    func didRecieveError(_ error:AnyObject)
 }

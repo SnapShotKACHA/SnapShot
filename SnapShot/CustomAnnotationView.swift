@@ -21,10 +21,10 @@ class CustomAnnotation: MAAnnotationView {
     
     override init!(annotation: MAAnnotation!, reuseIdentifier: String!) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        self.bounds = CGRectMake(0, 0, 40, 40)
-        self.backgroundColor = UIColor.clearColor()
-        self.portraitImageView = UIImageView(frame: CGRectMake(0, 0, 40, 40))
-        self.portraitImageView?.contentMode = .ScaleAspectFit
+        self.bounds = CGRect(x: 0, y: 0, width: 40, height: 40)
+        self.backgroundColor = UIColor.clear
+        self.portraitImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        self.portraitImageView?.contentMode = .scaleAspectFit
         self .addSubview(portraitImageView!)
         
     }

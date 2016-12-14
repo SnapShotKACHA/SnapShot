@@ -11,19 +11,19 @@ import SwiftyJSON
 
 class SpecialShotDetailModel: BaseModel {
     
-    private var picUrls: String?;
-    private var price: String?;
-    private var title: String?;
-    private var intro: String?;
-    private var shotId: String?;
-    private var summary: String?;
-    private var date: String?;
-    private var location: String?;
-    private var service: String?;
-    private var sculpt: String?; // 造型
-    private var likeCount: String?; // 点赞数量
-    private var commentCount: String?; // 评论数量
-    private var photographers: String?; // 摄影师，{头像，id}
+    fileprivate var picUrls: String?;
+    fileprivate var price: String?;
+    fileprivate var title: String?;
+    fileprivate var intro: String?;
+    fileprivate var shotId: String?;
+    fileprivate var summary: String?;
+    fileprivate var date: String?;
+    fileprivate var location: String?;
+    fileprivate var service: String?;
+    fileprivate var sculpt: String?; // 造型
+    fileprivate var likeCount: String?; // 点赞数量
+    fileprivate var commentCount: String?; // 评论数量
+    fileprivate var photographers: String?; // 摄影师，{头像，id}
 
     override init() {
         picUrls = ""
@@ -41,7 +41,7 @@ class SpecialShotDetailModel: BaseModel {
         photographers = ""
     }
     
-    override func parseJson(object: AnyObject) {
+    override func parseJson(_ object: AnyObject) {
         super.parseJson(object)
         picUrls = JSON(object)[JSON_KEY_PIC_URLS].string
         price = JSON(object)[JSON_KEY_PRICE].string

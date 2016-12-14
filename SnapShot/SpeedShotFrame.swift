@@ -15,6 +15,6 @@ class SpeedShotFrame: UIView {
     @IBOutlet weak var startSpeedShotButton: UIButton!
     
     
-    @IBAction func startSpeedShotButtonAction(sender: AnyObject) {
+    @IBAction func startSpeedShotButtonAction(_ sender: AnyObject) {
     }    
 }

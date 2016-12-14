@@ -14,12 +14,12 @@ import SwiftyJSON
 */
 class GetGroupShotListTask: BaseTask, HttpProtocol {
     
-    private var uid: String!
-    private var longitude: String!
-    private var latitude: String!
-    private var page: String!
-    private var step: String!
-    private var sortType: String! //price、distance、date三类，用于按照价格、距离、时间排序，默认为价格
+    fileprivate var uid: String!
+    fileprivate var longitude: String!
+    fileprivate var latitude: String!
+    fileprivate var page: String!
+    fileprivate var step: String!
+    fileprivate var sortType: String! //price、distance、date三类，用于按照价格、距离、时间排序，默认为价格
     
     init(uid: String!, longitude: String!, latitude: String!, page: String!, step: String!, sortType: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_GET_GROUP_SHOT_LIST, engineProtocol: engineProtocol)
@@ -47,7 +47,7 @@ class GetGroupShotListTask: BaseTask, HttpProtocol {
         self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("GetGroupShotListTask, didRecieveResults")
         print("results = ")
         print(results)
@@ -71,7 +71,7 @@ class GetGroupShotListTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("GetGroupShotListTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

@@ -11,11 +11,11 @@ import SwiftyJSON
 
 class PhotographerCommentsModel: BaseModel {
     
-    private var commentatorId: String?; // 发布评论的用户id
-    private var avatar: String?; // 发布评论的用户头像
-    private var nickname: String?; // 发布评论的用户昵称
-    private var time: String?; // 评论的时间， 使用格林威治时间转换
-    private var content: String?; // 评论具体内容
+    fileprivate var commentatorId: String?; // 发布评论的用户id
+    fileprivate var avatar: String?; // 发布评论的用户头像
+    fileprivate var nickname: String?; // 发布评论的用户昵称
+    fileprivate var time: String?; // 评论的时间， 使用格林威治时间转换
+    fileprivate var content: String?; // 评论具体内容
     
     override init() {
         commentatorId = ""
@@ -25,7 +25,7 @@ class PhotographerCommentsModel: BaseModel {
         content = ""
     }
     
-    override func parseJson(object: AnyObject) {
+    override func parseJson(_ object: AnyObject) {
         super.parseJson(object)
         commentatorId = JSON(object)[JSON_KEY_COMMENTATOR_ID].string
         avatar = JSON(object)[JSON_KEY_AVATAR].string

@@ -29,7 +29,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         
         let nib = UINib(nibName: "CardCell", bundle: nil)
         if self.SVTableView != nil {
-            SVTableView!.registerNib(nib, forCellReuseIdentifier: "cardCell")
+            SVTableView!.register(nib, forCellReuseIdentifier: "cardCell")
             
             SVTableView!.delegate = self
             SVTableView!.dataSource = self
@@ -38,10 +38,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.priceSortButton = UIButton()
         self.appointSortButton = UIButton()
         self.rateSortButton = UIButton()
-        self.initSortButtons([self.priceSortButton!,self.appointSortButton!,self.rateSortButton!], titleArray: ["价格优先","预约量优先","评级优先"], targetArrary: ["priceSortAction" , "appointSortAction", "rateSortAction"])
+        self.initSortButtons([self.priceSortButton!,self.appointSortButton!,self.rateSortButton!], titleArray: ["价格优先","预约量优先","评级优先"], targetArrary: [#selector(SearchViewController.priceSortAction) , #selector(SearchViewController.appointSortAction), #selector(SearchViewController.rateSortAction)])
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.SVsearchBar?.removeFromSuperview()
         self.locationBtn?.removeFromSuperview()
         self.cancelBtn?.removeFromSuperview()
@@ -59,8 +59,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.locationBtn = ViewWidgest.addLeftButton("北京")
         self.cancelBtn = ViewWidgest.addRightButton("取消")
         
-        locationBtn!.addTarget(self, action: "locationBtnAction", forControlEvents: UIControlEvents.TouchUpInside)
-        cancelBtn!.addTarget(self, action: "cancelBtnAction", forControlEvents: UIControlEvents.TouchUpInside)
+        locationBtn!.addTarget(self, action: #selector(SearchViewController.locationBtnAction), for: UIControlEvents.touchUpInside)
+        cancelBtn!.addTarget(self, action: #selector(SearchViewController.cancelBtnAction), for: UIControlEvents.touchUpInside)
         
         self.navigationController?.navigationBar.addSubview(self.SVsearchBar!)
         self.navigationController?.navigationBar.addSubview(self.locationBtn!)
@@ -72,22 +72,22 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     }
     
     // 初始化排序按钮
-    func initSortButtons( ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector]) {
+    func initSortButtons( _ ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector]) {
         // 画按钮
-        for var i = 0; i < 3; i += 1 {
+        for i in 0 ..< 3 {
             ButtonArray[i].frame = CGRect(x: Double((SCREEN_WIDTH/3) * CGFloat(i)), y: 44, width: Double(SCREEN_WIDTH/3), height: 40)
-            ButtonArray[i].setTitle(titleArray[i], forState: UIControlState.Normal)
-            ButtonArray[i].setTitleColor(TEXT_COLOR_GREY, forState: UIControlState.Normal)
-            ButtonArray[i].setTitleColor(TEXT_COLOR_LIGHT_GREY, forState: UIControlState.Highlighted)
-            ButtonArray[i].titleLabel?.font = UIFont.systemFontOfSize(14)
-            ButtonArray[i].backgroundColor = UIColor.whiteColor()
-            ButtonArray[i].addTarget(self, action: targetArrary[i], forControlEvents: UIControlEvents.TouchUpInside)
+            ButtonArray[i].setTitle(titleArray[i], for: UIControlState())
+            ButtonArray[i].setTitleColor(TEXT_COLOR_GREY, for: UIControlState())
+            ButtonArray[i].setTitleColor(TEXT_COLOR_LIGHT_GREY, for: UIControlState.highlighted)
+            ButtonArray[i].titleLabel?.font = UIFont.systemFont(ofSize: 14)
+            ButtonArray[i].backgroundColor = UIColor.white
+            ButtonArray[i].addTarget(self, action: targetArrary[i], for: UIControlEvents.touchUpInside)
             self.navigationController?.navigationBar.addSubview(ButtonArray[i])
             
         }
         
         // 画分割线
-        for var i = 0; i < 2; i++ {
+        for i in 0 ..< 2 {
             let verticalShortLine: UIImageView = UIImageView(frame: CGRect(x: Double((SCREEN_WIDTH/3) * CGFloat(i + 1)), y: 49, width: 0.5, height: 32))
             verticalShortLine.image = UIImage(named: "verticalLineImage")
             verticalShortLine.tag = 100+i
@@ -109,25 +109,25 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         print("rateSort")
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.cancelBtn?.removeFromSuperview()
         self.searchBtn = ViewWidgest.addRightButton("搜索")
-        self.searchBtn?.addTarget(self, action: "searchBtnAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.searchBtn?.addTarget(self, action: #selector(SearchViewController.searchBtnAction), for: UIControlEvents.touchUpInside)
         self.navigationController?.navigationBar.addSubview(self.searchBtn!)
     }
 
     
     
     //---------------------UISearchBarDelegate-------------//
-    func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         return true
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
     
-    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         self.searchBtn?.removeFromSuperview()
         return true
     }
@@ -138,7 +138,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     }
     
     func cancelBtnAction() {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func searchBtnAction() {
@@ -146,30 +146,30 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         self.navigationController?.navigationBar.addSubview(self.cancelBtn!)
     }
     
-    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         return true
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
     }
     
     //--------------------UITableViewDataSource-----------//
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return CGFloat(TABLE_CELL_HEIGHT)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:UITableViewCell
         
-        let tmp = tableView.dequeueReusableCellWithIdentifier("cardCell")
+        let tmp = tableView.dequeueReusableCell(withIdentifier: "cardCell")
         
         if tmp == nil {
-            cell = CardCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cardCell")
+            cell = CardCell(style: UITableViewCellStyle.default, reuseIdentifier: "cardCell")
         } else {
             cell = tmp!
         }
@@ -186,9 +186,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     }
     
     
-    private func doReturnCell(row:Int) -> UITableViewCell {
+    fileprivate func doReturnCell(_ row:Int) -> UITableViewCell {
         
-        let cell = SVTableView.dequeueReusableCellWithIdentifier("cardCell") as! CardCell
+        let cell = SVTableView.dequeueReusableCell(withIdentifier: "cardCell") as! CardCell
         cell.photographerIDLabel.text = "安琪胡桃夹子"
         cell.priceLabel.text = "￥350"
         cell.setRateImages(3)
@@ -201,11 +201,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     
     
     //=======================UITableViewDelegate 的实现===================================
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 40
         }
@@ -213,15 +213,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         return CGFloat(SECTION_HEIGHT)
     }
     
-    func SlideScrollViewDidClicked(index: Int) {
+    func SlideScrollViewDidClicked(_ index: Int) {
         print(index)
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.SVsearchBar?.resignFirstResponder()
         self.searchBtn?.resignFirstResponder()
     }

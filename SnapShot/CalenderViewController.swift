@@ -11,7 +11,7 @@ import UIKit
 
 class CalenderViewController: UIViewController {
     var numberOfDaysInCurrentMonth: Int?
-    var firstDayOfCurrentMonth: NSDate?
+    var firstDayOfCurrentMonth: Date?
     var weekly: Int?
     
     

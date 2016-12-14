@@ -11,10 +11,10 @@ import SwiftyJSON
 
 class PhotographerProductModel: BaseModel {
     
-    private var commentCount: String?; // 收藏数量
-    private var picUrl: String?;
-    private var workId: String?; // 擅长领域
-    private var likeCount: String?; // 点赞数量
+    fileprivate var commentCount: String?; // 收藏数量
+    fileprivate var picUrl: String?;
+    fileprivate var workId: String?; // 擅长领域
+    fileprivate var likeCount: String?; // 点赞数量
     
     override init() {
         commentCount = ""
@@ -23,7 +23,7 @@ class PhotographerProductModel: BaseModel {
         likeCount = ""
     }
     
-    override func parseJson(object: AnyObject) {
+    override func parseJson(_ object: AnyObject) {
         super.parseJson(object)
         commentCount = JSON(object)[JSON_KEY_COMMENT_COUNT].string
         picUrl = JSON(object)[JSON_KEY_PIC_URL].string

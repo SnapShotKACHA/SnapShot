@@ -21,7 +21,7 @@ class LoginModel: BaseModel {
         uid = ""
     }
     
-    override func parseJson(object: AnyObject) {
+    override func parseJson(_ object: AnyObject) {
         super.parseJson(object)
         phoneNum = JSON(object)[JSON_KEY_PHONE_NUM].string
         username = JSON(object)[JSON_KEY_USER_NAME].string

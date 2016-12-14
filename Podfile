@@ -2,8 +2,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'PromiseKit', '~> 3.0'
-pod 'Alamofire', '~> 3.0.0-beta.3'
+pod 'PromiseKit', '~> 4.1.0'
+pod 'Alamofire', '~> 4.2.0'
 pod 'HanekeSwift'
 pod 'SwiftyJSON'
 pod 'PKRevealController'

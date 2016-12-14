@@ -9,7 +9,7 @@
 import Foundation
 
 class BaseModel {
-    func parseJson(object: AnyObject) {
+    func parseJson(_ object: AnyObject) {
         
     }
 }

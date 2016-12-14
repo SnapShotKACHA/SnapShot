@@ -18,7 +18,7 @@ class CommentDisplayTableView: UITableView, UITableViewDelegate, UITableViewData
         self.sectionNumber = numberOfSection
         self.contentSize = CGSize(width: SCREEN_WIDTH, height: 700)
         let nibCommentCell = UINib(nibName: "CommentCell", bundle: nil)
-        self.registerNib(nibCommentCell, forCellReuseIdentifier: "commentCell")
+        self.register(nibCommentCell, forCellReuseIdentifier: "commentCell")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,34 +27,34 @@ class CommentDisplayTableView: UITableView, UITableViewDelegate, UITableViewData
     
     
     //==================UITableViewDataSource====================================================//
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = (self.dequeueReusableCellWithIdentifier("commentCell", forIndexPath: indexPath) as? CommentCell)!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = (self.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as? CommentCell)!
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     //==================UITableViewDelegate===========================================================//
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.sectionNumber == 0 ? 1: self.sectionNumber
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return COMMENT_CELL_HEIGHT
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         tableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 15
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 2 {
             return 90
         } else {

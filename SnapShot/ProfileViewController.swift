@@ -34,44 +34,44 @@ class ProfileViewController: BasicViewController {
     
     var artsImageArray: [String]!
     
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = true
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
       
         ViewWidgest.navigatiobBarButtomButton([self.profileBtn, self.artsDisplayBtn, self.commentDisplayBtn], titleArray: ["基本资料","作品展示","用户评论"], targetArrary: ["profileBtnAction","artsDisplayBtnAction","commentDisplayBtnAction"], viewController: self, yPosition: 227)
-        leftBtn.addTarget(self, action: "pushView", forControlEvents: UIControlEvents.TouchUpInside)
-        self.profileBtn.selected = true
+        leftBtn.addTarget(self, action: #selector(ProfileViewController.pushView), for: UIControlEvents.touchUpInside)
+        self.profileBtn.isSelected = true
         
         self.appointButton.backgroundColor = SP_BLUE_COLOR
-        self.appointButton.tintColor = UIColor.whiteColor()
-        self.appointButton.setTitle("立即预约", forState: .Normal)
+        self.appointButton.tintColor = UIColor.white
+        self.appointButton.setTitle("立即预约", for: UIControlState())
         self.appointButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.appointButton.layer.borderWidth = 12
-        self.appointButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
-        self.appointButton.addTarget(self, action: "makeAppointmentAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.appointButton.layer.borderColor = BACKGROUND_COLOR_GREY.cgColor
+        self.appointButton.addTarget(self, action: #selector(ProfileViewController.makeAppointmentAction), for: UIControlEvents.touchUpInside)
         
         self.commentButton.backgroundColor = SP_BLUE_COLOR
-        self.commentButton.tintColor = UIColor.whiteColor()
-        self.commentButton.setTitle("发表评论", forState: .Normal)
+        self.commentButton.tintColor = UIColor.white
+        self.commentButton.setTitle("发表评论", for: UIControlState())
         self.commentButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.commentButton.layer.borderWidth = 12
-        self.commentButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
-        self.commentButton.addTarget(self, action: "makeCommentAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.commentButton.layer.borderColor = BACKGROUND_COLOR_GREY.cgColor
+        self.commentButton.addTarget(self, action: #selector(ProfileViewController.makeCommentAction), for: UIControlEvents.touchUpInside)
         
         let tableRect = CGRect(x: 0, y: 265, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 245)
         
-        self.profileDetailTableView = ProfileDetailTableView(frame: tableRect, style: UITableViewStyle.Grouped)
-        self.artsDisplayTableView = ArtsDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 5)
-        self.commentDisplayTableVeiw = CommentDisplayTableView(frame: tableRect, style: UITableViewStyle.Grouped, numberOfSection: 1)
+        self.profileDetailTableView = ProfileDetailTableView(frame: tableRect, style: UITableViewStyle.grouped)
+        self.artsDisplayTableView = ArtsDisplayTableView(frame: tableRect, style: UITableViewStyle.grouped, numberOfSection: 5)
+        self.commentDisplayTableVeiw = CommentDisplayTableView(frame: tableRect, style: UITableViewStyle.grouped, numberOfSection: 1)
         
-        if self.profileBtn.selected == true {
+        if self.profileBtn.isSelected == true {
             self.view.addSubview(self.profileDetailTableView!)
             self.view.addSubview(self.appointButton)
         }
         
         if self.photographerModel != nil {
             self.profileUserIDLabel.text = photographerModel?.getNickname()
-            self.profileImageView.hnk_setImageFromURL(NSURL(string: photographerModel!.getAvatar())!)
-            self.headImageView.hnk_setImageFromURL(NSURL(string: photographerModel!.getPicUrl())!)
+            self.profileImageView.hnk_setImageFromURL(URL(string: photographerModel!.getAvatar())!)
+            self.headImageView.hnk_setImageFromURL(URL(string: photographerModel!.getPicUrl())!)
             self.profileAppointLabel.text = photographerModel?.getAppointmentCount()
         }
     }
@@ -82,8 +82,8 @@ class ProfileViewController: BasicViewController {
     
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = false
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,10 +91,10 @@ class ProfileViewController: BasicViewController {
     }
     
     func profileBtnAction() {
-        if self.profileBtn.selected == false {
-            self.profileBtn.selected = true
-            self.artsDisplayBtn.selected = false
-            self.commentDisplayBtn.selected = false
+        if self.profileBtn.isSelected == false {
+            self.profileBtn.isSelected = true
+            self.artsDisplayBtn.isSelected = false
+            self.commentDisplayBtn.isSelected = false
             self.artsDisplayTableView?.removeFromSuperview()
             self.commentDisplayTableVeiw?.removeFromSuperview()
             self.view.addSubview(self.profileDetailTableView!)
@@ -104,10 +104,10 @@ class ProfileViewController: BasicViewController {
     }
     
     func artsDisplayBtnAction() {
-        if self.artsDisplayBtn.selected == false {
-            self.artsDisplayBtn.selected = true
-            self.profileBtn.selected = false
-            self.commentDisplayBtn.selected = false
+        if self.artsDisplayBtn.isSelected == false {
+            self.artsDisplayBtn.isSelected = true
+            self.profileBtn.isSelected = false
+            self.commentDisplayBtn.isSelected = false
             self.profileDetailTableView?.removeFromSuperview()
             self.commentDisplayTableVeiw?.removeFromSuperview()
             self.view.addSubview(self.artsDisplayTableView!)
@@ -117,10 +117,10 @@ class ProfileViewController: BasicViewController {
     }
     
     func commentDisplayBtnAction() {
-        if self.commentDisplayBtn.selected == false {
-            self.commentDisplayBtn.selected = true
-            self.artsDisplayBtn.selected = false
-            self.profileBtn.selected = false
+        if self.commentDisplayBtn.isSelected == false {
+            self.commentDisplayBtn.isSelected = true
+            self.artsDisplayBtn.isSelected = false
+            self.profileBtn.isSelected = false
             self.profileDetailTableView?.removeFromSuperview()
             self.artsDisplayTableView?.removeFromSuperview()
             self.view.addSubview(self.commentDisplayTableVeiw!)
@@ -131,7 +131,7 @@ class ProfileViewController: BasicViewController {
     }
 
     func pushView() {
-        self.navigationController!.popToRootViewControllerAnimated(true)
+        self.navigationController!.popToRootViewController(animated: true)
     }
 
     func makeAppointmentAction() {
@@ -144,18 +144,18 @@ class ProfileViewController: BasicViewController {
         commentView.backgroundColor = TEXT_COLOR_LIGHT_GREY
         let inputField = UITextField (frame: CGRect(x: 10, y: 10, width: commentView.frame.size.width - 20, height: 110))
         inputField.placeholder = "请输入评论"
-        inputField.backgroundColor = UIColor.whiteColor()
+        inputField.backgroundColor = UIColor.white
         commentView.addSubview(inputField)
         let makeComment = UIButton(frame: CGRect(x: 40, y: 130, width: 100, height: 40))
         makeComment.backgroundColor = SP_BLUE_COLOR
-        makeComment.setTitle("发表评论", forState:  UIControlState.Normal)
-        makeComment.addTarget(self, action: "makeCommentButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        makeComment.setTitle("发表评论", for:  UIControlState())
+        makeComment.addTarget(self, action: #selector(ProfileViewController.makeCommentButtonAction), for: UIControlEvents.touchUpInside)
         commentView.addSubview(makeComment)
         
         let cancelComment = UIButton(frame: CGRect(x: 180, y: 130, width: 100, height: 40))
         cancelComment.backgroundColor = SP_BLUE_COLOR
-        cancelComment.setTitle("取消", forState:  UIControlState.Normal)
-        cancelComment.addTarget(self, action: "cancelCommentButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        cancelComment.setTitle("取消", for:  UIControlState())
+        cancelComment.addTarget(self, action: #selector(ProfileViewController.cancelCommentButtonAction), for: UIControlEvents.touchUpInside)
         commentView.addSubview(cancelComment)
         
         self.view.addSubview(commentView)

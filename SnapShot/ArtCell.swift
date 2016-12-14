@@ -21,15 +21,15 @@ class ArtCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func likeAction(sender: AnyObject) {
+    @IBAction func likeAction(_ sender: AnyObject) {
     }
-    @IBAction func commentAction(sender: AnyObject) {
+    @IBAction func commentAction(_ sender: AnyObject) {
     }
-    @IBAction func repostAction(sender: AnyObject) {
+    @IBAction func repostAction(_ sender: AnyObject) {
     }
     
     

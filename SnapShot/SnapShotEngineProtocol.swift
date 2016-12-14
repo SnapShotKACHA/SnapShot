@@ -9,6 +9,6 @@
 import Foundation
 
 protocol SnapShotEngineProtocol {
-    func onTaskSuccess(taskType:Int!, successCode:Int, extraData:AnyObject)
-    func onTaskError(taskType:Int!, errorCode:Int, extraData:AnyObject)
+    func onTaskSuccess(_ taskType:Int!, successCode:Int, extraData:AnyObject)
+    func onTaskError(_ taskType:Int!, errorCode:Int, extraData:AnyObject)
 }

@@ -11,9 +11,9 @@ import SwiftyJSON
 
 class GetPhotographerCommentsTask: BaseTask, HttpProtocol {
     
-    private var uid: String!
-    private var page: String!
-    private var step: String!
+    fileprivate var uid: String!
+    fileprivate var page: String!
+    fileprivate var step: String!
     
     init(userId: String!, page: String!, step: String!, engineProtocol: SnapShotEngineProtocol!) {
         super.init(taskType: TASK_TYPE_GET_PHOTOGRAPHER_COMMENT, engineProtocol: engineProtocol)
@@ -35,7 +35,7 @@ class GetPhotographerCommentsTask: BaseTask, HttpProtocol {
         self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("GetPhotographerCommentsTask, didRecieveResults")
         print("results = ")
         print(results)
@@ -53,7 +53,7 @@ class GetPhotographerCommentsTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("GetPhotographerCommentsTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

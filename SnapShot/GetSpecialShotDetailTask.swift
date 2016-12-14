@@ -32,7 +32,7 @@ class GetSpecialShotDetailTask: BaseTask, HttpProtocol {
         self.httpControl.onRequest(UrlAssembler.init(taskUrl: self.taskUrl, parameterDictionary: parametersDic, signiture: signature.md5).url)
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("GetSpecialShotDetailTask, didRecieveResults")
         print("results = ")
         print(results)
@@ -52,7 +52,7 @@ class GetSpecialShotDetailTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("GetSpecialShotDetailTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

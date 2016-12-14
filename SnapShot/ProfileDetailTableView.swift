@@ -20,9 +20,9 @@ class ProfileDetailTableView: UITableView, UITableViewDataSource, UITableViewDel
         let nibValueCell = UINib(nibName: "ValueCell", bundle: nil)
         let nibCameraCell = UINib(nibName: "CameraCell", bundle: nil)
         let nibServiceCell = UINib(nibName: "ServiceCell", bundle: nil)
-        self.registerNib(nibValueCell, forCellReuseIdentifier: "valueCell")
-        self.registerNib(nibCameraCell, forCellReuseIdentifier: "cameraCell")
-        self.registerNib(nibServiceCell, forCellReuseIdentifier: "serviceCell")
+        self.register(nibValueCell, forCellReuseIdentifier: "valueCell")
+        self.register(nibCameraCell, forCellReuseIdentifier: "cameraCell")
+        self.register(nibServiceCell, forCellReuseIdentifier: "serviceCell")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,20 +31,20 @@ class ProfileDetailTableView: UITableView, UITableViewDataSource, UITableViewDel
     
     
     //==================UITableViewDataSource====================================================//
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell?
         
         if indexPath.section == 0 {
-            cell = self.dequeueReusableCellWithIdentifier("valueCell") as! ValueCell
+            cell = self.dequeueReusableCell(withIdentifier: "valueCell") as! ValueCell
             return cell!
             
         } else if indexPath.section == 1{
             let detailCell: ServiceCell?
-            detailCell = self.dequeueReusableCellWithIdentifier("serviceCell") as? ServiceCell
+            detailCell = self.dequeueReusableCell(withIdentifier: "serviceCell") as? ServiceCell
             return detailCell!
         } else if indexPath.section == 2 {
             let cameraCell: CameraCell?
-            cameraCell = self.dequeueReusableCellWithIdentifier("cameraCell") as? CameraCell
+            cameraCell = self.dequeueReusableCell(withIdentifier: "cameraCell") as? CameraCell
             return cameraCell!
         }  else {
             cell = UITableViewCell()
@@ -52,16 +52,16 @@ class ProfileDetailTableView: UITableView, UITableViewDataSource, UITableViewDel
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     //==================UITableViewDelegate===========================================================//
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return VALUE_CELL_HEIGHT
         } else if indexPath.section == 1{
@@ -73,16 +73,16 @@ class ProfileDetailTableView: UITableView, UITableViewDataSource, UITableViewDel
         }
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         tableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 15
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 2 {
             return 90
         } else {

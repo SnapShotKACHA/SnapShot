@@ -33,11 +33,11 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     var loginButton: UIButton?
     var statues: String = "user"
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.initLeftViewController()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.loginButton?.removeFromSuperview()
     }
 //    override func viewDidAppear(animated: Bool) {
@@ -56,36 +56,36 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     }
     
     func initLeftViewController(){
-        self.homePageButton.addTarget(AppDelegate(), action: "rightViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
-        self.loginButton = UIButton(frame: CGRectMake(75, 90, 60, 30))
+        self.homePageButton.addTarget(AppDelegate(), action: "rightViewShowAction", for: UIControlEvents.touchUpInside)
+        self.loginButton = UIButton(frame: CGRect(x: 75, y: 90, width: 60, height: 30))
         self.loginButton?.layer.masksToBounds = true
         self.loginButton?.layer.cornerRadius = 5.0
         self.loginButton?.layer.borderWidth = 1.0
-        self.loginButton?.layer.borderColor =  TEXT_COLOR_LIGHT_GREY.CGColor
-        self.loginButton?.setTitle("登录", forState:  UIControlState.Normal)
-        self.loginButton?.setTitleColor(TEXT_COLOR_LIGHT_GREY, forState: UIControlState.Normal)
-        self.loginButton?.setTitleColor(UIColor.blackColor(), forState: UIControlState.Selected)
-        self.loginButton?.addTarget(self, action: "loginViewDisplay", forControlEvents: UIControlEvents.TouchUpInside)
+        self.loginButton?.layer.borderColor =  TEXT_COLOR_LIGHT_GREY.cgColor
+        self.loginButton?.setTitle("登录", for:  UIControlState())
+        self.loginButton?.setTitleColor(TEXT_COLOR_LIGHT_GREY, for: UIControlState())
+        self.loginButton?.setTitleColor(UIColor.black, for: UIControlState.selected)
+        self.loginButton?.addTarget(self, action: #selector(LeftViewController.loginViewDisplay), for: UIControlEvents.touchUpInside)
         self.view.addSubview(self.loginButton!)
-        self.userProfileButton.enabled = false
+        self.userProfileButton.isEnabled = false
         if isLogin == false {
-            self.profileImage.hidden = true
-            self.userIDLabel.hidden = true
+            self.profileImage.isHidden = true
+            self.userIDLabel.isHidden = true
             
             
             
         } else {
             self.loginButton!.removeFromSuperview()
-            self.userProfileButton.enabled = true
-            self.loginButton?.hidden = true
-            self.loginButton?.frame = CGRectMake(-100, -100, 0, 0)
-            self.profileImage.hidden = false
-            self.userIDLabel.hidden = false
+            self.userProfileButton.isEnabled = true
+            self.loginButton?.isHidden = true
+            self.loginButton?.frame = CGRect(x: -100, y: -100, width: 0, height: 0)
+            self.profileImage.isHidden = false
+            self.userIDLabel.isHidden = false
             self.userIDLabel.text = ToolKit.setUserID()
             self.userIDLabel.textColor = TEXT_COLOR_LIGHT_GREY
             self.userIDLabel.adjustsFontSizeToFitWidth = true
             self.view.addSubview(self.userIDLabel)
-            self.changeStatuesButton.hidden = false
+            self.changeStatuesButton.isHidden = false
         }
 
     }
@@ -93,36 +93,36 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     func loginViewDisplay() {
         print("login button is pressed!")
         self.title = ""
-        let loginViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("loginViewController") as? LoginViewController
+        let loginViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "loginViewController") as? LoginViewController
         self.navigationController?.pushViewController(loginViewController!, animated: true)
     }
     
    
-    @IBAction func changeStatusButton(sender: AnyObject) {
+    @IBAction func changeStatusButton(_ sender: AnyObject) {
         print("changStatusButton button is pressed!")
     }
     
-    @IBAction func serviceCataButton(sender: AnyObject) {
+    @IBAction func serviceCataButton(_ sender: AnyObject) {
         print("changStatusButton button is pressed!")
-        let cataViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("cataViewController") as! CataViewController
+        let cataViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "cataViewController") as! CataViewController
         self.navigationController?.pushViewController(cataViewController, animated: true)
     }
     
-    @IBAction func userProfileButton(sender: AnyObject) {
+    @IBAction func userProfileButton(_ sender: AnyObject) {
         print("serviceCataButton button is pressed!")
-        let photographerViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("photographerViewController") as! PhotographerViewController
+        let photographerViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "photographerViewController") as! PhotographerViewController
         self.navigationController?.pushViewController(photographerViewController, animated: true)
     }
     
     
-    @IBAction func groupAppointmentButton(sender: AnyObject) {
+    @IBAction func groupAppointmentButton(_ sender: AnyObject) {
         print("groupAppointmentButton button is pressed!")
-        let groupViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("groupViewController") as! GroupViewController
+        let groupViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "groupViewController") as! GroupViewController
         self.navigationController?.pushViewController(groupViewController, animated: true)
         
     }
     
-    @IBAction func fastAppointButton(sender: AnyObject) {
+    @IBAction func fastAppointButton(_ sender: AnyObject) {
         if statues == "user" {
             let locationViewController = LocationViewController()
             self.navigationController?.pushViewController(locationViewController, animated: true)
@@ -134,23 +134,23 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func specialServiceButton(sender: AnyObject) {
+    @IBAction func specialServiceButton(_ sender: AnyObject) {
         let specialServiceViewController = SpecialServiceViewController()
         self.navigationController?.pushViewController(specialServiceViewController, animated: true)
     }
     
-    @IBAction func couponButton(sender: AnyObject) {
+    @IBAction func couponButton(_ sender: AnyObject) {
         print("couponButton button is pressed!")
         let couponViewController = CouponViewController()
         self.navigationController?.pushViewController(couponViewController, animated: true)
     }
 
-    @IBAction func changeStatuesButton(sender: AnyObject) {
+    @IBAction func changeStatuesButton(_ sender: AnyObject) {
         statues = "photographer"
     }
     
     //====================UITextFieldDelegate=================//
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         print(textField.text)
         return true

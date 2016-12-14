@@ -27,46 +27,46 @@ import PromiseKit
         }
     }
 */
-public class PMKAlertController {
-    public var title: String? { return UIAlertController.title }
-    public var message: String? { return UIAlertController.message }
-    public var preferredStyle: UIAlertControllerStyle { return UIAlertController.preferredStyle }
-    public var actions: [UIAlertAction] { return UIAlertController.actions }
-    public var textFields: [UITextField]? { return UIAlertController.textFields }
+open class PMKAlertController {
+    open var title: String? { return UIAlertController.title }
+    open var message: String? { return UIAlertController.message }
+    open var preferredStyle: UIAlertControllerStyle { return UIAlertController.preferredStyle }
+    open var actions: [UIAlertAction] { return UIAlertController.actions }
+    open var textFields: [UITextField]? { return UIAlertController.textFields }
 
-    public required init(title: String?, message: String?  = nil, preferredStyle: UIAlertControllerStyle = .Alert) {
+    public required init(title: String?, message: String?  = nil, preferredStyle: UIAlertControllerStyle = .alert) {
         UIAlertController = UIKit.UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
     }
 
-    public func addActionWithTitle(title: String, style: UIAlertActionStyle = .Default) -> UIAlertAction {
+    open func addActionWithTitle(_ title: String, style: UIAlertActionStyle = .default) -> UIAlertAction {
         let action = UIAlertAction(title: title, style: style) { action in
-            if style == UIAlertActionStyle.Cancel {
+            if style == UIAlertActionStyle.cancel {
                 self.fulfill(action)
             } else {
-                self.reject(Error.Cancelled)
+                self.reject(Error.cancelled)
             }
         }
         UIAlertController.addAction(action)
         return action
     }
 
-    public func addTextFieldWithConfigurationHandler(configurationHandler: ((UITextField) -> Void)?) {
-        UIAlertController.addTextFieldWithConfigurationHandler(configurationHandler)
+    open func addTextFieldWithConfigurationHandler(_ configurationHandler: ((UITextField) -> Void)?) {
+        UIAlertController.addTextField(configurationHandler: configurationHandler)
     }
 
-    private let UIAlertController: UIKit.UIAlertController
-    private let (promise, fulfill, reject) = Promise<UIAlertAction>.pendingPromise()
-    private var retainCycle: PMKAlertController?
+    fileprivate let UIAlertController: UIKit.UIAlertController
+    fileprivate let (promise, fulfill, reject) = Promise<UIAlertAction>.pendingPromise()
+    fileprivate var retainCycle: PMKAlertController?
 
-    public enum Error: ErrorType {
-        case Cancelled
+    public enum Error: ErrorProtocol {
+        case cancelled
     }
 }
 
 extension UIViewController {
-    public func promiseViewController(vc: PMKAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> Promise<UIAlertAction> {
+    public func promiseViewController(_ vc: PMKAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> Promise<UIAlertAction> {
         vc.retainCycle = vc
-        presentViewController(vc.UIAlertController, animated: true, completion: nil)
+        present(vc.UIAlertController, animated: true, completion: nil)
         vc.promise.always { _ -> Void in
             vc.retainCycle = nil
         }

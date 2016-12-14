@@ -11,18 +11,18 @@ import UIKit
 
 class ToolKit {
     static func getTimeStamp() -> String {
-        var timeStamp = String(NSDate().timeIntervalSince1970)
-        timeStamp.removeAtIndex(timeStamp.startIndex.advancedBy(10))
-        timeStamp = timeStamp.substringToIndex(timeStamp.startIndex.advancedBy(13))
+        var timeStamp = String(Date().timeIntervalSince1970)
+        timeStamp.remove(at: timeStamp.characters.index(timeStamp.startIndex, offsetBy: 10))
+        timeStamp = timeStamp.substring(to: timeStamp.characters.index(timeStamp.startIndex, offsetBy: 13))
         return timeStamp
     }
     
     static func setUserID() -> String
     {
-        if userDefaults.objectForKey("username") !== nil {
-            return userDefaults.objectForKey("username") as! String
-        } else if userDefaults.objectForKey("phoneNum") != nil {
-            return userDefaults.objectForKey("phoneNum") as! String
+        if userDefaults.object(forKey: "username") !== nil {
+            return userDefaults.object(forKey: "username") as! String
+        } else if userDefaults.object(forKey: "phoneNum") != nil {
+            return userDefaults.object(forKey: "phoneNum") as! String
         } else {
             return "未获得用户名"
         }
@@ -30,22 +30,22 @@ class ToolKit {
     }
     
     static func iOS8() -> Bool {
-        let versionCode:String = UIDevice.currentDevice().systemVersion
-        let start:String.Index = versionCode.startIndex.advancedBy(0)
-        let end:String.Index = versionCode.startIndex.advancedBy(1)
-        let range = Range<String.Index>(start: start, end: end)
-        let version = NSString(string: UIDevice.currentDevice().systemVersion.substringWithRange(range)).doubleValue
+        let versionCode:String = UIDevice.current.systemVersion
+        let start:String.Index = versionCode.characters.index(versionCode.startIndex, offsetBy: 0)
+        let end:String.Index = versionCode.characters.index(versionCode.startIndex, offsetBy: 1)
+        let range = (start ..< end)
+        let version = NSString(string: UIDevice.current.systemVersion.substring(with: range)).doubleValue
         return version >= 8.0
     }
 
     
-    static func stringToTimeStamp(stringTime:String)->String {
+    static func stringToTimeStamp(_ stringTime:String)->String {
         
-        let dfmatter = NSDateFormatter()
+        let dfmatter = DateFormatter()
         dfmatter.dateFormat="yyyy年MM月dd日"
-        let date = dfmatter.dateFromString(stringTime)
+        let date = dfmatter.date(from: stringTime)
         
-        let dateStamp:NSTimeInterval = date!.timeIntervalSince1970
+        let dateStamp:TimeInterval = date!.timeIntervalSince1970
         
         let dateSt:Int = Int(dateStamp)
         print(dateSt)
@@ -53,21 +53,21 @@ class ToolKit {
         
     }
     
-    static func timeStampToString(timeStamp:String)->String {
+    static func timeStampToString(_ timeStamp:String)->String {
         
         let string = NSString(string: timeStamp)
         
-        let timeSta:NSTimeInterval = string.doubleValue
-        let dfmatter = NSDateFormatter()
+        let timeSta:TimeInterval = string.doubleValue
+        let dfmatter = DateFormatter()
         dfmatter.dateFormat="MM月dd日"
         
-        let date = NSDate(timeIntervalSince1970: timeSta)
+        let date = Date(timeIntervalSince1970: timeSta)
         
-        print(dfmatter.stringFromDate(date))
-        return dfmatter.stringFromDate(date)
+        print(dfmatter.string(from: date))
+        return dfmatter.string(from: date)
     }
     
-    static func isTelNumber(num:NSString)->Bool
+    static func isTelNumber(_ num:NSString)->Bool
     {
         let mobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
         let  CM = "^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$"
@@ -77,10 +77,10 @@ class ToolKit {
         let regextestcm = NSPredicate(format: "SELF MATCHES %@",CM )
         let regextestcu = NSPredicate(format: "SELF MATCHES %@" ,CU)
         let regextestct = NSPredicate(format: "SELF MATCHES %@" ,CT)
-        if ((regextestmobile.evaluateWithObject(num) == true)
-            || (regextestcm.evaluateWithObject(num)  == true)
-            || (regextestct.evaluateWithObject(num) == true)
-            || (regextestcu.evaluateWithObject(num) == true))
+        if ((regextestmobile.evaluate(with: num) == true)
+            || (regextestcm.evaluate(with: num)  == true)
+            || (regextestct.evaluate(with: num) == true)
+            || (regextestcu.evaluate(with: num) == true))
         {
             return true
         }
@@ -96,10 +96,10 @@ class ToolKit {
 
 extension String  {
     var md5: String! {
-        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
-        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CC_LONG(self.lengthOfBytes(using: String.Encoding.utf8))
         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         
         CC_MD5(str!, strLen, result)
         
@@ -108,19 +108,19 @@ extension String  {
             hash.appendFormat("%02x", result[i])
         }
         
-        result.destroy()
+        result.deinitialize()
         
         return String(format: hash as String)
     }
 }
 
-extension NSDate {
+extension Date {
 //    let numberOfDaysInCurrentMonth: Int?
 //    var firstDayOfCurrentMonth: NSDate?
 //    var weekly: Int?
 
     func numberOfDaysInCurrentMonth() -> Int {
-        return NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.Day, inUnit: NSCalendarUnit.Month, forDate: self).length
+        return (Calendar.current as NSCalendar).range(of: NSCalendar.Unit.day, in: NSCalendar.Unit.month, for: self).length
     }
     
 //    func firstDayOfCurrentMonth() -> NSDate {

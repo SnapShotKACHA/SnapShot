@@ -20,14 +20,14 @@ extension String {
     }
     
     func MD5String() -> String {
-        guard let data = self.dataUsingEncoding(NSUTF8StringEncoding) else {
+        guard let data = self.data(using: String.Encoding.utf8) else {
             return self
         }
 
         let MD5Calculator = MD5(data)
         let MD5Data = MD5Calculator.calculate()
-        let resultBytes = UnsafeMutablePointer<CUnsignedChar>(MD5Data.bytes)
-        let resultEnumerator = UnsafeBufferPointer<CUnsignedChar>(start: resultBytes, count: MD5Data.length)
+        let resultBytes = UnsafeMutablePointer<CUnsignedChar>(mutating: (MD5Data as NSData).bytes.bindMemory(to: CUnsignedChar.self, capacity: MD5Data.count))
+        let resultEnumerator = UnsafeBufferPointer<CUnsignedChar>(start: resultBytes, count: MD5Data.count)
         let MD5String = NSMutableString()
         for c in resultEnumerator {
             MD5String.appendFormat("%02x", c)
@@ -39,7 +39,7 @@ extension String {
         let MD5String = self.MD5String()
         let pathExtension = (self as NSString).pathExtension
         if pathExtension.characters.count > 0 {
-            return (MD5String as NSString).stringByAppendingPathExtension(pathExtension) ?? MD5String
+            return (MD5String as NSString).appendingPathExtension(pathExtension) ?? MD5String
         } else {
             return MD5String
         }

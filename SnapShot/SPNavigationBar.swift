@@ -15,13 +15,13 @@ class SPNavigationBar: UINavigationBar {
         super.init(frame: frame)
         let titleShadow: NSShadow = NSShadow()
         titleShadow.shadowColor = UIColor(red: 218/255, green: 147/255, blue: 171/255, alpha: 1)
-        titleShadow.shadowOffset = CGSizeMake(1, 1)
-        self.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:UIFont(name: "Heiti SC", size: 24.0)!, NSShadowAttributeName:titleShadow]
+        titleShadow.shadowOffset = CGSize(width: 1, height: 1)
+        self.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:UIFont(name: "Heiti SC", size: 24.0)!, NSShadowAttributeName:titleShadow]
         
         self.barTintColor = UIColor(red: 2/255, green: 191/255, blue: 141/255, alpha: 1)
         
-        self.tintColor = UIColor.whiteColor()
-        self.pushNavigationItem(initNavigationBarItem(), animated: false)
+        self.tintColor = UIColor.white
+        self.pushItem(initNavigationBarItem(), animated: false)
 
     }
 
@@ -32,7 +32,7 @@ class SPNavigationBar: UINavigationBar {
     func initNavigationBarItem() -> UINavigationItem {
         SPNavigationBarItem = UINavigationItem()
         SPNavigationBarItem!.title = "SnapShot"
-        SPNavigationBarItem!.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchButtonAction")
+        SPNavigationBarItem!.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: "searchButtonAction")
         return SPNavigationBarItem!
     }
 

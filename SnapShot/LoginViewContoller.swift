@@ -8,6 +8,30 @@
 
 import Foundation
 import UIKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class LoginViewController: BasicViewController, UITextFieldDelegate {
     
@@ -28,32 +52,32 @@ class LoginViewController: BasicViewController, UITextFieldDelegate {
     let PHONE_NUM_TAG = 0201
     let PASSWORD_TAG = 0202
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.addSubview(self.registerPushButton)
     }
     
     override func viewDidLoad() {
-        self.phoneWarningLabel.hidden = true
-        self.passwordWarningLabel.hidden = true
+        self.phoneWarningLabel.isHidden = true
+        self.passwordWarningLabel.isHidden = true
         self.phoneNumTextField.placeholder = "请输入电话号码"
         self.phoneNumTextField.tag = PHONE_NUM_TAG
         self.phoneNumTextField.delegate = self
-        self.passwordTextField.secureTextEntry = true
+        self.passwordTextField.isSecureTextEntry = true
         self.passwordTextField.tag = PASSWORD_TAG
         self.passwordTextField.placeholder = "请输入密码"
         self.passwordTextField.delegate = self
-        self.checkBox.setImage(UIImage(named: "checkBoxImage"), forState: UIControlState.Normal)
-        self.checkBox.setImage(UIImage(named: "checkBoxSelectedImage"), forState: UIControlState.Selected)
+        self.checkBox.setImage(UIImage(named: "checkBoxImage"), for: UIControlState())
+        self.checkBox.setImage(UIImage(named: "checkBoxSelectedImage"), for: UIControlState.selected)
         self.title = "咔嚓"
         self.registerPushButton = ViewWidgest.addRightButton("注册")
-        self.registerPushButton.addTarget(self, action: "registerPushButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.registerPushButton.addTarget(self, action: #selector(LoginViewController.registerPushButtonAction), for: UIControlEvents.touchUpInside)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.registerPushButton.removeFromSuperview()
     }
     
-    @IBAction func loginButtonAction(sender: AnyObject) {
+    @IBAction func loginButtonAction(_ sender: AnyObject) {
         if phoneNumTextField.text != nil && ToolKit.isTelNumber(phoneNumTextField.text!) && passwordTextField.text != nil {
             SnapShotTaskEngine.getInstance().doLogin("", phoneNum: self.phoneNumTextField.text!, password: self.passwordTextField.text!, engineProtocol: self)
         }
@@ -61,36 +85,36 @@ class LoginViewController: BasicViewController, UITextFieldDelegate {
     
     func registerPushButtonAction() {
         self.title = ""
-        let registerViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("registerViewController") as? RegisterViewController
+        let registerViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "registerViewController") as? RegisterViewController
         self.navigationController?.pushViewController(registerViewController!, animated: true)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.phoneNumTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField.tag {
         case PHONE_NUM_TAG:
             if phoneNumTextField.text == nil {
-                self.phoneWarningLabel.hidden = false
+                self.phoneWarningLabel.isHidden = false
             } else if !ToolKit.isTelNumber(self.phoneNumTextField.text!){
                 self.phoneNumTextField.text = nil
-                self.phoneWarningLabel.hidden = false
+                self.phoneWarningLabel.isHidden = false
             } else {
-                self.phoneWarningLabel.hidden = true
+                self.phoneWarningLabel.isHidden = true
             }
             break
             
         case PASSWORD_TAG:
             if passwordTextField.text == nil {
-                self.passwordWarningLabel.hidden = false
+                self.passwordWarningLabel.isHidden = false
             } else if self.passwordTextField.text?.characters.count < 6 || self.passwordTextField.text?.characters.count > 16 {
                 self.passwordTextField.text = nil
-                self.passwordWarningLabel.hidden = false
+                self.passwordWarningLabel.isHidden = false
             } else {
-                self.passwordWarningLabel.hidden = true
+                self.passwordWarningLabel.isHidden = true
             }
             break
             
@@ -99,16 +123,16 @@ class LoginViewController: BasicViewController, UITextFieldDelegate {
         }
     }
     
-    override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+    override func onTaskSuccess(_ taskType: Int!, successCode: Int, extraData: AnyObject) {
         if (taskType == TASK_TYPE_LOGIN && successCode == TASK_RESULT_CODE_SUCCESS) {
-            navigationController!.popToRootViewControllerAnimated(true)
+            navigationController!.popToRootViewController(animated: true)
         }
     }
     
-    override func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+    override func onTaskError(_ taskType: Int!, errorCode: Int, extraData: AnyObject) {
         if (taskType == TASK_TYPE_LOGIN) {
-            let cancelAction = UIAlertAction(title: "重新登录", style: .Cancel, handler: nil)
-            presentViewController(ViewWidgest.displayAlert("登录错误", message: "请核对用户名和密码", actions: [cancelAction]), animated: true, completion: nil)
+            let cancelAction = UIAlertAction(title: "重新登录", style: .cancel, handler: nil)
+            present(ViewWidgest.displayAlert("登录错误", message: "请核对用户名和密码", actions: [cancelAction]), animated: true, completion: nil)
         }
     }
 }

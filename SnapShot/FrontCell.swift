@@ -29,15 +29,15 @@ class FrontCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 
-    @IBAction func likeButtonAction(sender: AnyObject) {
+    @IBAction func likeButtonAction(_ sender: AnyObject) {
     }
     
-    @IBAction func commentButtonAction(sender: AnyObject) {
+    @IBAction func commentButtonAction(_ sender: AnyObject) {
     }
-    @IBAction func repostButtonAction(sender: AnyObject) {
+    @IBAction func repostButtonAction(_ sender: AnyObject) {
     }
 }

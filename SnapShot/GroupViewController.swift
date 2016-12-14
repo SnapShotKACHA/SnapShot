@@ -18,13 +18,13 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
     var dateSortButton: UIButton?
     var startServiceButton: UIButton = UIButton(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 60, width: SCREEN_WIDTH, height: 60))
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         if self.navBtn == nil {
             self.navBtn = ViewWidgest.addLeftButton("navigationButtonImage", imageAfter: "navigationButtonImage")
-            self.navBtn?.addTarget(self, action: "popToRoot", forControlEvents: UIControlEvents.TouchUpInside)
+            self.navBtn?.addTarget(self, action: #selector(GroupViewController.popToRoot), for: UIControlEvents.touchUpInside)
         }
         self.navigationController?.navigationBar.addSubview(self.navBtn!)
-        groupTableView.registerNib(UINib(nibName: "GroupCell", bundle: nil), forCellReuseIdentifier: "groupCell")
+        groupTableView.register(UINib(nibName: "GroupCell", bundle: nil), forCellReuseIdentifier: "groupCell")
         groupTableView.delegate = self
         groupTableView.dataSource = self
         initTopButtons()
@@ -39,7 +39,7 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         ViewWidgest.recoverNavigationBar([self.navBtn!, self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], navigationController: self.navigationController!)
         SnapShotTaskEngine.getInstance().doGetGroupShotListTask("", longitude: "", latitude: "", page: "0", step: "5", sortType: "", engineProtocol: self)
     }
@@ -51,18 +51,18 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
         ViewWidgest.navigatiobBarButtomButton([self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], titleArray: ["价格优先","距离优先","日期优先"], targetArrary: ["priceSortAction" , "distanceSortAction", "dateSortAction"], viewController: self, yPosition: 64)
         
         self.startServiceButton.backgroundColor = SP_BLUE_COLOR
-        self.startServiceButton.tintColor = UIColor.whiteColor()
-        self.startServiceButton.setTitle("发起活动", forState: .Normal)
+        self.startServiceButton.tintColor = UIColor.white
+        self.startServiceButton.setTitle("发起活动", for: UIControlState())
         self.startServiceButton.titleLabel?.font = UIFont(name: HEITI, size: 17)
         self.startServiceButton.layer.borderWidth = 12
-        self.startServiceButton.layer.borderColor = BACKGROUND_COLOR_GREY.CGColor
+        self.startServiceButton.layer.borderColor = BACKGROUND_COLOR_GREY.cgColor
         self.view.addSubview(self.startServiceButton)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var groupCell: GroupCell?
-        groupCell = groupTableView.dequeueReusableCellWithIdentifier("groupCell") as? GroupCell
+        groupCell = groupTableView.dequeueReusableCell(withIdentifier: "groupCell") as? GroupCell
         if indexPath.section == 0{
             
             groupCell?.groupCellTitleLabel.text = "奥林匹克森林公园"
@@ -85,22 +85,22 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
         return groupCell!
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
     }
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             let groupDetailViewController:GroupDetailViewController = GroupDetailViewController(title: "奥森萌娃外拍")
             groupDetailViewController.imageUrlArray = ["http://111.13.47.169:8080/upload/image/custom/tuanpai1-xiangqing1.jpg","http://111.13.47.169:8080/upload/image/custom/tuanpai1-xiangqing2.jpg","http://111.13.47.169:8080/upload/image/custom/tuanpai1-xiangqing3.jpg"]
@@ -112,7 +112,7 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
@@ -131,16 +131,16 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
     }
     
     func popToRoot() {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
-    override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+    override func onTaskSuccess(_ taskType: Int!, successCode: Int, extraData: AnyObject) {
         if TASK_TYPE_GET_GROUP_SHOT_LIST == taskType {
             print(extraData)
         }
     }
     
-    override func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+    override func onTaskError(_ taskType: Int!, errorCode: Int, extraData: AnyObject) {
         
     }
     

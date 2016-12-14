@@ -2,13 +2,13 @@ extension Promise {
     /**
      - Returns: The error with which this promise was rejected; `nil` if this promise is not rejected.
     */
-    public var error: ErrorType? {
+    public var error: ErrorProtocol? {
         switch state.get() {
-        case .None:
+        case .none:
             return nil
-        case .Some(.Fulfilled):
+        case .some(.fulfilled):
             return nil
-        case .Some(.Rejected(let error, _)):
+        case .some(.rejected(let error, _)):
             return error
         }
     }
@@ -46,11 +46,11 @@ extension Promise {
     */
     public var value: T? {
         switch state.get() {
-        case .None:
+        case .none:
             return nil
-        case .Some(.Fulfilled(let value)):
+        case .some(.fulfilled(let value)):
             return value
-        case .Some(.Rejected):
+        case .some(.rejected):
             return nil
         }
     }

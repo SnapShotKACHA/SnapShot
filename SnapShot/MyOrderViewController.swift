@@ -23,43 +23,43 @@ class MyOrderViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         self.title = "我的订单"
-        self.myOrderTableView = UITableView(frame: CGRect(x: 0, y: 44, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 44), style: .Plain)
+        self.myOrderTableView = UITableView(frame: CGRect(x: 0, y: 44, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 44), style: .plain)
         self.myOrderTableView?.delegate = self
         self.myOrderTableView?.dataSource = self
         let nibOrderCell = UINib(nibName: "OrderCell", bundle: nil)
-        self.myOrderTableView?.registerNib(nibOrderCell, forCellReuseIdentifier: "orderCell")
+        self.myOrderTableView?.register(nibOrderCell, forCellReuseIdentifier: "orderCell")
         self.view.addSubview(self.myOrderTableView!)
     }
     
     //==================UITableViewDataSource====================================================//
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = (self.myOrderTableView!.dequeueReusableCellWithIdentifier("orderCell", forIndexPath: indexPath) as? OrderCell)!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = (self.myOrderTableView!.dequeueReusableCell(withIdentifier: "orderCell", for: indexPath) as? OrderCell)!
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     //==================UITableViewDelegate===========================================================//
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return VALUE_CELL_HEIGHT
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         tableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 15
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }
 }

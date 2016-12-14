@@ -16,20 +16,20 @@ class CataViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var cataTitle: [String] = []
     var cataImage: [String] = []
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.getCataImage()
     }
     
     override func viewDidLoad() {
         self.title = "摄影分类"
-        cataTableView.registerNib(UINib(nibName: "CataDetailCell", bundle: nil), forCellReuseIdentifier: "cataDetailCell")
-        cataTableView.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
+        cataTableView.register(UINib(nibName: "CataDetailCell", bundle: nil), forCellReuseIdentifier: "cataDetailCell")
+        cataTableView.register(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
         cataTableView.delegate = self
         cataTableView.dataSource = self
-        cataTableView.separatorColor = UIColor.clearColor()
+        cataTableView.separatorColor = UIColor.clear
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else {
@@ -37,7 +37,7 @@ class CataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return CATA_CELL_HEIGHT
         } else {
@@ -45,65 +45,65 @@ class CataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cataCell: CataCell?
         var cataDetailCell: CataDetailCell?
         
         if indexPath.section == 0 && indexPath.row == 0{
 
-            cataCell = cataTableView.dequeueReusableCellWithIdentifier("cataCell") as? CataCell
+            cataCell = cataTableView.dequeueReusableCell(withIdentifier: "cataCell") as? CataCell
             cataCell?.cataLabel.text = "萌娃外拍"
             cataCell?.cataImageView.image = UIImage(named: "cataImageDefault")
             return cataCell!
         } else {
-            cataDetailCell = cataTableView.dequeueReusableCellWithIdentifier("cataDetailCell") as? CataDetailCell
+            cataDetailCell = cataTableView.dequeueReusableCell(withIdentifier: "cataDetailCell") as? CataDetailCell
 //            cataDetailCell?.cataImage1.image = UIImage(named: "cataImageDefault")
 //            cataDetailCell?.cataImage2.image = UIImage(named: "cataImageDefault")
-            cataDetailCell?.cataLabel1.textColor = UIColor.whiteColor()
-            cataDetailCell?.cataLabel2.textColor = UIColor.whiteColor()
+            cataDetailCell?.cataLabel1.textColor = UIColor.white
+            cataDetailCell?.cataLabel2.textColor = UIColor.white
             cataDetailCell?.cataLabel1.text = ""
             cataDetailCell?.cataLabel2.text = ""
             
             if indexPath.row == 0 {
                 if self.cataTitle.count > 0 {
-                    cataDetailCell?.cataImage1.hnk_setImageFromURL(NSURL(string: self.cataImage[indexPath.row])!)
-                    cataDetailCell?.cataImage2.hnk_setImageFromURL(NSURL(string: self.cataImage[indexPath.row + 1])!)
+                    cataDetailCell?.cataImage1.hnk_setImageFromURL(URL(string: self.cataImage[indexPath.row])!)
+                    cataDetailCell?.cataImage2.hnk_setImageFromURL(URL(string: self.cataImage[indexPath.row + 1])!)
 //                    cataDetailCell?.cataLabel1.text = self.cataTitle[indexPath.row]
 //                    cataDetailCell?.cataLabel2.text = self.cataTitle[indexPath.row + 1]
                 }
                 return cataDetailCell!
             } else if indexPath.row == 1 {
                 if self.cataTitle.count > 0 {
-                    cataDetailCell?.cataImage1.hnk_setImageFromURL(NSURL(string: self.cataImage[2])!)
-                    cataDetailCell?.cataImage2.hnk_setImageFromURL(NSURL(string: self.cataImage[3])!)
+                    cataDetailCell?.cataImage1.hnk_setImageFromURL(URL(string: self.cataImage[2])!)
+                    cataDetailCell?.cataImage2.hnk_setImageFromURL(URL(string: self.cataImage[3])!)
 //                    cataDetailCell?.cataLabel1.text = self.cataTitle[2]
 //                    cataDetailCell?.cataLabel2.text = self.cataTitle[3]
                 }
                 return cataDetailCell!
             } else if indexPath.row == 2 {
                 if self.cataTitle.count > 0 {
-                    cataDetailCell?.cataImage1.hnk_setImageFromURL(NSURL(string: self.cataImage[4])!)
-                    cataDetailCell?.cataImage2.hnk_setImageFromURL(NSURL(string: self.cataImage[5])!)
+                    cataDetailCell?.cataImage1.hnk_setImageFromURL(URL(string: self.cataImage[4])!)
+                    cataDetailCell?.cataImage2.hnk_setImageFromURL(URL(string: self.cataImage[5])!)
 //                    cataDetailCell?.cataLabel1.text = self.cataTitle[4]
 //                    cataDetailCell?.cataLabel2.text = self.cataTitle[5]
                 }
                 return cataDetailCell!
             } else {
                 if self.cataTitle.count > 0 {
-                    cataDetailCell?.cataImage1.hnk_setImageFromURL(NSURL(string: self.cataImage[6])!)
-                    cataDetailCell?.cataImage2.hnk_setImageFromURL(NSURL(string: self.cataImage[7])!)
+                    cataDetailCell?.cataImage1.hnk_setImageFromURL(URL(string: self.cataImage[6])!)
+                    cataDetailCell?.cataImage2.hnk_setImageFromURL(URL(string: self.cataImage[7])!)
 //                    cataDetailCell?.cataLabel1.text = self.cataTitle[6]
 //                    cataDetailCell?.cataLabel2.text = self.cataTitle[7]
                 }
@@ -121,26 +121,26 @@ class CataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         httpControl.onRequest(urlAssembler.url)
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print(results)
         if JSON(results)["succeed"].int! == 1 {
             print(JSON(results)["data"]["items"])
             
             var sampleString: String = JSON(results)["data"]["items"].string!
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("[", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("]", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("\"", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("title", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString("url", withString: "")
-            sampleString = sampleString.stringByReplacingOccurrencesOfString(":", withString: "")
-            var tempArr = sampleString.componentsSeparatedByString("},{")
+            sampleString = sampleString.replacingOccurrences(of: "[", with: "")
+            sampleString = sampleString.replacingOccurrences(of: "]", with: "")
+            sampleString = sampleString.replacingOccurrences(of: "\"", with: "")
+            sampleString = sampleString.replacingOccurrences(of: "title", with: "")
+            sampleString = sampleString.replacingOccurrences(of: "url", with: "")
+            sampleString = sampleString.replacingOccurrences(of: ":", with: "")
+            var tempArr = sampleString.components(separatedBy: "},{")
            
-            tempArr[0] = tempArr[0].stringByReplacingOccurrencesOfString("{", withString: "")
-            tempArr[tempArr.count - 1] = tempArr[tempArr.count - 1].stringByReplacingOccurrencesOfString("}", withString: "")
+            tempArr[0] = tempArr[0].replacingOccurrences(of: "{", with: "")
+            tempArr[tempArr.count - 1] = tempArr[tempArr.count - 1].replacingOccurrences(of: "}", with: "")
             for var i = 0; i < tempArr.count; i++ {
-                let tempValue = tempArr[i].componentsSeparatedByString(",")
+                let tempValue = tempArr[i].components(separatedBy: ",")
                 self.cataTitle.append(tempValue[0])
-                self.cataImage.append((tempValue[1].stringByReplacingOccurrencesOfString("8080", withString: ":8080")).stringByReplacingOccurrencesOfString("http", withString: "http:"))
+                self.cataImage.append((tempValue[1].replacingOccurrences(of: "8080", with: ":8080")).replacingOccurrences(of: "http", with: "http:"))
                 
             }
             self.cataTableView.reloadData()
@@ -152,7 +152,7 @@ class CataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("httpProtocol is called")
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("httpProtocol is called")
     }
 

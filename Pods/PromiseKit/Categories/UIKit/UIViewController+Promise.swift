@@ -21,47 +21,47 @@ import PromiseKit
 */
 extension UIViewController {
 
-    public enum Error: ErrorType {
-        case NavigationControllerEmpty
-        case NoImageFound
-        case NotPromisable
-        case NotGenericallyPromisable
-        case NilPromisable
+    public enum Error: ErrorProtocol {
+        case navigationControllerEmpty
+        case noImageFound
+        case notPromisable
+        case notGenericallyPromisable
+        case nilPromisable
     }
 
-    public func promiseViewController<T>(vc: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) -> Promise<T> {
+    public func promiseViewController<T>(_ vc: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) -> Promise<T> {
 
         let p: Promise<T> = promise(vc)
         if p.pending {
-            presentViewController(vc, animated: animated, completion: completion)
+            present(vc, animated: animated, completion: completion)
             p.always {
-                self.dismissViewControllerAnimated(animated, completion: nil)
+                self.dismiss(animated: animated, completion: nil)
             }
         }
 
         return p
     }
     
-    public func promiseViewController<T>(nc: UINavigationController, animated: Bool = true, completion:(()->Void)? = nil) -> Promise<T> {
+    public func promiseViewController<T>(_ nc: UINavigationController, animated: Bool = true, completion:(()->Void)? = nil) -> Promise<T> {
         if let vc = nc.viewControllers.first {
             let p: Promise<T> = promise(vc)
             if p.pending {
-                presentViewController(nc, animated: animated, completion: completion)
+                present(nc, animated: animated, completion: completion)
                 p.always {
-                    self.dismissViewControllerAnimated(animated, completion: nil)
+                    self.dismiss(animated: animated, completion: nil)
                 }
             }
             return p
         } else {
-            return Promise(error: Error.NavigationControllerEmpty)
+            return Promise(error: Error.navigationControllerEmpty)
         }
     }
 
-    public func promiseViewController(vc: UIImagePickerController, animated: Bool = true, completion: (() -> Void)? = nil) -> Promise<UIImage> {
+    public func promiseViewController(_ vc: UIImagePickerController, animated: Bool = true, completion: (() -> Void)? = nil) -> Promise<UIImage> {
         let proxy = UIImagePickerControllerProxy()
         vc.delegate = proxy
         vc.mediaTypes = ["public.image"]  // this promise can only resolve with a UIImage
-        presentViewController(vc, animated: animated, completion: completion)
+        present(vc, animated: animated, completion: completion)
         return proxy.promise.then(on: zalgo) { info -> UIImage in
             if let img = info[UIImagePickerControllerEditedImage] as? UIImage {
                 return img
@@ -69,9 +69,9 @@ extension UIViewController {
             if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 return img
             }
-            throw Error.NoImageFound
+            throw Error.noImageFound
         }.always {
-            self.dismissViewControllerAnimated(animated, completion: nil)
+            self.dismiss(animated: animated, completion: nil)
         }
     }
 }
@@ -88,22 +88,22 @@ extension UIViewController {
     var promise: AnyObject! { get }
 }
 
-private func promise<T>(vc: UIViewController) -> Promise<T> {
-    if !vc.conformsToProtocol(Promisable) {
-        return Promise(error: UIViewController.Error.NotPromisable)
-    } else if let promise = vc.valueForKeyPath("promise") as? Promise<T> {
+private func promise<T>(_ vc: UIViewController) -> Promise<T> {
+    if !vc.conforms(to: Promisable) {
+        return Promise(error: UIViewController.Error.notPromisable)
+    } else if let promise = vc.value(forKeyPath: "promise") as? Promise<T> {
         return promise
-    } else if let _: AnyObject = vc.valueForKeyPath("promise") {
-        return Promise(error: UIViewController.Error.NotGenericallyPromisable)
+    } else if let _: AnyObject = vc.value(forKeyPath: "promise") {
+        return Promise(error: UIViewController.Error.notGenericallyPromisable)
     } else {
-        return Promise(error: UIViewController.Error.NilPromisable)
+        return Promise(error: UIViewController.Error.nilPromisable)
     }
 }
 
 
 // internal scope because used by ALAssetsLibrary extension
 @objc class UIImagePickerControllerProxy: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    let (promise, fulfill, reject) = Promise<[NSObject : AnyObject]>.pendingPromise()
+    let (promise, fulfill, reject) = Promise<[AnyHashable: Any]>.pendingPromise()
     var retainCycle: AnyObject?
 
     required override init() {
@@ -111,12 +111,12 @@ private func promise<T>(vc: UIViewController) -> Promise<T> {
         retainCycle = self
     }
 
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         fulfill(info)
         retainCycle = nil
     }
 
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         reject(UIImagePickerController.Error.Cancelled)
         retainCycle = nil
     }

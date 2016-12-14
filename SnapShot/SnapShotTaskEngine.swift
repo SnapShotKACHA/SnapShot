@@ -10,12 +10,14 @@ import Foundation
 
 class SnapShotTaskEngine {
     
+    private static var __once: () = {SnapShotSingleton.instance = SnapShotTaskEngine()}()
+    
     class func getInstance() -> SnapShotTaskEngine! {
         struct SnapShotSingleton {
-            static var predicate: dispatch_once_t = 0
+            static var predicate: Int = 0
             static var instance: SnapShotTaskEngine? = nil
         }
-        dispatch_once(&SnapShotSingleton.predicate, {SnapShotSingleton.instance = SnapShotTaskEngine()})
+        _ = SnapShotTaskEngine.__once
         return SnapShotSingleton.instance
     }
     
@@ -26,7 +28,7 @@ class SnapShotTaskEngine {
      * password, string, 用户原始密码经md5加密后的字符串
      * authCode, string, 手机验证码
      */
-    func doRegister(username: String!,
+    func doRegister(_ username: String!,
         phoneNum: String!,
         password: String!,
         verifyCode: String!,
@@ -44,7 +46,7 @@ class SnapShotTaskEngine {
      * 登录成功后，SnapShotEngineProtocol中onTaskSuccess方法，返回LoginModel
      * 可根据uid查找用户信息
      */
-    func doLogin(username:String?,
+    func doLogin(_ username:String?,
         phoneNum: String?,
         password: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
@@ -56,7 +58,7 @@ class SnapShotTaskEngine {
         return loginTask.taskID
     }
     
-    func doGetVerifyCode(phoneNum: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+    func doGetVerifyCode(_ phoneNum: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let getVerifyCodeTask: GetSMSVerifyCodeTask = GetSMSVerifyCodeTask(phoneNum: phoneNum,
             engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetVerifyCode task start, taskID = \(getVerifyCodeTask.taskID)")
@@ -70,7 +72,7 @@ class SnapShotTaskEngine {
      * uid, long, 用户id
      * need test
      */
-    func doGetUserInfoTask(userId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+    func doGetUserInfoTask(_ userId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let getUserInfoTask: GetUserInfoTask = GetUserInfoTask(userId: userId, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, getUserInfoTask task start, taskID = \(getUserInfoTask.taskID)")
         return getUserInfoTask.taskID
@@ -84,7 +86,7 @@ class SnapShotTaskEngine {
      * secretKey 用户密码，经过两次md5加密
      * need test
      */
-    func doModifyUserNameTask(newName: String!,
+    func doModifyUserNameTask(_ newName: String!,
         uid:String!,
         secretKey: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
@@ -102,7 +104,7 @@ class SnapShotTaskEngine {
      * secretKey 用户密码，经过两次md5加密
      * need test
      */
-    func doModifyPasswordTask(phoneNum: String!,
+    func doModifyPasswordTask(_ phoneNum: String!,
         password: String!,
         authCode: String!,
         secretKey: String!,
@@ -125,7 +127,7 @@ class SnapShotTaskEngine {
     * secretKey 用户密码，经过两次md5加密
     * need test
     */
-    func doEnrollGroupShotTask(shotId: String!,
+    func doEnrollGroupShotTask(_ shotId: String!,
         uid:String!,
         secretKey: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
@@ -145,7 +147,7 @@ class SnapShotTaskEngine {
      * return extraData: SpecialShotModel
      * need test
      */
-    func doGetRecommendedSpecialShot(userId: String!,
+    func doGetRecommendedSpecialShot(_ userId: String!,
         longitude: String!,
         latitude: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
@@ -165,7 +167,7 @@ class SnapShotTaskEngine {
      * return extraData: SpecailShotDetailModel
      * need test
      */
-    func doGetSpecialShotDetailTask(shotId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
+    func doGetSpecialShotDetailTask(_ shotId: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let getSpecialShotDetailTask: GetSpecialShotDetailTask = GetSpecialShotDetailTask(shotId: shotId,
             engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetSpecialShotDetailTask task start, taskID = \(getSpecialShotDetailTask.taskID)")
@@ -184,7 +186,7 @@ class SnapShotTaskEngine {
      * return extraData: --
      * need test
      */
-    func doGetRecommendedPhotographerTask(uid: String!,
+    func doGetRecommendedPhotographerTask(_ uid: String!,
         longitude: String!,
         latitude: String!,
         page: String!,
@@ -207,7 +209,7 @@ class SnapShotTaskEngine {
      * photographerId, long, 摄影师id
      * need test
      */
-    func doGetPhotographerBaseDetailTask(userId: String!,
+    func doGetPhotographerBaseDetailTask(_ userId: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
         let getPhotographerBaseDetailTask: GetPhotographerBaseDetailTask = GetPhotographerBaseDetailTask(userId: userId, engineProtocol: engineProtocol);
         print("SnapShotTaskEngine, GetPhotographerBaseDetailTask task start, taskID = \(getPhotographerBaseDetailTask.taskID)")
@@ -223,7 +225,7 @@ class SnapShotTaskEngine {
      * step, 每页的条数
      * need test
      */
-    func doGetPhotographerProductTask(gid: String!, page: String!,
+    func doGetPhotographerProductTask(_ gid: String!, page: String!,
         step: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
             let getPhotographerProductTask: GetPhotographerProductTask = GetPhotographerProductTask(gid: gid,
                 page: page,
@@ -242,7 +244,7 @@ class SnapShotTaskEngine {
      * step, 每页的条数
      * need test
      */
-    func doGetPhotographerCommentsTask(userId: String!, page: String!,
+    func doGetPhotographerCommentsTask(_ userId: String!, page: String!,
         step: String!, engineProtocol: SnapShotEngineProtocol!) -> Int! {
             let getPhotographerCommentsTask: GetPhotographerCommentsTask = GetPhotographerCommentsTask(userId: userId,
                 page: page,
@@ -260,7 +262,7 @@ class SnapShotTaskEngine {
      * workId：摄影作品id
      * need test
      */
-    func doLikeTheWorkTask(workId: String!, uid: String!, secretKey: String!,
+    func doLikeTheWorkTask(_ workId: String!, uid: String!, secretKey: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
             let likeTheWorkTask: LikeTheWorkTask = LikeTheWorkTask(workId: workId,
                 uid: uid,
@@ -280,7 +282,7 @@ class SnapShotTaskEngine {
      * parent: 父评论，可选
      * need test
      */
-    func doCommentTheWorkTask(workId: String!, uid: String!, content: String, parent: String!, secretKey: String!,
+    func doCommentTheWorkTask(_ workId: String!, uid: String!, content: String, parent: String!, secretKey: String!,
         engineProtocol: SnapShotEngineProtocol!) -> Int! {
             let commentTheWorkTask: CommentTheWorkTask = CommentTheWorkTask(workId: workId,
                 uid: uid,
@@ -304,7 +306,7 @@ class SnapShotTaskEngine {
      * return extraData: SpecialShotModel
      * need test
      */
-    func doGetSpecialShotListTask(userId: String!,
+    func doGetSpecialShotListTask(_ userId: String!,
         longitude: String!,
         latitude: String!,
         page: String!,
@@ -333,7 +335,7 @@ class SnapShotTaskEngine {
      * return extraData: SpecialShotModel
      * need test
      */
-    func doGetGroupShotListTask(userId: String!,
+    func doGetGroupShotListTask(_ userId: String!,
         longitude: String!,
         latitude: String!,
         page: String!,

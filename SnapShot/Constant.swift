@@ -11,7 +11,7 @@ import UIKit
 
 // Universe Varible
 var isLogin:Bool = false
-var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+var userDefaults:UserDefaults = UserDefaults.standard
 
 // 高德导航 Map KEY
 let AMAP_KEY = "5f535d9ec2e98bbdc4acc2f9b201e530"
@@ -32,9 +32,9 @@ let CAMERA_CELL_HEIGHT: CGFloat = 175
 let COMMENT_CELL_HEIGHT: CGFloat = 70
 let COUPON_HEADER_CELL_HEIGHT: CGFloat = 220
 let COUPON_CELL_HEIGHT: CGFloat = 100
-let DETAIL_CELL_HEIGHT: CGFloat = CGFloat((UIScreen.mainScreen().bounds.height - 20)/2)
-let SCREEN_WIDTH:CGFloat = UIScreen.mainScreen().bounds.width
-let SCREEN_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.height
+let DETAIL_CELL_HEIGHT: CGFloat = CGFloat((UIScreen.main.bounds.height - 20)/2)
+let SCREEN_WIDTH:CGFloat = UIScreen.main.bounds.width
+let SCREEN_HEIGHT:CGFloat = UIScreen.main.bounds.height
 
 //字体颜色
 let TEXT_COLOR_GREY:UIColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)

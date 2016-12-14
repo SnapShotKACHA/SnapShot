@@ -11,16 +11,16 @@ import SwiftyJSON
 
 class PhotographerIntroduceModel: BaseModel {
     
-    private var picUrl: String?;
-    private var price: String?;
-    private var avatar: String?;
-    private var nickname: String?;
-    private var publishDate: String?;
-    private var location: String?;
-    private var likeCount: String?;
-    private var commentCount: String?;
-    private var photographerId: String?;
-    private var appointmentCount: String?;
+    fileprivate var picUrl: String?;
+    fileprivate var price: String?;
+    fileprivate var avatar: String?;
+    fileprivate var nickname: String?;
+    fileprivate var publishDate: String?;
+    fileprivate var location: String?;
+    fileprivate var likeCount: String?;
+    fileprivate var commentCount: String?;
+    fileprivate var photographerId: String?;
+    fileprivate var appointmentCount: String?;
     
     init(picUrlValue: String, priceValue: String, avatarValue: String, nicknameValue: String, publishDateValue: String, loactionValue: String, likeCountValue: String, photographerIdValue: String, commentCountValue: String, appointmentCountValue: String) {
         picUrl = picUrlValue
@@ -35,7 +35,7 @@ class PhotographerIntroduceModel: BaseModel {
         appointmentCount = appointmentCountValue
     }
     
-    override func parseJson(object: AnyObject) {
+    override func parseJson(_ object: AnyObject) {
         super.parseJson(object)
         picUrl = JSON(object)[JSON_KEY_PIC_URL].string
         price = JSON(object)[JSON_KEY_PRICE].string

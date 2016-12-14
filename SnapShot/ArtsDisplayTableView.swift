@@ -18,7 +18,7 @@ class ArtsDisplayTableView: UITableView, UITableViewDataSource, UITableViewDeleg
         self.sectionNumber = numberOfSection
         self.contentSize = CGSize(width: SCREEN_WIDTH, height: 700)
         let nibArtCell = UINib(nibName: "ArtCell", bundle: nil)
-        self.registerNib(nibArtCell, forCellReuseIdentifier: "artCell")
+        self.register(nibArtCell, forCellReuseIdentifier: "artCell")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,41 +27,41 @@ class ArtsDisplayTableView: UITableView, UITableViewDataSource, UITableViewDeleg
     
     
     //==================UITableViewDataSource====================================================//
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 && indexPath.row == 0 {
-            let cell: ArtCell = (self.dequeueReusableCellWithIdentifier("artCell", forIndexPath: indexPath) as? ArtCell)!
+            let cell: ArtCell = (self.dequeueReusableCell(withIdentifier: "artCell", for: indexPath) as? ArtCell)!
             cell.artImageView = UIImageView(image: UIImage(named: "frontCellImageDefault1"))
             return cell
         } else {
-            let cell: ArtCell = (self.dequeueReusableCellWithIdentifier("artCell", forIndexPath: indexPath) as? ArtCell)!
+            let cell: ArtCell = (self.dequeueReusableCell(withIdentifier: "artCell", for: indexPath) as? ArtCell)!
             
             return cell
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return 1
     }
     
     //==================UITableViewDelegate===========================================================//
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.sectionNumber == 0 ? 1: self.sectionNumber
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         tableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 15
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 2 {
             return 90
         } else {

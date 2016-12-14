@@ -11,14 +11,14 @@ import SwiftyJSON
 
 class PhotographerBaseDetailModel: BaseModel {
     
-    private var appointmentCount: String?; // 预约数量
-    private var intro: String?;
-    private var collectCount: String?; // 收藏数量
-    private var priceTendency: String?; // 应该是JsonArray的形式，目前不会解析
-    private var photograopherId: String?;
-    private var serveCity: String?
-    private var skill: String?; // 擅长领域
-    private var likeCount: String?; // 点赞数量
+    fileprivate var appointmentCount: String?; // 预约数量
+    fileprivate var intro: String?;
+    fileprivate var collectCount: String?; // 收藏数量
+    fileprivate var priceTendency: String?; // 应该是JsonArray的形式，目前不会解析
+    fileprivate var photograopherId: String?;
+    fileprivate var serveCity: String?
+    fileprivate var skill: String?; // 擅长领域
+    fileprivate var likeCount: String?; // 点赞数量
     
     override init() {
         appointmentCount = ""
@@ -31,7 +31,7 @@ class PhotographerBaseDetailModel: BaseModel {
         likeCount = ""
     }
     
-    override func parseJson(object: AnyObject) {
+    override func parseJson(_ object: AnyObject) {
         super.parseJson(object)
         appointmentCount = JSON(object)[JSON_KEY_APPOINTMENT_COUNT].string
         collectCount = JSON(object)[JSON_KEY_COLLECT_COUNT].string

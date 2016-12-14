@@ -8,28 +8,28 @@
 
 import Foundation
 
-public class UTF8Encoding {
-    public static func encode(bytes: Array<UInt8>) -> String {
+open class UTF8Encoding {
+    open static func encode(_ bytes: Array<UInt8>) -> String {
         var encodedString = ""
         var decoder = UTF8()
-        var generator = bytes.generate()
+        var generator = bytes.makeIterator()
         var finished: Bool = false
         repeat {
             let decodingResult = decoder.decode(&generator)
             switch decodingResult {
-            case .Result(let char):
-                encodedString.append(char)
-            case .EmptyInput:
+            case .scalarValue(let char):
+                encodedString.append(String(char))
+            case .emptyInput:
                 finished = true
                 /* ignore errors and unexpected values */
-            case .Error:
+            case .error:
                 finished = true
             }
         } while (!finished)
         return encodedString
     }
     
-    public static func decode(str: String) -> Array<UInt8> {
+    open static func decode(_ str: String) -> Array<UInt8> {
         var decodedBytes = Array<UInt8>()
         for b in str.utf8 {
             decodedBytes.append(b)

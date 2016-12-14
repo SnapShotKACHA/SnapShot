@@ -40,7 +40,7 @@ class CommentTheWorkTask: BaseTask, HttpProtocol {
         self.httpControl.onRequestWithParams(self.taskUrl, param: Parameters(parameterDictionary: parametersDic, signiture: signature.md5))
     }
     
-    func didRecieveResults(results: AnyObject) {
+    func didRecieveResults(_ results: AnyObject) {
         print("CommentTheWorkTask, didRecieveResults")
         print("results = ")
         print(results)
@@ -58,7 +58,7 @@ class CommentTheWorkTask: BaseTask, HttpProtocol {
         }
     }
     
-    func didRecieveError(error: AnyObject) {
+    func didRecieveError(_ error: AnyObject) {
         print("CommentTheWorkTask, didRecieveError")
         notifyFailed(self.taskType, errorCode: TASK_RESULT_CODE_GENERAL_ERROR, extraData: "")
     }

@@ -9,6 +9,30 @@
 import Foundation
 import UIKit
 import Alamofire
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class RegisterViewController: BasicViewController, UITextFieldDelegate {
     @IBOutlet weak var userIDTextField: UITextField!
@@ -34,9 +58,9 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordValidWarningLabel: UILabel!
     
     
-    private var timer:NSTimer?
-    private var startCount = 60
-    private var loginPushButton:UIButton?
+    fileprivate var timer:Timer?
+    fileprivate var startCount = 60
+    fileprivate var loginPushButton:UIButton?
     let USERNAME_TAG = 0101
     let PHONE_NUM_TAG = 0102
     let AUTHCODE_TAG = 0103
@@ -44,12 +68,12 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
     let PASSWORD_VALIDE_TAG = 0105
     
     
-    override func viewWillAppear(animated: Bool) {
-        self.userIDWarningLabel.hidden = true
-        self.phoneNumWarningLabel.hidden = true
-        self.authCodeWarningLabel.hidden = true
-        self.passwordWarningLabel.hidden = true
-        self.passwordValidWarningLabel.hidden = true
+    override func viewWillAppear(_ animated: Bool) {
+        self.userIDWarningLabel.isHidden = true
+        self.phoneNumWarningLabel.isHidden = true
+        self.authCodeWarningLabel.isHidden = true
+        self.passwordWarningLabel.isHidden = true
+        self.passwordValidWarningLabel.isHidden = true
         self.passwordValidWarningLabel.text = "两次输入不一致"
     }
     
@@ -64,52 +88,52 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
         self.SMSTextField.placeholder = "请输入短信验证码"
         self.SMSTextField.tag = AUTHCODE_TAG
         self.SMSTextField.delegate = self
-        self.passwordTextField.secureTextEntry = true
+        self.passwordTextField.isSecureTextEntry = true
         self.passwordTextField.placeholder = "请输入密码"
         self.passwordTextField.tag = PASSWORD_TAG
         self.passwordTextField.delegate = self
-        self.passwordValidTextField.secureTextEntry = true
+        self.passwordValidTextField.isSecureTextEntry = true
         self.passwordValidTextField.placeholder = "请再次输入密码"
         self.passwordValidTextField.tag = PASSWORD_VALIDE_TAG
         self.passwordTextField.delegate = self
         self.timeLabel.text = "获取验证码"
         self.loginPushButton = ViewWidgest.addRightButton("登录")
-        self.loginPushButton?.addTarget(self, action: "pushToLoginViewController", forControlEvents: UIControlEvents.TouchUpInside)
+        self.loginPushButton?.addTarget(self, action: #selector(RegisterViewController.pushToLoginViewController), for: UIControlEvents.touchUpInside)
         self.navigationController?.navigationBar.addSubview(self.loginPushButton!)
         
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         self.loginPushButton?.removeFromSuperview()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.userIDTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
         self.passwordValidTextField.resignFirstResponder()
         self.SMSTextField.resignFirstResponder()
     }
     
-    @IBAction func licenseCheckBoxAction(sender: AnyObject) {
+    @IBAction func licenseCheckBoxAction(_ sender: AnyObject) {
     
     }
-    @IBAction func licenseDisplayButtonAction(sender: AnyObject) {
+    @IBAction func licenseDisplayButtonAction(_ sender: AnyObject) {
     
     }
     
-    @IBAction func sendSMSButtonAction(sender: AnyObject) {
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
-        self.sendSMSButton.enabled = false
+    @IBAction func sendSMSButtonAction(_ sender: AnyObject) {
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(RegisterViewController.countDown), userInfo: nil, repeats: true)
+        self.sendSMSButton.isEnabled = false
         if SMSTextField.text != nil {
             SnapShotTaskEngine.getInstance().doGetVerifyCode(phoneNumTextField.text!, engineProtocol: self)
         } else {
-            self.authCodeWarningLabel.hidden = false
+            self.authCodeWarningLabel.isHidden = false
         }
         
     }
 
     func countDown() {
-        self.startCount--
+        self.startCount -= 1
         self.timeLabel.text = "请\(self.startCount)秒后重试"
         
         if self.startCount < 0 {
@@ -125,58 +149,58 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
     }
     
     func pushToLoginViewController() {
-        let loginViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("loginViewController")
+        let loginViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "loginViewController")
         self.navigationController?.popToViewController(loginViewController, animated: true)
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField.tag {
         case USERNAME_TAG:
             if userIDTextField.text == nil {
-                self.userIDWarningLabel.hidden = false
+                self.userIDWarningLabel.isHidden = false
             } else {
-                self.userIDWarningLabel.hidden = true
+                self.userIDWarningLabel.isHidden = true
             }
             break
             
         case PHONE_NUM_TAG:
             if phoneNumTextField.text == nil {
-                self.phoneNumWarningLabel.hidden = false
+                self.phoneNumWarningLabel.isHidden = false
             } else if !ToolKit.isTelNumber(self.phoneNumTextField.text!){
                 self.phoneNumTextField.text = nil
-                self.phoneNumWarningLabel.hidden = false
+                self.phoneNumWarningLabel.isHidden = false
             } else {
-                self.phoneNumWarningLabel.hidden = true
+                self.phoneNumWarningLabel.isHidden = true
             }
             break
             
         case AUTHCODE_TAG:
             if SMSTextField.text == nil {
-                self.authCodeWarningLabel.hidden = false
+                self.authCodeWarningLabel.isHidden = false
             } else {
-                self.authCodeWarningLabel.hidden = true
+                self.authCodeWarningLabel.isHidden = true
             }
             break
 
         case PASSWORD_TAG:
             if passwordTextField.text == nil {
-                self.passwordWarningLabel.hidden = false
+                self.passwordWarningLabel.isHidden = false
             } else if self.passwordTextField.text?.characters.count < 6 || self.passwordTextField.text?.characters.count > 16 {
                 self.passwordTextField.text = nil
-                self.passwordWarningLabel.hidden = false
+                self.passwordWarningLabel.isHidden = false
             } else {
-                self.passwordWarningLabel.hidden = true
+                self.passwordWarningLabel.isHidden = true
             }
             break
             
         case PASSWORD_VALIDE_TAG:
             if passwordValidTextField == nil {
-                self.passwordValidTextField.hidden = false
+                self.passwordValidTextField.isHidden = false
             } else if self.passwordValidTextField != passwordTextField.text {
                 self.passwordValidTextField.text = nil
-                self.passwordValidWarningLabel.hidden = false
+                self.passwordValidWarningLabel.isHidden = false
             } else {
-                self.passwordValidWarningLabel.hidden  = true
+                self.passwordValidWarningLabel.isHidden  = true
             }
             break
             
@@ -185,7 +209,7 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
         }
     }
 
-    @IBAction func registerButtonAction(sender: AnyObject) {
+    @IBAction func registerButtonAction(_ sender: AnyObject) {
         if phoneNumTextField.text != nil
             && userIDTextField.text != nil
             && self.SMSTextField.text != nil
@@ -197,12 +221,12 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
                 password: passwordTextField.text!,
                 verifyCode: SMSTextField.text!, engineProtocol: self)
         } else {
-            self.passwordValidWarningLabel.hidden = false
+            self.passwordValidWarningLabel.isHidden = false
             self.passwordValidWarningLabel.text = "注册失败"
         }
     }
     
-    override func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+    override func onTaskError(_ taskType: Int!, errorCode: Int, extraData: AnyObject) {
         // receive register failed errorCode, handle it!
         // with different errorCode
         if (TASK_TYPE_REGISTER == taskType) {
@@ -210,12 +234,12 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
         } else if (TASK_TYPE_GET_VERIFY_CODE == taskType) {
             // TODO handle getVerifyCode failed
             print("get verify code task success, handle please!")
-            let cancelAction = UIAlertAction(title: "注册失败", style: .Cancel, handler: nil)
-            presentViewController(ViewWidgest.displayAlert("注册失败", message: "请重新获取验证码或者更换注册手机号", actions: [cancelAction]), animated: true, completion: nil)
+            let cancelAction = UIAlertAction(title: "注册失败", style: .cancel, handler: nil)
+            present(ViewWidgest.displayAlert("注册失败", message: "请重新获取验证码或者更换注册手机号", actions: [cancelAction]), animated: true, completion: nil)
         }
     }
     
-    override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
+    override func onTaskSuccess(_ taskType: Int!, successCode: Int, extraData: AnyObject) {
         if (TASK_TYPE_REGISTER == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
             print("register task success, handle please!")
             SnapShotTaskEngine.getInstance().doLogin(nil, phoneNum: self.phoneNumTextField.text, password: self.passwordTextField.text, engineProtocol: self)
@@ -223,7 +247,7 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
             // TODO handle getVerifyCode succedd
             print("get verify code task success, handle please!")
         } else if (TASK_TYPE_LOGIN == taskType && TASK_RESULT_CODE_SUCCESS == successCode) {
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }

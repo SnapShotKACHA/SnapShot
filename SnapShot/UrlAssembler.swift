@@ -13,7 +13,7 @@ class UrlAssembler {
     
     init (taskUrl: String, parameterDictionary: Dictionary<String, String>, signiture: String) {
         self.url = taskUrl + "?"
-        let sortedDic = parameterDictionary.sort{$0.0 < $1.0}
+        let sortedDic = parameterDictionary.sorted{$0.0 < $1.0}
         //        sortedDic = sortedDic.reverse()
         for (parameter, parameterValue) in sortedDic {
             url += "\(parameter)=\(parameterValue)&"

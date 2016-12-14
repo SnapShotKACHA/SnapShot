@@ -28,30 +28,30 @@ class BaseTask : NSObject {
         self.engineProtocol = engineProtocol
     }
     
-    func notifySuccess(taskType: Int!, successCode: Int!, extraData: AnyObject!) {
+    func notifySuccess(_ taskType: Int!, successCode: Int!, extraData: AnyObject!) {
         if (self.engineProtocol != nil) {
             self.engineProtocol.onTaskSuccess(taskType, successCode: successCode, extraData: extraData)
         }
 }
     
-    func notifyFailed(taskType: Int!, errorCode: Int!, extraData: AnyObject!) {
+    func notifyFailed(_ taskType: Int!, errorCode: Int!, extraData: AnyObject!) {
         if (self.engineProtocol != nil) {
             self.engineProtocol.onTaskError(taskType, errorCode: errorCode, extraData: extraData)
         }
     }
     
-    func generatePostSignature(url: String!, parametersDic:Dictionary<String, String>, secretKey: String!) -> String! {
+    func generatePostSignature(_ url: String!, parametersDic:Dictionary<String, String>, secretKey: String!) -> String! {
         return generateSignature("POST", url: url, parametersDic: parametersDic, secretKey: secretKey);
     }
     
-    func generateGetSignature(url: String!, parametersDic:Dictionary<String, String>) -> String! {
+    func generateGetSignature(_ url: String!, parametersDic:Dictionary<String, String>) -> String! {
         return generateSignature("GET", url: url, parametersDic: parametersDic, secretKey: SECRET_KEY);
     }
     
-    private func generateSignature(method: String!, url: String!, parametersDic:Dictionary<String, String>, secretKey: String!) -> String! {
+    fileprivate func generateSignature(_ method: String!, url: String!, parametersDic:Dictionary<String, String>, secretKey: String!) -> String! {
         var result: String = method
         result += url;
-        let sortedDic = parametersDic.sort{$0.0 < $1.0}
+        let sortedDic = parametersDic.sorted{$0.0 < $1.0}
         for (parameter, parameterValue) in sortedDic {
             result += "\(parameter)=\(parameterValue)"
         }

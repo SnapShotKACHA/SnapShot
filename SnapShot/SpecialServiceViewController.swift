@@ -13,38 +13,38 @@ import SwiftyJSON
 class SpecialServiceViewController: BasicViewController, UITableViewDelegate, UITableViewDataSource {
     var specialSeviceTableView: UITableView?
     var specialShotModelArray: [SpecialShotModel] = []
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         SnapShotTaskEngine.getInstance().doGetSpecialShotListTask("", longitude: "", latitude: "", page: "0", step: "5", engineProtocol: self)
     }
     
     override func viewDidLoad() {
         self.title = "特色服务"
-        specialSeviceTableView = UITableView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT) , style: .Plain)
+        specialSeviceTableView = UITableView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT) , style: .plain)
         self.view.addSubview(specialSeviceTableView!)
-        specialSeviceTableView!.registerNib(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
+        specialSeviceTableView!.register(UINib(nibName: "CataCell", bundle: nil), forCellReuseIdentifier: "cataCell")
         specialSeviceTableView?.delegate = self
         specialSeviceTableView?.dataSource = self
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.specialShotModelArray.removeAll()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CATA_CELL_HEIGHT
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cataCell = specialSeviceTableView!.dequeueReusableCellWithIdentifier("cataCell") as? CataCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cataCell = specialSeviceTableView!.dequeueReusableCell(withIdentifier: "cataCell") as? CataCell
         cataCell?.cataLabel.text = "星球大战剧照"
         
         if specialShotModelArray.count > 0 {
             let index = indexPath.section
-            cataCell?.cataImageView.hnk_setImageFromURL(NSURL(string: specialShotModelArray[index].getPicUrl())!)
+            cataCell?.cataImageView.hnk_setImageFromURL(URL(string: specialShotModelArray[index].getPicUrl())!)
             cataCell?.cataIntroLabel.text = specialShotModelArray[index].getTitle()
             cataCell?.cataLabel.text = specialShotModelArray[index].getIntro()
             cataCell?.priceLabel.text = "\(specialShotModelArray[index].getPrice())元"
@@ -53,7 +53,7 @@ class SpecialServiceViewController: BasicViewController, UITableViewDelegate, UI
         return cataCell!
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             let specialServiceDetailViewController = SpecialServiceDetailViewController(title: self.specialShotModelArray[indexPath.section].getIntro())
             specialServiceDetailViewController.specialShotModel = SpecialShotModel(picUrlValue: "", priceValue: "", titleValue: "", introValeu: "")
@@ -74,29 +74,29 @@ class SpecialServiceViewController: BasicViewController, UITableViewDelegate, UI
         }
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return specialShotModelArray.count > 0 ? specialShotModelArray.count : 3
     }
     
     
-    override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
-        if String(extraData) != nil {
+    override func onTaskSuccess(_ taskType: Int!, successCode: Int, extraData: AnyObject) {
+        if String(describing: extraData) != nil {
             
             let itemsString = JSON(extraData)[JSON_KEY_DATA][JSON_KEY_ITEMS].string
-            let itemsData = itemsString?.dataUsingEncoding(NSUTF8StringEncoding)
+            let itemsData = itemsString?.data(using: String.Encoding.utf8)
             
-            let jsonArr = try!NSJSONSerialization.JSONObjectWithData(itemsData!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+            let jsonArr = try!JSONSerialization.jsonObject(with: itemsData!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSArray
             //
             
             for item in jsonArr {
-                let picUrl = item.objectForKey(JSON_KEY_PIC_URL) as! String
-                let price = item.objectForKey(JSON_KEY_PRICE) as! String
-                let intro = item.objectForKey(JSON_KEY_INTRO) as! String
-                let title = item.objectForKey(JSON_KEY_TITLE) as! String
+                let picUrl = item.object(forKey: JSON_KEY_PIC_URL) as! String
+                let price = item.object(forKey: JSON_KEY_PRICE) as! String
+                let intro = item.object(forKey: JSON_KEY_INTRO) as! String
+                let title = item.object(forKey: JSON_KEY_TITLE) as! String
                 
                 let specialShot: SpecialShotModel = SpecialShotModel(picUrlValue: picUrl, priceValue: price, titleValue: intro, introValeu: title)
                 self.specialShotModelArray.append(specialShot)
@@ -109,7 +109,7 @@ class SpecialServiceViewController: BasicViewController, UITableViewDelegate, UI
     }
     
     
-    override func onTaskError(taskType: Int!, errorCode: Int, extraData: AnyObject) {
+    override func onTaskError(_ taskType: Int!, errorCode: Int, extraData: AnyObject) {
         
     }
 }

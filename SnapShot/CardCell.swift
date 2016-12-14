@@ -24,18 +24,18 @@ class CardCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func setRateImages(upNum:Int) {
-        for var i = 0; i < upNum; i++ {
+    func setRateImages(_ upNum:Int) {
+        for i in 0 ..< upNum {
             let rateImage:UIImageView = UIImageView(frame: CGRect(x: 190 + (20*i), y: 40, width: 15, height: 15))
             rateImage.image = UIImage(named: "upRateImage")
             self.addSubview(rateImage)
         }
         
-        for var i = 0; i < (5-upNum); i++ {
+        for i in 0 ..< (5-upNum) {
             let rateImage:UIImageView = UIImageView(frame: CGRect(x: 190 + (20*upNum) + (20*i), y: 40, width: 15, height: 15))
             rateImage.image = UIImage(named: "downRateImage")
             self.addSubview(rateImage)
