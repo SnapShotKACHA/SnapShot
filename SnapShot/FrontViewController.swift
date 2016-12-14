@@ -16,6 +16,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     var imageUrl: [String] = []
     var specialShotModel: SpecialShotModel?
     var photographerIntroduceModel: [PhotographerIntroduceModel] = []
+    var refreshViewHeight: CGFloat = 44
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
@@ -42,12 +43,13 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func initTableView() {
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.frame = CGRectMake(SCREEN_WIDTH / 2 - 20, 64, 40, 40)
+        loadingView.frame = CGRectMake(SCREEN_WIDTH / 2 - 20, 84, 40, 40)
         loadingView.tintColor = UIColor(red: 78/255, green: 221/255, blue: 200/255, alpha: 1)
         mainTableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             SnapShotTaskEngine.getInstance().doGetRecommendedSpecialShot("", longitude: "", latitude: "", engineProtocol: self)
             SnapShotTaskEngine.getInstance().doGetRecommendedPhotographerTask("", longitude: "", latitude: "", page: "1", step: "5", engineProtocol: self)
             // Do not forget to call dg_stopLoading() at the end
+            self!.refreshViewHeight = 64
             self?.mainTableView.dg_stopLoading()
             }, loadingView: loadingView)
         mainTableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
@@ -62,6 +64,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewWillDisappear(animated: Bool) {
         self.navBtn?.removeFromSuperview()
         self.navBtn = nil
+        self.photographerIntroduceModel.removeAll()
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +85,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
-            return 44
+            return refreshViewHeight
         } else if indexPath.section == 0 && indexPath.row == 1 {
             return CATA_CELL_HEIGHT
         } else {
@@ -109,7 +112,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             if specialShotModel != nil {
                 cataCell?.cataLabel.text = specialShotModel?.getTitle()
                 cataCell?.cataImageView.hnk_setImageFromURL(NSURL(string: specialShotModel!.getPicUrl())!)
-                cataCell?.priceLabel.text = specialShotModel?.getPrice()
+                cataCell?.priceLabel.text = "\(specialShotModel!.getPrice())元"
                 cataCell?.cataIntroLabel.text = specialShotModel?.getIntro()
             }
             
@@ -123,14 +126,18 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             
             if self.photographerIntroduceModel.count > 0 {
-                frontCell?.locationLabel.text = self.photographerIntroduceModel[indexPath.section].getLocation()
-                frontCell?.timeLabel.text = self.photographerIntroduceModel[indexPath.section].getPublishDate()
-                frontCell?.userIDLabel.text = self.photographerIntroduceModel[indexPath.section].getNickname()
-                frontCell?.priceLabel.text = "￥\(self.photographerIntroduceModel[indexPath.section].getPrice())"
-                frontCell?.profileImageView.hnk_setImageFromURL(NSURL(string: self.photographerIntroduceModel[indexPath.section].getAvatar())!)
-                frontCell!.artImageView.hnk_setImageFromURL(NSURL(string: self.photographerIntroduceModel[indexPath.section].getPicUrl())!)
+                let index = indexPath.section - 1
+                frontCell?.locationLabel.text = self.photographerIntroduceModel[index].getLocation()
+                frontCell?.timeLabel.text = self.photographerIntroduceModel[index].getPublishDate()
+                frontCell?.userIDLabel.text = self.photographerIntroduceModel[index].getNickname()
+                frontCell?.priceLabel.text = "￥\(self.photographerIntroduceModel[index].getPrice())"
+                frontCell?.profileImageView.hnk_setImageFromURL(NSURL(string: self.photographerIntroduceModel[index].getAvatar())!)
+                frontCell!.artImageView.hnk_setImageFromURL(NSURL(string: self.photographerIntroduceModel[index].getPicUrl())!)
+                frontCell!.likeCountLabel.text = self.photographerIntroduceModel[index].getLikeCount()
+                frontCell?.commentCountLabel.text = self.photographerIntroduceModel[index].getCommentCount()
+                frontCell?.repostCountLabel.text = self.photographerIntroduceModel[index].getAppointmentCount()
             }
-            frontCell!.addGestureRecognizer(tapRecognizer)
+//            frontCell!.addGestureRecognizer(tapRecognizer)
             return frontCell!
         }
     }
@@ -158,14 +165,23 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //=======================UITableViewDelegate 的实现===================================
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return photographerIntroduceModel.count > 0 ? photographerIntroduceModel.count : 3
+        return photographerIntroduceModel.count > 0 ? photographerIntroduceModel.count + 1 : 3
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 1 {
-            let specialServiceDetailViewController = SpecialServiceDetailViewController(title: "星球大战剧照")
+        if indexPath.section == 0 && indexPath.row == 1 {
+            let specialServiceDetailViewController = SpecialServiceDetailViewController(title: self.specialShotModel!.getIntro())
+            specialServiceDetailViewController.specialShotModel = SpecialShotModel(picUrlValue: "", priceValue: "", titleValue: "", introValeu: "")
+            specialServiceDetailViewController.specialShotModel = self.specialShotModel!
+            specialServiceDetailViewController.imageUrlArray = ["http://111.13.47.169:8080/upload/image/custom/special2-xiangqing1.jpg","http://111.13.47.169:8080/upload/image/custom/special2-xiangqing2.jpg","http://111.13.47.169:8080/upload/image/custom/special2-xiangqing3.jpg"]
             self.navigationController?.pushViewController(specialServiceDetailViewController, animated: true)
+        } else {
+            let profileviewController =  UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("profileViewController") as! ProfileViewController
+            profileviewController.photographerModel = PhotographerIntroduceModel(picUrlValue: "", priceValue: "", avatarValue: "", nicknameValue: "", publishDateValue: "", loactionValue: "", likeCountValue: "", photographerIdValue: "", commentCountValue: "", appointmentCountValue: "")
+            profileviewController.photographerModel = self.photographerIntroduceModel[indexPath.section - 1]
+            self.navigationController?.pushViewController(profileviewController, animated: true)
         }
+        
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -195,14 +211,14 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.mainTableView.reloadData()
                 break
             case TASK_TYPE_GET_RECOMMENDED_PHOTOGRAPHER:
-                print("++++++++++\(extraData)++++++++++")
+               
                 if String(extraData) != nil {
                 
                     let itemsString = JSON(extraData)[JSON_KEY_DATA][JSON_KEY_ITEMS].string
                     let itemsData = itemsString?.dataUsingEncoding(NSUTF8StringEncoding)
                 
                     let jsonArr = try!NSJSONSerialization.JSONObjectWithData(itemsData!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-//                    print (String(jsonArr))
+//
                 
                     for item in jsonArr {
                         let picUrl = item.objectForKey(JSON_KEY_PIC_URL) as! String
@@ -217,7 +233,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
                         let appointmentCount = item.objectForKey(JSON_KEY_APPOINTMENT_COUNT) as! String
                         
                         let photographerIntro: PhotographerIntroduceModel = PhotographerIntroduceModel(picUrlValue: picUrl, priceValue: price, avatarValue: avatar, nicknameValue: nickname, publishDateValue: publishDate, loactionValue: location, likeCountValue: likeCount, photographerIdValue: photographerId, commentCountValue: commentCount, appointmentCountValue: appointmentCount)
-                        print(photographerIntro.getNickname())
+                      
                         self.photographerIntroduceModel.append(photographerIntro)
                     }
                     
@@ -227,7 +243,7 @@ class FrontViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
                 break
             case TASK_TYPE_GET_RECOMMENDED_SPECIAL_SHOT:
-                specialShotModel = SpecialShotModel()
+                specialShotModel = SpecialShotModel(picUrlValue: "", priceValue: "", titleValue: "", introValeu: "")
                 specialShotModel = extraData as? SpecialShotModel
                 self.mainTableView.reloadData()
                 break

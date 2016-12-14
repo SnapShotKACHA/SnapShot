@@ -12,7 +12,7 @@ import UIKit
 class GroupDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var groupDetailTableView: UITableView!
     var groupTitle: String?
-    
+    var imageUrlArray: [String] = []
     init(title:String) {
         super.init(nibName: nil, bundle: nil)
         self.groupTitle = title
@@ -58,8 +58,8 @@ class GroupDetailViewController: UIViewController, UITableViewDataSource, UITabl
             let slideScrollView = SlidScrollView(frame: slideRect)
             
             slideScrollView.initWithFrameRect(slideRect,
-                            picAddressArray: ["http://img.article.pchome.net/game/00/25/32/06/248_131117202025_1.jpg", "http://img.article.pchome.net/game/00/25/32/06/248_131117202039_1.jpg","http://img.article.pchome.net/game/00/25/32/06/248_131117202057_1.jpg"],
-                            titleArray: ["巫妖王","尤迪安","冰封王座"])
+                            picAddressArray: imageUrlArray,
+                            titleArray: ["","",""])
             let priceLabel = UILabel(frame: CGRect(x: 10, y: DETAIL_CELL_HEIGHT * 0.6 + 30, width: 80, height: 30))
             priceLabel.text = "￥350"
             priceLabel.font = UIFont(name: HEITI, size: 27)

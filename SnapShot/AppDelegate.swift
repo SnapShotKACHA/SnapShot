@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol, C
         self.revealController!.setMinimumWidth(220.0, maximumWidth: 240.0, forViewController: leftViewController)
         self.revealController!.recognizesPanningOnFrontView = true
         self.revealController!.title = "咔嚓"
-        self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "popToSearchView")
+        self.revealController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(AppDelegate.popToSearchView))
         self.navigationController = UINavigationController()
         self.window?.rootViewController = self.initNavigationController()
         self.navigationController!.pushViewController(revealController!, animated: false)        
@@ -167,6 +167,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SnapShotEngineProtocol, C
         self.revealController?.showViewController(self.leftViewController)
     }
 
+    func rightViewShowAction() {
+        self.revealController?.showViewController(self.frontViewController)
+    }
+    
     func popToSearchView() {
         self.searchViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("searchViewController") as? SearchViewController
         self.navigationController?.navigationItem.hidesBackButton = true

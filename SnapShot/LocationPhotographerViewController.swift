@@ -192,9 +192,15 @@ class LocationPhotographerViewController: BasicViewController, MAMapViewDelegate
             cell.textLabel?.text = "10元快拍：建议拍摄10张左右，时长约5-10分钟"
             cell.textLabel?.textColor = SP_BLUE_COLOR
             return cell
-        } else {
+        } else if indexPath.row == 1 {
             let cell: SpeedShotOrderCell = speedShotOrderTableView?.dequeueReusableCellWithIdentifier("speedShotOrderCell") as! SpeedShotOrderCell
             cell.SSorderCellUserIdLabel.text = "胡桃夹子"
+            cell.getOrderButton.addTarget(self, action: "getOrderButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+            return cell
+        } else {
+            let cell: SpeedShotOrderCell = speedShotOrderTableView?.dequeueReusableCellWithIdentifier("speedShotOrderCell") as! SpeedShotOrderCell
+            cell.SSorderCellUserIdLabel.text = "Summer Li"
+            cell.SSordeCellProfileImageView.image = UIImage(named: "profileDefaultForFrontCell")
             cell.getOrderButton.addTarget(self, action: "getOrderButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
             return cell
         }

@@ -21,6 +21,10 @@ class FrontCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var repostButton: UIButton!
     
+    @IBOutlet weak var repostCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
+    @IBOutlet weak var likeCountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -56,7 +56,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
     }
     
     func initLeftViewController(){
-        
+        self.homePageButton.addTarget(AppDelegate(), action: "rightViewShowAction", forControlEvents: UIControlEvents.TouchUpInside)
         self.loginButton = UIButton(frame: CGRectMake(75, 90, 60, 30))
         self.loginButton?.layer.masksToBounds = true
         self.loginButton?.layer.cornerRadius = 5.0
@@ -97,9 +97,7 @@ class LeftViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(loginViewController!, animated: true)
     }
     
-    @IBAction func homePageButton(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
-    }
+   
     @IBAction func changeStatusButton(sender: AnyObject) {
         print("changStatusButton button is pressed!")
     }

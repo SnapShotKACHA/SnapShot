@@ -41,6 +41,7 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
     
     override func viewWillDisappear(animated: Bool) {
         ViewWidgest.recoverNavigationBar([self.navBtn!, self.priceSortButton!,self.distanceSortButton!,self.dateSortButton!], navigationController: self.navigationController!)
+        SnapShotTaskEngine.getInstance().doGetGroupShotListTask("", longitude: "", latitude: "", page: "0", step: "5", sortType: "", engineProtocol: self)
     }
     
     func initTopButtons() {
@@ -71,11 +72,12 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
             groupCell?.groupCellMemberNumLabel.text = "3-5个家庭"
             groupCell?.groupCellPhotographerLabel.text = "2"
         } else {
+            groupCell?.groupCellImageView.image = UIImage(named: "groupCellImageDefault2")
             groupCell?.groupCellTitleLabel.text = "朝阳公园孕妇周记"
             groupCell?.groupCellTimeLabel.text = "2015年11月6日14:00-18:00"
             groupCell?.groupCellLocationLabel.text = "北京朝阳公园"
             groupCell?.groupCellServiceLabel.text = ">50张拍摄，15张精修"
-            groupCell?.groupCellMemberNumLabel.text = "2-3位孕妈妈"
+            groupCell?.groupCellMemberNumLabel.text = "2-3位情侣"
             groupCell?.groupCellPhotographerLabel.text = "1"
         }
         
@@ -87,21 +89,27 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
         return 400
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 20
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
+    }
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
 
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let groupDetailViewController:GroupDetailViewController = GroupDetailViewController(title: "奥森萌娃外拍")
-        self.navigationController?.pushViewController(groupDetailViewController, animated: true)
+        if indexPath.section == 0 {
+            let groupDetailViewController:GroupDetailViewController = GroupDetailViewController(title: "奥森萌娃外拍")
+            groupDetailViewController.imageUrlArray = ["http://111.13.47.169:8080/upload/image/custom/tuanpai1-xiangqing1.jpg","http://111.13.47.169:8080/upload/image/custom/tuanpai1-xiangqing2.jpg","http://111.13.47.169:8080/upload/image/custom/tuanpai1-xiangqing3.jpg"]
+            self.navigationController?.pushViewController(groupDetailViewController, animated: true)
+        } else {
+            let groupDetailViewController:GroupDetailViewController = GroupDetailViewController(title: "情侣外拍")
+            groupDetailViewController.imageUrlArray = ["http://111.13.47.169:8080/upload/image/custom/tuanpai2-xiangqing1.jpg","http://111.13.47.169:8080/upload/image/custom/tuanpai2-xiangqing2.jpg","http://111.13.47.169:8080/upload/image/custom/tuanpai2-xiangqing3.jpg"]
+            self.navigationController?.pushViewController(groupDetailViewController, animated: true)
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -128,7 +136,7 @@ class GroupViewController: BasicViewController, UITableViewDelegate, UITableView
     
     override func onTaskSuccess(taskType: Int!, successCode: Int, extraData: AnyObject) {
         if TASK_TYPE_GET_GROUP_SHOT_LIST == taskType {
-            
+            print(extraData)
         }
     }
     

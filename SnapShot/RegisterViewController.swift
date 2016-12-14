@@ -210,6 +210,8 @@ class RegisterViewController: BasicViewController, UITextFieldDelegate {
         } else if (TASK_TYPE_GET_VERIFY_CODE == taskType) {
             // TODO handle getVerifyCode failed
             print("get verify code task success, handle please!")
+            let cancelAction = UIAlertAction(title: "注册失败", style: .Cancel, handler: nil)
+            presentViewController(ViewWidgest.displayAlert("注册失败", message: "请重新获取验证码或者更换注册手机号", actions: [cancelAction]), animated: true, completion: nil)
         }
     }
     

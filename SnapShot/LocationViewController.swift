@@ -165,7 +165,7 @@ class LocationViewController: BasicViewController, MAMapViewDelegate, AMapSearch
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "急速约拍"
+        self.title = "极速约拍"
         MAMapServices.sharedServices().apiKey = AMAP_KEY
         self.modeSegment = UISegmentedControl()
         initMapView()

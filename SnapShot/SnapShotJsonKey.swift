@@ -60,3 +60,4 @@ let JSON_KEY_MAX_NUMBER: String = "maxNumber"
 let JSON_KEY_MIN_NUMBER: String = "minNumber"
 let JSON_KEY_PHOTOGRAPHER_COUNT: String = "photographerCount"
 
+

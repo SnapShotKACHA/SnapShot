@@ -72,9 +72,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     }
     
     // 初始化排序按钮
-    func initSortButtons(var ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector]) {
+    func initSortButtons( ButtonArray:[UIButton], titleArray:[String], targetArrary:[Selector]) {
         // 画按钮
-        for var i = 0; i < 3; i++ {
+        for var i = 0; i < 3; i += 1 {
             ButtonArray[i].frame = CGRect(x: Double((SCREEN_WIDTH/3) * CGFloat(i)), y: 44, width: Double(SCREEN_WIDTH/3), height: 40)
             ButtonArray[i].setTitle(titleArray[i], forState: UIControlState.Normal)
             ButtonArray[i].setTitleColor(TEXT_COLOR_GREY, forState: UIControlState.Normal)
@@ -127,6 +127,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         
     }
     
+    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+        self.searchBtn?.removeFromSuperview()
+        return true
+    }
+    
 
     func locationBtnAction() {
     
@@ -137,7 +142,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     }
     
     func searchBtnAction() {
-        
+        self.searchBtn?.removeFromSuperview()
+        self.navigationController?.navigationBar.addSubview(self.cancelBtn!)
     }
     
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
@@ -188,6 +194,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         cell.setRateImages(3)
         cell.displayImage.image = UIImage(named: "cellDefaultImage")
         
+        
+        
         return cell
     }
     
@@ -213,4 +221,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.SVsearchBar?.resignFirstResponder()
+        self.searchBtn?.resignFirstResponder()
+    }
 }

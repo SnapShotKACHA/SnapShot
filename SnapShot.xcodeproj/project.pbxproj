@@ -20,7 +20,6 @@
 		020652111C44E2B90098A622 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020652101C44E2B90098A622 /* Security.framework */; };
 		020763241C0D803000750BCE /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020763231C0D803000750BCE /* CommentCell.xib */; };
 		020763261C0D80D000750BCE /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020763251C0D80D000750BCE /* CommentCell.swift */; };
-		021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021695501BD8C7CE006A022F /* LaunchScreen.storyboard */; };
 		021C1C201BF06CFD0064DC45 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */; };
 		021C1C221BF08C170064DC45 /* CataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C1C211BF08C160064DC45 /* CataViewController.swift */; };
 		021C1C241BF08E330064DC45 /* CataDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 021C1C231BF08E330064DC45 /* CataDetailCell.xib */; };
@@ -89,6 +88,7 @@
 		02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */; };
 		02D1F1821BE0BCF50019D0E0 /* ViewWidgest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */; };
 		02D39B651C4F643F00E1067B /* SpecialServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39B641C4F643F00E1067B /* SpecialServiceDetailViewController.swift */; };
+		02D969571C859EA200E34446 /* LaunchScreenPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D969551C859EA200E34446 /* LaunchScreenPage.storyboard */; };
 		02E96BBA1BF33F5300B6388F /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E96BB91BF33F5300B6388F /* GroupViewController.swift */; };
 		02F7B0911BFB20660095C415 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */; };
 		02F90BC71BFD763A00949D9B /* LowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F90BC61BFD763A00949D9B /* LowerCell.xib */; };
@@ -169,7 +169,6 @@
 		020652101C44E2B90098A622 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		020763231C0D803000750BCE /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		020763251C0D80D000750BCE /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		021695511BD8C7CE006A022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		021C1C1F1BF06CFD0064DC45 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		021C1C211BF08C160064DC45 /* CataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CataViewController.swift; sourceTree = "<group>"; };
 		021C1C231BF08E330064DC45 /* CataDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CataDetailCell.xib; sourceTree = "<group>"; };
@@ -245,6 +244,7 @@
 		02C228A71BD9DA4E00BC83C3 /* ValueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueCell.xib; sourceTree = "<group>"; };
 		02D1F1811BE0BCF50019D0E0 /* ViewWidgest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWidgest.swift; sourceTree = "<group>"; };
 		02D39B641C4F643F00E1067B /* SpecialServiceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialServiceDetailViewController.swift; sourceTree = "<group>"; };
+		02D969561C859EA200E34446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreenPage.storyboard; sourceTree = "<group>"; };
 		02E96BB91BF33F5300B6388F /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		02F7B0901BFB20660095C415 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		02F90BC61BFD763A00949D9B /* LowerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LowerCell.xib; sourceTree = "<group>"; };
@@ -501,7 +501,7 @@
 				027F16241BC762C700D9B721 /* AppDelegate.swift */,
 				022487F31BCF4B3B0019D7CF /* Assets.xcassets */,
 				027F16281BC762C700D9B721 /* Main.storyboard */,
-				021695501BD8C7CE006A022F /* LaunchScreen.storyboard */,
+				02D969551C859EA200E34446 /* LaunchScreenPage.storyboard */,
 				027F16331BC762C700D9B721 /* Info.plist */,
 				027F162B1BC762C700D9B721 /* SnapShot.xcdatamodeld */,
 			);
@@ -771,9 +771,9 @@
 				02B30DCA1C4E09DF00DFB69D /* ServiceFeeFrame.xib in Resources */,
 				0265C8AE1C21338E00F9914B /* OrderInfoCell.xib in Resources */,
 				028F209E1C0D3FBB00AAAF68 /* ArtCell.xib in Resources */,
+				02D969571C859EA200E34446 /* LaunchScreenPage.storyboard in Resources */,
 				02F96CB41BDA152100AA3D5E /* DetailCell.xib in Resources */,
 				024E862E1BE8B2CD00E44628 /* FrontCell.xib in Resources */,
-				021695521BD8C7CE006A022F /* LaunchScreen.storyboard in Resources */,
 				02BD41E61BF4788E0078451A /* GroupCell.xib in Resources */,
 				022487F41BCF4B3B0019D7CF /* Assets.xcassets in Resources */,
 				02C228A81BD9DA4E00BC83C3 /* ValueCell.xib in Resources */,
@@ -982,20 +982,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		021695501BD8C7CE006A022F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				021695511BD8C7CE006A022F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		027F16281BC762C700D9B721 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				027F16291BC762C700D9B721 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02D969551C859EA200E34446 /* LaunchScreenPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02D969561C859EA200E34446 /* Base */,
+			);
+			name = LaunchScreenPage.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

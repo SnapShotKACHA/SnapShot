@@ -21,6 +21,7 @@ class ProfileViewController: BasicViewController {
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var leftBtn: UIButton!
     
+    var photographerModel: PhotographerIntroduceModel?
     var profileBtn: UIButton = UIButton()
     var artsDisplayBtn: UIButton = UIButton()
     var commentDisplayBtn: UIButton = UIButton()
@@ -65,6 +66,13 @@ class ProfileViewController: BasicViewController {
         if self.profileBtn.selected == true {
             self.view.addSubview(self.profileDetailTableView!)
             self.view.addSubview(self.appointButton)
+        }
+        
+        if self.photographerModel != nil {
+            self.profileUserIDLabel.text = photographerModel?.getNickname()
+            self.profileImageView.hnk_setImageFromURL(NSURL(string: photographerModel!.getAvatar())!)
+            self.headImageView.hnk_setImageFromURL(NSURL(string: photographerModel!.getPicUrl())!)
+            self.profileAppointLabel.text = photographerModel?.getAppointmentCount()
         }
     }
     

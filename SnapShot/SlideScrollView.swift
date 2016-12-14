@@ -30,7 +30,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
     
     func initWithFrameRect(rect:CGRect, picAddressArray:[String], titleArray:[String]) -> AnyObject {
         
-        var tempArray:[String] = ["http://img.article.pchome.net/game/00/25/32/06/248_131117202025_1.jpg", "http://img.article.pchome.net/game/00/25/32/06/248_131117202039_1.jpg","http://img.article.pchome.net/game/00/25/32/06/248_131117202057_1.jpg"]
+        var tempArray:[String] = picAddressArray
         self.titleArray = titleArray
         arrayCount = tempArray.count
         viewSize = rect;
@@ -52,7 +52,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         self.scrollView.addSubview(firstImageView)
         self.titleArray.insert(titleArray[titleArray.count - 1], atIndex: 0)
         
-        for var i = 0; i < tempArray.count; i++ {
+        for i in 0 ..< tempArray.count {
             let imageView: UIImageView = UIImageView(frame: CGRectMake(viewSize.size.width * CGFloat(i + 1), 0, viewSize.size.width, viewSize.size.height))
             imageView.hnk_setImageFromURL(NSURL(string: tempArray[i])!)
             self.scrollView.addSubview(imageView)
@@ -66,7 +66,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         
         
         self.scrollView.scrollRectToVisible(CGRectMake(viewSize.size.width, 0, viewSize.size.width, viewSize.size.height), animated: false)
-        let tapGestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "imagePressed")
+        let tapGestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SlidScrollView.imagePressed))
         
         tapGestureRecognizer.numberOfTapsRequired = 1
         tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -77,7 +77,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         
         let myHeight:Float = 24
         let shadowImg:UIImageView = UIImageView()
-        shadowImg.frame = CGRect(origin: CGPoint(x: 0, y: scrollView.frame.height - 80), size: CGSize(width: 320, height: 80))
+        shadowImg.frame = CGRect(x: 0, y: viewSize.height - 80, width: 320, height: 80)
         shadowImg.image = UIImage(named: "shadow.png")
         self.addSubview(shadowImg)
         
@@ -106,7 +106,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         noteTitle.frame = CGRect(origin: CGPoint(x: 10, y: 130), size: CGSize(width: 300, height: 50))
         
         let maskImage = UIImage(named: "HomeImageMask")
-        let maskImageView = UIImageView(frame: CGRectMake(0, CGFloat(125), viewSize.size.width, 75))
+        let maskImageView = UIImageView(frame: CGRectMake(0, viewSize.size.height - 75, viewSize.size.width, 75))
         maskImageView.image = maskImage
         
         self.addSubview(maskImageView)
@@ -114,7 +114,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         self.addSubview(noteView)
         
         
-       self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "autoShowNextPage", userInfo: nil, repeats: true)
+       self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(SlidScrollView.autoShowNextPage), userInfo: nil, repeats: true)
         
         
         return self
@@ -139,7 +139,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
         self.scrollView .scrollRectToVisible(CGRectMake(CGFloat(currentPageNumber + 2) * pageWidth, 0, viewSize.size.width, viewSize.size.height), animated: true)
         self.noteTitle.text = self.titleArray[currentPageNumber + 2]
         
-        currentPageNumber++
+        currentPageNumber += 1
         
         if currentPageNumber == arrayCount {
             self.scrollView.scrollRectToVisible(CGRectMake(viewSize.size.width, 0, viewSize.size.width, viewSize.size.height), animated: false)
@@ -167,7 +167,7 @@ class SlidScrollView: UIView,UIScrollViewDelegate {
             self.pageControl.currentPage = currentPageIndex - 1
         }
         self.noteTitle.text = self.titleArray[pageControl.currentPage + 1]
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "autoShowNextPage", userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(SlidScrollView.autoShowNextPage), userInfo: nil, repeats: true)
     }
     
     

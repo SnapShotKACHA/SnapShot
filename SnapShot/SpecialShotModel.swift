@@ -17,11 +17,11 @@ class SpecialShotModel: BaseModel {
     private var intro: String?;
     private var shotId: String?;
     
-    override init() {
-        picUrl = ""
-        price = ""
-        title = ""
-        intro = ""
+    init(picUrlValue: String, priceValue: String, titleValue: String, introValeu: String) {
+        picUrl = picUrlValue
+        price = priceValue
+        title = titleValue
+        intro = introValeu
         shotId = ""
     }
     
